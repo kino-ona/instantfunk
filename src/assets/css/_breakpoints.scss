@@ -1,0 +1,5 @@
+@mixin mobile($max-width: 1080px) {
+	@media only screen and (max-width: $max-width) {
+			@content;
+	}
+}
