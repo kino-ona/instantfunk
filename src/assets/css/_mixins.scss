@@ -34,16 +34,14 @@
 	@if ($line > 1) {
 		white-space:normal;
 		word-wrap:break-word;
-		display:-webkit-box;
+		display:flex;
 		-webkit-line-clamp:$line;
-		-webkit-box-orient:vertical;
 	} @else {
 		// white-space:nowrap;
 		white-space:normal;
 		word-wrap:break-word;
-		display:-webkit-box;
+		display:flex;
 		-webkit-line-clamp:$line;
-		-webkit-box-orient:vertical;
 	}
 	overflow:hidden;
 	text-overflow:ellipsis;
@@ -148,11 +146,9 @@ $sqrt_2: 1.41421356237;
 
 						@if ($direction == 'up') {
 								top: round($width*0.5);
-								-webkit-transform: translate(-50%, -50%) rotate(45deg);
 								transform: translate(-50%, -50%) rotate(45deg);
 						} @else if ($direction == 'down') {
 								bottom: round($width*0.5);
-								-webkit-transform: translate(-50%, 50%) rotate(-135deg);
 								transform: translate(-50%, 50%) rotate(-135deg);
 						}
 				} @else if ($direction == 'left' or $direction == 'right') {
@@ -163,11 +159,9 @@ $sqrt_2: 1.41421356237;
 
 						@if ($direction == 'left') {
 								left: round($height*0.5);
-								-webkit-transform: translate(-50%, -50%) rotate(-45deg);
 								transform: translate(-50%, -50%) rotate(-45deg);
 						} @else if ($direction == 'right') {
 								right: round($height*0.5);
-								-webkit-transform: translate(50%, -50%) rotate(135deg);
 								transform: translate(50%, -50%) rotate(135deg);
 						}
 				}
@@ -189,7 +183,6 @@ $sqrt_2: 1.41421356237;
 						left: 50%;
 						width: $thick;
 						height: $height - round(math.div($thick, $sqrt_2));
-						-webkit-transform: translate(-50%, 0);
 						transform: translate(-50%, 0);
 
 				} @else if ($direction == 'left' or $direction == 'right') {
@@ -203,7 +196,6 @@ $sqrt_2: 1.41421356237;
 
 						width: $width - round(math.div($thick, $sqrt_2));
 						height: $thick;
-						-webkit-transform: translate(0, -50%);
 						transform: translate(0, -50%);
 				}
 		}
@@ -211,10 +203,6 @@ $sqrt_2: 1.41421356237;
 
 // gradient bg
 @mixin dimm-gradient($direction, $rotate, $start:rgba(0, 0, 0, 1), $end:rgba(0, 0, 0, 0)) {
-	background-image: -webkit-linear-gradient($direction, $start, $end);
-	background-image: -moz-linear-gradient($direction, $start, $end);
-	background-image: -ms-linear-gradient($direction, $start, $end);
-	background-image: -o-linear-gradient($direction, $start, $end);
 	@if $direction==top and $rotate==null {
 		background-image: linear-gradient(to bottom, $start, $end);
 	}

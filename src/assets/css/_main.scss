@@ -2,6 +2,10 @@
 
 // main 
 .visual {
-	height: 600px;
-	background-color: cyan;
+	.video {
+		.video__container {
+			height: 600px;
+			background-color: cyan;
+		}
+	}
 } 

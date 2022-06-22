@@ -1,0 +1,12 @@
+@use 'mixins';
+
+// carousel
+.carousel {
+	.carousel__mask {
+		overflow: hidden;
+	}
+	.carousel__loop {
+		white-space: nowrap;
+		text-transform: uppercase;
+	}
+}
