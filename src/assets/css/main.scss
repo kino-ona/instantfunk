@@ -1,10 +1,15 @@
+@use 'fonts';
+@use 'reset';
+@use 'layout';
+@use 'components';
+@use 'menu';
 @use 'mixins';
 
 // main 
 .visual {
 	.video {
 		.video__container {
-			height: 600px;
+			height: 100vh;
 			background-color: cyan;
 		}
 	}
