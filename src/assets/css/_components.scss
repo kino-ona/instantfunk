@@ -19,3 +19,59 @@
 		@include sprite.retina-sprite(sprite.$logo-group);
 	}
 }
+
+// form
+.select {
+	display: inline-flex;
+	position: relative;
+	min-width: 123px;
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		right: 19px;
+		top: 50%;
+		margin-top: -3px;
+		@include sprite.retina-sprite(sprite.$bg-select-group);
+	}
+}
+
+// button
+.button {
+	.button__container {
+		display: flex;
+		justify-content: center;
+		.button__item {
+			&:not(:first-child) {
+				margin-left: 8px;
+			}
+		}
+	}
+	.button__item {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		height: 30px;
+		padding: 0 12px;
+		border: 1px solid #000;
+		border-radius: 30px;
+		font-size: 13px;
+		text-align: center;
+	}
+	.button__item--black {
+		background-color: #000;
+		color: #fff;
+	}
+	.button__item--medium {
+		height: 44px;
+		padding: 0 16px;
+		font-weight: 500;
+		font-size: 16px;
+	}
+	.button__item--large {
+		min-width: 148px;
+		height: 60px;
+		font-weight: 500;
+		font-size: 18px;
+	}
+}

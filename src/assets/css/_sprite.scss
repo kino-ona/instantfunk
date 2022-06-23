@@ -9,45 +9,69 @@
 //
 // At the bottom of this section, we provide information about the spritesheet itself
 // $spritesheet: width height image $spritesheet-sprites;
+$bg-select-name: 'bg_select';
+$bg-select-x: 0px;
+$bg-select-y: 14px;
+$bg-select-offset-x: 0px;
+$bg-select-offset-y: -14px;
+$bg-select-width: 11px;
+$bg-select-height: 6px;
+$bg-select-total-width: 161px;
+$bg-select-total-height: 20px;
+$bg-select-image: '../images/ico/icons.png';
+$bg-select: (0px, 14px, 0px, -14px, 11px, 6px, 161px, 20px, '../images/ico/icons.png', 'bg_select', );
 $logo-name: 'logo';
 $logo-x: 0px;
 $logo-y: 0px;
 $logo-offset-x: 0px;
 $logo-offset-y: 0px;
-$logo-width: 174px;
+$logo-width: 161px;
 $logo-height: 14px;
-$logo-total-width: 174px;
-$logo-total-height: 14px;
+$logo-total-width: 161px;
+$logo-total-height: 20px;
 $logo-image: '../images/ico/icons.png';
-$logo: (0px, 0px, 0px, 0px, 174px, 14px, 174px, 14px, '../images/ico/icons.png', 'logo', );
+$logo: (0px, 0px, 0px, 0px, 161px, 14px, 161px, 20px, '../images/ico/icons.png', 'logo', );
+$bg-select-2x-name: 'bg_select@2x';
+$bg-select-2x-x: 0px;
+$bg-select-2x-y: 28px;
+$bg-select-2x-offset-x: 0px;
+$bg-select-2x-offset-y: -28px;
+$bg-select-2x-width: 22px;
+$bg-select-2x-height: 12px;
+$bg-select-2x-total-width: 322px;
+$bg-select-2x-total-height: 40px;
+$bg-select-2x-image: '../images/ico/icons@2x.png';
+$bg-select-2x: (0px, 28px, 0px, -28px, 22px, 12px, 322px, 40px, '../images/ico/icons@2x.png', 'bg_select@2x', );
 $logo-2x-name: 'logo@2x';
 $logo-2x-x: 0px;
 $logo-2x-y: 0px;
 $logo-2x-offset-x: 0px;
 $logo-2x-offset-y: 0px;
-$logo-2x-width: 348px;
+$logo-2x-width: 322px;
 $logo-2x-height: 28px;
-$logo-2x-total-width: 348px;
-$logo-2x-total-height: 28px;
+$logo-2x-total-width: 322px;
+$logo-2x-total-height: 40px;
 $logo-2x-image: '../images/ico/icons@2x.png';
-$logo-2x: (0px, 0px, 0px, 0px, 348px, 28px, 348px, 28px, '../images/ico/icons@2x.png', 'logo@2x', );
-$spritesheet-width: 174px;
-$spritesheet-height: 14px;
+$logo-2x: (0px, 0px, 0px, 0px, 322px, 28px, 322px, 40px, '../images/ico/icons@2x.png', 'logo@2x', );
+$spritesheet-width: 161px;
+$spritesheet-height: 20px;
 $spritesheet-image: '../images/ico/icons.png';
-$spritesheet-sprites: ($logo, );
-$spritesheet: (174px, 14px, '../images/ico/icons.png', $spritesheet-sprites, );
-$retina-spritesheet-width: 348px;
-$retina-spritesheet-height: 28px;
+$spritesheet-sprites: ($bg-select, $logo, );
+$spritesheet: (161px, 20px, '../images/ico/icons.png', $spritesheet-sprites, );
+$retina-spritesheet-width: 322px;
+$retina-spritesheet-height: 40px;
 $retina-spritesheet-image: '../images/ico/icons@2x.png';
-$retina-spritesheet-sprites: ($logo-2x, );
-$retina-spritesheet: (348px, 28px, '../images/ico/icons@2x.png', $retina-spritesheet-sprites, );
+$retina-spritesheet-sprites: ($bg-select-2x, $logo-2x, );
+$retina-spritesheet: (322px, 40px, '../images/ico/icons@2x.png', $retina-spritesheet-sprites, );
 
 // These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
 //
 // The list formatted variables are intended for mixins like `retina-sprite` and `retina-sprites`.
+$bg-select-group-name: 'bg_select';
+$bg-select-group: ('bg_select', $bg-select, $bg-select-2x, );
 $logo-group-name: 'logo';
 $logo-group: ('logo', $logo, $logo-2x, );
-$retina-groups: ($logo-group, );
+$retina-groups: ($bg-select-group, $logo-group, );
 
 // The provided mixins are intended to be used with the array-like variables
 //

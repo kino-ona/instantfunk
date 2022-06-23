@@ -1,4 +1,14 @@
+@use 'mixins';
 @use 'variables';
+// 100 Thin
+// 200 ExtraLight
+// 300 Light
+// 400 Regular
+// 500 Medium
+// 600 SemiBold
+// 700 Bold
+// 800 ExtraBold
+// 900 Black 
 
 * {
 	margin: 0;
@@ -18,10 +28,12 @@
 	-webkit-tap-highlight-color: transparent;
 	text-size-adjust: 100%;
 	color: #000;
-	font-family: 'NS DL','Malgun Gothic',Dotum,'돋움',AppleGothicNeoSD,'Apple SD 산돌고딕 Neo','굴림',arial,sans-serif;
-	font-size: 16px;
+	font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+	font-weight: 400;
+	font-size: 14px;
 	cursor: default;
 	line-height: 1;
+	letter-spacing: -0.025em;
 	overflow-wrap: break-word;
 	tab-size: 4;
 }
@@ -73,103 +85,133 @@ label {
 	cursor: pointer;
 }
 
-input[type=text],
-input[type=password],
-input[type=number],
-input[type=tel],
-input[type=email] {
+input[type='text'],
+input[type='password'],
+input[type='number'],
+input[type='tel'],
+input[type='email'] {
 	appearance: none;
 	width: 100%;
-	height: 50px;
-	padding: 13px 15px;
-	border: 1px solid #ddd;
-	border-radius: 0;
-	background-color: #fff;
+	height: 58px;
+	padding: 0 15px;
+	border: 1px solid #f4f4f7;
+	border-radius: 58px;
+	background-color: #f4f4f7;
 	color: #000;
-	font-size: 16px;
-	font-family: 'NS MD','Malgun Gothic',Dotum,'돋움',AppleGothicNeoSD,'Apple SD 산돌고딕 Neo','굴림',arial,sans-serif;
-	line-height: 26px;
-	&:not([readonly]):not([disabled]):not([aria-invalid="true"]) {
+	font-size: 18px;
+	font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+	outline: none;
+	&:not([readonly]):not([disabled]):not([aria-invalid='true']) {
 		&:focus {
-			border-color: #2CBBB6;
-			outline: 0;
+			border-color: #5eecfa;
+			background-color: #fff;
 		}
 	}
 	&[disabled] {
 		background-color: #F7F7F7;
-		color: #777;
+		color: #999;
 	}
 	&[readonly] {
 		background-color: #F7F7F7;
-		color: #777;
+		color: #999;
 	}
-	&[aria-invalid="true"] {
+	&[aria-invalid='true'] {
 		position: relative;
 		padding-right: 60px;
 		border-color: red;
 	}
-	::-webkit-input-placeholder {
-		font-size: 16px;
-		color: #777;
-	}
-	::-moz-placeholder {
-		font-size: 16px;
-		color: #777;
-	}
+}
+::-webkit-input-placeholder {
+	padding-left: 9px;
+	font-size: 14px;
+	color: #999;
+}
+::-moz-placeholder {
+	padding-left: 9px;
+	font-size: 14px;
+	color: #999;
 }
 
-input[type=checkbox],
-input[type=radio] {
+input[type='checkbox'],
+input[type='radio'] {
 	appearance: none;
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	padding: 0;
-	margin: -1px;
-	overflow: hidden;
-	clip: rect(0, 0, 0, 0);
-	border: 0;
-	&:checked + label {
-		&:before {
-			background-position: -60px -255px;
+	border: 1px solid #000;
+	border-radius: 50%;
+	&:checked {
+		background-color: #000;
+	}
+}
+input[type='checkbox'] {
+	width: 14px;
+	height: 14px;
+	& + label {
+		padding-left: 3px;
+	}
+	& ~ input[type='checkbox'] {
+		margin-left: 25px;
+	}
+}
+input[type='radio'] {
+	position: relative;
+	width: 24px;
+	height: 24px;
+	@include mixins.rotate(45);
+	&:checked {
+		&:before,
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			background-color: #fff;
 		}
+		&:before {
+			left: 11px;
+			top: 4px;
+			width: 2px;
+			height: 12px;
+		}
+		&:after {
+			left: 6px;
+			top: 14px;
+			width: 5px;
+			height: 2px;
+		}
+	}
+	& + label {
+		padding-left: 7px;
+	}
+	& ~ input[type='radio'] {
+		margin-left: 35px;
 	}
 }
 
 select{
 	appearance: none;
 	width: 100%;
-	height: 50px;
-	margin: 0;
-	padding: 0 15px;
-	border: 1px solid #ddd;
-	border-radius: 0;
-	color: #000;
-	font-family:'NS MD','Malgun Gothic',Dotum,'돋움',AppleGothicNeoSD,'Apple SD 산돌고딕 Neo','굴림',arial,sans-serif;
-	background: {
-		color: #fff;
-		image: url(../images/bg_select.png);
-		repeat: no-repeat;
-		size: 20px 20px;
-		position: 92% center;
-	}
-	outline: none;
-	font-size: 16px;
+	height: 58px;
+	padding: 0 40px 0 25px;
+	border: 1px solid #f4f4f7;
+	border-radius: 58px;
+	background-color: #f4f4f7;
+	font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+	font-size: 18px;
 	cursor: pointer;
-	&:not([readonly]):not([disabled]):not([aria-invalid="true"]) {
+	outline: none;
+	&:not([readonly]):not([disabled]):not([aria-invalid='true']) {
 		&:focus {
-			border-color: #2CBBB6;
+			border-color: #5eecfa;
+			background-color: #fff;
 		}
 	}
 	&[disabled] {
 		background-color: #F7F7F7;
-		color: #777;
+		color: #999;
 	}
 	&[readonly] {
 		background-color: #F7F7F7;
-		color: #777;
+		color: #999;
 	}
-	&[aria-invalid="true"] {
+	&[aria-invalid='true'] {
 		position: relative;
 		padding-right: 60px;
 		border-color: red;
@@ -185,10 +227,10 @@ textarea {
 	border: 1px solid #ddd;
 	background-color: #fff;
 	color: #000;
-	font-family: 'NS MD','Malgun Gothic',Dotum,'돋움',AppleGothicNeoSD,'Apple SD 산돌고딕 Neo','굴림',arial,sans-serif;
+	font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
 	font-size: 16px;
 	resize: none;
-	&:not([readonly]):not([disabled]):not([aria-invalid="true"]) {
+	&:not([readonly]):not([disabled]):not([aria-invalid='true']) {
 		&:focus {
 			border-color: #2CBBB6;
 		}
@@ -201,7 +243,7 @@ textarea {
 		background-color: #F7F7F7;
 		color: #777;
 	}
-	&[aria-invalid="true"] {
+	&[aria-invalid='true'] {
 		position: relative;
 		padding-right: 60px;
 		border-color: red;
