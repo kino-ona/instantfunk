@@ -1,3 +1,6 @@
+@use 'mixins';
+@use 'sprite';
+
 // header
 .header {
 	position: fixed;
@@ -17,9 +20,25 @@
 		}
 	}
 	.header__right {
+		display: flex;
+		align-items: center;
 		position: absolute;
 		right: 30px;
 		top: 33px;
+	}
+	.header__funkplay {
+		display: block;
+		margin-left: 26px;
+		@include sprite.retina-sprite(sprite.$bg-header-funkplay-off-group);
+	}
+	.header__funkplay--active {
+		@include sprite.retina-sprite(sprite.$bg-header-funkplay-on-group);
+	}
+	.search {
+		.search__trigger {
+			display: block;
+			@include sprite.retina-sprite(sprite.$ico-header-search-group);
+		}
 	}
 }
 
@@ -76,18 +95,110 @@
 				background-color: #fff;
 			}
 		}
+		& + .nav__layer {
+			display: block;
+		}
 	}
 	.nav__layer {
+		display: none;
 		position: absolute;
 		left: 50%;
 		top: 15px;
 		z-index: -1;
 		width: 380px;
-		height: 600px;
+		padding-top: 90px;
 		margin-left: -190px;
 		border: 1px solid #000;
 		border-radius: 42px;
 		background-color: #fff;
+	}
+	.nav__menu {
+		&:last-child {
+			padding-bottom: 60px;
+		}
+	}
+	.nav__menu--category {
+		.nav__link {
+			&:focus,
+			&:hover {
+				color: #5eecfa;
+			}
+		}
+	}
+	.nav__menu--theme {
+		margin-top: 30px;
+		.nav__item {
+			&:not(:first-child) {
+				margin-top: 8px;
+			}
+		}
+		.nav__link {
+			font-size: 12px;
+		}
+	}
+	.nav__item {
+		text-align: center;
+		&:not(:first-child) {
+			margin-top: 20px;
+		}
+	}
+	.nav__link {
+		font-size: 24px;
+	}
+	.nav__link--cart {
+		span {
+			font-size: 14px;
+			color: #5eecfa;
+			line-height: 24px;
+			vertical-align: text-top;
+		}
+	}
+	.nav__carousel {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		height: 60px;
+		margin-top: 30px;
+		border-top: 1px solid #000;
+		border-radius: 0 0 42px 42px;
+		.nav__text {
+			font-size: 26px;
+			span {
+				position: relative;
+				font-size: 14px;
+			}
+		}
+		.carousel {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			.carousel__mask {
+				display: flex;
+				align-items: center;
+				overflow: hidden;
+				height: 100%;
+				border-radius: 0 0 42px 42px;
+				background-color: #fc4f03;
+			}
+			.carousel__loop {
+				white-space: nowrap;
+				&:first-child {
+					animation: menuCarousel01 30s linear infinite;
+					animation-delay: -30s;
+				}
+				&:last-child {
+					animation: menuCarousel02 30s linear infinite;
+					animation-delay: -15s;
+				}
+				.carousel__text {
+					margin: 0 12px;
+					font-size: 26px;
+				}
+			}
+		}
 	}
 }
 

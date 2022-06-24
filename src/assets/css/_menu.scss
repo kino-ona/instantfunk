@@ -142,43 +142,9 @@
 		top: 0;
 		width: 100%;
 		.carousel__mask {
-			display: flex;
-			align-items: center;
 			height: 56px;
 			border-radius: 42px 42px 0 0;
 			background-color: #fc4f03;
 		}
-		.carousel__loop {
-			&:first-child {
-				animation: menuCarousel01 30s linear infinite;
-				animation-delay: -30s;
-			}
-			&:last-child {
-				animation: menuCarousel02 30s linear infinite;
-				animation-delay: -15s;
-			}
-			.carousel__text {
-				margin: 0 28px;
-				font-size: 24px;
-			}
-		}
-	}
-}
-
-@keyframes menuCarousel01 {
-	0% {
-		@include mixins.translate(100%, 0);
-	}
-	100% {
-		@include mixins.translate(-100%, 0);
-	}
-}
-
-@keyframes menuCarousel02 {
-	0% {
-		@include mixins.translate(0, 0);
-	}
-	100% {
-		@include mixins.translate(-200%, 0);
 	}
 }
