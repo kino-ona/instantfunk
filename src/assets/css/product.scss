@@ -37,7 +37,11 @@
     display: flex;
     .product__tag--name {
       display: inline;
-      
+      padding: 8px;
+      margin-right: 4px;
+      border: 1px solid #000000;
+      border-radius: 40px;
+      overflow: hidden;
     }
   }
 }
