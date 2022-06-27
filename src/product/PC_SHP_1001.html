@@ -23,14 +23,24 @@
 
 			<div class="detail__container">
 				<div class="detail__quick">
-					<p><a href="#" class="quick_link">DETAIL INFO</a></p>
-					<p><a href="#" class="quick_link">SHOP GUIDE</a></p>
-					<p><a href="#" class="quick_link">TALKWALK</a></p>
-					<p><a href="#" class="quick_link">REVIEW</a></p>
+					<p><a href="#prdDetail" class="quick_link">DETAIL INFO</a></p>
+					<p><a href="#prdGuide" class="quick_link">SHOP GUIDE</a></p>
+					<p><a href="#prdTalkwalk" class="quick_link">TALKWALK</a></p>
+					<p><a href="#prdReview" class="quick_link">REVIEW</a></p>
 				</div>
 
 				<div class="detail__image">
-					
+					<div class="swiper-container productDetailswp">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img src="../assets/images/temp/@product01.png" alt="">
+							</div>
+							<div class="swiper-slide">
+								<img src="../assets/images/temp/@product02.png" alt="">
+							</div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
 				</div>
 				
 				<div class="detail_info">
@@ -87,14 +97,16 @@
 								</li>
 							</ul>
 						</div>
-						
+
 						<!-- more -->
-						<ul class="product__accordion">
-							<li>
-								<a href="#" class="accordion__title">
-									상세설명
-								</a>
-								<div class="accordion__content">
+						<ul class="product__accordion accord_wrap">
+							<li class="accord_item" data-status="hidden">
+								<div class="accord_title">
+									<a href="#" class="accord_target" tabindex="0">
+										상세설명 <i></i>
+									</a>
+								</div>
+								<div class="accord_panel">
 									<p>INSTANTFUNK 22S/S<br>
 										크롭 기장의 니트가디건입니다.<br><br>
 										가슴 윗부분은 플레인 미스조직,<br>
@@ -107,11 +119,13 @@
 										단품착용 및 이너와 레이어드하여 스타일링이 가능합니다.</p>
 								</div>
 							</li>
-							<li>
-								<a href="#" class="accordion__title">
-									멤버십혜택
-								</a>
-								<div class="accordion__content">
+							<li class="accord_item" data-status="expanded">
+								<div class="accord_title">
+									<a href="#" class="accord_target" tabindex="0">
+										멤버십혜택 <i></i>
+									</a>
+								</div>
+								<div class="accord_panel">
 									<div class="membership__benefit">
 										<p>멤버십 등급별 상시할인이 자동적용됩니다. <a href="/member/membership.html">멤버십</a></p>
 										<p>
@@ -142,12 +156,50 @@
 				</div>
 				<!--// detail_info -->
 
+				<div class="product__additional">
+					<div id="prdDetail" class="detail__cont">
+						<img src="../assets/images/temp/@productdetail.jpg">
+					</div>
+
+					<div id="prdGuide" class="product__section">
+						<div class="accord_wrap">
+							<div class="accord_item" data-status="expanded">
+								<div class="accord_title">
+									<a href="#" class="accord_target" tabindex="0">상품결제 <span></span></a>
+								</div>
+								<div class="accord_panel">
+									<p>고액결제의 경우 안전을 위해 카드사에서 확인전화를 드릴 수도 있습니다.<br>
+										확인과정에서 도난 카드의 사용이나 타인 명의의 주문등 정상적인 주문이 아니라고 판단될 경우 임의로 주문을 보류 또는 취소할 수 있습니다. <br><br>
+										무통장 입금은 상품 구매 대금은 PC뱅킹, 인터넷뱅킹, 텔레뱅킹 혹은 가까운 은행에서 직접 입금하시면 됩니다.<br>
+										주문시 입력한 입금자명과 실제입금자의 성명이 반드시 일치하여야 하며, 7일 이내로 입금을 하셔야 하며 입금되지 않은 주문은 자동취소 됩니다.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="prdTalkwalk" class="product__section">
+
+					</div>
+
+					<div id="prdReview" class="product__section">
+
+					</div>
+				</div>
+				<!--// detail content -->
+
 			</div>
-			<!-- detail__container -->
+			<!--// detail__container -->
 
     </div>
 
 		<footer class="footer"></footer>
 	</div>
+
+	<script src="../assets/js/swiper.min.js"></script>
+	<script>
+		var productSwiper = new Swiper('.productDetailswp', {
+			pagination: '.swiper-pagination',
+		});
+	</script>
 </body>
 </html>

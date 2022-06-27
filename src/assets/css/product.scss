@@ -9,6 +9,7 @@
   position: fixed;
   left: 40px;
   top: 50%;
+  z-index: 10;
   @include mixins.translate(0, -50%);
   .quick_link {
     display: block;
@@ -79,21 +80,58 @@
     }
   }
 }
+.swiper-container {
+  .swiper-pagination {
+    width: 100%;
+    bottom: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .swiper-pagination-bullet {
+    width: 100%;
+    max-width: 42px;
+    min-width: 10px;
+    height: 2px;
+    margin: 0 !important;
+    border-radius: 0;
+    background-color: #dbdbdb;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: #000000;
+  }
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
 
 // product detail
 .detail__container {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
 }
-
+.detail__image {
+  width: 100%;
+  height: calc(100vh - 90px);
+  margin: 0 auto;
+  padding-left: 256px;
+  padding-right: 425px;
+  text-align: center;
+  .productDetailswp {
+    height: 100%;
+  }
+}
 .detail_info {
   position: fixed;
-  max-width: 360px;
+  top: 90px;
   right: 30px;
+  max-width: 360px;
   padding: 38px 29px;
   border: 1px solid #000000;
   border-radius: 40px;
   overflow: hidden;
+  z-index: 10;
   .product__type {
     margin-bottom: 17px;
   }
@@ -179,6 +217,67 @@
     .btn_buynow {
       background-color: #000000;
       color: #ffffff;
+    }
+  }
+
+  .accord_item {
+    margin-bottom: 20px;
+    .accord_title {
+      padding-bottom: 16px;
+    }
+    .accord_panel {
+      line-height: 1.3;
+    }
+  }
+}
+.product__additional {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 256px;
+  padding-right: 425px;
+  .product__section {
+    margin-top: 42px;
+  }
+  .accord_title {
+    width: 100%;
+    &[aria-expanded="true"] {
+      .accord_target span {
+        &:after {
+          -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+        }
+      }
+    }
+  } 
+  .accord_target {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 100px;
+    font-weight: 400;
+    span {
+      position: relative;
+      display: block;
+      width: 64px;
+      height: 64px;
+      &:before, &:after {
+        content: ' ';
+        position: absolute;
+        left: 32px;
+        height: 64px;
+        width: 2px;
+        background-color: #000;
+        @include mixins.transition(.4s, ease);
+      }
+      &:before {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+      }
+      &:after {
+        -webkit-transform: rotate(-180deg);
+        transform: rotate(-180deg);
+      }
     }
   }
 }
