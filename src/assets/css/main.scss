@@ -185,3 +185,16 @@
 		}
 	}
 }
+
+.celeb-curation {
+	.celeb-curation__container {
+		padding: 0 32px;
+	}
+	.celeb-curation__text {
+		display: block;
+		color: #5eecfa;
+		font-size: 80px;
+		letter-spacing: -0.01em;
+		@include mixins.Druk();
+	}
+}
