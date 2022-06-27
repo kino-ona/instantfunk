@@ -1,3 +1,4 @@
+@use 'breakpoints';
 @use 'mixins';
 
 // main 
@@ -11,4 +12,176 @@
 			border-radius: 42px;
 		}
 	}
-} 
+}
+
+.best-menu {
+	.best-menu__list {
+		padding: 50px 0;
+		> .best-menu__row {
+			padding: 50px 20px;
+		}
+	}
+	.best-menu__row {
+		display: flex;
+	}
+	.best-menu__row--col3 {
+		> .best-menu__col {
+			width: calc(100% / 3);
+		}
+	}
+	.best-menu__row--col4 {
+		> .best-menu__col {
+			width: 25%;
+		}
+	}
+	.best-menu__row--col2 {
+		> .best-menu__col {
+			width: 50%;
+		}
+	}
+	.best-menu__row--stretch {
+		align-items: stretch;
+		.best-menu__col--half {
+			margin-top: -50px;
+			> .best-menu__row {
+				height: 50%;
+				padding-top: 50px;
+				> .best-menu__col,
+				.best-menu__item {
+					height: 100%;
+				}
+			}
+		}
+	}
+	.best-menu__item {
+		padding: 0 50px;
+		.swiper-container {
+			height: 100%;
+		}
+		.swiper-wrapper {
+			align-items: stretch;
+		}
+		.swiper-slide {
+			height: auto;
+		}
+	}
+	.best-menu__inner {
+		height: 100%;
+	}
+	.best-menu__img {
+		height: 100%;
+		text-align: center;
+		img {
+			height: 100%;
+			border-radius: 42px;
+		}
+	}
+	.best-menu__info {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+	}
+	.best-menu__info--green {
+		color: #9af54c;
+		.best-menu__link {
+			border-color: #9af54c;
+			&:focus,
+			&:hover {
+				background-color: #9af54c;
+			}
+		}
+	}
+	.best-menu__info--cyan {
+		color: #b2f9ea;
+		.best-menu__link {
+			border-color: #b2f9ea;
+			&:focus,
+			&:hover {
+				background-color: #b2f9ea;
+			}
+		}
+	}
+	.best-menu__info--yellow {
+		color: #fffe72;
+		.best-menu__link {
+			border-color: #fffe72;
+			&:focus,
+			&:hover {
+				background-color: #fffe72;
+			}
+		}
+	}
+	.best-menu__info--orange {
+		color: #fc9738;
+		.best-menu__link {
+			border-color: #fc9738;
+			&:focus,
+			&:hover {
+				background-color: #fc9738;
+			}
+		}
+	}
+	.best-menu__info--purple {
+		color: #b7adf0;
+		.best-menu__link {
+			border-color: #b7adf0;
+			&:focus,
+			&:hover {
+				background-color: #b7adf0;
+			}
+		}
+	}
+	.best-menu__info--pink {
+		color: #ff9bc1;
+		.best-menu__link {
+			border-color: #ff9bc1;
+			&:focus,
+			&:hover {
+				background-color: #ff9bc1;
+			}
+		}
+	}
+	.best-menu__category {
+		margin-bottom: 10px;
+		text-transform: uppercase;
+	}
+	.best-menu__name {
+		font-size: 48px;
+		text-transform: uppercase;
+	}
+	.best-menu__link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 15px;
+		width: 128px;
+		height: 44px;
+		border-width: 1px;
+		border-style: solid;
+		border-radius: 44px;
+		font-size: 26px;
+		text-transform: uppercase;
+		&:focus,
+		&:hover {
+			color: #000;
+		}
+	}
+	.carousel {
+		.carousel__mask {
+			height: 54px;
+			background-color: #fc9738;
+		}
+		.carousel__text {
+			margin: 0 50px;
+			color: #fffe72;
+			font-size: 48px;
+		}
+	}
+}
