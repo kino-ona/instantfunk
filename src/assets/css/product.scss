@@ -1,4 +1,5 @@
 @use 'mixins';
+@use 'sprite';
 
 .sub__container {
   padding-top: 90px;
@@ -128,9 +129,8 @@
   .product__reivew--title {
     display: flex;
     .ic_star {
-      display: inline;
-      width: 16px;
-      height: 16px;
+      display: inline-block;
+      @include sprite.retina-sprite(sprite.$ico-star-group);
     }
     p {
       margin-right: 16px;
