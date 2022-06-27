@@ -55,6 +55,8 @@ function accoSet(setId, multiTF, setFocus) {
 
 	defaultAcc = new Accordion(setId, {
 		allowMultiple: multiTF,
-		setFocus: setFocus
+		setFocus: setFocus,
+    transition: 'height 0s',
+		transitionSupport: false,
 	});
 }
