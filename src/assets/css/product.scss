@@ -267,8 +267,10 @@
   margin: 0 auto;
   padding-left: 256px;
   padding-right: 425px;
+  text-align: center;
   .product__section {
-    margin-top: 42px;
+    max-width: 1240px;
+    margin: 42px auto 0;
   }
   .accord_title {
     width: 100%;
