@@ -50,19 +50,21 @@
 	.nav__trigger {
 		display: flex;
 		justify-content: center;
-		align-items: center;
 		width: 117px;
 		height: 33px;
 		border: 1px solid #000;
 		border-radius: 33px;
 		background-color: #fff;
+		font-weight: 600;
 		font-size: 18px;
+		line-height: 35px;
 		text-align: center;
 		&:not(:first-child) {
 			margin-left: 10px;
 		}
 		.nav__ico {
 			display: flex;
+			align-self: center;
 			position: relative;
 			width: 27px;
 			height: 8px;
@@ -133,6 +135,7 @@
 			}
 		}
 		.nav__link {
+			font-weight: 400;
 			font-size: 12px;
 		}
 	}
@@ -143,12 +146,14 @@
 		}
 	}
 	.nav__link {
+		font-weight: 500;
 		font-size: 24px;
 	}
 	.nav__link--cart {
 		span {
-			font-size: 14px;
 			color: #5eecfa;
+			font-weight: 600;
+			font-size: 14px;
 			line-height: 24px;
 			vertical-align: text-top;
 		}
