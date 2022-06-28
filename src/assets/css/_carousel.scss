@@ -14,12 +14,12 @@
 	.carousel__loop {
 		white-space: nowrap;
 		&:first-child {
-			animation: menuCarousel01 30s linear infinite;
-			animation-delay: -30s;
+			animation: menuCarousel01 60s linear infinite;
+			animation-delay: -60s;
 		}
 		&:last-child {
-			animation: menuCarousel02 30s linear infinite;
-			animation-delay: -15s;
+			animation: menuCarousel02 60s linear infinite;
+			animation-delay: -30s;
 		}
 		.carousel__text {
 			margin: 0 28px;
