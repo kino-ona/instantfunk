@@ -12,6 +12,7 @@
 		};
 	}
 	.carousel__loop {
+		height: 100%;
 		white-space: nowrap;
 		&:first-child {
 			animation: menuCarousel01 60s linear infinite;

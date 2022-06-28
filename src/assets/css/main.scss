@@ -150,16 +150,18 @@
 	}
 	.best-menu__category {
 		margin-bottom: 10px;
+		font-weight: 500;
 		text-transform: uppercase;
 	}
 	.best-menu__name {
+		font-weight: 500;
 		font-size: 48px;
+		letter-spacing: -0.96px;
 		text-transform: uppercase;
 	}
 	.best-menu__link {
 		display: flex;
 		justify-content: center;
-		align-items: center;
 		margin-top: 15px;
 		width: 128px;
 		height: 44px;
@@ -167,6 +169,7 @@
 		border-style: solid;
 		border-radius: 44px;
 		font-size: 26px;
+		line-height: 46px;
 		text-transform: uppercase;
 		&:focus,
 		&:hover {
@@ -182,19 +185,172 @@
 			margin: 0 50px;
 			color: #fffe72;
 			font-size: 48px;
+			line-height: 65px;
 		}
 	}
 }
 
 .celeb-curation {
 	.celeb-curation__container {
-		padding: 0 32px;
+		padding: 105px 32px;
+	}
+	.celeb-curation__screen {
+		position: relative;
+		overflow: hidden;
+	}
+	.celeb-curation__screen--opened {
+		.celeb-curation__curtain {
+			&:first-child {
+				animation: screenTopCurtain 1s linear forwards;
+				.celeb-curation__text {
+					animation: screenTopText 1s linear forwards;
+				}
+			}
+			&:last-child {
+				animation: screenBottomCurtain 1s linear forwards;
+				.celeb-curation__text {
+					animation: screenBottomText 1s linear forwards;
+				}
+			}
+		}
+		.celeb-curation__swiper {
+			animation: screen 1s linear forwards;
+		}
+	}
+	.celeb-curation__curtain {
+		display: flex;
+		position: absolute;
+		left: 0;
+		z-index: 10;
+		width: 100%;
+		height: 50%;
+		background-color: #fff;
+		&:first-child {
+			align-items: flex-end;
+			top: 0;
+		}
+		&:last-child {
+			bottom: 0;
+		}
 	}
 	.celeb-curation__text {
-		display: block;
+		display: inline-flex;
+		position: relative;
+		left: 50%;
 		color: #5eecfa;
-		font-size: 80px;
+		font-size: 225px;
 		letter-spacing: -0.01em;
+		text-align: center;
 		@include mixins.Druk();
+		@include mixins.translate(-50%, 0);
+	}
+	.menu {
+		.menu__list {
+			margin: -12px 0 0 -12px;
+		}
+		.menu__list--col2 {
+			.menu__item {
+				width: calc(50% - 12px);
+			}
+		}
+		.menu__item {
+			margin: 12px 0 0 12px;
+			&:first-child {
+				.menu__img {
+					position: static;
+					height: 100%;
+					@include mixins.translate(0, 0);
+					img {
+						width: 100%;
+						height: 100%;
+						border-radius: 42px;
+					}
+				}
+			}
+		}
+		.menu__round {
+			max-height: 780px;
+			padding-top: 84.6%;
+		}
+		.menu__info {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			padding: 0 32px 32px;
+		}
+		.menu__name {
+			font-size: 32px;
+			line-height: 36px;
+		}
+	}
+}
+
+@keyframes screenTopCurtain {
+	0% {
+		height: 50%;
+	}
+	70% {
+		height: 150px;
+	}
+	100% {
+		height: auto;
+	}
+}
+
+@keyframes screenBottomCurtain {
+	0% {
+		height: 50%;
+	}
+	70% {
+		height: 150px;
+	}
+	100% {
+		height: auto;
+	}
+}
+
+@keyframes screenTopText {
+	0% {
+		left: 50%;
+		font-size: 225px;
+		@include mixins.translate(-50%, 0);
+	}
+	70% {
+		left: 50%;
+		font-size: 150px;
+		@include mixins.translate(-50%, 0);
+	}
+	100% {
+		left: 0;
+		font-size: 80px;
+		@include mixins.translate(0, 0);
+	}
+}
+
+@keyframes screenBottomText {
+	0% {
+		left: 50%;
+		@include mixins.translate(-50%, 0);
+	}
+	70% {
+		left: 50%;
+		font-size: 150px;
+		@include mixins.translate(-50%, 0);
+	}
+	100% {
+		left: 100%;
+		font-size: 80px;
+		@include mixins.translate(-100%, 0);
+	}
+}
+
+@keyframes screen {
+	0% {
+		margin: 0;
+		padding: 0;
+	}
+	100% {
+		padding: 80px 0;
 	}
 }
