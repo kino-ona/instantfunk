@@ -14,7 +14,6 @@
       <div class="footer__address">
         <p class="addr__info">압구정 플래그십 스토어<br>서울특별시 강남구 신사동 654-11</p>
         <p><a href="#" class="btn__map">MAP</a></p>
-
         <p class="cs__info">
           82) 070-7720-9093<br>
           12:00am ~ 20:00pm
@@ -33,8 +32,28 @@
   </div>
 
   <div class="footer__funkplay">
-		<div class="shadow-box"></div>
-    <img class="img_funkplay" src="../assets/images/img_funkplay.png" alt="funkplay">
+		<div class="shadow-box">
+      <img class="img_funkplay shadow" src="../assets/images/img_funkplay.png" />
+      <img class="img_funkplay shadow" src="../assets/images/img_funkplay.png" />
+      <img class="img_funkplay shadow" src="../assets/images/img_funkplay.png" />
+      <img class="img_funkplay shadow" src="../assets/images/img_funkplay.png" />
+      <img class="img_funkplay shadow" src="../assets/images/img_funkplay.png" />
+    </div>
+    <img class="img_funkplay" src="../assets/images/img_funkplay.png" alt="funkplay" />
+    <a href="#" class="btn__funkplay">
+      <div class="carousel">
+        <div class="carousel__mask">
+          <p class="carousel__loop">
+            <span class="carousel__text">CLICK!</span>
+            <span class="carousel__text">CLICK!</span>
+          </p>
+          <p class="carousel__loop">
+            <span class="carousel__text">CLICK!</span>
+            <span class="carousel__text">CLICK!</span>
+          </p>
+        </div>
+      </div>
+    </a>
   </div>
   <div class="footer__cs">
     <div class="carousel">
@@ -67,9 +86,3 @@
   </div>
   
 </div>
-
-<script>
-for (var i=0; i < 5; i++) {
-  $('.shadow-box').append('<img class="img_funkplay shadow" src="../assets/images/img_funkplay.png">');
-}
-</script>

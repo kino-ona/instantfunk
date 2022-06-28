@@ -127,6 +127,7 @@
   position: fixed;
   top: 90px;
   right: 30px;
+  bottom: inherit;
   max-width: 360px;
   max-height: calc(100vh - 100px);
   padding: 38px 29px 30px;
@@ -134,6 +135,11 @@
   border-radius: 40px;
   overflow: hidden;
   z-index: 10;
+  &.on {
+    position: absolute;
+    bottom: 0;
+    top: inherit;
+  }
   .product__type {
     margin-bottom: 17px;
   }

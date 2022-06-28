@@ -60,3 +60,32 @@ function accoSet(setId, multiTF, setFocus) {
 		transitionSupport: false,
 	});
 }
+
+
+
+$(function() {
+	if($('.footer').length > 0) {
+		var $w = $(window),
+			footerHei = $('.footer').outerHeight();
+	
+		$w.on('scroll', function() {
+			var sT = $w.scrollTop();
+			var val = $(document).height() - $w.height() - footerHei;
+	
+			if (sT > val) {
+				var a0 = setTimeout(function(){
+					$('.footer .img_funkplay').addClass('__active')
+					$('.footer .shadow-box').addClass('__active')
+				}, 600);
+				var a0 = setTimeout(function(){
+					$('.footer .btn__funkplay').addClass('__active')
+				}, 2000);
+			} else {
+				$('.footer .img_funkplay').removeClass('__active')
+				$('.footer .shadow-box').removeClass('__active')
+				$('.footer .btn__funkplay').removeClass('__active')
+			}
+		});
+		
+	}
+});
