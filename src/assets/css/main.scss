@@ -97,6 +97,9 @@
 				border-radius: 32px;
 			}
 		}
+		.visual__video--visible {
+			visibility: visible;
+		}
 		.carousel {
 			height: 100%;
 			.carousel__mask {
