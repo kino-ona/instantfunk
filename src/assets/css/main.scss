@@ -18,6 +18,14 @@
 				}
 			}
 		}
+		.swiper-pagination {
+			display: inline-flex;
+			left: 479px;
+			bottom: 240px;
+			color: #fff;
+			font-weight: 600;
+			font-size: 18px;
+		}
 	}
 	.visual__mask {
 		overflow: hidden;
@@ -69,6 +77,41 @@
 		font-size: 38px;
 		line-height: 70px;
 		text-align: center;
+	}
+	.visual__control {
+		position: absolute;
+		left: 20px;
+		bottom: 20px;
+		z-index: 1;
+		width: 490px;
+		height: 210px;
+		border-radius: 36px;
+		background-color: #fff;
+		cursor: pointer;
+		opacity: 0;
+		animation: visualCont .5s linear forwards;
+		animation-delay: .7s;
+		.visual__video {
+			visibility: hidden;
+			video {
+				border-radius: 32px;
+			}
+		}
+		.carousel {
+			height: 100%;
+			.carousel__mask {
+				height: 100%;
+			}
+			.carousel__loop {
+				.carousel__text {
+					margin: 0 20px;
+					font-weight: 500;
+					font-size: 80px;
+					line-height: 225px;
+					letter-spacing: -4px;
+				}
+			}
+		}
 	}
 }
 

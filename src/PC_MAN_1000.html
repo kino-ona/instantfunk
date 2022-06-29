@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>인스턴트펑크 공식홈페이지 - 인스턴트펑크 INSTANTFUNK</title>
 
 	<script src="./assets/js/jquery-2.1.1.js"></script>
 	<script src="./assets/js/swiper.min.js"></script>
@@ -28,7 +28,7 @@
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
 									<div class="visual__video">
-										<video autoplay loop muted>
+										<video loop muted>
 											<source src="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" type="video/mp4">
 										</video>
 									</div>
@@ -45,10 +45,45 @@
 								</div>
 								<div class="swiper-slide">
 									<div class="visual__video">
-										<video autoplay loop muted>
+										<video loop muted>
 											<source src="https://googlechrome.github.io/samples/muted-autoplay/chrome-clip.mp4" type="video/mp4">
 										</video>
 									</div>
+								</div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
+						<div class="visual__control">
+							<div class="visual__preview">
+								<div class="visual__video">
+									<video autoplay loop muted>
+										<source src="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" type="video/mp4">
+									</video>
+								</div>
+								<div class="visual__video">
+									<video muted>
+										<source src="https://googlechrome.github.io/samples/muted-autoplay/chrome-clip.mp4" type="video/mp4">
+									</video>
+								</div>
+							</div>
+							<div class="carousel">
+								<div class="carousel__mask">
+									<p class="carousel__loop">
+										<span class="carousel__text">NEXT</span>
+										<span class="carousel__text">NEXT</span>
+										<span class="carousel__text">NEXT</span>
+										<span class="carousel__text">NEXT</span>
+										<span class="carousel__text">NEXT</span>
+										<span class="carousel__text">NEXT</span>
+									</p>
+									<p class="carousel__loop">
+										<span class="carousel__text">NEXT</span>
+										<span class="carousel__text">NEXT</span>
+										<span class="carousel__text">NEXT</span>
+										<span class="carousel__text">NEXT</span>
+										<span class="carousel__text">NEXT</span>
+										<span class="carousel__text">NEXT</span>
+									</p>
 								</div>
 							</div>
 						</div>
@@ -667,13 +702,5 @@
 			"webroot": "."
 		})
 	</div>
-	<script>
-    const bestMenuSwiper = new Swiper('.best-menu .best-menu__item .swiper-container');
-
-		const celebCurationSwiper = new Swiper('.celeb-curation .celeb-curation__swiper .swiper-container', {
-			nextButton: '.celeb-curation .celeb-curation__swiper .swiper-button-next',
-			prevButton: '.celeb-curation .celeb-curation__swiper .swiper-button-prev'
-		});
-  </script>
 </body>
 </html>
