@@ -139,14 +139,14 @@
 		font-size: 10px;
 	}
 	
-	.carousel {
+	.marquee {
 		position: absolute;
 		left: 0;
 		top: 0;
 		width: 100%;
-		.carousel__mask {
+		border-radius: 42px 42px 0 0;
+		.marquee__mask {
 			height: 56px;
-			border-radius: 42px 42px 0 0;
 			background-color: #fc4f03;
 		}
 		// .carousel__text {
