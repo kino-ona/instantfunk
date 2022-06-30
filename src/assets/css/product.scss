@@ -199,10 +199,22 @@
   .product__reivew--list {
     .rv__item {
       padding: 25px 0;
+      &:after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+    }
+    .rv__figure {
+      float: left;
+      width: 55px;
+      margin-right: 15px;
     }
     .rv__box {
       @include mixins.ellipse(2);
+      float: left;
       display: block;
+      width: calc(100% - 70px);
       height: 32px;
       line-height: 1.2;
     }
