@@ -71,7 +71,7 @@
     width: 100%;
     height: 100%;
     font-size: 48px;
-    line-height: 1.7;
+    letter-spacing: -1px;
     border: 1px solid #000000;
     border-radius: 50%;
     overflow: hidden;
@@ -319,6 +319,7 @@
     padding: 10px 0 50px;
     @include mixins.Ptd();
     line-height: 1.4;
+    text-align: left;
   }
   .detail__cont {
     margin-bottom: 220px;
