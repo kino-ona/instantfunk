@@ -68,6 +68,7 @@
 	}
 	.visual__link {
 		display: inline-flex;
+		align-items: center;
 		justify-content: center;
 		width: 220px;
 		height: 60px;
@@ -75,7 +76,7 @@
 		background-color: #fff;
 		color: #000;
 		font-size: 38px;
-		line-height: 70px;
+		// line-height: 70px;
 		text-align: center;
 	}
 	.visual__control {
@@ -100,17 +101,17 @@
 		.visual__video--visible {
 			visibility: visible;
 		}
-		.carousel {
+		.marquee {
 			height: 100%;
-			.carousel__mask {
+			.marquee__mask {
 				height: 100%;
 			}
-			.carousel__loop {
-				.carousel__text {
+			.marquee__loop {
+				.marquee__text {
 					margin: 0 20px;
 					font-weight: 500;
 					font-size: 80px;
-					line-height: 225px;
+					// line-height: 225px;
 					letter-spacing: -4px;
 				}
 			}
@@ -266,6 +267,7 @@
 	.best-menu__link {
 		display: flex;
 		justify-content: center;
+		align-items: center;
 		margin-top: 15px;
 		width: 128px;
 		height: 44px;
@@ -273,23 +275,23 @@
 		border-style: solid;
 		border-radius: 44px;
 		font-size: 26px;
-		line-height: 46px;
+		// line-height: 46px;
 		text-transform: uppercase;
 		&:focus,
 		&:hover {
 			color: #000;
 		}
 	}
-	.carousel {
-		.carousel__mask {
+	.marquee {
+		.marquee__mask {
 			height: 54px;
 			background-color: #fc9738;
 		}
-		.carousel__text {
+		.marquee__text {
 			margin: 0 50px;
 			color: #fffe72;
 			font-size: 48px;
-			line-height: 65px;
+			// line-height: 65px;
 		}
 	}
 }
@@ -351,6 +353,9 @@
 	.celeb-curation__swiper {
 		.swiper-button-prev,
 		.swiper-button-next {
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			top: auto;
 			bottom: 32px;
 			width: 162px;
@@ -360,7 +365,7 @@
 			border-radius: 60px;
 			background: none;
 			font-size: 32px;
-			line-height: 62px;
+			// line-height: 62px;
 			&:focus,
 			&:hover {
 				background-color: #5eecfa;
@@ -514,6 +519,6 @@
 		padding: 0;
 	}
 	100% {
-		padding: 80px 0;
+		padding: 90px 0;
 	}
 }

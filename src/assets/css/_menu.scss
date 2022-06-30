@@ -89,12 +89,13 @@
 	.menu__category {
 		display: flex;
 		justify-content: center;
+		align-items: center;
 		width: 380px;
 		height: 180px;
 		border-radius: 180px;
 		background-color: #fff;
 		font-size: 70px;
-		line-height: 195px;
+		// line-height: 195px;
 	}
 	.menu__img {
 		position: absolute;
@@ -148,8 +149,8 @@
 			border-radius: 42px 42px 0 0;
 			background-color: #fc4f03;
 		}
-		.carousel__text {
-			line-height: 65px;
-		}
+		// .carousel__text {
+			// line-height: 65px;
+		// }
 	}
 }

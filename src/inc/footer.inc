@@ -41,35 +41,65 @@
     </div>
     <img class="img_funkplay" src="../assets/images/img_funkplay.png" alt="funkplay" />
     <a href="#" class="btn__funkplay">
-      <div class="carousel">
-        <div class="carousel__mask">
-          <p class="carousel__loop">
-            <span class="carousel__text">CLICK!</span>
-            <span class="carousel__text">CLICK!</span>
+      <div class="marquee">
+        <div class="marquee__mask">
+          <p class="marquee__loop">
+            <span class="marquee__text">CLICK!</span>
+            <span class="marquee__text">CLICK!</span>
+            <span class="marquee__text">CLICK!</span>
+            <span class="marquee__text">CLICK!</span>
           </p>
-          <p class="carousel__loop">
-            <span class="carousel__text">CLICK!</span>
-            <span class="carousel__text">CLICK!</span>
+          <p class="marquee__loop">
+            <span class="marquee__text">CLICK!</span>
+            <span class="marquee__text">CLICK!</span>
+            <span class="marquee__text">CLICK!</span>
+            <span class="marquee__text">CLICK!</span>
+          </p>
+          <p class="marquee__loop">
+            <span class="marquee__text">CLICK!</span>
+            <span class="marquee__text">CLICK!</span>
+            <span class="marquee__text">CLICK!</span>
+            <span class="marquee__text">CLICK!</span>
+          </p>
+          <p class="marquee__loop">
+            <span class="marquee__text">CLICK!</span>
+            <span class="marquee__text">CLICK!</span>
+            <span class="marquee__text">CLICK!</span>
+            <span class="marquee__text">CLICK!</span>
           </p>
         </div>
       </div>
     </a>
   </div>
   <div class="footer__cs">
-    <div class="carousel">
-      <div class="carousel__mask">
-        <p class="carousel__loop">
-          <span class="carousel__text">MON-FRI, 10:00AM ~ 18:00</span>
-          <span class="carousel__text">cs@instantfunk.kr</span>
-          <span class="carousel__text">MON-FRI, 10:00AM ~ 18:00</span>
-          <span class="carousel__text">cs@instantfunk.kr</span>
-        </p>
-        <p class="carousel__loop">
-          <span class="carousel__text">MON-FRI, 10:00AM ~ 18:00</span>
-          <span class="carousel__text">cs@instantfunk.kr</span>
-          <span class="carousel__text">MON-FRI, 10:00AM ~ 18:00</span>
-          <span class="carousel__text">cs@instantfunk.kr</span>
-        </p>
+    <div class="marquee">
+      <div class="marquee">
+        <div class="marquee__mask">
+          <p class="marquee__loop">
+            <span class="marquee__text">MON-FRI, 10:00AM ~ 18:00</span>
+            <span class="marquee__text">cs@instantfunk.kr</span>
+            <span class="marquee__text">MON-FRI, 10:00AM ~ 18:00</span>
+            <span class="marquee__text">cs@instantfunk.kr</span>
+          </p>
+          <p class="marquee__loop">
+            <span class="marquee__text">MON-FRI, 10:00AM ~ 18:00</span>
+            <span class="marquee__text">cs@instantfunk.kr</span>
+            <span class="marquee__text">MON-FRI, 10:00AM ~ 18:00</span>
+            <span class="marquee__text">cs@instantfunk.kr</span>
+          </p>
+          <p class="marquee__loop">
+            <span class="marquee__text">MON-FRI, 10:00AM ~ 18:00</span>
+            <span class="marquee__text">cs@instantfunk.kr</span>
+            <span class="marquee__text">MON-FRI, 10:00AM ~ 18:00</span>
+            <span class="marquee__text">cs@instantfunk.kr</span>
+          </p>
+          <p class="marquee__loop">
+            <span class="marquee__text">MON-FRI, 10:00AM ~ 18:00</span>
+            <span class="marquee__text">cs@instantfunk.kr</span>
+            <span class="marquee__text">MON-FRI, 10:00AM ~ 18:00</span>
+            <span class="marquee__text">cs@instantfunk.kr</span>
+          </p>
+        </div>
       </div>
     </div>
   </div>

@@ -29,25 +29,33 @@
 							<li class="nav__item"><a href="#" class="nav__link">22SS DENIM & SWEAT</a></li>
 						</ul>
 					</nav>
-					<div class="nav__carousel nav__carousel--campaign">
+					<div class="nav__marquee nav__marquee--campaign">
 						<p class="nav__text">Instant campaign <span>®</span></p>
-						<div class="carousel">
-							<div class="carousel__mask">
-								<p class="carousel__loop">
-									<span class="carousel__text">Instant campaign <span>®</span></span>
-									<span class="carousel__text">Instant campaign <span>®</span></span>
-									<span class="carousel__text">Instant campaign <span>®</span></span>
-									<span class="carousel__text">Instant campaign <span>®</span></span>
-									<span class="carousel__text">Instant campaign <span>®</span></span>
-									<span class="carousel__text">Instant campaign <span>®</span></span>
+						<div class="marquee">
+							<div class="marquee__mask">
+								<p class="marquee__loop">
+									<span class="marquee__text">Instant campaign <span>®</span></span>
+									<span class="marquee__text">Instant campaign <span>®</span></span>
+									<span class="marquee__text">Instant campaign <span>®</span></span>
+									<span class="marquee__text">Instant campaign <span>®</span></span>
 								</p>
-								<p class="carousel__loop">
-									<span class="carousel__text">Instant campaign <span>®</span></span>
-									<span class="carousel__text">Instant campaign <span>®</span></span>
-									<span class="carousel__text">Instant campaign <span>®</span></span>
-									<span class="carousel__text">Instant campaign <span>®</span></span>
-									<span class="carousel__text">Instant campaign <span>®</span></span>
-									<span class="carousel__text">Instant campaign <span>®</span></span>
+								<p class="marquee__loop">
+									<span class="marquee__text">Instant campaign <span>®</span></span>
+									<span class="marquee__text">Instant campaign <span>®</span></span>
+									<span class="marquee__text">Instant campaign <span>®</span></span>
+									<span class="marquee__text">Instant campaign <span>®</span></span>
+								</p>
+								<p class="marquee__loop">
+									<span class="marquee__text">Instant campaign <span>®</span></span>
+									<span class="marquee__text">Instant campaign <span>®</span></span>
+									<span class="marquee__text">Instant campaign <span>®</span></span>
+									<span class="marquee__text">Instant campaign <span>®</span></span>
+								</p>
+								<p class="marquee__loop">
+									<span class="marquee__text">Instant campaign <span>®</span></span>
+									<span class="marquee__text">Instant campaign <span>®</span></span>
+									<span class="marquee__text">Instant campaign <span>®</span></span>
+									<span class="marquee__text">Instant campaign <span>®</span></span>
 								</p>
 							</div>
 						</div>
@@ -63,24 +71,32 @@
 							<li class="nav__item"><a href="#" class="nav__link">SIGN OUT</a></li>
 						</ul>
 					</nav>
-					<div class="nav__carousel">
-						<div class="carousel">
-							<div class="carousel__mask">
-								<p class="carousel__loop">
-									<span class="carousel__text">Welcom Chan123</span>
-									<span class="carousel__text">Welcom Chan123</span>
-									<span class="carousel__text">Welcom Chan123</span>
-									<span class="carousel__text">Welcom Chan123</span>
-									<span class="carousel__text">Welcom Chan123</span>
-									<span class="carousel__text">Welcom Chan123</span>
+					<div class="nav__marquee">
+						<div class="marquee">
+							<div class="marquee__mask">
+								<p class="marquee__loop">
+									<span class="marquee__text">Welcom Chan123</span>
+									<span class="marquee__text">Welcom Chan123</span>
+									<span class="marquee__text">Welcom Chan123</span>
+									<span class="marquee__text">Welcom Chan123</span>
 								</p>
-								<p class="carousel__loop">
-									<span class="carousel__text">Welcom Chan123</span>
-									<span class="carousel__text">Welcom Chan123</span>
-									<span class="carousel__text">Welcom Chan123</span>
-									<span class="carousel__text">Welcom Chan123</span>
-									<span class="carousel__text">Welcom Chan123</span>
-									<span class="carousel__text">Welcom Chan123</span>
+								<p class="marquee__loop">
+									<span class="marquee__text">Welcom Chan123</span>
+									<span class="marquee__text">Welcom Chan123</span>
+									<span class="marquee__text">Welcom Chan123</span>
+									<span class="marquee__text">Welcom Chan123</span>
+								</p>
+								<p class="marquee__loop">
+									<span class="marquee__text">Welcom Chan123</span>
+									<span class="marquee__text">Welcom Chan123</span>
+									<span class="marquee__text">Welcom Chan123</span>
+									<span class="marquee__text">Welcom Chan123</span>
+								</p>
+								<p class="marquee__loop">
+									<span class="marquee__text">Welcom Chan123</span>
+									<span class="marquee__text">Welcom Chan123</span>
+									<span class="marquee__text">Welcom Chan123</span>
+									<span class="marquee__text">Welcom Chan123</span>
 								</p>
 							</div>
 						</div>
