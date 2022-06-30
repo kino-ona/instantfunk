@@ -15,6 +15,7 @@
 	<div id="wrap">
 		@@include('../inc/header.inc', {
 			"login": "false",
+			"search": "false",
 			"webroot": ".."
 		})
 
@@ -127,7 +128,9 @@
 			</div>
     </div>
 
-		<footer class="footer"></footer>
+		@@include('../inc/footer.inc', {
+			"webroot": ".."
+		})
 	</div>
 </body>
 </html>

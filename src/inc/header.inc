@@ -116,7 +116,62 @@
 			<div class="search">
 				<button type="button" class="search__trigger">
 					<span class="a11y">검색</span>
-				</button>
+				</button>@@if (search !== 'true') {
+				<div class="search__layer">
+					<div class="search__form">
+						<form action="">
+							<fieldset>
+								<legend class="a11y">검색</legend>
+								<div class="search__row">
+									<label for="searchText" class="a11y">검색어</label>
+									<input type="text" id="searchText" class="search__input" placeholder="SEARCH EVERYHING">
+									<button type="button" class="search__button"><span class="a11y">검색 버튼</span></button>
+								</div>
+								<!-- 인기검색어 -->
+								<div class="search__recommend">
+									<ul class="search__list">
+										<li class="search__item">
+											<a href="#" class="search__link">검색어</a>
+										</li>
+										<li class="search__item">
+											<a href="#" class="search__link">검색어</a>
+										</li>
+										<li class="search__item">
+											<a href="#" class="search__link">검색어</a>
+										</li>
+										<li class="search__item">
+											<a href="#" class="search__link">검색어</a>
+										</li>
+										<li class="search__item">
+											<a href="#" class="search__link">검색어</a>
+										</li>
+										<li class="search__item">
+											<a href="#" class="search__link">검색어</a>
+										</li>
+									</ul>
+								</div>
+								<!-- // 인기검색어 -->
+							</fieldset>
+						</form>
+					</div>
+				</div>}@@if (search === 'true') {
+				<div class="search__layer search__layer--opened">
+					<div class="search__form">
+						<form action="">
+							<fieldset>
+								<legend class="a11y">검색</legend>
+								<div class="search__row">
+									<label for="searchText" class="a11y">검색어</label>
+									<input type="text" id="searchText" class="search__input" placeholder="SEARCH EVERYHING">
+									<button type="button" class="search__button"><span class="a11y">검색 버튼</span></button>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+					<div class="search__result">
+						<p class="search__text">총 45개 의 제품이 검색되었습니다.</p>
+					</div>
+				</div>}
 			</div>
 			<button type="button" class="header__funkplay">
 				<span class="a11y">FUNK PLAY 보기</span>
