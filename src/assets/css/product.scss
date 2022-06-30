@@ -36,7 +36,7 @@
     background-color: transparent;
     border: none;
     text-align: center;
-    @include mixins.Ptd();
+    @include mixins.PtdRegular();
   }
   .qty_button {
     width: 36px;
@@ -146,17 +146,15 @@
   .product__name {
     width: 60%;
     margin-bottom: 10px;
-    @include mixins.Ptd();
+    @include mixins.PtdMedium();
     font-size: 24px;
-    font-weight: 500;
     line-height: 1.3;
     word-break: keep-all;
   }
   .product__price {
     margin-bottom: 16px;
     font-size: 18px;
-    @include mixins.Ptd();
-    font-weight: 500;
+    @include mixins.PtdMedium();
   }
 
   .product__tag {
@@ -169,7 +167,7 @@
       border: 1px solid #000000;
       border-radius: 40px;
       overflow: hidden;
-      @include mixins.Ptd();
+      @include mixins.PtdRegular();
     }
   }
 
@@ -192,8 +190,7 @@
       }
     }
     .review__count {
-      @include mixins.Ptd();
-      font-weight: 500;
+      @include mixins.PtdMedium();
       span {
         font-weight: 400;
       }
@@ -257,7 +254,7 @@
       padding-bottom: 16px;
     }
     .accord_panel {
-      @include mixins.Ptd();
+      @include mixins.PtdRegular();
       line-height: 1.4;
     }
   }
@@ -317,7 +314,7 @@
   }
   .accord_panel {
     padding: 10px 0 50px;
-    @include mixins.Ptd();
+    @include mixins.PtdRegular();
     line-height: 1.4;
   }
   .detail__cont {
