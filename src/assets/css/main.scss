@@ -5,17 +5,15 @@
 .visual {
 	.visual__container {
 		height: 100vh;
-		background-color: cyan;
+		background-color: #5eecfa;
 		.swiper-container {
 			height: 100%;
 		}
 		.swiper-slide {
-			&:first-child {
-				.visual__contents {
-					opacity: 0;
-					animation: visualCont .5s linear forwards;
-					animation-delay: .35s;
-				}
+			.visual__contents--fadein {
+				opacity: 0;
+				animation: visualCont .5s linear forwards;
+				animation-delay: .35s;
 			}
 		}
 		.swiper-pagination {
@@ -89,9 +87,6 @@
 		border-radius: 36px;
 		background-color: #fff;
 		cursor: pointer;
-		opacity: 0;
-		animation: visualCont .5s linear forwards;
-		animation-delay: .7s;
 		.visual__video {
 			visibility: hidden;
 			video {
@@ -426,22 +421,13 @@
 
 @keyframes visual {
 	0% {
-		left: 50%;
-		top: 50%;
-		width: 0;
-		height: 0;
+		clip-path: inset(50% round 42px);
 	}
 	50% {
-		left: 25%;
-		top: 25%;
-		width: 50%;
-		height: 50%;
+		clip-path: inset(30% round 42px);
 	}
 	100% {
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
+		clip-path: inset(0 round 42px);
 	}
 }
 

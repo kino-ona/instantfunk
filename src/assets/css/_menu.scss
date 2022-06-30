@@ -117,12 +117,12 @@
 	.menu__name {
 		font-size: 14px;
 		line-height: 18px;
-		@include mixins.Ptd();
+		@include mixins.PtdRegular();
 	}
 	.menu__price {
 		font-size: 14px;
 		line-height: 18px;
-		@include mixins.Ptd();
+		@include mixins.PtdRegular();
 	}
 	.menu__discount {
 		color: #999;
@@ -130,6 +130,7 @@
 		font-size: 14px;
 		line-height: 18px;
 		text-decoration: line-through;
+		@include mixins.PtdRegular();
 	}
 	.menu__coupon {
 		margin-left: 8px;

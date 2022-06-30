@@ -54,13 +54,13 @@
 	--move-initial: calc(-25% + var(--offset));
 	--move-final: calc(-50% + var(--offset));
 	.marquee__mask {
-		width: fit-content;
     display: flex;
-    position: relative;
 		align-items: center;
+    position: relative;
+		width: fit-content;
+		white-space: nowrap;
     transform: translate3d(var(--move-initial), 0, 0);
     animation: marquee 10s linear infinite;
-		white-space: nowrap;
 	}
 	.marquee__loop {
 		.marquee__text {
@@ -69,6 +69,7 @@
 		}
 	}
 }
+
 @keyframes marquee {
 	0% {
 		transform: translate3d(var(--move-initial), 0, 0);
