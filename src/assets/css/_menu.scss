@@ -130,6 +130,7 @@
 		font-size: 14px;
 		line-height: 18px;
 		text-decoration: line-through;
+		@include mixins.Ptd();
 	}
 	.menu__coupon {
 		margin-left: 8px;
