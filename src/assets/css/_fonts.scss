@@ -101,11 +101,23 @@ http://scripts.sil.org/OFL
 // 	src: local('AT Sult Extended'), url('../fonts/ATSurt-RegularExtended.woff2') format('woff2'), url('../fonts/ATSurt-RegularExtended.woff') format('woff');
 // }
 
+/*
+        This font software is the property of Commercial Type.
+
+        You may not modify the font software, use it on another website, or install it on a computer.
+
+        License information is available at http://commercialtype.com/eula
+        For more information please visit Commercial Type at http://commercialtype.com or email us at info[at]commercialtype.com
+
+        Copyright (C) 2022 Schwartzco Inc.
+        License: 2206-HSXIQN     
+*/
+
 @font-face {
 	font-family: 'Druk Wide';
 	font-weight: 700;
-	font-display: swap;
-	src: local('Druk Wide'), url('../fonts/DrukWide-Bold.woff2') format('woff2'), url('../fonts/DrukWide-Bold.woff') format('woff');
+	font-stretch: normal;
+	src: local('Druk Wide'), url('../fonts/DrukWide-Bold-Web.woff2') format('woff2'), url('../fonts/DrukWide-Bold-Web.woff') format('woff');
 }
 
 // test
