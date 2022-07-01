@@ -1,3 +1,4 @@
+@use 'breakpoints';
 @use 'mixins';
 @use 'sprite';
 
@@ -292,6 +293,9 @@
 			padding-top: 3px;
 			.marquee__text {
 				font-size: 36px;
+				@include breakpoints.mobile() {
+					font-size: 18px;
+				}
 			}
 		}
 	}
@@ -340,6 +344,46 @@
 			text-transform: uppercase;
 		}
 	}
+	@include breakpoints.mobile() {
+		margin-left: 0;
+    margin-right: 0;
+		padding-left: 20px;
+    padding-right: 20px;
+		flex-wrap: wrap;
+		.footer__section {
+			flex: auto;
+			width: 50%;
+			&:last-of-type {
+				padding-left: 50%;
+			}
+		}
+		.footer__link {
+			a {
+				font-size: 18px;
+				letter-spacing: -1px;
+			}
+		}
+		.footer__address {
+			.addr__info {
+				font-size: 18px;
+				letter-spacing: -1px;
+			}
+			.cs__info {
+				margin-top: 30px;
+				font-size: 10px;
+			}
+		}
+		.footer__sns {
+			> li {
+				margin-bottom: 4px;
+			}
+			a {
+				font-size: 10px;
+			}
+		}
+		
+	}
+
 }
 .footer_copyright {
 	&:after {
@@ -353,8 +397,6 @@
 	padding-bottom: 60px;
 	.footer__section {
 		float: left;
-		// margin-right: 10%;
-		// width: calc(100%/3);
 		width: calc(70% - 145px);
 		&:first-child {
 			width: 30%;
@@ -362,6 +404,29 @@
 		&:last-of-type {
 			width: 145px;
 			text-align: right;
+		}
+	}
+
+	@include breakpoints.mobile() {
+		margin-left: 15px;
+		margin-right: 15px;
+		padding-bottom: 30px;
+		.footer__section {
+			float: none;
+			width: 100% !important;
+			margin-bottom: 20px;
+			&:last-of-type {
+				margin-bottom: 0;
+				text-align: left;
+			}
+			p {
+				width: 100%;
+				font-size: 12px;
+				span {
+					display: block;
+					padding-bottom: 5px;
+				}
+			}
 		}
 	}
 }
@@ -396,6 +461,22 @@
 			opacity: 1;
 		}
 	}
+
+	@include breakpoints.mobile() {
+		padding-bottom: 45%;
+		margin-left: 15px;
+		margin-right: 15px;
+		margin-bottom:50px;
+		.btn__funkplay {
+			width: 95px;
+			height: 45px;
+			right: 18.5%;
+			bottom: 18px;
+			.marquee__loop .marquee__text {
+				font-size: 12px;
+			}
+		}
+	}
 }
 
 .shadow-box {
@@ -409,16 +490,33 @@
 	position: absolute;
 	transform: translate(0, 100px); 
 	width: 100%;
+	height: 100%;
 	padding-top: 0;
-	// height: 204px;
+	background: {
+		image: url('../images/img_funkplay.png');
+		size: 100%;
+		repeat: no-repeat;
+		position: center center;
+	}
 	&.__active {
 		transform: translate(0, 0); 
 		animation: funkPlayEffect 1.3s ease-in-out alternate;
+	}
+
+	@include breakpoints.mobile() {
+		transform: translate(0, 50px); 
+		background: {
+			image: url('../images/m_img_funkplay.png');
+			size: 100%;
+		}
 	}
 }
 .img_funkplay.shadow:nth-of-type(1) {
 	opacity: 0;
 	transform: translate(0, 100px); 
+	@include breakpoints.mobile() {
+		transform: translate(0, 50px); 
+	}
 	&.__active {
 		-webkit-animation-delay: 0.0s;
 		animation-delay: 0.0s; 
@@ -428,6 +526,9 @@
 .img_funkplay.shadow:nth-of-type(2) {
 	opacity: 0;
 	transform: translate(0, 100px); 
+	@include breakpoints.mobile() {
+		transform: translate(0, 50px); 
+	}
 	&.__active {
 		-webkit-animation-delay: 0.2s;
 		animation-delay: 0.2s;
@@ -437,6 +538,9 @@
 .img_funkplay.shadow:nth-of-type(3) {
 	opacity: 0;
 	transform: translate(0, 100px); 
+	@include breakpoints.mobile() {
+		transform: translate(0, 50px); 
+	}
 	&.__active {
 		-webkit-animation-delay: 0.3s;
 		animation-delay: 0.3s;
@@ -446,6 +550,9 @@
 .img_funkplay.shadow:nth-of-type(4) {
 	opacity: 0;
 	transform: translate(0, 100px); 
+	@include breakpoints.mobile() {
+		transform: translate(0, 50px); 
+	}
 	&.__active {
 		-webkit-animation-delay: 0.4s;
 		animation-delay: 0.4s;
@@ -455,6 +562,9 @@
 .img_funkplay.shadow:nth-of-type(5) {
 	opacity: 0;
 	transform: translate(0, 100px); 
+	@include breakpoints.mobile() {
+		transform: translate(0, 50px); 
+	}
 	&.__active {
 		-webkit-animation-delay: 0.5s;
 		animation-delay: 0.5s;
@@ -476,4 +586,24 @@
 	100% {
 		transform: translate(0, 0); 
 	}
+}
+
+@include breakpoints.mobile() {
+
+@-webkit-keyframes funkPlayEffect{
+	0% {
+		transform: translate(0, 50px); 
+	}
+	100% {
+		transform: translate(0, 0); 
+	}
+}
+@keyframes funkPlayEffect{
+	0% {
+		transform: translate(0, 50px); 
+	}
+	100% {
+		transform: translate(0, 0); 
+	}
+}
 }

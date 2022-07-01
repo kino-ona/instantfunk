@@ -1,3 +1,4 @@
+@use 'breakpoints';
 @use 'mixins';
 
 // carousel
@@ -61,6 +62,10 @@
 		white-space: nowrap;
     transform: translate3d(var(--move-initial), 0, 0);
     animation: marquee 10s linear infinite;
+
+		@include breakpoints.mobile() {
+			animation: marquee 30s linear infinite;
+		}
 	}
 	.marquee__loop {
 		.marquee__text {

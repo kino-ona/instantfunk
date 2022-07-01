@@ -32,14 +32,14 @@
   </div>
 
   <div class="footer__funkplay">
-		<div class="shadow-box">
-      <img class="img_funkplay shadow" src="../assets/images/img_funkplay.png" />
-      <img class="img_funkplay shadow" src="../assets/images/img_funkplay.png" />
-      <img class="img_funkplay shadow" src="../assets/images/img_funkplay.png" />
-      <img class="img_funkplay shadow" src="../assets/images/img_funkplay.png" />
-      <img class="img_funkplay shadow" src="../assets/images/img_funkplay.png" />
+    <div class="shadow-box">
+      <p class="img_funkplay shadow"></p>
+      <p class="img_funkplay shadow"></p>
+      <p class="img_funkplay shadow"></p>
+      <p class="img_funkplay shadow"></p>
+      <p class="img_funkplay shadow"></p>
     </div>
-    <img class="img_funkplay" src="../assets/images/img_funkplay.png" alt="funkplay" />
+    <p class="img_funkplay" alt="funkplay"></p>
     <a href="#" class="btn__funkplay">
       <div class="marquee">
         <div class="marquee__mask">
@@ -108,7 +108,7 @@
       <p>© INSTATNFUNK. ALL RIGHTS RESERVED 2022</p>
     </div>
     <div class="footer__section">
-      <p>사업자등록번호 231-88-00766 확인 통신판매신고 2018-서울강남-00068 대표 신재혁 개인정보관리책임자 김요필</p>
+      <p><span>사업자등록번호 231-88-00766</span> <span>확인 통신판매신고 2018-서울강남-00068</span> <span>대표 신재혁 개인정보관리책임자 김요필</span></p>
     </div>
     <div class="footer__section">
       <p>©Simplexinternet</p>
