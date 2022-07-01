@@ -1,5 +1,5 @@
 @use 'mixins';
-@use 'sprite';
+@use 'sprite/icons';
 
 .sub__container {
   padding-top: 90px;
@@ -178,7 +178,7 @@
     align-items: center;
     .ic_star {
       display: inline-block;
-      @include sprite.retina-sprite(sprite.$ico-star-group);
+      @include icons.retina-sprite(icons.$ico-star-group);
       vertical-align: middle;
     }
     p {

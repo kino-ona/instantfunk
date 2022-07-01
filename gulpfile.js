@@ -43,7 +43,8 @@ const
 	browsersync   = require('browser-sync').create(),
 	del           = require('del'),
 	buffer        = require('vinyl-buffer'),
-	spritesmith   = require('gulp.spritesmith'),
+	// spritesmith   = require('gulp.spritesmith'),
+	spritesmith   = require('gulp.spritesmith-multi'),
 	merge         = require('merge-stream'),
 	imagemin      = require('gulp-imagemin'),
 	newer         = require('gulp-newer'),
@@ -119,7 +120,7 @@ exports.copyJs = copyJs;
 
 // image
 function image(done) {
-	return src([paths.img, '!src/assets/images/ico/*.png'])
+	return src([paths.img, '!src/assets/images/sprite/**/*'])
 		.pipe(newer(dist.img))
 		.pipe(imagemin([
 			imagemin.optipng({optimizationLevel: 1})
@@ -137,29 +138,99 @@ function watchs(done) {
 	watch([paths.html, paths.inc], copyHtml);
 	watch(paths.css, compileScss);
 	watch(paths.js, copyJs);
-	watch([paths.img, '!src/assets/images/ico/*.png'], image);
-	watch('src/assets/images/ico/*.png', sprite); // 스프라이트 이미지 감시용
+	watch([paths.img, '!src/assets/images/ico/*, !src/assets/images/ico/m/*'], image);
+	watch('src/assets/images/sprite/**/*.png', sprite); // 스프라이트 이미지 감시용
+	// watch('src/assets/images/ico/*.png', sprite); // 스프라이트 이미지 감시용
+	// watch('src/assets/images/ico/m/*.png', spriteMobile); // 스프라이트 이미지 감시용
 	done();
 }
 
 // clean
 function clean(done) {
-	del.sync(['dist/*.html', '!dist/path/**', '!dist/path.html', 'dist/product', 'dist/order', 'dist/member', 'dist/myshop', 'dist/assets/**', '!dist/assets/fonts']);
+	del.sync(['dist/*.html', '!dist/path/**', '!dist/path.html', 'dist/product', 'dist/order', 'dist/member', 'dist/search', 'dist/myshop', 'dist/assets/**', '!dist/assets/fonts']);
 	done();
 }
 exports.clean = clean;
 
 // sprite
-function sprite(done) {
-	const spriteData = src('src/assets/images/ico/*.png').pipe(spritesmith({
-		imgName: 'icons.png',
-		imgPath: '../images/ico/icons.png',
-		cssName: '_sprite.scss',
-		retinaSrcFilter: 'src/assets/images/ico/*@2x.png',
-		retinaImgName: 'icons@2x.png',
-		retinaImgPath: '../images/ico/icons@2x.png'
-	}));
+// function sprite(done) {
+// 	const spriteData = src('src/assets/images/ico/*.png')
+// 		.pipe(spritesmith({
+// 		imgName: 'icons.png',
+// 		imgPath: '../images/ico/icons.png',
+// 		cssName: '_sprite.scss',
+// 		retinaSrcFilter: 'src/assets/images/ico/*@2x.png',
+// 		retinaImgName: 'icons@2x.png',
+// 		retinaImgPath: '../images/ico/icons@2x.png'
+// 	}));
 
+// 	const imgStream = spriteData.img
+// 		.pipe(buffer())
+// 		.pipe(imagemin([
+// 			imagemin.optipng({optimizationLevel: 1})
+// 		], {
+// 			verbose: true
+// 		}
+// 		))
+// 		.pipe(dest('dist/assets/images/ico'));
+// 	const cssStream = spriteData.css
+// 		.pipe(buffer())
+// 		.pipe(dest('src/assets/css'));
+// 	return merge(imgStream, cssStream),
+// 	done();
+// }
+// exports.sprite = sprite;
+
+// function spriteMobile(done) {
+// 	const spriteData = src('src/assets/images/ico/m/*.png')
+// 		.pipe(spritesmith({
+// 		imgName: 'icons.png',
+// 		imgPath: '../images/ico/m/icons.png',
+// 		cssName: '_msprite.scss',
+// 		cssVarMap: function (sprite) {
+// 			sprite.x = sprite.x / 2;
+// 			sprite.y = sprite.y / 2;
+// 			sprite.width = sprite.width / 2;
+// 			sprite.height = sprite.height / 2;
+// 		}
+// 	}));
+
+// 	const imgStream = spriteData.img
+// 		.pipe(buffer())
+// 		.pipe(imagemin([
+// 			imagemin.optipng({optimizationLevel: 1})
+// 		], {
+// 			verbose: true
+// 		}
+// 		))
+// 		.pipe(dest('dist/assets/images/ico/m'));
+// 	const cssStream = spriteData.css
+// 		.pipe(buffer())
+// 		.pipe(dest('src/assets/css'));
+// 	return merge(imgStream, cssStream),
+// 	done();
+// }
+// exports.spriteMobile = spriteMobile;
+
+//  sprite
+function sprite(done) {
+	const opts = {
+		spritesmith: function (options, sprite){
+			options.imgPath =  `../images/sprite/${options.imgName}`;
+			options.cssName = `_${sprite}.scss`;
+			options.cssTemplate = null;
+			options.cssSpritesheetName = sprite;
+
+			return options;
+		}
+	};
+
+	const spriteData = src('src/assets/images/sprite/**/*.png')
+		.pipe(spritesmith(opts))
+		.on('error', function (err) {
+			console.log(err)
+    });
+	
 	const imgStream = spriteData.img
 		.pipe(buffer())
 		.pipe(imagemin([
@@ -168,10 +239,12 @@ function sprite(done) {
 			verbose: true
 		}
 		))
-		.pipe(dest('dist/assets/images/ico'));
+		.pipe(dest('dist/assets/images/sprite'));
+		
 	const cssStream = spriteData.css
 		.pipe(buffer())
-		.pipe(dest('src/assets/css'));
+		.pipe(dest('src/assets/css/sprite'));
+
 	return merge(imgStream, cssStream),
 	done();
 }
@@ -179,9 +252,11 @@ exports.sprite = sprite;
 
 // clean sprite
 function cleanSprite(done) {
-	del.sync(['dist/assets/images/ico', 'src/assets/css/_sprite.scss']);
+	del.sync(['dist/assets/images/sprite', 'src/assets/css/sprite']);
 	done();
 }
 exports.cleanSprite = cleanSprite;
+
+// exports.default = series(compileScss, sprite, spriteMobile, image, copyHtml, copyJs, server, watchs);
 
 exports.default = series(compileScss, sprite, image, copyHtml, copyJs, server, watchs);

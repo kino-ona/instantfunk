@@ -1,4 +1,7 @@
-@use 'sprite';
+@use 'mixins';
+@use 'sprite/icons';
+@use 'sprite/mo_icons';
+@use 'breakpoints';
 
 // a11y
 .a11y {
@@ -10,14 +13,6 @@
 	overflow: hidden;
 	clip: rect(0, 0, 0, 0);
 	border: 0;
-}
-
-// logo
-.logo {
-	.logo__link {
-		display: block;
-		@include sprite.retina-sprite(sprite.$logo-group);
-	}
 }
 
 // form
@@ -32,7 +27,7 @@
 		right: 19px;
 		top: 50%;
 		margin-top: -3px;
-		@include sprite.retina-sprite(sprite.$bg-select-group);
+		@include icons.retina-sprite(icons.$bg-select-group);
 	}
 }
 
