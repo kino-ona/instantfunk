@@ -24,7 +24,7 @@ $(document).ready(function () {
 	winSizeCheck();
 	function winSizeCheck() {
 		let winWidth = $(window).width();
-		console.log(winWidth);
+		// console.log(winWidth);
 		if (winWidth >= 750) {
 			$('html').removeClass('mobile');
 			$('html').addClass('desktop');

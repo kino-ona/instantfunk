@@ -1,8 +1,14 @@
 @use 'mixins';
 @use 'sprite/icons';
+@use 'sprite/mo_icons';
+@use 'breakpoints';
 
 .sub__container {
+  width: 100%;
   padding-top: 90px;
+  @include breakpoints.mobile() {
+    padding-top: 65px;
+  }
 }
 
 .detail__quick {
@@ -16,6 +22,10 @@
     margin: 5px 0;
     font-weight: 700;
   }
+  @include breakpoints.mobile() {
+    display: none;
+  }
+
 }
 .product__option {
   margin-bottom: 59px;
@@ -40,6 +50,15 @@
   }
   .qty_button {
     width: 36px;
+  }
+  @include breakpoints.mobile() {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: #5eecfa;
+    padding: 25px 20px;
+    border-radius: 40px;
+    overflow: hidden;
   }
 }
 .product__opt--list {
@@ -79,6 +98,11 @@
     &.opt__selected, &:hover, &:active {
       background-color: #5eecfa;
     }
+    @include breakpoints.mobile() {
+      &.opt__selected, &:hover, &:active {
+        background-color: #ffffff;
+      }
+    }
   }
 }
 .swiper-container {
@@ -104,13 +128,24 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    height: inherit;
+    padding-top: 100%;
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      @include mixins.translate(-50%, -50%);
+    }
   }
 }
 
 // product detail
 .detail__container {
   position: relative;
+  width: 100%;
   min-height: 100vh;
+  z-index: 1;
 }
 .detail__image {
   width: 100%;
@@ -122,6 +157,13 @@
   .productDetailswp {
     height: 100%;
   }
+  @include breakpoints.mobile() {
+    padding:0;
+    height: 64.77vh;
+    margin-bottom: 5px;
+    border-radius: 68px;
+    overflow: hidden;
+  } 
 }
 .detail_info {
   position: fixed;
@@ -270,6 +312,15 @@
       line-height: 1.4;
     }
   }
+  @include breakpoints.mobile() {
+    position: relative;
+    right: inherit;
+    top: inherit;
+    max-width: 750px;
+    max-height: inherit;
+    overflow: inherit;
+    padding: 25px 20px;
+  }
 }
 .product__additional {
   width: 100%;
@@ -332,5 +383,31 @@
   }
   .detail__cont {
     margin-bottom: 220px;
+  }
+  @include breakpoints.mobile() {
+    padding-left: 0;
+    padding-right: 0;
+    .detail__cont {
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-bottom: 120px;
+    }
+    .accord_target {
+      font-size: 36px;
+      span {
+        width: 40px;
+        height: 40px;
+        &:after, &:before {
+          left: inherit;
+          right: 15;
+          width: 1px;
+          height: 40px;
+        }
+      }
+    }
+    .accord_wrap {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   }
 }
