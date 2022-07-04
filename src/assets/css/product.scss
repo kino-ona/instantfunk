@@ -132,10 +132,10 @@
     padding-top: 100%;
     img {
       position: absolute;
-      top: 50%;
+      top: 0;
       left: 50%;
       width: 100%;
-      @include mixins.translate(-50%, -50%);
+      @include mixins.translate(-50%, 0);
     }
   }
 }
@@ -324,7 +324,7 @@
 }
 .product__additional {
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto 175px;
   padding-left: 256px;
   padding-right: 425px;
   text-align: center;
@@ -408,6 +408,133 @@
     .accord_wrap {
       padding-left: 15px;
       padding-right: 15px;
+    }
+  }
+  
+  .product__talkwalk {
+    margin-bottom: 190px;
+  }
+  .review__head {
+    position: relative;
+    display: flex;
+    height: 80px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #000000;
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    .review_sort--head {
+      position: relative;
+      width: 115px;
+      padding: 15px 10px 15px 20px;
+      border-radius: 15px;
+      border: 1px solid #000000;
+      font-size: 18px;
+      text-align: left;
+      .arrow {
+        position: absolute;
+        right: 12px; 
+        top: 50%; 
+        @include mixins.translate(0, -50%);
+        width: 12px;
+        height: 14px;
+        &::after {
+          content: '';
+          display: block;
+          width: 10px;
+          height: 10px;
+          border-top: 1px solid #000;
+          border-right: 1px solid #000;
+          transform: rotate(135deg);
+        }
+      }
+    }
+    .review__sort {
+      position: relative;
+      flex: 1;
+    }
+    .review__sorting {
+      display: none;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      padding: 12px 10px 12px 20px;
+      border-radius: 15px;
+      border: 1px solid #000000;
+      border-top: 0;
+      background-color: #ffffff;
+      li {
+        text-align: left;
+      }
+      a {
+        display: block;
+        padding: 15px 0;
+        font-size: 18px;
+      }
+    }
+    .review__etc {
+      flex: 1;
+      text-align: right;
+    }
+    .btn__rvWrite {
+      display: inline-block;
+      padding: 15px 20px;
+      border-radius: 28px;
+      border: 1px solid #000000;
+      font-size: 18px;
+    }
+  }
+  .review__list--cont {
+    text-align: left;
+    .rv__product {
+      display: flex;
+    }
+    .rv__figure {
+      width: 48px;
+      height: 48px;
+      margin-right: 10px;
+    }
+    .rv__box {
+      width: calc(100% - 148px);
+    }
+    .rv__prname {
+      font-size: 16px;
+      @include mixins.PtdMedium();
+    }
+    .rv__prcode {
+      display: block;
+      margin-top: 7px;
+      font-size: 12px;
+      @include mixins.PtdMedium();
+    }
+    .rv__count {
+      width: 90px;
+      align-items: flex-end;
+    }
+    .rv__text {
+      margin-bottom: 15px;
+      font-size: 24px;
+      line-height: 1.3;
+      word-break: keep-all;
+    }
+    .rv__thumnb {
+      position: relative;
+      width: 180px;
+      height: 180px;
+      border-radius: 42px;
+      overflow: hidden;
+      span {
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        @include mixins.translate(-50%, -50%);
+        font-size: 40px;
+        font-weight: 600;
+        color: #5eecfa;
+      }
     }
   }
 }
