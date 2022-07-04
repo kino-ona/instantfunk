@@ -222,7 +222,6 @@ function sprite(done) {
 			options.cssTemplate = null;
 			options.cssSpritesheetName = sprite;
 			
-			console.log(options);
 			return options;
 		}
 	};
