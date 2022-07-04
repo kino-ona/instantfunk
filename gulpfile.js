@@ -243,7 +243,7 @@ function sprite(done) {
 		.pipe(dest('dist/assets/images/sprite'));
 		
 	const cssStream = spriteData.css
-		// .pipe(buffer())
+		.pipe(buffer())
 		.pipe(dest('src/assets/css/sprite'));
 
 	return merge(imgStream, cssStream),

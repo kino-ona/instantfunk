@@ -1,5 +1,5 @@
-@use 'breakpoints';
 @use 'mixins';
+@use 'breakpoints';
 
 // carousel
 // .carousel {
@@ -59,6 +59,7 @@
 		align-items: center;
     position: relative;
 		width: fit-content;
+		height: 100%;
 		white-space: nowrap;
     transform: translate3d(var(--move-initial), 0, 0);
     animation: marquee 10s linear infinite;
@@ -71,6 +72,15 @@
 		.marquee__text {
 			margin: 0 28px;
 			font-size: 24px;
+		}
+	}
+	
+	@include breakpoints.mobile() {
+		.marquee__loop {
+			.marquee__text {
+				margin: 0 8px;
+				font-size: 11px;
+			}
 		}
 	}
 }

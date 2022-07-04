@@ -1,4 +1,5 @@
 @use 'mixins';
+@use 'breakpoints';
 
 // menu
 .menu {
@@ -8,20 +9,11 @@
 	.menu__list {
 		display: flex;
 		flex-wrap: wrap;
-		margin: -2px 0 0 -2px;
-	}
-	.menu__list--col2 {
-		.menu__item {
-			width: calc(50% - 2px);
-		}
-	}
-	.menu__list--col3 {
-		.menu__item {
-			width: calc(100% / 3 - 2px);
-		}
+		margin-left: -4px;
 	}
 	.menu__item {
-		margin: 2px 0 0 2px;
+		width: calc(100% / 3 - 4px);
+		margin-left: 4px;
 	}
 	.menu__link {
 		display: block;
@@ -92,7 +84,7 @@
 		align-items: center;
 		width: 380px;
 		height: 180px;
-		border-radius: 180px;
+		border-radius: 100vw;
 		background-color: #fff;
 		font-size: 70px;
 		// line-height: 195px;
@@ -108,19 +100,32 @@
 	}
 	.menu__info {
 		display: flex;
-		justify-content: space-between;
+		// justify-content: space-between;
 		align-items: center;
 		padding: 10px 20px 55px;
-		.menu__left,
 		.menu__right {
 			display: flex;
 			align-items: center;
+			flex: 1;
 		}
 	}
 	.menu__name {
 		font-size: 14px;
 		line-height: 18px;
 		@include mixins.PtdRegular();
+	}
+	.menu__coupon {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		height: 20px;
+		margin: 0 auto 0 8px;
+		padding: 0 6px 0 7px;
+		border: 1px solid #000;
+		border-radius: 1em;
+		font-weight: 500;
+		font-size: 10px;
+		letter-spacing: -0.05em;
 	}
 	.menu__price {
 		font-size: 14px;
@@ -135,26 +140,58 @@
 		text-decoration: line-through;
 		@include mixins.PtdRegular();
 	}
-	.menu__coupon {
-		margin-left: 8px;
-		padding: 6px 6px 5px;
-		border: 1px solid #000;
-		border-radius: 10px;
-		font-size: 10px;
-	}
 	
 	.marquee {
 		position: absolute;
 		left: 0;
 		top: 0;
 		width: 100%;
-		border-radius: 42px 42px 0 0;
-		.marquee__mask {
-			height: 56px;
-			background-color: #fc4f03;
+		height: 56px;
+		clip-path: inset(0 round 42px 42px 0 0);
+		background-color: #fc4f03;
+	}
+	
+	@include breakpoints.mobile() {
+		.menu__list {
+			margin-left: -2px;
 		}
-		// .carousel__text {
-			// line-height: 65px;
-		// }
+		.menu__item {
+			width: calc(50% - 2px);
+			margin-left: 2px;
+		}
+		.menu__round {
+			padding-top: 133.33%;
+			border-radius: 21px;
+		}
+		.menu__info {
+			display: block;
+			padding: 10px 8px 15px;
+		}
+		.menu__name {
+			font-size: 11px;
+			line-height: 13px;
+		}
+		.menu__price {
+			font-size: 11px;
+			line-height: 13px;
+		}
+		.menu__discount {
+			margin-right: 5px;
+			font-size: 11px;
+			line-height: 13px;
+		}
+		.menu__coupon {
+			justify-content: flex-start;
+			margin: 2px 4px 0 0;
+			font-size: 11px;
+		}
+
+		.marquee {
+			height: 28.5px;
+			clip-path: inset(0 round 21px 21px 0 0);
+			.marquee__mask {
+				height: 28.5px;
+			}
+		}
 	}
 }
