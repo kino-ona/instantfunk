@@ -19,7 +19,7 @@
 	}
 	.logo {
 		position: relative;
-		z-index: 10;
+		z-index: 1;
 		.logo__link {
 			display: block;
 			@include icons.retina-sprite(icons.$logo-group);
@@ -36,7 +36,6 @@
 		.nav__container {
 			display: flex;
 			justify-content: center;
-			// position: relative;
 		}
 		.nav__trigger {
 			display: flex;
@@ -311,19 +310,12 @@
 			width: 100%;
 			height: 100%;
 			margin-left: 0;
+			@include mixins.translate(-100vw, 0);
 			.nav__container {
-				// display: none;
 				flex-direction: column;
 				height: 100%;
 				padding: 170px 15px 90px;
 				background-color: #fff;
-				@include mixins.translate(-100vw, 0);
-			}
-			.nav__container--opened {
-				animation: mobileNavOpen .2s linear forwards;
-			}
-			.nav__container--closed {
-				animation: mobileNavClose .2s linear forwards;
 			}
 			.nav__trigger {
 				display: none;
@@ -407,6 +399,12 @@
 					}
 				}
 			}
+		}
+		.nav--opened {
+			animation: mobileNavOpen .2s linear forwards;
+		}
+		.nav--closed {
+			animation: mobileNavClose .2s linear forwards;
 		}
 		.header__right {
 			display: none;
