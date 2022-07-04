@@ -120,7 +120,7 @@
 					<button type="button" class="header__search">
 						<span class="a11y">검색</span>
 					</button>
-					<div class="search">@@if (search !== 'true') {
+					<div class="search">
 						<div class="search__layer">
 							<div class="search__form">
 								<form action="">
@@ -158,24 +158,7 @@
 									</fieldset>
 								</form>
 							</div>
-						</div>}@@if (search === 'true') {
-						<div class="search__layer search__layer--opened">
-							<div class="search__form">
-								<form action="">
-									<fieldset>
-										<legend class="a11y">검색</legend>
-										<div class="search__row">
-											<label for="searchText" class="a11y">검색어</label>
-											<input type="text" id="searchText" class="search__input" placeholder="SEARCH EVERYHING">
-											<button type="button" class="search__button"><span class="a11y">검색 버튼</span></button>
-										</div>
-									</fieldset>
-								</form>
-							</div>
-							<div class="search__result">
-								<p class="search__text">총 45개 의 제품이 검색되었습니다.</p>
-							</div>
-						</div>}
+						</div>
 					</div>
 				</div>
 			</div>
