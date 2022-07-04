@@ -220,7 +220,7 @@
 			top: 0;
 			z-index: -1;
 			width: 100%;
-			padding-top: 135px;
+			padding: 135px 0 44px;
 			background-color: #fff;
 		}
 		.search__layer--opened {
@@ -766,20 +766,22 @@
 }
 }
 
-@keyframes mobileNavOpen {
-	0% {
-		@include mixins.translate(-100vw, 0);
+@include breakpoints.mobile() {
+	@keyframes mobileNavOpen {
+		0% {
+			@include mixins.translate(-100vw, 0);
+		}
+		100% {
+			@include mixins.translate(0, 0);
+		}
 	}
-	100% {
-		@include mixins.translate(0, 0);
-	}
-}
-
-@keyframes mobileNavClose {
-	0% {
-		@include mixins.translate(0, 0);
-	}
-	100% {
-		@include mixins.translate(-100vw, 0);
+	
+	@keyframes mobileNavClose {
+		0% {
+			@include mixins.translate(0, 0);
+		}
+		100% {
+			@include mixins.translate(-100vw, 0);
+		}
 	}
 }
