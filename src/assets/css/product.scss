@@ -526,15 +526,37 @@
       border-radius: 42px;
       overflow: hidden;
       span {
-        display: block;
+        display: flex;
+        align-items: center;
         position: absolute;
         left: 50%;
         top: 50%;
         @include mixins.translate(-50%, -50%);
+        border: 1px solid #5eecfa;
+        border-radius: 28px;
+        padding: 8px 15px;
         font-size: 40px;
         font-weight: 600;
         color: #5eecfa;
+        vertical-align: middle;
+        z-index: 1;
+        em {
+          margin-top: -10px;
+          font-size: 34px;
+        }
       }
+      img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        @include mixins.translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .rv__moreinfo {
+      display: flex;
     }
   }
 }
