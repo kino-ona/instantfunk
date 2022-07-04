@@ -217,10 +217,12 @@ function sprite(done) {
 	const opts = {
 		spritesmith: function (options, sprite){
 			options.imgPath =  `../images/sprite/${options.imgName}`;
+			options.retinaImgPath = `../images/sprite/${options.retinaImgName}`;
 			options.cssName = `_${sprite}.scss`;
 			options.cssTemplate = null;
 			options.cssSpritesheetName = sprite;
-
+			
+			console.log(options);
 			return options;
 		}
 	};
@@ -242,7 +244,7 @@ function sprite(done) {
 		.pipe(dest('dist/assets/images/sprite'));
 		
 	const cssStream = spriteData.css
-		.pipe(buffer())
+		// .pipe(buffer())
 		.pipe(dest('src/assets/css/sprite'));
 
 	return merge(imgStream, cssStream),
