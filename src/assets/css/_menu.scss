@@ -24,7 +24,7 @@
 	.menu__round {
 		position: relative;
 		padding-top: 112.5%;
-		border-radius: 42px;
+		// border-radius: 42px;
 		> .menu__inner {
 			position: absolute;
 			left: 0;
@@ -38,46 +38,46 @@
 			align-items: center;
 		}
 	}
-	.menu__round--darkgreen {
-		background: {
-			color: #b3f977;
-		}
-	}
-	.menu__round--lightgreen {
-		background: {
-			color: #b3f877;
-		}
-	}
-	.menu__round--cyan {
-		background: {
-			color: #5eecfa;
-		}
-	}
-	.menu__round--yellow {
-		background: {
-			color: #fffe72;
-		}
-	}
-	.menu__round--orange {
-		background: {
-			color: #fb9739;
-		}
-	}
-	.menu__round--darkpink {
-		background: {
-			color: #ffb5d1;
-		}
-	}
-	.menu__round--lightpink {
-		background: {
-			color: #ffb4d2;
-		}
-	}
-	.menu__round--purple {
-		background: {
-			color: #b8adf1;
-		}
-	}
+	// .menu__round--darkgreen {
+	// 	background: {
+	// 		color: #b3f977;
+	// 	}
+	// }
+	// .menu__round--lightgreen {
+	// 	background: {
+	// 		color: #b3f877;
+	// 	}
+	// }
+	// .menu__round--cyan {
+	// 	background: {
+	// 		color: #5eecfa;
+	// 	}
+	// }
+	// .menu__round--yellow {
+	// 	background: {
+	// 		color: #fffe72;
+	// 	}
+	// }
+	// .menu__round--orange {
+	// 	background: {
+	// 		color: #fb9739;
+	// 	}
+	// }
+	// .menu__round--darkpink {
+	// 	background: {
+	// 		color: #ffb5d1;
+	// 	}
+	// }
+	// .menu__round--lightpink {
+	// 	background: {
+	// 		color: #ffb4d2;
+	// 	}
+	// }
+	// .menu__round--purple {
+	// 	background: {
+	// 		color: #b8adf1;
+	// 	}
+	// }
 	.menu__category {
 		display: flex;
 		justify-content: center;
@@ -93,14 +93,24 @@
 		height: 100%;
 	}
 	.menu__img {
+		// position: absolute;
+		// left: 50%;
+		// top: 50%;
+		// @include mixins.translate(-50%, -50%);
 		position: absolute;
-		left: 50%;
-		top: 50%;
-		@include mixins.translate(-50%, -50%);
+		left: 0;
+		top: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		img {
+			width: 100%;
+			height: 100%;
+			border-radius: 42px;
+		}
 	}
 	.menu__info {
 		display: flex;
-		// justify-content: space-between;
 		align-items: center;
 		padding: 10px 20px 55px;
 		.menu__right {
@@ -145,6 +155,7 @@
 		position: absolute;
 		left: 0;
 		top: 0;
+		z-index: 5;
 		width: 100%;
 		height: 56px;
 		clip-path: inset(0 round 42px 42px 0 0);
@@ -161,7 +172,12 @@
 		}
 		.menu__round {
 			padding-top: 133.33%;
-			border-radius: 21px;
+			// border-radius: 21px;
+		}
+		.menu__img {
+			img {
+				border-radius: 21px;
+			}
 		}
 		.menu__info {
 			display: block;
