@@ -46,10 +46,12 @@ $(document).ready(function () {
 		if (!$('.nav').hasClass('nav--opened')) {
 			$('.nav').removeClass('nav--closed');
 			$('.nav').addClass('nav--opened');
+			$('.mobile .header .header__search').removeClass('header__search--show').addClass('header__search--hide');
 			$(this).text('CLOSE');
 		} else {
 			$('.nav').removeClass('nav--opened');
 			$('.nav').addClass('nav--closed');
+			$('.mobile .header .header__search').removeClass('header__search--hide').addClass('header__search--show');
 			$(this).text('MENU');
 		}
 	});

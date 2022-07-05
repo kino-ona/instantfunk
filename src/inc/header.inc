@@ -3,6 +3,7 @@
 				<h1 class="logo">
 					<a href="#" class="logo__link"><span class="a11y">INSTANTPUNK</span></a>
 				</h1>
+				<a class="header__cart">CART <span>(3)</span></a>
 				<button class="header__mobile">MENU</button>
 				<div class="nav">
 					<div class="nav__container">
@@ -128,7 +129,7 @@
 										<legend class="a11y">검색</legend>
 										<div class="search__row">
 											<label for="searchText" class="a11y">검색어</label>
-											<input type="text" id="searchText" class="search__input" placeholder="SEARCH EVERYHING">
+											<input type="text" id="searchText" class="search__input" placeholder="SEARCH EVERYTHING">
 											<button type="button" class="search__button"><span class="a11y">검색 버튼</span></button>
 										</div>
 										<!-- 인기검색어 -->

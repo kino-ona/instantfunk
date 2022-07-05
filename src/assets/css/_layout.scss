@@ -17,6 +17,9 @@
 		position: relative;
 		padding: 42px 103px 0 40px;
 	}
+	.header__cart {
+		display: none;
+	}
 	.header__mobile {
 		display: none;
 	}
@@ -220,8 +223,10 @@
 			top: 0;
 			z-index: -1;
 			width: 100%;
-			padding: 135px 0 44px;
+			padding: 135px 0 56px;
+			border-radius: 0 0 42px 42px;
 			background-color: #fff;
+			box-shadow: 0.484px 1.941px 15px 0px rgba(0, 0, 0, 0.08);
 		}
 		.search__layer--opened {
 			display: block;
@@ -233,24 +238,26 @@
 				position: relative;
 				.search__input {
 					height: 46px;
+					padding: 0;
 					border: 0;
 					border-bottom: 1px solid #000;
 					border-radius: 0;
 					background-color: #fff;
 					font-size: 24px;
-					text-align: center;
 				}
 				::-webkit-input-placeholder {
+					padding: 0;
 					font-size: 24px;
 				}
 				::-moz-placeholder {
+					padding: 0;
 					font-size: 24px;
 				}
 				.search__button {
 					position: absolute;
-					right: 8px;
+					right: 0;
 					top: 50%;
-					margin-top: -10px;
+					margin-top: -10.5px;
 					@include icons.retina-sprite(icons.$btn-header-search-group);
 				}
 			}
@@ -265,27 +272,19 @@
 			}
 			.search__item {
 				margin: 4px 0 0 4px;
-				&:nth-child(even) {
-					.search__link {
-						background-color: #000;
-						color: #fff;
-					}
-				}
 			}
 			.search__link {
 				display: flex;
 				justify-content: center;
 				align-items: center;
 				height: 33px;
-				padding: 0 14px;
+				padding: 0 15px 0 14px;
 				border: 1px solid #000;
-				border-radius: 33px;
+				border-radius: 100vw;
 				text-align: center;
+				letter-spacing: -0.025em;
 				@include mixins.PtdMedium();
 			}
-		}
-		.search__result {
-			margin-top: 25px;
 		}
 	}
 
@@ -294,17 +293,40 @@
 			justify-content: center;
 			padding: 23.5px 15px 0;
 		}
+		.header__cart {
+			display: flex;
+			align-items: baseline;
+			position: absolute;
+			left: 15px;
+			top: 23.5px;
+			z-index: 10;
+			font-weight: 600;
+			font-size: 10px;
+			span {
+				margin-left: 3px;
+				color: #52dae7;
+			}
+		}
 		.header__mobile {
 			display: block;
 			position: absolute;
-			right: 30px;
+			right: 15px;
 			top: 23.5px;
 			z-index: 10;
 			font-weight: 600;
 			font-size: 10px;
 		}
-		.header__right {
-			display: none;
+		.header__search {
+			position: absolute;
+			right: 64.5px;
+			top: 22px;
+			@include mixins.sprite(mo_icons.$ico-header-search);
+		}
+		.header__search--show {
+			animation: mobileSearchShow .2s linear forwards;
+		}
+		.header__search--hide {
+			animation: mobileSearchHide .2s linear forwards;
 		}
 		.header__funkplay {
 			position: static;
@@ -382,24 +404,25 @@
 				}
 			}
 			.nav__item--cart {
-				display: flex;
-				position: fixed;
-				left: 30px;
-				top: 23.5px;
-				margin-top: 0 !important;
-				@include mixins.translate(100vw, 0);
-				.nav__link {
-					display: flex;
-					align-items: baseline;
-					font-weight: 600;
-					font-size: 10px;
-					span {
-						margin-left: 5px;
-						font-weight: inherit;
-						font-size: inherit;
-						line-height: 1;
-					}
-				}
+				display: none;
+				// display: flex;
+				// position: fixed;
+				// left: 15px;
+				// top: 23.5px;
+				// margin-top: 0 !important;
+				// @include mixins.translate(100vw, 0);
+				// .nav__link {
+				// 	display: flex;
+				// 	align-items: baseline;
+				// 	font-weight: 600;
+				// 	font-size: 10px;
+				// 	span {
+				// 		margin-left: 3px;
+				// 		font-weight: inherit;
+				// 		font-size: inherit;
+				// 		line-height: 1;
+				// 	}
+				// }
 			}
 			.nav__link {
 				font-size: 20px;
@@ -427,6 +450,45 @@
 		}
 		.nav--closed {
 			animation: mobileNavClose .2s linear forwards;
+		}
+
+		.search {
+			.search__layer {
+				padding: 82px 21px 35px;
+			}
+			.search__form {
+				.search__row {
+					.search__input {
+						height: 27px;
+						font-size: 16px;
+					}
+					::-webkit-input-placeholder {
+						font-size: 16px;
+					}
+					::-moz-placeholder {
+						font-size: 16px;
+					}
+					.search__button {
+						margin-top: -5.25px;
+						@include mixins.sprite(mo_icons.$btn-header-search);
+					}
+				}
+				.search__recommend {
+					margin-top: 30px;
+				}
+				.search__list {
+					justify-content: flex-start;
+					margin: -6px 0 0 -6px;
+				}
+				.search__item {
+					margin: 6px 0 0 6px;
+				}
+				.search__link {
+					height: 30px;
+					padding: 0 10px 0 10.5px;
+					font-size: 11px;
+				}
+			}
 		}
 	}
 }
@@ -782,6 +844,24 @@
 		}
 		100% {
 			@include mixins.translate(-100vw, 0);
+		}
+	}
+
+	@keyframes mobileSearchShow {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+	@keyframes mobileSearchHide {
+		0% {
+			opacity: 1;
+		}
+		100% {
+			opacity: 0;
 		}
 	}
 }
