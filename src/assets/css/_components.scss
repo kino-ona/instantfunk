@@ -79,3 +79,10 @@
 		overflow:hidden;
 	}
 }
+
+.list__bottom {
+	display: flex;
+	.btn__underline {
+		text-decoration: underline;
+	}
+}

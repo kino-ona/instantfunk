@@ -619,10 +619,34 @@
   } //.review__list--cont 
   .review_paging {
     display: flex;
+    flex: 1;
+    height: 43px;
+    align-items: center;
     .btn__prev, .btn__next {
       display: inline-block;
       width: 43px;
       height: 43px;
+    }
+    .paging_number {
+      width:70px;
+      height: 100%;
+      margin: 0 6px;
+      border: 1px solid #000000;
+      border-radius: 14px;
+      align-items: center;
+      vertical-align: middle;
+      p {
+        line-height: 40px;
+      }
+      p, span {
+        display: inline-block;
+        font-size: 16px;
+      }
+    }
+  }
+  .list__bottom {
+    .btn__underline {
+      font-size: 18px;
     }
   }
 }
