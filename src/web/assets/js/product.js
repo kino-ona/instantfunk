@@ -8,6 +8,12 @@ $(document).ready(function(){
 })
 
 $(function() {
+  var productSwiper = new Swiper('.productDetailswp', {
+    pagination: {
+			el: '.swiper-pagination'
+		}
+  });
+
   var $w = $(window),
     footerHei = $('.footer').outerHeight(),
     $banner = $('.detail_info');
@@ -45,6 +51,28 @@ $(function() {
 	  });
 	}
 
+  var productListSwiper = new Swiper('product-list .menu .menu__swiper');
+
+  $('.product-list .menu .menu__link').click(function(){
+    var el = $(this).closest('.menu__item');
+    el.find('.menu__layer').addClass('menu__layer--opened');
+  });
+
+  $('.product-list .menu .menu__dimmed').click(function(){
+    console.log(0);
+    var el = $(this).closest('.menu__item');
+    el.find('.menu__layer').removeClass('menu__layer--opened');
+  });
+
+  $('.product-list .menu .menu__button--cart').click(function(){
+    var el = $(this).closest('.menu__item');
+    el.find('.menu__option').addClass('menu__option--opened');
+  });
+
+  $('.product-list .menu .menu__close').click(function(){
+    var el = $(this).closest('.menu__item');
+    el.find('.menu__option').removeClass('menu__option--opened');
+  });
 });
 
 
