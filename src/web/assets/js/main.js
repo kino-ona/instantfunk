@@ -3,14 +3,20 @@ $(document).ready(function(){
 	var visualSwiper = new Swiper('.visual .swiper-container', {
 		speed: 600,
 		loop: true,
-		allowTouchMove: false,
 		pagination: {
 			el: '.visual .swiper-container .swiper-pagination',
 			type: 'fraction'
+		},
+		breakpointsInverse: true,
+		breakpoints: {
+			750: {
+				allowTouchMove: false
+			}
 		}
 	});
 
 	if (visualSwiper.initialized) {
+		console.log(visualSwiper);
 		var video = visualSwiper.$el.find('video');
 		var target = $('.desktop .visual .visual__control').find('.visual__video');
 
