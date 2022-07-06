@@ -85,4 +85,9 @@
 	.btn__underline {
 		text-decoration: underline;
 	}
+
+  @include breakpoints.mobile() {
+		margin-left: 15px;
+		margin-right: 15px;
+	}
 }

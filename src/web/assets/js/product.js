@@ -1,6 +1,11 @@
-var productSwiper = new Swiper('.productDetailswp', {
-  pagination: '.swiper-pagination',
-});
+$(document).ready(function(){
+  var productSwiper = new Swiper('.productDetailswp', {
+		pagination: {
+			el: '.productDetailswp .swiper-pagination',
+			// type: 'fraction'
+		},
+  });
+})
 
 $(function() {
   var $w = $(window),
@@ -20,15 +25,15 @@ $(function() {
     });
   } else {
     console.log($banner.height())
-    $option = $('.detail_info').find('.product__option');
-    $optionH = $option.height();
+    // $option = $('.detail_info').find('.product__option');
+    // $optionH = $option.height();
 
-    $option.css({
-      top: $banner.height() + 55
-    });
-    $('.product__additional').css({
-      'margin-top': $optionH + 100
-    })
+    // $option.css({
+    //   top: $banner.height() + 55
+    // });
+    // $('.product__additional').css({
+    //   'margin-top': $optionH + 100
+    // })
     
   }
 
