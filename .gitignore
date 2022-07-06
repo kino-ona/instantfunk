@@ -1,10 +1,9 @@
 .DS_Store
 node_modules
 dist/**/*.html
-dist/assets/css
-dist/assets/images
-dist/assets/js
-src/assets/css/_sprite.scss
+dist/web/assets/css
+dist/web/assets/images
+dist/web/assets/js
 src/assets/css/sprite
 Data/
 ftp/

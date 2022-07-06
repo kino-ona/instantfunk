@@ -22,7 +22,7 @@
 		}
 		.swiper-pagination {
 			display: flex;
-			left: 479px;
+			left: calc(510px - 31px);
 			bottom: 240px;
 			width: auto;
 			color: #fff;
@@ -634,7 +634,7 @@
 		height: 150px;
 	}
 	100% {
-		height: auto;
+		height: 80px;
 	}
 }
 
@@ -647,7 +647,7 @@
 			height: 28px;
 		}
 		100% {
-			height: auto;
+			height: 21px;
 		}
 	}
 }
@@ -660,7 +660,7 @@
 		height: 150px;
 	}
 	100% {
-		height: auto;
+		height: 80px;
 	}
 }
 
@@ -673,7 +673,7 @@
 			height: 28px;
 		}
 		100% {
-			height: auto;
+			height: 21px;
 		}
 	}
 }
@@ -767,7 +767,7 @@
 			padding: 0;
 		}
 		100% {
-			padding: 34px 0;
+			padding: 28px 0;
 		}
 	}
 }

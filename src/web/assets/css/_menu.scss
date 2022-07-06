@@ -138,14 +138,12 @@
 		letter-spacing: -0.05em;
 	}
 	.menu__price {
-		font-size: 14px;
 		line-height: 18px;
 		@include mixins.PtdRegular();
 	}
 	.menu__discount {
 		color: #999;
-		margin-right: 10px;
-		font-size: 14px;
+		margin: 0 10px 0 auto;
 		line-height: 18px;
 		text-decoration: line-through;
 		@include mixins.PtdRegular();

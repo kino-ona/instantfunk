@@ -12,16 +12,16 @@ const
 	// paths
 	paths = {
 		html: 'src/**/*.html',
-		css: 'src/assets/css/**/*.scss',
-		js: 'src/assets/js/**/*.js',
-		img: 'src/assets/images/**/*',
+		css: 'src/web/assets/css/**/*.scss',
+		js: 'src/web/assets/js/**/*.js',
+		img: 'src/web/assets/images/**/*',
 		inc: 'src/inc/**/*.inc'
 	},
 	dist = {
 		html: 'dist',
-		css: 'dist/assets/css',
-		js: 'dist/assets/js',
-		img: 'dist/assets/images'
+		css: 'dist/web/assets/css',
+		js: 'dist/web/assets/js',
+		img: 'dist/web/assets/images'
 	},
 
 	// modules
@@ -120,7 +120,7 @@ exports.copyJs = copyJs;
 
 // image
 function image(done) {
-	return src([paths.img, '!src/assets/images/sprite/**'])
+	return src([paths.img, '!src/web/assets/images/sprite/**'])
 		.pipe(newer(dist.img))
 		.pipe(imagemin([
 			imagemin.optipng({optimizationLevel: 1})
@@ -138,8 +138,8 @@ function watchs(done) {
 	watch([paths.html, paths.inc], copyHtml);
 	watch(paths.css, compileScss);
 	watch(paths.js, copyJs);
-	watch([paths.img, '!src/assets/images/sprite'], image);
-	watch('src/assets/images/sprite/**/*.png', sprite); // 스프라이트 이미지 감시용
+	watch([paths.img, '!src/web/assets/images/sprite'], image);
+	watch('src/web/assets/images/sprite/**/*.png', sprite); // 스프라이트 이미지 감시용
 	// watch('src/assets/images/ico/*.png', sprite); // 스프라이트 이미지 감시용
 	// watch('src/assets/images/ico/m/*.png', spriteMobile); // 스프라이트 이미지 감시용
 	done();
@@ -147,7 +147,7 @@ function watchs(done) {
 
 // clean
 function clean(done) {
-	del.sync(['dist/*.html', '!dist/path/**', '!dist/path.html', 'dist/product', 'dist/order', 'dist/member', 'dist/search', 'dist/myshop', 'dist/assets/**', '!dist/assets/fonts']);
+	del.sync(['dist/*.html', '!dist/path/**', '!dist/path.html', 'dist/product', 'dist/order', 'dist/member', 'dist/search', 'dist/myshop', 'dist/web/assets/**', '!dist/web/assets/fonts']);
 	done();
 }
 exports.clean = clean;
@@ -226,7 +226,7 @@ function sprite(done) {
 		}
 	};
 
-	const spriteData = src('src/assets/images/sprite/**/*.png')
+	const spriteData = src('src/web/assets/images/sprite/**/*.png')
 		.pipe(spritesmith(opts))
 		.on('error', function (err) {
 			console.log(err)
@@ -240,11 +240,11 @@ function sprite(done) {
 			verbose: true
 		}
 		))
-		.pipe(dest('dist/assets/images/sprite'));
+		.pipe(dest('dist/web/assets/images/sprite'));
 		
 	const cssStream = spriteData.css
 		.pipe(buffer())
-		.pipe(dest('src/assets/css/sprite'));
+		.pipe(dest('src/web/assets/css/sprite'));
 
 	return merge(imgStream, cssStream),
 	done();
@@ -253,7 +253,7 @@ exports.sprite = sprite;
 
 // clean sprite
 function cleanSprite(done) {
-	del.sync(['dist/assets/images/sprite', 'src/assets/css/sprite']);
+	del.sync(['dist/web/assets/images/sprite', 'src/web/assets/css/sprite']);
 	done();
 }
 exports.cleanSprite = cleanSprite;

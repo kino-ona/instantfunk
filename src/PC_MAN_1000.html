@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>인스턴트펑크 공식홈페이지 - 인스턴트펑크 INSTANTFUNK</title>
-
-	<script src="./assets/js/jquery-2.1.1.js"></script>
-	<script src="./assets/js/swiper.min.js"></script>
-	<script src="./assets/js/ui.js"></script>
-	<script src="./assets/js/main.js"></script>
-	<link rel="stylesheet" href="./assets/css/ui.css">
-	<link rel="stylesheet" href="./assets/css/main.css">
+	@@include('./inc/pagehead.inc', {
+		"pagetitle": "인스턴트펑크 공식홈페이지 - 인스턴트펑크 INSTANTFUNK",
+		"webroot": "."
+	})
+	<script src="/web/assets/js/main.js"></script>
+	<link rel="stylesheet" href="/web/assets/css/main.css">
 </head>
 <body>
 	<div id="wrap">
@@ -23,697 +18,633 @@
 		<div class="container">
 			<div class="visual">
 				<div class="visual__container">
-					<div class="visual__mask">
-						<div class="swiper-container">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide swiper-no-swiping">
-									<div class="visual__video">
-										<video loop muted poster="./assets/images/dummy.png">
-											<source src="../sample01.mp4" type="video/mp4">
-										</video>
-									</div>
-									<div class="visual__contents">
-										<dov class="visual__inner">
-											<p class="visual__theme">22SS BEYOND Y2K PART 2,3</p>
-											<p class="visual__title">
-												INSTANT<br>
-												POOL
-											</p>
-											<a href="#" class="visual__link">VIEW</a>
-										</dov>
-									</div>
+						<div class="visual__mask">
+								<div class="swiper-container">
+										<div class="swiper-wrapper">
+												<div class="swiper-slide">
+														<div class="visual__video">
+																<video loop muted poster="/web/assets/images/dummy.png">
+																		<source src="../sample01.mp4" type="video/mp4">
+																</video>
+														</div>
+														<div class="visual__contents">
+																<dov class="visual__inner">
+																		<p class="visual__theme">22SS BEYOND Y2K PART 2,3</p>
+																		<p class="visual__title">
+																				INSTANT<br>
+																				POOL
+																		</p>
+																		<a href="#" class="visual__link">VIEW</a>
+																</dov>
+														</div>
+												</div>
+												<div class="swiper-slide">
+														<div class="visual__video">
+																<video loop muted poster="/web/assets/images/dummy.png">
+																		<source src="../sample02.mp4" type="video/mp4">
+																</video>
+														</div>
+														<div class="visual__contents">
+																<dov class="visual__inner">
+																		<p class="visual__theme">22SS BEYOND Y2K PART 2,3</p>
+																		<p class="visual__title">
+																				INSTANT<br>
+																				POOL
+																		</p>
+																		<a href="#" class="visual__link">VIEW</a>
+																</dov>
+														</div>
+												</div>
+												<div class="swiper-slide">
+														<div class="visual__video">
+																<video loop muted poster="/web/assets/images/dummy.png">
+																		<source src="../sample03.mp4" type="video/mp4">
+																</video>
+														</div>
+														<div class="visual__contents">
+																<dov class="visual__inner">
+																		<p class="visual__theme">22SS BEYOND Y2K PART 2,3</p>
+																		<p class="visual__title">
+																				INSTANT<br>
+																				POOL
+																		</p>
+																		<a href="#" class="visual__link">VIEW</a>
+																</dov>
+														</div>
+												</div>
+										</div>
+										<div class="swiper-pagination"></div>
 								</div>
-								<div class="swiper-slide swiper-no-swiping">
-									<div class="visual__video">
-										<video loop muted poster="./assets/images/dummy.png">
-											<source src="../sample02.mp4" type="video/mp4">
-										</video>
-									</div>
-									<div class="visual__contents">
-										<dov class="visual__inner">
-											<p class="visual__theme">22SS BEYOND Y2K PART 2,3</p>
-											<p class="visual__title">
-												INSTANT<br>
-												POOL
-											</p>
-											<a href="#" class="visual__link">VIEW</a>
-										</dov>
-									</div>
+								<div class="visual__control">
+										<div class="visual__preview">
+												<div class="visual__video">
+														<video autoplay loop muted>
+																<source src="../sample01.mp4" type="video/mp4">
+														</video>
+												</div>
+												<div class="visual__video">
+														<video autoplay loop muted>
+																<source src="../sample02.mp4" type="video/mp4">
+														</video>
+												</div>
+												<div class="visual__video">
+														<video autoplay loop muted>
+																<source src="../sample03.mp4" type="video/mp4">
+														</video>
+												</div>
+										</div>
+										<div class="marquee">
+												<div class="marquee__mask">
+														<p class="marquee__loop">
+																<span class="marquee__text">NEXT</span>
+																<span class="marquee__text">NEXT</span>
+																<span class="marquee__text">NEXT</span>
+																<span class="marquee__text">NEXT</span>
+														</p>
+														<p class="marquee__loop">
+																<span class="marquee__text">NEXT</span>
+																<span class="marquee__text">NEXT</span>
+																<span class="marquee__text">NEXT</span>
+																<span class="marquee__text">NEXT</span>
+														</p>
+														<p class="marquee__loop">
+																<span class="marquee__text">NEXT</span>
+																<span class="marquee__text">NEXT</span>
+																<span class="marquee__text">NEXT</span>
+																<span class="marquee__text">NEXT</span>
+														</p>
+														<p class="marquee__loop">
+																<span class="marquee__text">NEXT</span>
+																<span class="marquee__text">NEXT</span>
+																<span class="marquee__text">NEXT</span>
+																<span class="marquee__text">NEXT</span>
+														</p>
+												</div>
+										</div>
 								</div>
-								<div class="swiper-slide swiper-no-swiping">
-									<div class="visual__video">
-										<video loop muted poster="./assets/images/dummy.png">
-											<source src="../sample03.mp4" type="video/mp4">
-										</video>
-									</div>
-									<div class="visual__contents">
-										<dov class="visual__inner">
-											<p class="visual__theme">22SS BEYOND Y2K PART 2,3</p>
-											<p class="visual__title">
-												INSTANT<br>
-												POOL
-											</p>
-											<a href="#" class="visual__link">VIEW</a>
-										</dov>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-pagination"></div>
 						</div>
-						<div class="visual__control">
-							<div class="visual__preview">
-								<div class="visual__video">
-									<video autoplay loop muted>
-										<source src="../sample01.mp4" type="video/mp4">
-									</video>
-								</div>
-								<div class="visual__video">
-									<video autoplay loop muted>
-										<source src="../sample02.mp4" type="video/mp4">
-									</video>
-								</div>
-								<div class="visual__video">
-									<video autoplay loop muted>
-										<source src="../sample03.mp4" type="video/mp4">
-									</video>
-								</div>
-							</div>
-							<div class="marquee">
-								<div class="marquee__mask">
-									<p class="marquee__loop">
-										<span class="marquee__text">NEXT</span>
-										<span class="marquee__text">NEXT</span>
-										<span class="marquee__text">NEXT</span>
-										<span class="marquee__text">NEXT</span>
-									</p>
-									<p class="marquee__loop">
-										<span class="marquee__text">NEXT</span>
-										<span class="marquee__text">NEXT</span>
-										<span class="marquee__text">NEXT</span>
-										<span class="marquee__text">NEXT</span>
-									</p>
-									<p class="marquee__loop">
-										<span class="marquee__text">NEXT</span>
-										<span class="marquee__text">NEXT</span>
-										<span class="marquee__text">NEXT</span>
-										<span class="marquee__text">NEXT</span>
-									</p>
-									<p class="marquee__loop">
-										<span class="marquee__text">NEXT</span>
-										<span class="marquee__text">NEXT</span>
-										<span class="marquee__text">NEXT</span>
-										<span class="marquee__text">NEXT</span>
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
 				</div>
 			</div>
 			<div class="best-menu">
 				<div class="marquee">
-					<div class="marquee">
-						<div class="marquee__mask">
-							<p class="marquee__loop">
-								<span class="marquee__text">BEST</span>
-								<span class="marquee__text">BEST</span>
-								<span class="marquee__text">BEST</span>
-								<span class="marquee__text">BEST</span>
-							</p>
-							<p class="marquee__loop">
-								<span class="marquee__text">BEST</span>
-								<span class="marquee__text">BEST</span>
-								<span class="marquee__text">BEST</span>
-								<span class="marquee__text">BEST</span>
-							</p>
-							<p class="marquee__loop">
-								<span class="marquee__text">BEST</span>
-								<span class="marquee__text">BEST</span>
-								<span class="marquee__text">BEST</span>
-								<span class="marquee__text">BEST</span>
-							</p>
-							<p class="marquee__loop">
-								<span class="marquee__text">BEST</span>
-								<span class="marquee__text">BEST</span>
-								<span class="marquee__text">BEST</span>
-								<span class="marquee__text">BEST</span>
-							</p>
+						<div class="marquee">
+								<div class="marquee__mask">
+										<p class="marquee__loop">
+												<span class="marquee__text">BEST</span>
+												<span class="marquee__text">BEST</span>
+												<span class="marquee__text">BEST</span>
+												<span class="marquee__text">BEST</span>
+										</p>
+										<p class="marquee__loop">
+												<span class="marquee__text">BEST</span>
+												<span class="marquee__text">BEST</span>
+												<span class="marquee__text">BEST</span>
+												<span class="marquee__text">BEST</span>
+										</p>
+										<p class="marquee__loop">
+												<span class="marquee__text">BEST</span>
+												<span class="marquee__text">BEST</span>
+												<span class="marquee__text">BEST</span>
+												<span class="marquee__text">BEST</span>
+										</p>
+										<p class="marquee__loop">
+												<span class="marquee__text">BEST</span>
+												<span class="marquee__text">BEST</span>
+												<span class="marquee__text">BEST</span>
+												<span class="marquee__text">BEST</span>
+										</p>
+								</div>
 						</div>
-					</div>
 				</div>
 				<div class="best-menu__container">
-					<div class="best-menu__list">
-						<div class="best-menu__row">
-							<div class="best-menu__item">
-								<div class="swiper-container">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide">
-											<div class="best-menu__inner">
-												<div class="best-menu__img">
-													<img src="./assets/images/product01.png" alt="">
+						<div class="best-menu__list">
+								<div class="best-menu__row">
+										<div class="best-menu__item">
+												<div class="swiper-container">
+														<div class="swiper-wrapper">
+																<div class="swiper-slide">
+																		<div class="best-menu__inner">
+																				<div class="best-menu__img"><img src="/web/assets/images/product01.png" alt=""></div>
+																				<div class="best-menu__info best-menu__info--green">
+																						<p class="best-menu__category">ACCESSORY</p>
+																						<p class="best-menu__name">
+																								boucle<br>
+																								sleeveless
+																						</p>
+																						<a href="#" class="best-menu__link">VIEW</a>
+																				</div>
+																		</div>
+																</div>
+																<div class="swiper-slide">
+																		<div class="best-menu__inner">
+																				<div class="best-menu__img"><img src="/web/assets/images/dummy.png" alt=""></div>
+																		</div>
+																</div>
+														</div>
 												</div>
-												<div class="best-menu__info best-menu__info--green">
-													<p class="best-menu__category">ACCESSORY</p>
-													<p class="best-menu__name">
-														boucle<br>
-														sleeveless
-													</p>
-													<a href="#" class="best-menu__link">VIEW</a>
-												</div>
-											</div>
 										</div>
-										<div class="swiper-slide">
-											<div class="best-menu__inner">
-												<div class="best-menu__img">
-													<img src="./assets/images/dummy.png" alt="">
+										<div class="best-menu__item">
+												<div class="swiper-container">
+														<div class="swiper-wrapper">
+																<div class="swiper-slide">
+																		<div class="best-menu__inner">
+																				<div class="best-menu__img"><img src="/web/assets/images/product01.png" alt=""></div>
+																				<div class="best-menu__info best-menu__info--cyan">
+																						<p class="best-menu__category">ACCESSORY</p>
+																						<p class="best-menu__name">
+																								boucle<br>
+																								sleeveless
+																						</p>
+																						<a href="#" class="best-menu__link">VIEW</a>
+																				</div>
+																		</div>
+																</div>
+																<div class="swiper-slide">
+																		<div class="best-menu__inner">
+																				<div class="best-menu__img"><img src="/web/assets/images/dummy.png" alt=""></div>
+																		</div>
+																</div>
+														</div>
 												</div>
-											</div>
 										</div>
-									</div>
+										<div class="best-menu__item">
+												<div class="swiper-container">
+														<div class="swiper-wrapper">
+																<div class="swiper-slide">
+																		<div class="best-menu__inner">
+																				<div class="best-menu__img"><img src="/web/assets/images/product01.png" alt=""></div>
+																				<div class="best-menu__info best-menu__info--pink">
+																						<p class="best-menu__category">ACCESSORY</p>
+																						<p class="best-menu__name">
+																								boucle<br>
+																								sleeveless
+																						</p>
+																						<a href="#" class="best-menu__link">VIEW</a>
+																				</div>
+																		</div>
+																</div>
+																<div class="swiper-slide">
+																		<div class="best-menu__inner">
+																				<div class="best-menu__img"><img src="/web/assets/images/dummy.png" alt=""></div>
+																		</div>
+																</div>
+														</div>
+												</div>
+										</div>
+										<div class="best-menu__item">
+												<div class="swiper-container">
+														<div class="swiper-wrapper">
+																<div class="swiper-slide">
+																		<div class="best-menu__inner">
+																				<div class="best-menu__img"><img src="/web/assets/images/product01.png" alt=""></div>
+																				<div class="best-menu__info best-menu__info--yellow">
+																						<p class="best-menu__category">ACCESSORY</p>
+																						<p class="best-menu__name">
+																								boucle<br>
+																								sleeveless
+																						</p>
+																						<a href="#" class="best-menu__link">VIEW</a>
+																				</div>
+																		</div>
+																</div>
+																<div class="swiper-slide">
+																		<div class="best-menu__inner">
+																				<div class="best-menu__img"><img src="/web/assets/images/dummy.png" alt=""></div>
+																		</div>
+																</div>
+														</div>
+												</div>
+										</div>
 								</div>
-							</div>
-							<div class="best-menu__item">
-								<div class="swiper-container">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide">
-											<div class="best-menu__inner">
-												<div class="best-menu__img">
-													<img src="./assets/images/product01.png" alt="">
+								<div class="best-menu__row best-menu__row--split">
+										<div class="best-menu__col best-menu__col--split">
+												<div class="best-menu__item">
+														<div class="swiper-container">
+																<div class="swiper-wrapper">
+																		<div class="swiper-slide">
+																				<div class="best-menu__inner">
+																						<div class="best-menu__img"><img src="/web/assets/images/@product_s.png" alt=""></div>
+																						<div class="best-menu__info best-menu__info--green">
+																								<p class="best-menu__category">ACCESSORY</p>
+																								<p class="best-menu__name">
+																										boucle<br>
+																										sleeveless
+																								</p>
+																								<a href="#" class="best-menu__link">VIEW</a>
+																						</div>
+																				</div>
+																		</div>
+																		<div class="swiper-slide">
+																				<div class="best-menu__inner">
+																						<div class="best-menu__img"><img src="/web/assets/images/dummy.png" alt=""></div>
+																				</div>
+																		</div>
+																</div>
+														</div>
 												</div>
-												<div class="best-menu__info best-menu__info--cyan">
-													<p class="best-menu__category">ACCESSORY</p>
-													<p class="best-menu__name">
-														boucle<br>
-														sleeveless
-													</p>
-													<a href="#" class="best-menu__link">VIEW</a>
+												<div class="best-menu__item">
+														<div class="swiper-container">
+																<div class="swiper-wrapper">
+																		<div class="swiper-slide">
+																				<div class="best-menu__inner">
+																						<div class="best-menu__img"><img src="/web/assets/images/@product_s.png" alt=""></div>
+																						<div class="best-menu__info best-menu__info--pink">
+																								<p class="best-menu__category">ACCESSORY</p>
+																								<p class="best-menu__name">
+																										boucle<br>
+																										sleeveless
+																								</p>
+																								<a href="#" class="best-menu__link">VIEW</a>
+																						</div>
+																				</div>
+																		</div>
+																		<div class="swiper-slide">
+																				<div class="best-menu__inner">
+																						<div class="best-menu__img"><img src="/web/assets/images/dummy.png" alt=""></div>
+																				</div>
+																		</div>
+																</div>
+														</div>
 												</div>
-											</div>
+												<div class="best-menu__item">
+														<div class="swiper-container">
+																<div class="swiper-wrapper">
+																		<div class="swiper-slide">
+																				<div class="best-menu__inner">
+																						<div class="best-menu__img"><img src="/web/assets/images/@product_s.png" alt=""></div>
+																						<div class="best-menu__info best-menu__info--green">
+																								<p class="best-menu__category">ACCESSORY</p>
+																								<p class="best-menu__name">
+																										boucle<br>
+																										sleeveless
+																								</p>
+																								<a href="#" class="best-menu__link">VIEW</a>
+																						</div>
+																				</div>
+																		</div>
+																		<div class="swiper-slide">
+																				<div class="best-menu__inner">
+																						<div class="best-menu__img"><img src="/web/assets/images/dummy.png" alt=""></div>
+																				</div>
+																		</div>
+																</div>
+														</div>
+												</div>
+												<div class="best-menu__item">
+														<div class="swiper-container">
+																<div class="swiper-wrapper">
+																		<div class="swiper-slide">
+																				<div class="best-menu__inner">
+																						<div class="best-menu__img"><img src="/web/assets/images/@product_s.png" alt=""></div>
+																						<div class="best-menu__info best-menu__info--pink">
+																								<p class="best-menu__category">ACCESSORY</p>
+																								<p class="best-menu__name">
+																										boucle<br>
+																										sleeveless
+																								</p>
+																								<a href="#" class="best-menu__link">VIEW</a>
+																						</div>
+																				</div>
+																		</div>
+																		<div class="swiper-slide">
+																				<div class="best-menu__inner">
+																						<div class="best-menu__img"><img src="/web/assets/images/dummy.png" alt=""></div>
+																				</div>
+																		</div>
+																</div>
+														</div>
+												</div>
 										</div>
-										<div class="swiper-slide">
-											<div class="best-menu__inner">
-												<div class="best-menu__img">
-													<img src="./assets/images/dummy.png" alt="">
+										<div class="best-menu__col">
+												<div class="best-menu__item">
+														<div class="swiper-container">
+																<div class="swiper-wrapper">
+																		<div class="swiper-slide">
+																				<div class="best-menu__inner">
+																						<div class="best-menu__img">
+																								<img src="/web/assets/images/@product.png" alt="">
+																						</div>
+																						<div class="best-menu__info best-menu__info--green">
+																								<p class="best-menu__category">ACCESSORY</p>
+																								<p class="best-menu__name">
+																										boucle<br>
+																										sleeveless
+																								</p>
+																								<a href="#" class="best-menu__link">VIEW</a>
+																						</div>
+																				</div>
+																		</div>
+																		<div class="swiper-slide">
+																				<div class="best-menu__inner">
+																						<div class="best-menu__img"><img src="/web/assets/images/dummy.png" alt=""></div>
+																				</div>
+																		</div>
+																</div>
+														</div>
 												</div>
-											</div>
 										</div>
-									</div>
 								</div>
-							</div>
-							<div class="best-menu__item">
-								<div class="swiper-container">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide">
-											<div class="best-menu__inner">
-												<div class="best-menu__img">
-													<img src="./assets/images/product01.png" alt="">
+								<div class="best-menu__row">
+										<div class="best-menu__item">
+												<div class="swiper-container">
+														<div class="swiper-wrapper">
+																<div class="swiper-slide">
+																		<div class="best-menu__inner">
+																				<div class="best-menu__img"><img src="/web/assets/images/product01.png" alt=""></div>
+																				<div class="best-menu__info best-menu__info--purple">
+																						<p class="best-menu__category">ACCESSORY</p>
+																						<p class="best-menu__name">
+																								boucle<br>
+																								sleeveless
+																						</p>
+																						<a href="#" class="best-menu__link">VIEW</a>
+																				</div>
+																		</div>
+																</div>
+																<div class="swiper-slide">
+																		<div class="best-menu__inner">
+																				<div class="best-menu__img"><img src="/web/assets/images/dummy.png" alt=""></div>
+																		</div>
+																</div>
+														</div>
 												</div>
-												<div class="best-menu__info best-menu__info--pink">
-													<p class="best-menu__category">ACCESSORY</p>
-													<p class="best-menu__name">
-														boucle<br>
-														sleeveless
-													</p>
-													<a href="#" class="best-menu__link">VIEW</a>
-												</div>
-											</div>
 										</div>
-										<div class="swiper-slide">
-											<div class="best-menu__inner">
-												<div class="best-menu__img">
-													<img src="./assets/images/dummy.png" alt="">
+										<div class="best-menu__item">
+												<div class="swiper-container">
+														<div class="swiper-wrapper">
+																<div class="swiper-slide">
+																		<div class="best-menu__inner">
+																				<div class="best-menu__img"><img src="/web/assets/images/product01.png" alt=""></div>
+																				<div class="best-menu__info best-menu__info--orange">
+																						<p class="best-menu__category">ACCESSORY</p>
+																						<p class="best-menu__name">
+																								boucle<br>
+																								sleeveless
+																						</p>
+																						<a href="#" class="best-menu__link">VIEW</a>
+																				</div>
+																		</div>
+																</div>
+																<div class="swiper-slide">
+																		<div class="best-menu__inner">
+																				<div class="best-menu__img"><img src="/web/assets/images/dummy.png" alt=""></div>
+																		</div>
+																</div>
+														</div>
 												</div>
-											</div>
 										</div>
-									</div>
+										<div class="best-menu__item">
+												<div class="swiper-container">
+														<div class="swiper-wrapper">
+																<div class="swiper-slide">
+																		<div class="best-menu__inner">
+																				<div class="best-menu__img"><img src="/web/assets/images/product01.png" alt=""></div>
+																				<div class="best-menu__info best-menu__info--green">
+																						<p class="best-menu__category">ACCESSORY</p>
+																						<p class="best-menu__name">
+																								boucle<br>
+																								sleeveless
+																						</p>
+																						<a href="#" class="best-menu__link">VIEW</a>
+																				</div>
+																		</div>
+																</div>
+																<div class="swiper-slide">
+																		<div class="best-menu__inner">
+																				<div class="best-menu__img"><img src="/web/assets/images/dummy.png" alt=""></div>
+																		</div>
+																</div>
+														</div>
+												</div>
+										</div>
+										<div class="best-menu__item">
+												<div class="swiper-container">
+														<div class="swiper-wrapper">
+																<div class="swiper-slide">
+																		<div class="best-menu__inner">
+																				<div class="best-menu__img"><img src="/web/assets/images/product01.png" alt=""></div>
+																				<div class="best-menu__info best-menu__info--green">
+																						<p class="best-menu__category">ACCESSORY</p>
+																						<p class="best-menu__name">
+																								boucle<br>
+																								sleeveless
+																						</p>
+																						<a href="#" class="best-menu__link">VIEW</a>
+																				</div>
+																		</div>
+																</div>
+																<div class="swiper-slide">
+																		<div class="best-menu__inner">
+																				<div class="best-menu__img"><img src="/web/assets/images/dummy.png" alt=""></div>
+																		</div>
+																</div>
+														</div>
+												</div>
+										</div>
 								</div>
-							</div>
-							<div class="best-menu__item">
-								<div class="swiper-container">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide">
-											<div class="best-menu__inner">
-												<div class="best-menu__img">
-													<img src="./assets/images/product01.png" alt="">
-												</div>
-												<div class="best-menu__info best-menu__info--yellow">
-													<p class="best-menu__category">ACCESSORY</p>
-													<p class="best-menu__name">
-														boucle<br>
-														sleeveless
-													</p>
-													<a href="#" class="best-menu__link">VIEW</a>
-												</div>
-											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="best-menu__inner">
-												<div class="best-menu__img">
-													<img src="./assets/images/dummy.png" alt="">
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
 						</div>
-						<div class="best-menu__row best-menu__row--split">
-							<div class="best-menu__col best-menu__col--split">
-								<div class="best-menu__item">
-									<div class="swiper-container">
-										<div class="swiper-wrapper">
-											<div class="swiper-slide">
-												<div class="best-menu__inner">
-													<div class="best-menu__img">
-														<img src="./assets/images/@product_s.png" alt="">
-													</div>
-													<div class="best-menu__info best-menu__info--green">
-														<p class="best-menu__category">ACCESSORY</p>
-														<p class="best-menu__name">
-															boucle<br>
-															sleeveless
-														</p>
-														<a href="#" class="best-menu__link">VIEW</a>
-													</div>
-												</div>
-											</div>
-											<div class="swiper-slide">
-												<div class="best-menu__inner">
-													<div class="best-menu__img">
-														<img src="./assets/images/dummy.png" alt="">
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="best-menu__item">
-									<div class="swiper-container">
-										<div class="swiper-wrapper">
-											<div class="swiper-slide">
-												<div class="best-menu__inner">
-													<div class="best-menu__img">
-														<img src="./assets/images/@product_s.png" alt="">
-													</div>
-													<div class="best-menu__info best-menu__info--pink">
-														<p class="best-menu__category">ACCESSORY</p>
-														<p class="best-menu__name">
-															boucle<br>
-															sleeveless
-														</p>
-														<a href="#" class="best-menu__link">VIEW</a>
-													</div>
-												</div>
-											</div>
-											<div class="swiper-slide">
-												<div class="best-menu__inner">
-													<div class="best-menu__img">
-														<img src="./assets/images/dummy.png" alt="">
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="best-menu__item">
-									<div class="swiper-container">
-										<div class="swiper-wrapper">
-											<div class="swiper-slide">
-												<div class="best-menu__inner">
-													<div class="best-menu__img">
-														<img src="./assets/images/@product_s.png" alt="">
-													</div>
-													<div class="best-menu__info best-menu__info--green">
-														<p class="best-menu__category">ACCESSORY</p>
-														<p class="best-menu__name">
-															boucle<br>
-															sleeveless
-														</p>
-														<a href="#" class="best-menu__link">VIEW</a>
-													</div>
-												</div>
-											</div>
-											<div class="swiper-slide">
-												<div class="best-menu__inner">
-													<div class="best-menu__img">
-														<img src="./assets/images/dummy.png" alt="">
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="best-menu__item">
-									<div class="swiper-container">
-										<div class="swiper-wrapper">
-											<div class="swiper-slide">
-												<div class="best-menu__inner">
-													<div class="best-menu__img">
-														<img src="./assets/images/@product_s.png" alt="">
-													</div>
-													<div class="best-menu__info best-menu__info--pink">
-														<p class="best-menu__category">ACCESSORY</p>
-														<p class="best-menu__name">
-															boucle<br>
-															sleeveless
-														</p>
-														<a href="#" class="best-menu__link">VIEW</a>
-													</div>
-												</div>
-											</div>
-											<div class="swiper-slide">
-												<div class="best-menu__inner">
-													<div class="best-menu__img">
-														<img src="./assets/images/dummy.png" alt="">
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="best-menu__col">
-								<div class="best-menu__item">
-									<div class="swiper-container">
-										<div class="swiper-wrapper">
-											<div class="swiper-slide">
-												<div class="best-menu__inner">
-													<div class="best-menu__img">
-														<img src="./assets/images/@product.png" alt="">
-													</div>
-													<div class="best-menu__info best-menu__info--green">
-														<p class="best-menu__category">ACCESSORY</p>
-														<p class="best-menu__name">
-															boucle<br>
-															sleeveless
-														</p>
-														<a href="#" class="best-menu__link">VIEW</a>
-													</div>
-												</div>
-											</div>
-											<div class="swiper-slide">
-												<div class="best-menu__inner">
-													<div class="best-menu__img">
-														<img src="./assets/images/dummy.png" alt="">
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="best-menu__row best-menu__row--col4">
-							<div class="best-menu__item">
-								<div class="swiper-container">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide">
-											<div class="best-menu__inner">
-												<div class="best-menu__img">
-													<img src="./assets/images/product01.png" alt="">
-												</div>
-												<div class="best-menu__info best-menu__info--purple">
-													<p class="best-menu__category">ACCESSORY</p>
-													<p class="best-menu__name">
-														boucle<br>
-														sleeveless
-													</p>
-													<a href="#" class="best-menu__link">VIEW</a>
-												</div>
-											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="best-menu__inner">
-												<div class="best-menu__img">
-													<img src="./assets/images/dummy.png" alt="">
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="best-menu__item">
-								<div class="swiper-container">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide">
-											<div class="best-menu__inner">
-												<div class="best-menu__img">
-													<img src="./assets/images/product01.png" alt="">
-												</div>
-												<div class="best-menu__info best-menu__info--orange">
-													<p class="best-menu__category">ACCESSORY</p>
-													<p class="best-menu__name">
-														boucle<br>
-														sleeveless
-													</p>
-													<a href="#" class="best-menu__link">VIEW</a>
-												</div>
-											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="best-menu__inner">
-												<div class="best-menu__img">
-													<img src="./assets/images/dummy.png" alt="">
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="best-menu__item">
-								<div class="swiper-container">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide">
-											<div class="best-menu__inner">
-												<div class="best-menu__img">
-													<img src="./assets/images/product01.png" alt="">
-												</div>
-												<div class="best-menu__info best-menu__info--green">
-													<p class="best-menu__category">ACCESSORY</p>
-													<p class="best-menu__name">
-														boucle<br>
-														sleeveless
-													</p>
-													<a href="#" class="best-menu__link">VIEW</a>
-												</div>
-											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="best-menu__inner">
-												<div class="best-menu__img">
-													<img src="./assets/images/dummy.png" alt="">
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="best-menu__item">
-								<div class="swiper-container">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide">
-											<div class="best-menu__inner">
-												<div class="best-menu__img">
-													<img src="./assets/images/product01.png" alt="">
-												</div>
-												<div class="best-menu__info best-menu__info--green">
-													<p class="best-menu__category">ACCESSORY</p>
-													<p class="best-menu__name">
-														boucle<br>
-														sleeveless
-													</p>
-													<a href="#" class="best-menu__link">VIEW</a>
-												</div>
-											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="best-menu__inner">
-												<div class="best-menu__img">
-													<img src="./assets/images/dummy.png" alt="">
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
 				</div>
 				<div class="marquee">
-					<div class="marquee">
-						<div class="marquee__mask">
-							<p class="marquee__loop">
-								<span class="marquee__text">BEST</span>
-								<span class="marquee__text">BEST</span>
-								<span class="marquee__text">BEST</span>
-								<span class="marquee__text">BEST</span>
-								<span class="marquee__text">BEST</span>
-								<span class="marquee__text">BEST</span>
-								<span class="marquee__text">BEST</span>
-								<span class="marquee__text">BEST</span>
-								<span class="marquee__text">BEST</span>
-								<span class="marquee__text">BEST</span>
-								<span class="marquee__text">BEST</span>
-								<span class="marquee__text">BEST</span>
-							</p>
-							<p class="marquee__loop">
-								<span class="marquee__text">BEST</span>
-								<span class="marquee__text">BEST</span>
-								<span class="marquee__text">BEST</span>
-								<span class="marquee__text">BEST</span>
-								<span class="marquee__text">BEST</span>
-								<span class="marquee__text">BEST</span>
-								<span class="marquee__text">BEST</span>
-								<span class="marquee__text">BEST</span>
-								<span class="marquee__text">BEST</span>
-								<span class="marquee__text">BEST</span>
-								<span class="marquee__text">BEST</span>
-								<span class="marquee__text">BEST</span>
-							</p>
+						<div class="marquee">
+								<div class="marquee__mask">
+										<p class="marquee__loop">
+												<span class="marquee__text">BEST</span>
+												<span class="marquee__text">BEST</span>
+												<span class="marquee__text">BEST</span>
+												<span class="marquee__text">BEST</span>
+												<span class="marquee__text">BEST</span>
+												<span class="marquee__text">BEST</span>
+												<span class="marquee__text">BEST</span>
+												<span class="marquee__text">BEST</span>
+												<span class="marquee__text">BEST</span>
+												<span class="marquee__text">BEST</span>
+												<span class="marquee__text">BEST</span>
+												<span class="marquee__text">BEST</span>
+										</p>
+										<p class="marquee__loop">
+												<span class="marquee__text">BEST</span>
+												<span class="marquee__text">BEST</span>
+												<span class="marquee__text">BEST</span>
+												<span class="marquee__text">BEST</span>
+												<span class="marquee__text">BEST</span>
+												<span class="marquee__text">BEST</span>
+												<span class="marquee__text">BEST</span>
+												<span class="marquee__text">BEST</span>
+												<span class="marquee__text">BEST</span>
+												<span class="marquee__text">BEST</span>
+												<span class="marquee__text">BEST</span>
+												<span class="marquee__text">BEST</span>
+										</p>
+								</div>
 						</div>
-					</div>
 				</div>
 			</div>
 			<div class="celeb-curation">
 				<div class="celeb-curation__container">
-					<div class="celeb-curation__screen">
-						<div class="celeb-curation__curtain">
-							<span class="celeb-curation__text">CELEB</span>
-						</div>
-						<div class="celeb-curation__swiper">
-							<div class="swiper-container">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide">
-										<div class="menu">
-											<div class="menu__container">
-												<div class="menu__list">
-													<div class="menu__item">
-														<div class="menu__round">
-															<div class="menu__inner">
-																<div class="menu__img">
-																	<img src="./assets/images/dummy.png" alt="">
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="menu__item">
-														<a href="#" class="menu__link">
-															<div class="menu__round">
-																<div class="menu__inner">
-																	<div class="menu__img">
-																		<img src="./assets/images/product.png" alt="">
-																	</div>
-																	<div class="menu__info">
-																		<p class="menu__name">
-																			22SS SLIM NEAT<br>
-																			ZIPUP
-																		</p>
-																	</div>
-																</div>
-															</div>
-														</a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="menu">
-											<div class="menu__container">
-												<div class="menu__list">
-													<div class="menu__item">
-														<div class="menu__round">
-															<div class="menu__inner">
-																<div class="menu__img">
-																	<img src="./assets/images/dummy.png" alt="">
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="menu__item">
-														<a href="#" class="menu__link">
-															<div class="menu__round">
-																<div class="menu__inner">
-																	<div class="menu__img">
-																		<img src="./assets/images/product.png" alt="">
-																	</div>
-																	<div class="menu__info">
-																		<p class="menu__name">
-																			22SS SLIM NEAT<br>
-																			ZIPUP
-																		</p>
-																	</div>
-																</div>
-															</div>
-														</a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
+						<div class="celeb-curation__screen">
+								<div class="celeb-curation__curtain">
+										<span class="celeb-curation__text">CELEB</span>
 								</div>
-								<button type="button" class="swiper-button-next">NEXT</button>
-        				<button type="button" class="swiper-button-prev">PREV</button>
-							</div>
+								<div class="celeb-curation__swiper">
+										<div class="swiper-container">
+												<div class="swiper-wrapper">
+														<div class="swiper-slide">
+																<div class="menu">
+																		<div class="menu__container">
+																				<div class="menu__list">
+																						<div class="menu__item">
+																								<div class="menu__round">
+																										<div class="menu__inner">
+																												<div class="menu__img"><img src="/web/assets/images/dummy.png" alt=""></div>
+																										</div>
+																								</div>
+																						</div>
+																						<div class="menu__item">
+																								<a href="#" class="menu__link">
+																										<div class="menu__round">
+																												<div class="menu__inner">
+																														<div class="menu__img">
+																																<img src="/web/assets/images/product.png" alt="">
+																														</div>
+																														<div class="menu__info">
+																																<p class="menu__name">
+																																		22SS SLIM NEAT<br>
+																																		ZIPUP
+																																</p>
+																														</div>
+																												</div>
+																										</div>
+																								</a>
+																						</div>
+																				</div>
+																		</div>
+																</div>
+														</div>
+														<div class="swiper-slide">
+																<div class="menu">
+																		<div class="menu__container">
+																				<div class="menu__list">
+																						<div class="menu__item">
+																								<div class="menu__round">
+																										<div class="menu__inner">
+																												<div class="menu__img"><img src="/web/assets/images/dummy.png" alt=""></div>
+																										</div>
+																								</div>
+																						</div>
+																						<div class="menu__item">
+																								<a href="#" class="menu__link">
+																										<div class="menu__round">
+																												<div class="menu__inner">
+																														<div class="menu__img"><img src="/web/assets/images/product.png" alt=""></div>
+																														<div class="menu__info">
+																																<p class="menu__name">
+																																		22SS SLIM NEAT<br>
+																																		ZIPUP
+																																</p>
+																														</div>
+																												</div>
+																										</div>
+																								</a>
+																						</div>
+																				</div>
+																		</div>
+																</div>
+														</div>
+												</div>
+												<button type="button" class="swiper-button-next">NEXT</button>
+												<button type="button" class="swiper-button-prev">PREV</button>
+										</div>
+								</div>
+								<div class="celeb-curation__curtain">
+										<span class="celeb-curation__text">CURATION</span>
+								</div>
 						</div>
-						<div class="celeb-curation__curtain">
-							<span class="celeb-curation__text">CURATION</span>
-						</div>
-					</div>
 				</div>
 			</div>
 			<div class="menu">
 				<nav class="menu__container">
-					<ul class="menu__list">
-						<li class="menu__item">
-							<a href="#" class="menu__link">
-								<div class="menu__round">
-									<div class="menu__inner menu__inner--center">
-										<div class="menu__img">
-											<img src="../assets/images/product.png" alt="상품">
-										</div>
-										<p class="menu__category">OUTER</p>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li class="menu__item">
-							<a href="#" class="menu__link">
-								<div class="menu__round">
-									<div class="menu__inner menu__inner--center">
-										<div class="menu__img">
-											<img src="../assets/images/product.png" alt="상품">
-										</div>
-										<p class="menu__category">BOTTOM</p>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li class="menu__item">
-							<a href="#" class="menu__link">
-								<div class="menu__round">
-									<div class="menu__inner menu__inner--center">
-										<div class="menu__img">
-											<img src="../assets/images/product.png" alt="상품">
-										</div>
-										<p class="menu__category">TOP</p>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li class="menu__item">
-							<a href="#" class="menu__link">
-								<div class="menu__round">
-									<div class="menu__inner menu__inner--center">
-										<div class="menu__img">
-											<img src="../assets/images/product.png" alt="상품">
-										</div>
-										<p class="menu__category">ACC</p>
-									</div>
-								</div>
-							</a>
-						</li>
-					</ul>
+						<ul class="menu__list">
+								<li class="menu__item">
+										<a href="#" class="menu__link">
+												<div class="menu__round">
+														<div class="menu__inner menu__inner--center">
+																<div class="menu__img"><img src="./web/assets/images/product.png" alt="상품"></div>
+																<p class="menu__category">OUTER</p>
+														</div>
+												</div>
+										</a>
+								</li>
+								<li class="menu__item">
+										<a href="#" class="menu__link">
+												<div class="menu__round">
+														<div class="menu__inner menu__inner--center">
+																<div class="menu__img"><img src="./web/assets/images/product.png" alt="상품"></div>
+																<p class="menu__category">BOTTOM</p>
+														</div>
+												</div>
+										</a>
+								</li>
+								<li class="menu__item">
+										<a href="#" class="menu__link">
+												<div class="menu__round">
+														<div class="menu__inner menu__inner--center">
+																<div class="menu__img"><img src="./web/assets/images/product.png" alt="상품"></div>
+																<p class="menu__category">TOP</p>
+														</div>
+												</div>
+										</a>
+								</li>
+								<li class="menu__item">
+										<a href="#" class="menu__link">
+												<div class="menu__round">
+														<div class="menu__inner menu__inner--center">
+																<div class="menu__img"><img src="./web/assets/images/product.png" alt="상품"></div>
+																<p class="menu__category">ACC</p>
+														</div>
+												</div>
+										</a>
+								</li>
+						</ul>
 				</nav>
 			</div>
 		</div>

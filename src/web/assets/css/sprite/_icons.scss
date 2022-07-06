@@ -1,0 +1,346 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$bg-header-funkplay-off-name: 'bg_header_funkplay_off';
+$bg-header-funkplay-off-x: 0px;
+$bg-header-funkplay-off-y: 14px;
+$bg-header-funkplay-off-offset-x: 0px;
+$bg-header-funkplay-off-offset-y: -14px;
+$bg-header-funkplay-off-width: 47px;
+$bg-header-funkplay-off-height: 32px;
+$bg-header-funkplay-off-total-width: 161px;
+$bg-header-funkplay-off-total-height: 63px;
+$bg-header-funkplay-off-image: '../images/sprite/icons.png';
+$bg-header-funkplay-off: (0px, 14px, 0px, -14px, 47px, 32px, 161px, 63px, '../images/sprite/icons.png', 'bg_header_funkplay_off', );
+$bg-header-funkplay-on-name: 'bg_header_funkplay_on';
+$bg-header-funkplay-on-x: 47px;
+$bg-header-funkplay-on-y: 14px;
+$bg-header-funkplay-on-offset-x: -47px;
+$bg-header-funkplay-on-offset-y: -14px;
+$bg-header-funkplay-on-width: 47px;
+$bg-header-funkplay-on-height: 32px;
+$bg-header-funkplay-on-total-width: 161px;
+$bg-header-funkplay-on-total-height: 63px;
+$bg-header-funkplay-on-image: '../images/sprite/icons.png';
+$bg-header-funkplay-on: (47px, 14px, -47px, -14px, 47px, 32px, 161px, 63px, '../images/sprite/icons.png', 'bg_header_funkplay_on', );
+$bg-select-name: 'bg_select';
+$bg-select-x: 149px;
+$bg-select-y: 14px;
+$bg-select-offset-x: -149px;
+$bg-select-offset-y: -14px;
+$bg-select-width: 11px;
+$bg-select-height: 6px;
+$bg-select-total-width: 161px;
+$bg-select-total-height: 63px;
+$bg-select-image: '../images/sprite/icons.png';
+$bg-select: (149px, 14px, -149px, -14px, 11px, 6px, 161px, 63px, '../images/sprite/icons.png', 'bg_select', );
+$btn-header-search-name: 'btn_header_search';
+$btn-header-search-x: 94px;
+$btn-header-search-y: 14px;
+$btn-header-search-offset-x: -94px;
+$btn-header-search-offset-y: -14px;
+$btn-header-search-width: 34px;
+$btn-header-search-height: 21px;
+$btn-header-search-total-width: 161px;
+$btn-header-search-total-height: 63px;
+$btn-header-search-image: '../images/sprite/icons.png';
+$btn-header-search: (94px, 14px, -94px, -14px, 34px, 21px, 161px, 63px, '../images/sprite/icons.png', 'btn_header_search', );
+$ico-header-search-name: 'ico_header_search';
+$ico-header-search-x: 36px;
+$ico-header-search-y: 46px;
+$ico-header-search-offset-x: -36px;
+$ico-header-search-offset-y: -46px;
+$ico-header-search-width: 15px;
+$ico-header-search-height: 15px;
+$ico-header-search-total-width: 161px;
+$ico-header-search-total-height: 63px;
+$ico-header-search-image: '../images/sprite/icons.png';
+$ico-header-search: (36px, 46px, -36px, -46px, 15px, 15px, 161px, 63px, '../images/sprite/icons.png', 'ico_header_search', );
+$ico-like-name: 'ico_like';
+$ico-like-x: 0px;
+$ico-like-y: 46px;
+$ico-like-offset-x: 0px;
+$ico-like-offset-y: -46px;
+$ico-like-width: 20px;
+$ico-like-height: 17px;
+$ico-like-total-width: 161px;
+$ico-like-total-height: 63px;
+$ico-like-image: '../images/sprite/icons.png';
+$ico-like: (0px, 46px, 0px, -46px, 20px, 17px, 161px, 63px, '../images/sprite/icons.png', 'ico_like', );
+$ico-share-name: 'ico_share';
+$ico-share-x: 128px;
+$ico-share-y: 14px;
+$ico-share-offset-x: -128px;
+$ico-share-offset-y: -14px;
+$ico-share-width: 21px;
+$ico-share-height: 20px;
+$ico-share-total-width: 161px;
+$ico-share-total-height: 63px;
+$ico-share-image: '../images/sprite/icons.png';
+$ico-share: (128px, 14px, -128px, -14px, 21px, 20px, 161px, 63px, '../images/sprite/icons.png', 'ico_share', );
+$ico-star-name: 'ico_star';
+$ico-star-x: 20px;
+$ico-star-y: 46px;
+$ico-star-offset-x: -20px;
+$ico-star-offset-y: -46px;
+$ico-star-width: 16px;
+$ico-star-height: 16px;
+$ico-star-total-width: 161px;
+$ico-star-total-height: 63px;
+$ico-star-image: '../images/sprite/icons.png';
+$ico-star: (20px, 46px, -20px, -46px, 16px, 16px, 161px, 63px, '../images/sprite/icons.png', 'ico_star', );
+$logo-name: 'logo';
+$logo-x: 0px;
+$logo-y: 0px;
+$logo-offset-x: 0px;
+$logo-offset-y: 0px;
+$logo-width: 161px;
+$logo-height: 14px;
+$logo-total-width: 161px;
+$logo-total-height: 63px;
+$logo-image: '../images/sprite/icons.png';
+$logo: (0px, 0px, 0px, 0px, 161px, 14px, 161px, 63px, '../images/sprite/icons.png', 'logo', );
+$bg-header-funkplay-off-2x-name: 'bg_header_funkplay_off@2x';
+$bg-header-funkplay-off-2x-x: 0px;
+$bg-header-funkplay-off-2x-y: 28px;
+$bg-header-funkplay-off-2x-offset-x: 0px;
+$bg-header-funkplay-off-2x-offset-y: -28px;
+$bg-header-funkplay-off-2x-width: 94px;
+$bg-header-funkplay-off-2x-height: 64px;
+$bg-header-funkplay-off-2x-total-width: 322px;
+$bg-header-funkplay-off-2x-total-height: 126px;
+$bg-header-funkplay-off-2x-image: '../images/sprite/icons@2x.png';
+$bg-header-funkplay-off-2x: (0px, 28px, 0px, -28px, 94px, 64px, 322px, 126px, '../images/sprite/icons@2x.png', 'bg_header_funkplay_off@2x', );
+$bg-header-funkplay-on-2x-name: 'bg_header_funkplay_on@2x';
+$bg-header-funkplay-on-2x-x: 94px;
+$bg-header-funkplay-on-2x-y: 28px;
+$bg-header-funkplay-on-2x-offset-x: -94px;
+$bg-header-funkplay-on-2x-offset-y: -28px;
+$bg-header-funkplay-on-2x-width: 94px;
+$bg-header-funkplay-on-2x-height: 64px;
+$bg-header-funkplay-on-2x-total-width: 322px;
+$bg-header-funkplay-on-2x-total-height: 126px;
+$bg-header-funkplay-on-2x-image: '../images/sprite/icons@2x.png';
+$bg-header-funkplay-on-2x: (94px, 28px, -94px, -28px, 94px, 64px, 322px, 126px, '../images/sprite/icons@2x.png', 'bg_header_funkplay_on@2x', );
+$bg-select-2x-name: 'bg_select@2x';
+$bg-select-2x-x: 298px;
+$bg-select-2x-y: 28px;
+$bg-select-2x-offset-x: -298px;
+$bg-select-2x-offset-y: -28px;
+$bg-select-2x-width: 22px;
+$bg-select-2x-height: 12px;
+$bg-select-2x-total-width: 322px;
+$bg-select-2x-total-height: 126px;
+$bg-select-2x-image: '../images/sprite/icons@2x.png';
+$bg-select-2x: (298px, 28px, -298px, -28px, 22px, 12px, 322px, 126px, '../images/sprite/icons@2x.png', 'bg_select@2x', );
+$btn-header-search-2x-name: 'btn_header_search@2x';
+$btn-header-search-2x-x: 188px;
+$btn-header-search-2x-y: 28px;
+$btn-header-search-2x-offset-x: -188px;
+$btn-header-search-2x-offset-y: -28px;
+$btn-header-search-2x-width: 68px;
+$btn-header-search-2x-height: 42px;
+$btn-header-search-2x-total-width: 322px;
+$btn-header-search-2x-total-height: 126px;
+$btn-header-search-2x-image: '../images/sprite/icons@2x.png';
+$btn-header-search-2x: (188px, 28px, -188px, -28px, 68px, 42px, 322px, 126px, '../images/sprite/icons@2x.png', 'btn_header_search@2x', );
+$ico-header-search-2x-name: 'ico_header_search@2x';
+$ico-header-search-2x-x: 72px;
+$ico-header-search-2x-y: 92px;
+$ico-header-search-2x-offset-x: -72px;
+$ico-header-search-2x-offset-y: -92px;
+$ico-header-search-2x-width: 30px;
+$ico-header-search-2x-height: 30px;
+$ico-header-search-2x-total-width: 322px;
+$ico-header-search-2x-total-height: 126px;
+$ico-header-search-2x-image: '../images/sprite/icons@2x.png';
+$ico-header-search-2x: (72px, 92px, -72px, -92px, 30px, 30px, 322px, 126px, '../images/sprite/icons@2x.png', 'ico_header_search@2x', );
+$ico-like-2x-name: 'ico_like@2x';
+$ico-like-2x-x: 0px;
+$ico-like-2x-y: 92px;
+$ico-like-2x-offset-x: 0px;
+$ico-like-2x-offset-y: -92px;
+$ico-like-2x-width: 40px;
+$ico-like-2x-height: 34px;
+$ico-like-2x-total-width: 322px;
+$ico-like-2x-total-height: 126px;
+$ico-like-2x-image: '../images/sprite/icons@2x.png';
+$ico-like-2x: (0px, 92px, 0px, -92px, 40px, 34px, 322px, 126px, '../images/sprite/icons@2x.png', 'ico_like@2x', );
+$ico-share-2x-name: 'ico_share@2x';
+$ico-share-2x-x: 256px;
+$ico-share-2x-y: 28px;
+$ico-share-2x-offset-x: -256px;
+$ico-share-2x-offset-y: -28px;
+$ico-share-2x-width: 42px;
+$ico-share-2x-height: 40px;
+$ico-share-2x-total-width: 322px;
+$ico-share-2x-total-height: 126px;
+$ico-share-2x-image: '../images/sprite/icons@2x.png';
+$ico-share-2x: (256px, 28px, -256px, -28px, 42px, 40px, 322px, 126px, '../images/sprite/icons@2x.png', 'ico_share@2x', );
+$ico-star-2x-name: 'ico_star@2x';
+$ico-star-2x-x: 40px;
+$ico-star-2x-y: 92px;
+$ico-star-2x-offset-x: -40px;
+$ico-star-2x-offset-y: -92px;
+$ico-star-2x-width: 32px;
+$ico-star-2x-height: 32px;
+$ico-star-2x-total-width: 322px;
+$ico-star-2x-total-height: 126px;
+$ico-star-2x-image: '../images/sprite/icons@2x.png';
+$ico-star-2x: (40px, 92px, -40px, -92px, 32px, 32px, 322px, 126px, '../images/sprite/icons@2x.png', 'ico_star@2x', );
+$logo-2x-name: 'logo@2x';
+$logo-2x-x: 0px;
+$logo-2x-y: 0px;
+$logo-2x-offset-x: 0px;
+$logo-2x-offset-y: 0px;
+$logo-2x-width: 322px;
+$logo-2x-height: 28px;
+$logo-2x-total-width: 322px;
+$logo-2x-total-height: 126px;
+$logo-2x-image: '../images/sprite/icons@2x.png';
+$logo-2x: (0px, 0px, 0px, 0px, 322px, 28px, 322px, 126px, '../images/sprite/icons@2x.png', 'logo@2x', );
+$icons-width: 161px;
+$icons-height: 63px;
+$icons-image: '../images/sprite/icons.png';
+$icons-sprites: ($bg-header-funkplay-off, $bg-header-funkplay-on, $bg-select, $btn-header-search, $ico-header-search, $ico-like, $ico-share, $ico-star, $logo, );
+$icons: (161px, 63px, '../images/sprite/icons.png', $icons-sprites, );
+$retina-spritesheet-width: 322px;
+$retina-spritesheet-height: 126px;
+$retina-spritesheet-image: '../images/sprite/icons@2x.png';
+$retina-spritesheet-sprites: ($bg-header-funkplay-off-2x, $bg-header-funkplay-on-2x, $bg-select-2x, $btn-header-search-2x, $ico-header-search-2x, $ico-like-2x, $ico-share-2x, $ico-star-2x, $logo-2x, );
+$retina-spritesheet: (322px, 126px, '../images/sprite/icons@2x.png', $retina-spritesheet-sprites, );
+
+// These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
+//
+// The list formatted variables are intended for mixins like `retina-sprite` and `retina-sprites`.
+$bg-header-funkplay-off-group-name: 'bg_header_funkplay_off';
+$bg-header-funkplay-off-group: ('bg_header_funkplay_off', $bg-header-funkplay-off, $bg-header-funkplay-off-2x, );
+$bg-header-funkplay-on-group-name: 'bg_header_funkplay_on';
+$bg-header-funkplay-on-group: ('bg_header_funkplay_on', $bg-header-funkplay-on, $bg-header-funkplay-on-2x, );
+$bg-select-group-name: 'bg_select';
+$bg-select-group: ('bg_select', $bg-select, $bg-select-2x, );
+$btn-header-search-group-name: 'btn_header_search';
+$btn-header-search-group: ('btn_header_search', $btn-header-search, $btn-header-search-2x, );
+$ico-header-search-group-name: 'ico_header_search';
+$ico-header-search-group: ('ico_header_search', $ico-header-search, $ico-header-search-2x, );
+$ico-like-group-name: 'ico_like';
+$ico-like-group: ('ico_like', $ico-like, $ico-like-2x, );
+$ico-share-group-name: 'ico_share';
+$ico-share-group: ('ico_share', $ico-share, $ico-share-2x, );
+$ico-star-group-name: 'ico_star';
+$ico-star-group: ('ico_star', $ico-star, $ico-star-2x, );
+$logo-group-name: 'logo';
+$logo-group: ('logo', $logo, $logo-2x, );
+$retina-groups: ($bg-header-funkplay-off-group, $bg-header-funkplay-on-group, $bg-select-group, $btn-header-search-group, $ico-header-search-group, $ico-like-group, $ico-share-group, $ico-star-group, $logo-group, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `retina-sprite` mixin sets up rules and a media query for a sprite/retina sprite.
+//   It should be used with a "retina group" variable.
+//
+// The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
+//
+// $icon-home-group: ('icon-home', $icon-home, $icon-home-2x, );
+//
+// .icon-home {
+//   @include retina-sprite($icon-home-group);
+// }
+@mixin sprite-background-size($sprite) {
+  $sprite-total-width: nth($sprite, 7);
+  $sprite-total-height: nth($sprite, 8);
+  background-size: $sprite-total-width $sprite-total-height;
+}
+
+@mixin retina-sprite($retina-group) {
+  $normal-sprite: nth($retina-group, 2);
+  $retina-sprite: nth($retina-group, 3);
+  @include sprite($normal-sprite);
+
+  @media (-webkit-min-device-pixel-ratio: 2),
+         (min-resolution: 192dpi) {
+    @include sprite-image($retina-sprite);
+    @include sprite-background-size($normal-sprite);
+  }
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
+
+// The `retina-sprites` mixin generates a CSS rule and media query for retina groups
+//   This yields the same output as CSS retina template but can be overridden in SCSS
+//
+// @include retina-sprites($retina-groups);
+@mixin retina-sprites($retina-groups) {
+  @each $retina-group in $retina-groups {
+    $sprite-name: nth($retina-group, 1);
+    .#{$sprite-name} {
+      @include retina-sprite($retina-group);
+    }
+  }
+}
