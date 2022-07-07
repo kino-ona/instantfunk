@@ -776,3 +776,21 @@
     }
   }
 }
+
+// product list
+.product-list {
+
+  .menu {
+    .menu__item {
+
+    }
+  }
+
+  @include breakpoints.custom(1400px) {
+    .menu {
+      .menu__item {
+        width: calc(50% - 4px);
+      }
+    }
+  }
+}
