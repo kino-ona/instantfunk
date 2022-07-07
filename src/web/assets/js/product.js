@@ -30,9 +30,10 @@ $(document).ready(function(){
     }
   });
 
-  $('.product-list .menu .menu__link').click(function(){
+  $('.product-list .menu .menu__link').click(function(event){
     var el = $(this).closest('.menu__item');
     el.find('.menu__layer').addClass('menu__layer--opened');
+    event.preventDefault();
   });
 
   $('.product-list .menu .menu__dimmed').click(function(){
