@@ -903,7 +903,133 @@
   }
 }
 .product_reviewview {
-  
+  .layer__wrap {
+    width: 800px;
+    height: 100%;
+    max-height: 840px;
+  }
+  .layer__content {
+    display: flex;
+    height: 100%;
+  }
+  .cont_detail {
+    width: calc(100% - 280px);
+    height: 100%;
+    padding: 35px 30px;
+    border-right: 1px solid #000000;
+    overflow-y: auto;
+  }
+  .cont_summary {
+    width: 280px;
+    padding: 35px 30px;
+  }
+  .rv__product {
+    display: flex;
+    margin-bottom: 30px;
+  }
+  .rv__figure {
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+  }
+  .rv__box {
+    width: calc(100% - 148px);
+  }
+  .rv__prname {
+    font-size: 20px;
+    @include mixins.PtdMedium();
+  }
+  .rv__prcnt {
+    display: flex;
+    margin-top: 7px;
+    @include mixins.PtdMedium();
+    p {
+      margin-right: 10px;
+    }
+  }
+  .review__text {
+    font-size:24px;
+    line-height: 1.3;
+    @include mixins.PtdRegular();
+    word-break: keep-all;
+  }
+  .review__image {
+    width: 100%;
+    margin: 15px 0;
+  }
+
+  .rv__moreinfo {
+    position: relative;
+    display: flex;
+    margin-top: 25px;
+    .info_tag {
+      margin-right: 10px;
+      border:1px solid #000000;
+      border-radius: 15px;
+      padding:9px 10px;
+      @include mixins.PtdMedium();
+    }
+  }
+  .rv__morebtn {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    button {
+      margin-left: 15px;
+    }
+  }
+  .btn__rvlike {
+    display: inline-block;
+    @include icons.retina-sprite(icons.$ico-like-group);
+    &.seleted {
+      @include icons.retina-sprite(icons.$ico-like-on-group);
+    }
+  }
+  .btn__rvshare {
+    display: inline-block;
+    @include icons.retina-sprite(icons.$ico-share-group);
+    &.seleted {
+    }
+  }
+  .review__writter {
+    padding-right: 30px;
+    @include mixins.PtdMedium();
+    line-height: 1.3;
+    word-break: keep-all;
+    span {
+      font-size: 20px;
+      vertical-align: middle;
+    }
+  }
+  .rv__other {
+    margin-top: 20px;
+  }
+  .other__title {
+    margin-bottom: 12px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .other__tag {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    color: #999999;
+  }
+  .other__list {
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    li {
+      float: left;
+      width: 60px;
+      height: 60px;
+      border-radius: 20px;
+      margin-right: 2px;
+      overflow: hidden;
+    }
+  }
 }
 
 // product list
