@@ -237,7 +237,7 @@
 							</div>
 
 							<div class="review__etc">
-								<a href="#" class="btn__rvWrite">WRITE</a>
+								<a onclick="$('#Product_ReviewWrite').show();" class="btn__rvWrite">WRITE</a>
 							</div>
 						</div>	
 
@@ -474,15 +474,97 @@
 		</div>
 
 		<!-- 리뷰등록 팝업 //-->
-		<div module="Product_BasketAdd" id="Product_BasketAdd" class="layer__body product_basketadd" style="display: block">
+		<div module="" id="Product_ReviewWrite" class="layer__body product_reviewwrite">
 			<div class="layer__wrap">
-				<div class="layer__close"><a onclick="$('#Product_BasketAdd').hide();" class="btn__close"><span class="a11y">닫기</span></a></div>
+				<div class="layer__close"><a onclick="$('#Product_ReviewWrite').hide();" class="btn__close"><span class="a11y">닫기</span></a></div>
+				<div class="layer__content">
+					<div class="rv__product">
+						<p class="rv__figure"><img src="/web/assets/images/temp/@product01.png"></p>
+						<div class="rv__box">
+							<p class="rv__prname">Rinen Striped Jacket</p>
+							<div class="rv__prcnt">
+								<p>리뷰 999</p>
+								<p>평점 4.8</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="rv__grade">
+						<dl class="table__form form__margin">
+							<dt>별점입력</dt>
+							<dd></dd>
+						</dl>
+					</div>
+
+					<div class="rv__photo">
+						<!-- <ul>
+							<li>
+								<button><i></i>사진추가</button>
+							</li>
+						</ul> -->
+
+						<button class="btn__addphoto"><i></i><span>사진추가</span></button>
+					</div>
+
+					<div class="rv__additem">
+						<dl class="table__form">
+							<dt>신장</dt>
+							<dd>
+								<select>
+									<option>선택</option>
+									<option>150미만</option>
+									<option>150~155</option>
+								</select>
+							</dd>
+						</dl>
+						<dl class="table__form">
+							<dt>몸무게</dt>
+							<dd>
+								<select>
+									<option>선택</option>
+									<option>40kg미만</option>
+									<option>41~45</option>
+								</select>
+							</dd>
+						</dl>
+						<dl class="table__form">
+							<dt>착용사이즈</dt>
+							<dd>
+								<select>
+									<option>선택</option>
+									<option>44</option>
+									<option>55</option>
+								</select>
+							</dd>
+						</dl>
+						<dl class="table__form align__top">
+							<dt>내용</dt>
+							<dd>
+								<textarea placeholder="내용을 입력하세요"></textarea>
+							</dd>
+						</dl>
+						<dl class="table__form form__margin">
+							<dt>SNS로 퍼가기</dt>
+							<dd>
+								<input type="checkbox" id="post_sns" /><label for="post_sns">허용</label>
+							</dd>
+						</dl>
+					</div>
+					<div class="layer__button">
+						<a onclick="$('#Product_ReviewWrite').hide();" class="btn btn_rvwrite">리뷰작성</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 리뷰상세 팝업 //-->
+		<div module="" id="Product_ReviewView" class="layer__body product_reviewview" style="display: block">
+			<div class="layer__wrap">
+				<div class="layer__close"><a onclick="$('#Product_ReviewView').hide();" class="btn__close"><span class="a11y">닫기</span></a></div>
 				<div class="layer__content">
 				</div>
 			</div>
 		</div>
-		
-
 		
 		@@include('../inc/footer.inc', {
 			"webroot": ".."

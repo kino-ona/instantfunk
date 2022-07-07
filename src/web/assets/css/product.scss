@@ -781,9 +781,6 @@
     display: flex;
     width: 530px;
     height: 330px;
-    border: 1px solid #000;
-    border-radius: 42px;
-    overflow: hidden;
     align-items: center;
     justify-content: center;
   }
@@ -814,6 +811,99 @@
     border: 1px solid #000000;
     background-color: #ffffff;
   }
+}
+.product_reviewwrite {
+  .layer__wrap {
+    width: 495px;
+    padding: 35px 25px;
+  }
+  .rv__product {
+    display: flex;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #000000;
+  }
+  .rv__figure {
+    width: 48px;
+    height: 48px;
+    margin-right: 10px;
+  }
+  .rv__box {
+    width: calc(100% - 148px);
+  }
+  .rv__prname {
+    font-size: 16px;
+    @include mixins.PtdMedium();
+  }
+  .rv__prcnt {
+    display: flex;
+    margin-top: 7px;
+    @include mixins.PtdMedium();
+    p {
+      margin-right: 10px;
+    }
+  }
+  .rv__additem {
+    border-bottom: 1px solid #000000;
+  }
+  .table__form {
+    margin:1px 0;
+    align-items: center;
+    &.align__top {
+      align-items: flex-start;
+      dt {
+        padding-top: 20px;
+      }
+    }
+    dt {
+      flex: .3;
+    }
+    dd {
+      flex: .7;
+    }
+    select {
+      border-radius: 28px;
+    }
+    textarea {
+      padding: 20px 15px;
+      border: 0;
+      border-radius: 28px;
+      background-color: #f4f4f7;
+    }
+  }
+  .rv__photo {
+    height: 155px;
+    margin: 0 0 20px;
+  }
+  .btn__addphoto {
+    width: 100%;
+    height: 155px;
+    background-color: #f4f4f7;
+    border-radius: 42px;
+    font-size: 18px;
+    text-align: center;
+    i {
+      display: block;
+      @include icons.retina-sprite(icons.$ico-camera-group);
+      margin: 0 auto;
+    }
+    span {
+      display: block;
+      margin-left: -10px;
+      margin-top: 8px;
+    }
+  }
+  .layer__button {
+    padding-top: 24px;
+    .btn_rvwrite {
+      flex: .3;
+      margin: 0 auto;
+      background-color: #000000;
+      color: #ffffff;
+    }
+  }
+}
+.product_reviewview {
+  
 }
 
 // product list
