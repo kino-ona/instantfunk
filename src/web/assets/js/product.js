@@ -31,6 +31,7 @@ $(function() {
     });
   } else {
     console.log($banner.height())
+    $banner.removeClass('on')
     // $option = $('.detail_info').find('.product__option');
     // $optionH = $option.height();
 
@@ -47,7 +48,7 @@ $(function() {
 		$('.card_board').cardGrid({
 	    no_columns: 2,
 	    padding_x: 0,
-	    single_column_breakpoint: 750
+	    single_column_breakpoint: 1400
 	  });
 	}
 
