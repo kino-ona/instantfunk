@@ -16,7 +16,6 @@ $(document).ready(function(){
 	});
 
 	if (visualSwiper.initialized) {
-		console.log(visualSwiper);
 		var video = visualSwiper.$el.find('video');
 		var target = $('.desktop .visual .visual__control').find('.visual__video');
 
@@ -27,11 +26,11 @@ $(document).ready(function(){
 		target.removeClass('visual__video--visible');
 	}
 
-	visualSwiper.on('transitionStart', function(){
+	visualSwiper.on('slideChangeTransitionStart', function(){
 		var video = visualSwiper.$el.find('video');
 		var target = $('.desktop .visual .visual__control').find('.visual__video');
 
-		for (let i = 0; i < video.length; i++) {
+		for (var i = 0; i < video.length; i++) {
 			video[i].pause();
 		}
 
@@ -44,7 +43,7 @@ $(document).ready(function(){
 		}
 	});
 
-	visualSwiper.on('transitionEnd', function(){
+	visualSwiper.on('slideChangeTransitionEnd', function(){
 		var video = visualSwiper.$el.find('video');
 
 		video[visualSwiper.activeIndex].play();
@@ -52,19 +51,18 @@ $(document).ready(function(){
 
 	$(document).on('mouseenter mouseleave', '.desktop .visual .visual__control', function(event){
 		if (event.type === 'mouseenter') {
-			const target = $(this).find('.visual__video');
-			let realIndex = visualSwiper.slides.eq(visualSwiper.activeIndex).attr('data-swiper-slide-index') || visualSwiper.activeIndex;
+			var target = $(this).find('.visual__video');
 			
 			target.removeClass('visual__video--visible');
 
-			if (Number(realIndex) + 1 == visualSwiper.slides.length - 2) {
+			if (Number(visualSwiper.realIndex) + 1 == visualSwiper.slides.length - 2) {
 				target.first().addClass('visual__video--visible');
 			} else {
-				target.eq(Number(realIndex) + 1).addClass('visual__video--visible');
+				target.eq(Number(visualSwiper.realIndex) + 1).addClass('visual__video--visible');
 			}
 		}
 		if (event.type === 'mouseleave') {
-			const target = $(this).find('.visual__video');
+			var target = $(this).find('.visual__video');
 
 			target.removeClass('visual__video--visible');
 		}
@@ -83,12 +81,12 @@ $(document).ready(function(){
 		}
 	});
 
-	const screenTarget = $('.celeb-curation__screen');
-	const screenTargetOffset = screenTarget.offset().top;
-	const screenTargetHeight = screenTarget.height();
+	var screenTarget = $('.celeb-curation__screen');
+	var screenTargetOffset = screenTarget.offset().top;
+	var screenTargetHeight = screenTarget.height();
 
 	$(window).scroll(function(){
-		let scrollTop = $(window).scrollTop();
+		var scrollTop = $(window).scrollTop();
 		if (scrollTop >= screenTargetOffset - screenTargetHeight / 3) {
 			screenTarget.addClass('celeb-curation__screen--opened');
 		}
