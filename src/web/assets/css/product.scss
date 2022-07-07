@@ -915,10 +915,18 @@
     }
   }
 
-  @include breakpoints.custom(1400px) {
+  @include breakpoints.desksm() {
     .menu {
       .menu__item {
         width: calc(50% - 4px);
+      }
+    }
+  }
+
+  @include breakpoints.mobile() {
+    .menu {
+      .menu__item {
+        width: calc(50% - 2px);
       }
     }
   }

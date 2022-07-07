@@ -1,21 +1,34 @@
 $(document).ready(function(){
   var productSwiper = new Swiper('.productDetailswp', {
 		pagination: {
-			el: '.productDetailswp .swiper-pagination',
-			// type: 'fraction'
-		},
-  });
-
-  var productListSwiper = new Swiper('.product-list .menu .menu__swiper', {
-    speed: 600,
-    breakpointsInverse: true,
-    breakpoints: {
-			750: {
-				allowTouchMove: false
-			}
+			el: '.productDetailswp .swiper-pagination'
 		}
   });
-  console.log(productListSwiper);
+
+  $('.product-list .menu .menu__swiper').each(function(){
+    productListSwiper = new Swiper($(this), {
+      speed: 600,
+      pagination: {
+        el: $(this).find('.swiper-pagination'),
+        type: 'progressbar'
+      },
+      breakpointsInverse: true,
+      breakpoints: {
+        750: {
+          allowTouchMove: false,
+        }
+      }
+    });
+  });
+
+  $(document).on('mouseenter mouseleave', '.desktop .product-list .menu .menu__swiper', function(event){
+    if (event.type === 'mouseenter') {
+      this.swiper.autoplay.start();
+    }
+    if (event.type === 'mouseleave') {
+      this.swiper.autoplay.stop();
+    }
+  });
 
   $('.product-list .menu .menu__link').click(function(){
     var el = $(this).closest('.menu__item');
@@ -23,7 +36,6 @@ $(document).ready(function(){
   });
 
   $('.product-list .menu .menu__dimmed').click(function(){
-    console.log(0);
     var el = $(this).closest('.menu__item');
     el.find('.menu__layer').removeClass('menu__layer--opened');
   });
@@ -37,7 +49,7 @@ $(document).ready(function(){
     var el = $(this).closest('.menu__item');
     el.find('.menu__option').removeClass('menu__option--opened');
   });
-})
+});
 
 $(function() {
 

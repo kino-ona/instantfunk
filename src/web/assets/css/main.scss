@@ -80,7 +80,6 @@
 		background-color: #fff;
 		color: #000;
 		font-size: 38px;
-		// line-height: 70px;
 		text-align: center;
 	}
 	.visual__control {
@@ -113,7 +112,6 @@
 					margin: 0 20px;
 					font-weight: 500;
 					font-size: 80px;
-					// line-height: 225px;
 					letter-spacing: -0.04em;
 				}
 			}
@@ -317,7 +315,6 @@
 		border-style: solid;
 		border-radius: 1em;
 		font-size: 26px;
-		// line-height: 46px;
 		letter-spacing: -0.04em;
 		text-transform: uppercase;
 		&:focus,
@@ -337,7 +334,6 @@
 				color: #fffe72;
 				font-size: 48px;
 				letter-spacing: -0.05em;
-				// line-height: 65px;
 			}
 		}
 	}
@@ -462,7 +458,6 @@
 			border-radius: 1em;
 			background: none;
 			font-size: 32px;
-			// line-height: 62px;
 			&:focus,
 			&:hover {
 				background-color: #5eecfa;
@@ -487,18 +482,6 @@
 		.menu__item {
 			width: calc(50% - 12px);
 			margin: 0 0 0 12px;
-			// &:first-child {
-			// 	.menu__img {
-					// position: static;
-					// height: 100%;
-					// @include mixins.translate(0, 0);
-					// img {
-						// width: 100%;
-						// height: 100%;
-						// border-radius: 42px;
-				// 	}
-				// }
-			// }
 		}
 		.menu__round {
 			padding-top: 84.6%;
@@ -520,7 +503,7 @@
 	
 	@include breakpoints.mobile() {
 		.celeb-curation__container {
-			padding: 52.5px 16px;
+			padding: 52.5px 10px;
 		}
 		.celeb-curation__curtain {
 			.celeb-curation__text {
@@ -553,17 +536,12 @@
 			.menu__item {
 				width: auto;
 				margin: 10px 0 0 0;
-				// &:first-child {
-				// 	.menu__img {
-				// 		img {
-				// 			border-radius: 21px;
-				// 		}
-				// 	}
-				// }
 			}
-			// .menu__round {
-			// 	border-radius: 21px;
-			// }
+			.menu__img {
+				img {
+					border-radius: 21px;
+				}
+			}
 			.menu__info {
 				padding: 0 16px 16px;
 			}
@@ -583,6 +561,11 @@
 		width: calc(50% - 2px);
 		margin: 2px 0 0 2px;
 	}
+	.menu__img {
+		img {
+			border-radius: 42px;
+		}
+	}
 
  	@include breakpoints.mobile() {
 		.menu__list {
@@ -595,7 +578,11 @@
 		}
 		.menu__round {
 			padding-top: 112.5%;
-			// border-radius: 32px;
+		}
+		.menu__img {
+			img {
+				border-radius: 32px;
+			}
 		}
 	}
 }

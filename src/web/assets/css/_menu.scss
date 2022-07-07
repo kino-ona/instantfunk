@@ -28,7 +28,6 @@
 	.menu__round {
 		position: relative;
 		padding-top: 112.5%;
-		// border-radius: 42px;
 		> .menu__inner {
 			position: absolute;
 			left: 0;
@@ -36,52 +35,21 @@
 			width: 100%;
 			height: 100%;
 		}
-		// > .menu__inner--center {
-		// 	display: flex;
-		// 	justify-content: center;
-		// 	align-items: center;
-		// }
 	}
-	// .menu__round--darkgreen {
-	// 	background: {
-	// 		color: #b3f977;
-	// 	}
-	// }
-	// .menu__round--lightgreen {
-	// 	background: {
-	// 		color: #b3f877;
-	// 	}
-	// }
-	// .menu__round--cyan {
-	// 	background: {
-	// 		color: #5eecfa;
-	// 	}
-	// }
-	// .menu__round--yellow {
-	// 	background: {
-	// 		color: #fffe72;
-	// 	}
-	// }
-	// .menu__round--orange {
-	// 	background: {
-	// 		color: #fb9739;
-	// 	}
-	// }
-	// .menu__round--darkpink {
-	// 	background: {
-	// 		color: #ffb5d1;
-	// 	}
-	// }
-	// .menu__round--lightpink {
-	// 	background: {
-	// 		color: #ffb4d2;
-	// 	}
-	// }
-	// .menu__round--purple {
-	// 	background: {
-	// 		color: #b8adf1;
-	// 	}
-	// }
+	.menu__category {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: 380px;
+		height: 180px;
+		margin: -90px 0 0 -190px;
+		border-radius: 100vw;
+		background-color: #fff;
+		font-size: 70px;
+	}
 	.menu__tags {
 		position: absolute;
 		left: 36px;
@@ -118,23 +86,27 @@
 			@include icons.retina-sprite(icons.$ico-menu-tag-funkplay-group);
 		}
 	}
-	.menu__category {
+	.menu__colors {
 		display: flex;
-		justify-content: center;
-		align-items: center;
 		position: absolute;
-		left: 50%;
-		top: 50%;
-		width: 380px;
-		height: 180px;
-		margin: -90px 0 0 -190px;
-		border-radius: 100vw;
-		background-color: #fff;
-		font-size: 70px;
-		// line-height: 195px;
+		right: 44px;
+		top: 44px;
+		z-index: 5;
+		.menu__color {
+			width: 12px;
+			height: 12px;
+			border-radius: 50%;
+			background-color: #000;
+			&:not(:first-child) {
+				margin-left: 16px;
+			}
+		}
 	}
 	.menu__swiper {
 		height: 100%;
+		.swiper-pagination {
+			display: none;
+		}
 	}
 	.menu__img {
 		width: 100%;
@@ -150,9 +122,10 @@
 		align-items: center;
 		padding: 10px 20px 55px;
 		.menu__right {
-			display: flex;
-			align-items: center;
 			flex: 1;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
 		}
 	}
 	.menu__name {
@@ -224,7 +197,7 @@
 			align-items: center;
 			width: 100%;
 			height: 142px;
-			border-radius: 72px;
+			border-radius: 100vw;
 			background-color: #000;
 			color: #fff;
 			font-weight: 500;
@@ -315,6 +288,7 @@
 			top: 50%;
 			width: 21px;
 			height: 2px;
+			border-radius: 2px;
 			background-color: #000;
 		}
 		&:before {
@@ -346,7 +320,6 @@
 		}
 		.menu__round {
 			padding-top: 133.33%;
-			// border-radius: 21px;
 		}
 		.menu__category {
 			width: 170px;
@@ -354,9 +327,64 @@
 			font-size: 28px;
 			margin: -41.5px 0 0 -85px;
 		}
+		.menu__tags {
+			left: 12px;
+			top: 12px;
+		}
+		.menu__tag {
+			height: 17px;
+			padding: 0 5.5px 0 4.5px;
+			font-size: 11px;
+			letter-spacing: -0.025em;
+			i {
+				margin-right: 4.5px;
+			}
+		}
+		.menu__tag--celeb {
+			i {
+				@include mixins.sprite(mo_icons.$ico-menu-tag-celeb);
+			}
+		}
+		.menu__tag--picks {
+			i {
+				@include mixins.sprite(mo_icons.$ico-menu-tag-picks);
+			}
+		}
+		.menu__tag--funkplay {
+			i {
+				@include mixins.sprite(mo_icons.$ico-menu-tag-funkplay);
+			}
+		}
+		.menu__colors {
+			right: 15px;
+			top: 15px;
+			.menu__color {
+				width: 6px;
+				height: 6px;
+				&:not(:first-child) {
+					margin-left: 6px;
+				}
+			}
+		}
+		.menu__swiper {
+			.swiper-pagination-progressbar {
+				display: block;
+				left: 50%;
+				top: auto;
+				bottom: 56px;
+				width: 20.67vw;
+				height: 2px;
+				margin: 0 auto;
+				background-color: rgba(0,0,0,.14);
+				@include mixins.translate(-50%, 0);
+			}
+			.swiper-pagination-progressbar-fill {
+				background-color: #fff;
+			}
+		}
 		.menu__img {
 			img {
-				border-radius: 21px;
+				border-radius: 26px;
 			}
 		}
 		.menu__info {
@@ -372,19 +400,57 @@
 			line-height: 13px;
 		}
 		.menu__discount {
-			margin-right: 5px;
+			margin: 0 5px 0 0;
 			font-size: 11px;
 			line-height: 13px;
 		}
 		.menu__event {
-			justify-content: flex-start;
-			margin: 2px 4px 0 0;
-			font-size: 11px;
+			height: 12px;
+			margin: 2px 3px 0 0;
+			padding: 0 4px 0 3px;
+			font-size: 9px;
+		}
+		.menu__buttons {
+			.menu__button {
+				height: 40px;
+				font-size: 10px;
+			}
+		}
+		.menu__sizes {
+			margin: -3px 0 auto -3px;
+			padding: 4px 4px 0;
+			> div {
+				width: calc(100% / 3 - 3px);
+				padding-top: calc(100% / 3 - 3px);
+				margin: 3px 0 0 3px;
+			}
+			.menu__size {
+				font-size: 10.13vw;
+			}
+		}
+		.menu__count {
+			height: 40px;
+			margin-bottom: 2.5px;
+			padding: 0 15px;
+		}
+		.menu__current {
+			font-size: 10px;
+			letter-spacing: -0.025em;
+		}
+		.menu__close {
+			right: 14px;
+			bottom: 96.5px;
+			width: 21px;
+			height: 21px;
+			&:before,
+			&:after {
+				width: 10px;
+			}
 		}
 
 		.marquee {
 			height: 28.5px;
-			clip-path: inset(0 round 21px 21px 0 0);
+			clip-path: inset(0 round 26px 26px 0 0);
 			.marquee__mask {
 				height: 28.5px;
 			}
