@@ -818,14 +818,68 @@
 
 // product list
 .product-list {
-
-  .menu {
-    .menu__item {
-
+  .product-list__sort {
+    position: relative;
+  }
+  .product-list__trigger {
+    display: inline-flex;
+    align-items: center;
+    padding-left: 36px;
+    cursor: pointer;
+    .product-list__text {
+      font-weight: 500;
+      font-size: 100px;
+      letter-spacing: -0.05em;
+    }
+    .product-list__ico {
+      margin-left: 18px;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 10px solid #000;
+    }
+  }
+  .product-list__trigger--active {
+    & + .product-list__option {
+      display: flex;
+    }
+    .product-list__ico {
+      border-top: 0;
+      border-bottom: 10px solid #000;
+    }
+  }
+  .product-list__option {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    left: 0;
+    top: 135px;
+    z-index: 15;
+    padding-left: 35px;
+    .product-list__item {
+      &:not(:first-child) {
+        margin-top: 8px;
+      }
+      display: flex;
+      align-items: center;
+      height: 40px;
+      padding: 0 15px 0 16px;
+      border: 1px solid #000;
+      border-radius: 100vw;
+      background-color: #fff;
+      font-weight: 600;
+      font-size: 28px;
+      white-space: nowrap;
+      cursor: pointer;
+      &:focus,
+      &:hover {
+        background-color: #5eecfa;
+      }
     }
   }
 
   @include breakpoints.desksm() {
+
     .menu {
       .menu__item {
         width: calc(50% - 4px);
@@ -834,6 +888,62 @@
   }
 
   @include breakpoints.mobile() {
+    .product-list__container {
+      position: relative;
+      padding-bottom: 81px;
+    }
+    .product-list__sort {
+      position: fixed;
+      left: 50%;
+      bottom: 0;
+      z-index: 15;
+      margin-left: -50px;
+    }
+    .product-list__sort--absoluted {
+      position: absolute;
+    }
+    .product-list__trigger {
+      justify-content: center;
+      width: 100px;
+      height: 62px;
+      padding-left: 0;
+      border: 1px solid #000;
+      border-radius: 100vw;
+      background-color: #fff;
+      .product-list__text {
+        flex: 0 1 0%;
+        font-size: 10px;
+        letter-spacing: -0.02em;
+        text-align: center;
+      }
+      .product-list__ico {
+        margin-left: 4.5px;
+        border-left-width: 4px;
+        border-right-width: 4px;
+        border-top-width: 5px;
+      }
+    }
+    .product-list__trigger--active {
+      .product-list__ico {
+        border-bottom-width: 5px;
+      }
+    }
+    .product-list__option {
+      align-items: center;
+      left: 50%;
+      top: auto;
+      bottom: 66px;
+      padding-left: 0;
+      @include mixins.translate(-50%, 0);
+      .product-list__item {
+        height: 34px;
+        padding: 0 13px 0 14px;
+        font-weight: 500;
+        font-size: 22px;
+        letter-spacing: -0.02em;
+      }
+    }
+
     .menu {
       .menu__item {
         width: calc(50% - 2px);
