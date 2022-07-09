@@ -57,7 +57,11 @@
 						</div>
 
 						<!-- option -->
-						<div class="product__option">
+						<a href="#product__option" class="mo__fixed__option">
+							<p class="product__opt--title">OPTION</p>
+							<p class="btn__buy">BUY</p>
+						</a>
+						<div id="product__option" class="product__option">
 							<p class="product__opt--title">OPTION</p>
 							<ul class="product__opt--list">
 								<li><button class="opt__button opt__selected">F</button></li>
@@ -492,18 +496,46 @@
 					<div class="rv__grade">
 						<dl class="table__form form__margin">
 							<dt>별점입력</dt>
-							<dd></dd>
+							<dd>
+								<div class="rv_star">
+									<span class="ic_star"></span>
+									<span class="ic_star"></span>
+									<span class="ic_star"></span>
+									<span class="ic_star_half"></span>
+									<span class="ic_star_blank"></span>
+								</div>
+							</dd>
 						</dl>
 					</div>
 
 					<div class="rv__photo">
-						<!-- <ul>
+						<ul class="rv_photo_list">
 							<li>
-								<button><i></i>사진추가</button>
+								<img class="figure" title="" src="/web/assets/images/temp/@product01.png">
+								<button type="button" class="btn__delete"><span class="a11y">삭제</span></button>
 							</li>
-						</ul> -->
+							<li>
+								<img class="figure" title="" src="/web/assets/images/temp/@product01.png">
+								<button type="button" class="btn__delete"><span class="a11y">삭제</span></button>
+							</li>
+							<li>
+								<img class="figure" title="" src="/web/assets/images/temp/@product01.png">
+								<button type="button" class="btn__delete"><span class="a11y">삭제</span></button>
+							</li>
+							<li>
+								<img class="figure" title="" src="/web/assets/images/temp/@product01.png">
+								<button type="button" class="btn__delete"><span class="a11y">삭제</span></button>
+							</li>
+							<!-- <li>
+								<img class="figure" title="" src="/web/assets/images/temp/@product01.png">
+								<button type="button" class="btn__delete"><span class="a11y">삭제</span></button>
+							</li> -->
+							<li>
+								<button class="btn__addphoto"><i></i><span>사진추가</span></button>
+							</li>
+						</ul>
 
-						<button class="btn__addphoto"><i></i><span>사진추가</span></button>
+						<!-- <button class="btn__addphoto"><i></i><span>사진추가</span></button> -->
 					</div>
 
 					<div class="rv__additem">
@@ -558,7 +590,7 @@
 		</div>
 
 		<!-- 리뷰상세 팝업 //-->
-		<div module="" id="Product_ReviewView" class="layer__body product_reviewview" style="display: block">
+		<div module="" id="Product_ReviewView" class="layer__body product_reviewview">
 			<div class="layer__wrap">
 				<div class="layer__close"><a onclick="$('#Product_ReviewView').hide();" class="btn__close"><span class="a11y">닫기</span></a></div>
 				<div class="layer__content">
@@ -600,6 +632,14 @@
 					</div>
 					<div class="cont_summary">
 						<p class="review__writter"><span>ININ******</span> 님의 리뷰</p>
+
+						<div class="rv_star">
+							<span class="ic_star"></span>
+							<span class="ic_star"></span>
+							<span class="ic_star"></span>
+							<span class="ic_star"></span>
+							<span class="ic_star_blank"></span>
+						</div>
 						<div class="rv__prcnt">
 							<p>댓글 999</p>
 							<p>좋아요 999</p>
