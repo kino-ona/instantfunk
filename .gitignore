@@ -4,6 +4,6 @@ dist/**/*.html
 dist/web/assets/css
 dist/web/assets/images
 dist/web/assets/js
-src/assets/css/sprite
+src/web/assets/css/sprite
 Data/
 ftp/
