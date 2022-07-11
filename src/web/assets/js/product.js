@@ -40,6 +40,11 @@ $(document).ready(function(){
   $('.product-list .menu .menu__swiper').each(function(){
     productListSwiper = new Swiper($(this), {
       speed: 600,
+      loop: true,
+      autoplay: {
+        enabled: false,
+        delay: 2000
+      },
       pagination: {
         el: $(this).find('.swiper-pagination'),
         type: 'progressbar'
@@ -47,7 +52,7 @@ $(document).ready(function(){
       breakpointsInverse: true,
       breakpoints: {
         750: {
-          allowTouchMove: false,
+          allowTouchMove: false
         }
       }
     });
