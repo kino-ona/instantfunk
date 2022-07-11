@@ -146,17 +146,24 @@
 		font-weight: 500;
 		font-size: 10px;
 		letter-spacing: -0.05em;
+		& + .menu__discount {
+			margin-left: 10px;
+		}
 	}
 	.menu__price {
+		margin-left: auto;
 		line-height: 18px;
 		@include mixins.PtdRegular();
 	}
 	.menu__discount {
 		color: #999;
-		margin: 0 10px;
+		margin: 0 10px 0 auto;
 		line-height: 18px;
 		text-decoration: line-through;
 		@include mixins.PtdRegular();
+		& + .menu__price {
+			margin-left: 0;
+		}
 	}
 	.menu__layer {
 		display: none;
@@ -399,7 +406,17 @@
 			font-size: 11px;
 			line-height: 13px;
 		}
+		.menu__event {
+			height: 12px;
+			margin: 2px 3px 0 0;
+			padding: 0 4px 0 3px;
+			font-size: 9px;
+			& + .menu__discount {
+				margin-left: 0;
+			}
+		}
 		.menu__price {
+			margin-left: 0;
 			font-size: 11px;
 			line-height: 13px;
 		}
@@ -407,12 +424,6 @@
 			margin: 0 5px 0 0;
 			font-size: 11px;
 			line-height: 13px;
-		}
-		.menu__event {
-			height: 12px;
-			margin: 2px 3px 0 0;
-			padding: 0 4px 0 3px;
-			font-size: 9px;
 		}
 		.menu__buttons {
 			.menu__button {
