@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc', {
+		"pagetitle": "인스턴트펑크 공식홈페이지 - 인스턴트펑크 INSTANTFUNK - 상품후기",
+		"webroot": "."
+	})
+	<script src="/web/assets/js/modernizr.js"></script>
+	<script src="/web/assets/js/product.js"></script>
+	<link rel="stylesheet" href="/web/assets/css/product.css">
+</head>
+<body>
+	<div id="wrap">
+		@@include('../inc/header.inc', {
+			"login": "false",
+			"webroot": ".."
+		})
+
+    <div class="container sub__container">
+      <div class="review__container inner_wrap">
+        <div class="rvwrap__head">
+          <h2 class="head__title">상품사용리뷰</h2>
+
+          <div class="head__search">
+            <button class="btn__sopen">상세검색열기</button>
+
+            <select class="btn__stype">
+              <option>내용</option>
+              <option>상품명</option>
+              <option>아이디</option>
+            </select>
+
+            <div class="search_keyword">
+              <input type="text" placeholder="검색어 입력" />
+            </div>
+
+            <label><input type="checkbox" class="ec-board-list-photo-only"> 포토리뷰만 보기</label>
+          </div> 
+
+          <div class="head__sort">
+            <div class="review__sort">
+              <p class="review_sort--head">전체 <i class="arrow"></i></p>
+              <ul class="review__sorting">
+                <li><a href="#">전체</a></li>
+                <li><a href="#">최신순</a></li>
+                <li><a href="#">평점순</a></li>
+                <li><a href="#">좋아요순</a></li>
+                <li><a href="#">조회수순</a></li>
+              </ul>
+            </div>
+          </div> 
+        </div>
+
+        <div class="review__list">
+          <ul class="review__list--cont card_board">
+            <li class="review__list--item">
+              <div class="item__inner">
+                <a href="#">
+                  <div class="rv__product">
+                    <p class="rv__figure"><img src="/web/assets/images/temp/@product01.png"></p>
+                    <div class="rv__box">
+                      <p class="rv__prname">Rinen Striped Jacket</p>
+                      <span class="rv__prcode">448374@N</span>
+                    </div>
+                    <p class="rv__count">
+                      <span class="ic_star"></span>
+                      4.8 <span>(36)</span>
+                    </p>
+                  </div>
+                </a>
+                <a onclick="$('#Product_ReviewView').show();">
+                  <div class="rv__review">
+                    <p class="rv__text">S은 크롭이래서 살짝 부담스러서 m샀는데 기장이 딱!!이에요 
+                      예뻐용 매장에서 피팅해보구 주문했는데 청바지에두 예쁘구 평일 출근룩 교복템이에용
+                      손올리묜 배는 살짝살짝 보여요! 제가원하던 느낌! <br>쟐입구있어영ㅎㅎ</p>
+                    <p class="rv__thumnb">
+                      <span>8<em>+</em></span>
+                      <img src="/web/assets/images/dummy.png"></p>
+                    </p>
+                  </div>
+                </a>
+                <div class="rv__morecnt">
+                  <div class="morecnt_section">
+                    <button type="button" class="btn__rvlike"></button>
+                    좋아요 <span>10</span>
+                  </div>
+                  <p class="morecnt_section">조회수 <span>10</span></p>
+                  <p class="morecnt_section">작성일 <span>2022-04-26 14:25</span></p>
+                </div>
+                <div class="rv__moreinfo">
+                  <p class="info_tag">158~168cm</p>
+                  <p class="info_tag">40~48kg</p>
+                  <p class="info_tag">M</p>
+  
+                  <button type="button" class="btn__rvshare"></button>
+                </div>
+              </div>
+            </li>
+            <li class="review__list--item">
+              <div class="item__inner">
+                <a href="#">
+                  <div class="rv__product">
+                    <p class="rv__figure"><img src="/web/assets/images/temp/@product01.png"></p>
+                    <div class="rv__box">
+                      <p class="rv__prname">Rinen Striped Jacket</p>
+                      <span class="rv__prcode">448374@N</span>
+                    </div>
+                    <p class="rv__count">
+                      <span class="ic_star"></span>
+                      4.8 <span>(36)</span>
+                    </p>
+                  </div>
+                </a>
+                <a onclick="$('#Product_ReviewView').show();">
+                  <div class="rv__review">
+                    <p class="rv__text">S은 크롭이래서 살짝 부담스러서 m샀는데 기장이 딱!!이에요</p>
+                    <p class="rv__thumnb">
+                      <span>8<em>+</em></span>
+                      <img src="/web/assets/images/dummy.png"></p>
+                    </p>
+                  </div>
+                </a>
+                <div class="rv__morecnt">
+                  <div class="morecnt_section">
+                    <button type="button" class="btn__rvlike"></button>
+                    좋아요 <span>10</span>
+                  </div>
+                  <p class="morecnt_section">조회수 <span>10</span></p>
+                  <p class="morecnt_section">작성일 <span>2022-04-26 14:25</span></p>
+                </div>
+                <div class="rv__moreinfo">
+                  <p class="info_tag">158~168cm</p>
+                  <p class="info_tag">40~48kg</p>
+                  <p class="info_tag">M</p>
+                </div>
+              </div>
+            </li>
+            <li class="review__list--item">
+              <div class="item__inner">
+                <a href="#">
+                  <div class="rv__product">
+                    <p class="rv__figure"><img src="/web/assets/images/temp/@product01.png"></p>
+                    <div class="rv__box">
+                      <p class="rv__prname">Rinen Striped Jacket</p>
+                      <span class="rv__prcode">448374@N</span>
+                    </div>
+                    <p class="rv__count">
+                      <span class="ic_star"></span>
+                      4.8 <span>(36)</span>
+                    </p>
+                  </div>
+                </a>
+                <a onclick="$('#Product_ReviewView').show();">
+                  <div class="rv__review">
+                    <p class="rv__text">S은 크롭이래서 살짝 부담스러서 m샀는데 기장이 딱!!이에요 
+                      예뻐용 매장에서 피팅해보구 주문했는데 청바지에두 예쁘구 평일 출근룩 교복템이에용
+                      손올리묜 배는 살짝살짝 보여요! 제가원하던 느낌! <br>쟐입구있어영ㅎㅎ</p>
+                    <p class="rv__thumnb">
+                      <span>8<em>+</em></span>
+                      <img src="/web/assets/images/dummy.png"></p>
+                    </p>
+                  </div>
+                </a>
+                <div class="rv__morecnt">
+                  <div class="morecnt_section">
+                    <button type="button" class="btn__rvlike"></button>
+                    좋아요 <span>10</span>
+                  </div>
+                  <p class="morecnt_section">조회수 <span>10</span></p>
+                  <p class="morecnt_section">작성일 <span>2022-04-26 14:25</span></p>
+                </div>
+                <div class="rv__moreinfo">
+                  <p class="info_tag">158~168cm</p>
+                  <p class="info_tag">40~48kg</p>
+                  <p class="info_tag">M</p>
+                </div>
+              </div>
+            </li>
+            <li class="review__list--item">
+              <div class="item__inner">
+                <a href="#">
+                  <div class="rv__product">
+                    <p class="rv__figure"><img src="/web/assets/images/temp/@product01.png"></p>
+                    <div class="rv__box">
+                      <p class="rv__prname">Rinen Striped Jacket</p>
+                      <span class="rv__prcode">448374@N</span>
+                    </div>
+                    <p class="rv__count">
+                      <span class="ic_star"></span>
+                      4.8 <span>(36)</span>
+                    </p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="rv__review">
+                    <p class="rv__text">S은 크롭이래서 살짝 부담스러서 m샀는데 기장이 딱!!이에요</p>
+                  </div>
+                </a>
+                <div class="rv__morecnt">
+                  <div class="morecnt_section">
+                    <button type="button" class="btn__rvlike"></button>
+                    좋아요 <span>10</span>
+                  </div>
+                  <p class="morecnt_section">조회수 <span>10</span></p>
+                  <p class="morecnt_section">작성일 <span>2022-04-26 14:25</span></p>
+                </div>
+                <div class="rv__moreinfo">
+                  <p class="info_tag">158~168cm</p>
+                  <p class="info_tag">40~48kg</p>
+                  <p class="info_tag">M</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <div class="list__bottom"> 
+            <div class="review_paging">
+              <p><a href="#" class="btn__prev"><img src="/web/assets/images/btn_review_prev.gif" alt="이전 페이지" /></a></p>
+              <div class="paging_number">
+                <p><span>1</span>/<span>9</span></p>
+              </div>
+              <p><a href="#" class="btn__next"><img src="/web/assets/images/btn_review_next.gif" alt="다음 페이지" /></a></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+		
+		@@include('../inc/footer.inc', {
+			"webroot": ".."
+		})
+	</div>
+</body>
+</html>
