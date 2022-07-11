@@ -130,6 +130,7 @@
 		position: absolute;
 		right: 30px;
 		top: 40px;
+		z-index: 1;
 		.btn__close {
 			display: block;
 			@include icons.retina-sprite(icons.$ico-close-group);
