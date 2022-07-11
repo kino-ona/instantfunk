@@ -30,6 +30,13 @@
 		@include icons.retina-sprite(icons.$bg-select-group);
 	}
 }
+.select--sorting {
+	min-width: 110px;
+	select {
+		height: 44px;
+		border-radius: 16px;
+	}
+}
 
 // button
 .button {

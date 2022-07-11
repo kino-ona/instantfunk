@@ -236,6 +236,9 @@
 			margin: 0 auto;
 			.search__row {
 				position: relative;
+				.search__field {
+					position: relative;
+				}
 				.search__input {
 					height: 46px;
 					padding: 0;
