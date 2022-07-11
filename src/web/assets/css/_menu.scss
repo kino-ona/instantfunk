@@ -119,16 +119,17 @@
 	}
 	.menu__info {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
 		padding: 10px 20px 55px;
 		.menu__right {
 			flex: 1;
 			display: flex;
-			flex-wrap: wrap;
 			align-items: center;
 		}
 	}
 	.menu__name {
+		margin-right: 8px;
 		font-size: 14px;
 		line-height: 18px;
 		@include mixins.PtdRegular();
@@ -138,7 +139,7 @@
 		justify-content: center;
 		align-items: center;
 		height: 20px;
-		margin: 0 auto 0 8px;
+		margin-right: auto;
 		padding: 0 6px 0 7px;
 		border: 1px solid #000;
 		border-radius: 1em;
@@ -152,7 +153,7 @@
 	}
 	.menu__discount {
 		color: #999;
-		margin: 0 10px 0 auto;
+		margin: 0 10px;
 		line-height: 18px;
 		text-decoration: line-through;
 		@include mixins.PtdRegular();
@@ -390,6 +391,9 @@
 		.menu__info {
 			display: block;
 			padding: 10px 8px 15px;
+			.menu__right {
+				flex-wrap: wrap;
+			}
 		}
 		.menu__name {
 			font-size: 11px;
