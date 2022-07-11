@@ -245,6 +245,7 @@
 							</div>
 						</div>	
 
+						<!-- 리뷰 //-->
 						<div class="review__list">
 							<ul class="review__list--cont card_board">
 								<li class="review__list--item">
@@ -453,6 +454,14 @@
 								</div>
 							</div>
 						</div>
+						<!-- 리뷰 없는 경우 //-->
+						<div class="review__list-nodata">
+							<div>
+								<p>아직 상품리뷰가 없습니다<br>상품을 구매하고 리뷰를 작성해보세요</p>
+								<a onclick="$('#Product_ReviewWrite').show();" class="btn__rvWrite">WRITE</a>
+							</div>
+						</div>
+
 					</div>
 				</div>
 				<!--// detail content -->
@@ -460,329 +469,330 @@
 			</div>
 			<!--// detail__container -->
 
-				<div class="suggest__item">
-					<div class="menu">
-						<div class="menu__container">
-							<ul class="menu__list">
-								<li class="menu__item">
-									<div class="menu__round">
-										<div class="menu__inner">
-											<a href="#" class="menu__link">
-												<div class="menu__colors">
-													<span class="menu__color"></span>
-													<span class="menu__color"></span>
-													<span class="menu__color"></span>
+			<div class="product-list suggest__item">
+				<p class="suggest__title">suggest item</p>
+				<div class="menu">
+					<div class="menu__container">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<div class="menu__round">
+									<div class="menu__inner">
+										<a href="#" class="menu__link">
+											<div class="menu__colors">
+												<span class="menu__color"></span>
+												<span class="menu__color"></span>
+												<span class="menu__color"></span>
+											</div>
+											<div class="menu__swiper swiper-container">
+												<ul class="swiper-wrapper">
+													<li class="swiper-slide">
+														<div class="menu__img"><img src="/web/assets/images/product.png" alt="상품"></div>
+													</li>
+													<li class="swiper-slide">
+														<div class="menu__img"><img src="/web/assets/images/product.png" alt="상품"></div>
+													</li>
+												</ul>
+												<div class="swiper-pagination"></div>
+											</div>
+										</a>
+										<div class="menu__layer">
+											<div class="menu__dimmed"></div>
+											<div class="menu__buttons">
+												<button type="button" class="menu__button menu__button--cart">CART</button>
+												<a href="#" class="menu__button">DETAIL</a>
+											</div>
+											<div class="menu__option">
+												<div class="menu__sizes">
+													<div>
+														<button type="button" class="menu__size menu__size--selected">F</button>
+													</div>
+													<div>
+														<button type="button" class="menu__size">S</button>
+													</div>
+													<div>
+														<button type="button" class="menu__size">M</button>
+													</div>
+													<div>
+														<button type="button" class="menu__size">L</button>
+													</div>
+													<div>
+														<button type="button" class="menu__size menu__size--disabled">XL</button>
+													</div>
 												</div>
-												<div class="menu__swiper swiper-container">
-													<ul class="swiper-wrapper">
-														<li class="swiper-slide">
-															<div class="menu__img"><img src="/web/assets/images/product.png" alt="상품"></div>
-														</li>
-														<li class="swiper-slide">
-															<div class="menu__img"><img src="/web/assets/images/product.png" alt="상품"></div>
-														</li>
-													</ul>
-													<div class="swiper-pagination"></div>
+												<div class="menu__count">
+													<button type="button" class="menu__button"><img src="../web/assets/images/btn_count_down.gif" alt=""></button>
+													<span class="menu__current">1</span>
+													<button type="button"><img src="../web/assets/images/btn_count_up.gif" alt=""></button>
 												</div>
-											</a>
-											<div class="menu__layer">
-												<div class="menu__dimmed"></div>
 												<div class="menu__buttons">
-													<button type="button" class="menu__button menu__button--cart">CART</button>
-													<a href="#" class="menu__button">DETAIL</a>
+													<button type="button" class="menu__button">ADD TO CART</button>
 												</div>
-												<div class="menu__option">
-													<div class="menu__sizes">
-														<div>
-															<button type="button" class="menu__size menu__size--selected">F</button>
-														</div>
-														<div>
-															<button type="button" class="menu__size">S</button>
-														</div>
-														<div>
-															<button type="button" class="menu__size">M</button>
-														</div>
-														<div>
-															<button type="button" class="menu__size">L</button>
-														</div>
-														<div>
-															<button type="button" class="menu__size menu__size--disabled">XL</button>
-														</div>
-													</div>
-													<div class="menu__count">
-														<button type="button" class="menu__button"><img src="../web/assets/images/btn_count_down.gif" alt=""></button>
-														<span class="menu__current">1</span>
-														<button type="button"><img src="../web/assets/images/btn_count_up.gif" alt=""></button>
-													</div>
-													<div class="menu__buttons">
-														<button type="button" class="menu__button">ADD TO CART</button>
-													</div>
-													<button class="menu__close">
-														<span class="a11y">닫기</span>
-													</button>
-												</div>
+												<button class="menu__close">
+													<span class="a11y">닫기</span>
+												</button>
 											</div>
 										</div>
 									</div>
-									<div class="menu__info">
-										<p class="menu__name">22SS 레이어드 크롭 자켓 핑크</p>
-										<div class="menu__right">
-											<span class="menu__event">COUPON</span>
-											<p class="menu__discount">₩46,000</p>
-											<p class="menu__price">₩50,000(30%)</p>
-										</div>
+								</div>
+								<div class="menu__info">
+									<p class="menu__name">22SS Ms 스카시 스트라이프 티셔츠 - 네이비</p>
+									<div class="menu__right">
+										<!-- <span class="menu__event">COUPON</span>	 -->
+										<p class="menu__discount">₩146,000</p>
+										<p class="menu__price">₩150,000(30%)</p>
 									</div>
-								</li>
-								<li class="menu__item">
-									<div class="menu__round">
-										<div class="menu__inner">
-											<a href="#" class="menu__link menu__link--none">
-												<!-- soldout -->
-												<div class="marquee">
-													<div class="marquee__mask">
-														<p class="marquee__loop">
-															<span class="marquee__text">SOLD OUT</span>
-															<span class="marquee__text">SOLD OUT</span>
-															<span class="marquee__text">SOLD OUT</span>
-															<span class="marquee__text">SOLD OUT</span>
-														</p>
-														<p class="marquee__loop">
-															<span class="marquee__text">SOLD OUT</span>
-															<span class="marquee__text">SOLD OUT</span>
-															<span class="marquee__text">SOLD OUT</span>
-															<span class="marquee__text">SOLD OUT</span>
-														</p>
-														<p class="marquee__loop">
-															<span class="marquee__text">SOLD OUT</span>
-															<span class="marquee__text">SOLD OUT</span>
-															<span class="marquee__text">SOLD OUT</span>
-															<span class="marquee__text">SOLD OUT</span>
-														</p>
-														<p class="marquee__loop">
-															<span class="marquee__text">SOLD OUT</span>
-															<span class="marquee__text">SOLD OUT</span>
-															<span class="marquee__text">SOLD OUT</span>
-															<span class="marquee__text">SOLD OUT</span>
-														</p>
+								</div>
+							</li>
+							<li class="menu__item">
+								<div class="menu__round">
+									<div class="menu__inner">
+										<a href="#" class="menu__link menu__link--none">
+											<!-- soldout -->
+											<div class="marquee">
+												<div class="marquee__mask">
+													<p class="marquee__loop">
+														<span class="marquee__text">SOLD OUT</span>
+														<span class="marquee__text">SOLD OUT</span>
+														<span class="marquee__text">SOLD OUT</span>
+														<span class="marquee__text">SOLD OUT</span>
+													</p>
+													<p class="marquee__loop">
+														<span class="marquee__text">SOLD OUT</span>
+														<span class="marquee__text">SOLD OUT</span>
+														<span class="marquee__text">SOLD OUT</span>
+														<span class="marquee__text">SOLD OUT</span>
+													</p>
+													<p class="marquee__loop">
+														<span class="marquee__text">SOLD OUT</span>
+														<span class="marquee__text">SOLD OUT</span>
+														<span class="marquee__text">SOLD OUT</span>
+														<span class="marquee__text">SOLD OUT</span>
+													</p>
+													<p class="marquee__loop">
+														<span class="marquee__text">SOLD OUT</span>
+														<span class="marquee__text">SOLD OUT</span>
+														<span class="marquee__text">SOLD OUT</span>
+														<span class="marquee__text">SOLD OUT</span>
+													</p>
+												</div>
+											</div>
+											<!-- // soldout -->
+											<div class="menu__colors">
+												<span class="menu__color"></span>
+												<span class="menu__color"></span>
+												<span class="menu__color"></span>
+											</div>
+											<div class="menu__swiper swiper-container">
+												<ul class="swiper-wrapper">
+													<li class="swiper-slide">
+														<div class="menu__img"><img src="/web/assets/images/product.png" alt="상품"></div>
+													</li>
+													<li class="swiper-slide">
+														<div class="menu__img"><img src="/web/assets/images/product.png" alt="상품"></div>
+													</li>
+												</ul>
+												<div class="swiper-pagination"></div>
+											</div>
+										</a>
+										<div class="menu__layer">
+											<div class="menu__dimmed"></div>
+											<div class="menu__buttons">
+												<button type="button" class="menu__button menu__button--cart">CART</button>
+												<a href="#" class="menu__button">DETAIL</a>
+											</div>
+											<div class="menu__option">
+												<div class="menu__sizes">
+													<div>
+														<button type="button" class="menu__size menu__size--selected">F</button>
+													</div>
+													<div>
+														<button type="button" class="menu__size">S</button>
+													</div>
+													<div>
+														<button type="button" class="menu__size">M</button>
+													</div>
+													<div>
+														<button type="button" class="menu__size">L</button>
+													</div>
+													<div>
+														<button type="button" class="menu__size menu__size--disabled">XL</button>
 													</div>
 												</div>
-												<!-- // soldout -->
-												<div class="menu__colors">
-													<span class="menu__color"></span>
-													<span class="menu__color"></span>
-													<span class="menu__color"></span>
+												<div class="menu__count">
+													<button type="button" class="menu__button"><img src="../web/assets/images/btn_count_down.gif" alt=""></button>
+													<span class="menu__current">1</span>
+													<button type="button"><img src="../web/assets/images/btn_count_up.gif" alt=""></button>
 												</div>
-												<div class="menu__swiper swiper-container">
-													<ul class="swiper-wrapper">
-														<li class="swiper-slide">
-															<div class="menu__img"><img src="/web/assets/images/product.png" alt="상품"></div>
-														</li>
-														<li class="swiper-slide">
-															<div class="menu__img"><img src="/web/assets/images/product.png" alt="상품"></div>
-														</li>
-													</ul>
-													<div class="swiper-pagination"></div>
-												</div>
-											</a>
-											<div class="menu__layer">
-												<div class="menu__dimmed"></div>
 												<div class="menu__buttons">
-													<button type="button" class="menu__button menu__button--cart">CART</button>
-													<a href="#" class="menu__button">DETAIL</a>
+													<button type="button" class="menu__button">ADD TO CART</button>
 												</div>
-												<div class="menu__option">
-													<div class="menu__sizes">
-														<div>
-															<button type="button" class="menu__size menu__size--selected">F</button>
-														</div>
-														<div>
-															<button type="button" class="menu__size">S</button>
-														</div>
-														<div>
-															<button type="button" class="menu__size">M</button>
-														</div>
-														<div>
-															<button type="button" class="menu__size">L</button>
-														</div>
-														<div>
-															<button type="button" class="menu__size menu__size--disabled">XL</button>
-														</div>
-													</div>
-													<div class="menu__count">
-														<button type="button" class="menu__button"><img src="../web/assets/images/btn_count_down.gif" alt=""></button>
-														<span class="menu__current">1</span>
-														<button type="button"><img src="../web/assets/images/btn_count_up.gif" alt=""></button>
-													</div>
-													<div class="menu__buttons">
-														<button type="button" class="menu__button">ADD TO CART</button>
-													</div>
-													<button class="menu__close">
-														<span class="a11y">닫기</span>
-													</button>
-												</div>
+												<button class="menu__close">
+													<span class="a11y">닫기</span>
+												</button>
 											</div>
 										</div>
 									</div>
-									<div class="menu__info">
-										<p class="menu__name">22SS 레이어드 크롭 자켓 핑크</p>
-										<div class="menu__right">
-											<span class="menu__event">COUPON</span>
-											<p class="menu__price">₩50,000</p>
-										</div>
+								</div>
+								<div class="menu__info">
+									<p class="menu__name">22SS 레이어드 크롭 자켓 핑크</p>
+									<div class="menu__right">
+										<span class="menu__event">COUPON</span>
+										<p class="menu__price">₩50,000</p>
 									</div>
-								</li>
-								<li class="menu__item">
-									<div class="menu__round">
-										<div class="menu__inner">
-											<a href="#" class="menu__link">
-												<div class="menu__tags">
-													<span class="menu__tag menu__tag--celeb">
-														<i></i>
-														CELEB
-													</span>
+								</div>
+							</li>
+							<li class="menu__item">
+								<div class="menu__round">
+									<div class="menu__inner">
+										<a href="#" class="menu__link">
+											<div class="menu__tags">
+												<span class="menu__tag menu__tag--celeb">
+													<i></i>
+													CELEB
+												</span>
+											</div>
+											<div class="menu__colors">
+												<span class="menu__color"></span>
+												<span class="menu__color"></span>
+												<span class="menu__color"></span>
+											</div>
+											<div class="menu__swiper swiper-container">
+												<ul class="swiper-wrapper">
+													<li class="swiper-slide">
+														<div class="menu__img"><img src="/web/assets/images/dummy.png" alt="상품"></div>
+													</li>
+													<li class="swiper-slide">
+														<div class="menu__img"><img src="/web/assets/images/dummy.png" alt="상품"></div>
+													</li>
+												</ul>
+												<div class="swiper-pagination"></div>
+											</div>
+										</a>
+										<div class="menu__layer">
+											<div class="menu__dimmed"></div>
+											<div class="menu__buttons">
+												<button type="button" class="menu__button menu__button--cart">CART</button>
+												<a href="#" class="menu__button">DETAIL</a>
+											</div>
+											<div class="menu__option">
+												<div class="menu__sizes">
+													<div>
+														<button type="button" class="menu__size menu__size--selected">F</button>
+													</div>
+													<div>
+														<button type="button" class="menu__size">S</button>
+													</div>
+													<div>
+														<button type="button" class="menu__size">M</button>
+													</div>
+													<div>
+														<button type="button" class="menu__size">L</button>
+													</div>
+													<div>
+														<button type="button" class="menu__size menu__size--disabled">XL</button>
+													</div>
 												</div>
-												<div class="menu__colors">
-													<span class="menu__color"></span>
-													<span class="menu__color"></span>
-													<span class="menu__color"></span>
+												<div class="menu__count">
+													<button type="button" class="menu__button"><img src="../web/assets/images/btn_count_down.gif" alt=""></button>
+													<span class="menu__current">1</span>
+													<button type="button"><img src="../web/assets/images/btn_count_up.gif" alt=""></button>
 												</div>
-												<div class="menu__swiper swiper-container">
-													<ul class="swiper-wrapper">
-														<li class="swiper-slide">
-															<div class="menu__img"><img src="/web/assets/images/dummy.png" alt="상품"></div>
-														</li>
-														<li class="swiper-slide">
-															<div class="menu__img"><img src="/web/assets/images/dummy.png" alt="상품"></div>
-														</li>
-													</ul>
-													<div class="swiper-pagination"></div>
-												</div>
-											</a>
-											<div class="menu__layer">
-												<div class="menu__dimmed"></div>
 												<div class="menu__buttons">
-													<button type="button" class="menu__button menu__button--cart">CART</button>
-													<a href="#" class="menu__button">DETAIL</a>
+													<button type="button" class="menu__button">ADD TO CART</button>
 												</div>
-												<div class="menu__option">
-													<div class="menu__sizes">
-														<div>
-															<button type="button" class="menu__size menu__size--selected">F</button>
-														</div>
-														<div>
-															<button type="button" class="menu__size">S</button>
-														</div>
-														<div>
-															<button type="button" class="menu__size">M</button>
-														</div>
-														<div>
-															<button type="button" class="menu__size">L</button>
-														</div>
-														<div>
-															<button type="button" class="menu__size menu__size--disabled">XL</button>
-														</div>
-													</div>
-													<div class="menu__count">
-														<button type="button" class="menu__button"><img src="../web/assets/images/btn_count_down.gif" alt=""></button>
-														<span class="menu__current">1</span>
-														<button type="button"><img src="../web/assets/images/btn_count_up.gif" alt=""></button>
-													</div>
-													<div class="menu__buttons">
-														<button type="button" class="menu__button">ADD TO CART</button>
-													</div>
-													<button class="menu__close">
-														<span class="a11y">닫기</span>
-													</button>
-												</div>
+												<button class="menu__close">
+													<span class="a11y">닫기</span>
+												</button>
 											</div>
 										</div>
 									</div>
-									<div class="menu__info">
-										<p class="menu__name">22SS 레이어드 크롭 자켓 핑크</p>
-										<div class="menu__right">
-											<span class="menu__event">COUPON</span>
-											<p class="menu__price">₩50,000</p>
-										</div>
+								</div>
+								<div class="menu__info">
+									<p class="menu__name">22SS 레이어드 크롭 자켓 핑크</p>
+									<div class="menu__right">
+										<span class="menu__event">COUPON</span>
+										<p class="menu__price">₩50,000</p>
 									</div>
-								</li>
-								<li class="menu__item">
-									<div class="menu__round">
-										<div class="menu__inner">
-											<a href="#" class="menu__link">
-												<div class="menu__tags">
-													<span class="menu__tag menu__tag--picks">
-														<i></i>
-														PICKS
-													</span>
+								</div>
+							</li>
+							<li class="menu__item">
+								<div class="menu__round">
+									<div class="menu__inner">
+										<a href="#" class="menu__link">
+											<div class="menu__tags">
+												<span class="menu__tag menu__tag--picks">
+													<i></i>
+													PICKS
+												</span>
+											</div>
+											<div class="menu__colors">
+												<span class="menu__color"></span>
+												<span class="menu__color"></span>
+												<span class="menu__color"></span>
+											</div>
+											<div class="menu__swiper swiper-container">
+												<ul class="swiper-wrapper">
+													<li class="swiper-slide">
+														<div class="menu__img"><img src="/web/assets/images/dummy.png" alt="상품"></div>
+													</li>
+													<li class="swiper-slide">
+														<div class="menu__img"><img src="/web/assets/images/dummy.png" alt="상품"></div>
+													</li>
+												</ul>
+												<div class="swiper-pagination"></div>
+											</div>
+										</a>
+										<div class="menu__layer">
+											<div class="menu__dimmed"></div>
+											<div class="menu__buttons">
+												<button type="button" class="menu__button menu__button--cart">CART</button>
+												<a href="#" class="menu__button">DETAIL</a>
+											</div>
+											<div class="menu__option">
+												<div class="menu__sizes">
+													<div>
+														<button type="button" class="menu__size menu__size--selected">F</button>
+													</div>
+													<div>
+														<button type="button" class="menu__size">S</button>
+													</div>
+													<div>
+														<button type="button" class="menu__size">M</button>
+													</div>
+													<div>
+														<button type="button" class="menu__size">L</button>
+													</div>
+													<div>
+														<button type="button" class="menu__size menu__size--disabled">XL</button>
+													</div>
 												</div>
-												<div class="menu__colors">
-													<span class="menu__color"></span>
-													<span class="menu__color"></span>
-													<span class="menu__color"></span>
+												<div class="menu__count">
+													<button type="button" class="menu__button"><img src="../web/assets/images/btn_count_down.gif" alt=""></button>
+													<span class="menu__current">1</span>
+													<button type="button"><img src="../web/assets/images/btn_count_up.gif" alt=""></button>
 												</div>
-												<div class="menu__swiper swiper-container">
-													<ul class="swiper-wrapper">
-														<li class="swiper-slide">
-															<div class="menu__img"><img src="/web/assets/images/dummy.png" alt="상품"></div>
-														</li>
-														<li class="swiper-slide">
-															<div class="menu__img"><img src="/web/assets/images/dummy.png" alt="상품"></div>
-														</li>
-													</ul>
-													<div class="swiper-pagination"></div>
-												</div>
-											</a>
-											<div class="menu__layer">
-												<div class="menu__dimmed"></div>
 												<div class="menu__buttons">
-													<button type="button" class="menu__button menu__button--cart">CART</button>
-													<a href="#" class="menu__button">DETAIL</a>
+													<button type="button" class="menu__button">ADD TO CART</button>
 												</div>
-												<div class="menu__option">
-													<div class="menu__sizes">
-														<div>
-															<button type="button" class="menu__size menu__size--selected">F</button>
-														</div>
-														<div>
-															<button type="button" class="menu__size">S</button>
-														</div>
-														<div>
-															<button type="button" class="menu__size">M</button>
-														</div>
-														<div>
-															<button type="button" class="menu__size">L</button>
-														</div>
-														<div>
-															<button type="button" class="menu__size menu__size--disabled">XL</button>
-														</div>
-													</div>
-													<div class="menu__count">
-														<button type="button" class="menu__button"><img src="../web/assets/images/btn_count_down.gif" alt=""></button>
-														<span class="menu__current">1</span>
-														<button type="button"><img src="../web/assets/images/btn_count_up.gif" alt=""></button>
-													</div>
-													<div class="menu__buttons">
-														<button type="button" class="menu__button">ADD TO CART</button>
-													</div>
-													<button class="menu__close">
-														<span class="a11y">닫기</span>
-													</button>
-												</div>
+												<button class="menu__close">
+													<span class="a11y">닫기</span>
+												</button>
 											</div>
 										</div>
 									</div>
-									<div class="menu__info">
-										<p class="menu__name">22SS 레이어드 크롭 자켓 핑크</p>
-										<div class="menu__right">
-											<span class="menu__event">COUPON</span>
-											<p class="menu__price">₩50,000</p>
-										</div>
+								</div>
+								<div class="menu__info">
+									<p class="menu__name">22SS 레이어드 크롭 자켓 핑크</p>
+									<div class="menu__right">
+										<span class="menu__event">COUPON</span>
+										<p class="menu__price">₩50,000</p>
 									</div>
-								</li>
-							</ul>
-						</div>
+								</div>
+							</li>
+						</ul>
 					</div>
 				</div>
+			</div>
 
     </div>
 

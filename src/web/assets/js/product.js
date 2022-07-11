@@ -89,8 +89,7 @@ $(document).ready(function(){
   });
 });
 
-$(function() {
-
+$(document).ready(function(){
   var $w = $(window),
     footerHei = $('.footer').outerHeight(),
     $lastPos = $('.suggest__item').outerHeight(),
@@ -111,7 +110,7 @@ $(function() {
       }
     });
   } else {
-    $banner.removeClass('on')
+    $detailInfo.removeClass('on')
     $detailQuick.removeClass('on')
 
     $w.on('scroll', function() {
