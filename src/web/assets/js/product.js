@@ -104,19 +104,6 @@ $(function() {
   } else {
     // console.log($banner.height())
     $banner.removeClass('on')
-
-    $w.on('scroll', function() {
-      var msT = $w.scrollTop();
-      var moptPos = $('.detail__container .product__option').position().top - 187;
-      console.log(moptPos)
-      if (msT >= moptPos) {
-        $('.mo__fixed__option').addClass('hide')
-      }else{
-        $('.mo__fixed__option').removeClass('hide')
-      }
-
-    });
-
     // $option = $('.detail_info').find('.product__option');
     // $optionH = $option.height();
 
@@ -130,7 +117,7 @@ $(function() {
   }
 
   if($('.card_board').length > 0) {
-		$('.review__list .card_board').cardGrid({
+		$('.card_board').cardGrid({
 	    no_columns: 2,
 	    padding_x: 0,
 	    single_column_breakpoint: 1400
