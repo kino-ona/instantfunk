@@ -93,22 +93,26 @@ $(function() {
 
   var $w = $(window),
     footerHei = $('.footer').outerHeight(),
-    $banner = $('.detail_info');
+    $lastPos = $('.suggest__item').outerHeight(),
+    $detailInfo = $('.detail_info');
+    $detailQuick = $('.detail__quick');
 
   if($w.width() > 750) {
     $w.on('scroll', function() {
       var sT = $w.scrollTop();
-      var val = $(document).height() - $w.height() - footerHei;
+      var val = $(document).height() - $w.height() - (footerHei + $lastPos);
   
       if (sT > val) {
-        $banner.addClass('on')
+        $detailInfo.addClass('on')
+        $detailQuick.addClass('on')
       } else {
-        $banner.removeClass('on')
+        $detailInfo.removeClass('on')
+        $detailQuick.removeClass('on')
       }
     });
   } else {
-    // console.log($banner.height())
     $banner.removeClass('on')
+    $detailQuick.removeClass('on')
 
     $w.on('scroll', function() {
       var msT = $w.scrollTop();
@@ -121,17 +125,6 @@ $(function() {
       }
 
     });
-
-    // $option = $('.detail_info').find('.product__option');
-    // $optionH = $option.height();
-
-    // $option.css({
-    //   top: $banner.height() + 55
-    // });
-    // $('.product__additional').css({
-    //   'margin-top': $optionH + 100
-    // })
-    
   }
 
   if($('.card_board').length > 0) {
