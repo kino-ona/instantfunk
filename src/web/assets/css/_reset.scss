@@ -138,7 +138,6 @@ input[type='checkbox'] {
 	height: 14px;
 	& + label {
 		padding-left: 3px;
-		vertical-align: middle;
 	}
 	& ~ input[type='checkbox'] {
 		margin-left: 25px;
