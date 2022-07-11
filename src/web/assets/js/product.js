@@ -24,7 +24,7 @@ $(document).ready(function(){
     var targetHeight = target.height();
     var winHeight = $(window).height();
 
-    if ($(window).scrollTop() > (targetOffset + targetHeight - winHeight - 62)) {
+    if ($(window).scrollTop() > (targetOffset + targetHeight - winHeight)) {
       target.find('.product-list__sort').addClass('product-list__sort--absoluted');
     } else {
       target.find('.product-list__sort').removeClass('product-list__sort--absoluted');
