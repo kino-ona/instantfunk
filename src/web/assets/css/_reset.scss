@@ -1,5 +1,6 @@
 @use 'mixins';
 @use 'variables';
+@use 'breakpoints';
 
 * {
 	margin: 0;
@@ -208,6 +209,11 @@ select{
 		position: relative;
 		padding-right: 60px;
 		border-color: red;
+	}
+
+  @include breakpoints.mobile() {
+		height: 48px;
+		font-size: 14px;
 	}
 }
 

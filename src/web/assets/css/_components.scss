@@ -103,6 +103,7 @@
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.4);
 	z-index: 100;
+	overflow: hidden;
 	.layer__wrap {
 		position: absolute;
 		top:50%;
@@ -135,6 +136,20 @@
 			display: block;
 			@include icons.retina-sprite(icons.$ico-close-group);
 			cursor: pointer;
+		}
+	}
+	@include breakpoints.mobile() {
+		.layer__wrap {
+			border-radius: 35px;
+		}
+		.layer__close {
+			top: 30px;
+			right: 15px;
+		}
+		.layer__button {
+			.btn {
+				font-size: 14px;
+			}
 		}
 	}
 }
