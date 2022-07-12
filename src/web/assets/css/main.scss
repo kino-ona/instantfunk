@@ -165,9 +165,9 @@
 
 .best-menu {
 	.best-menu__list {
-		padding: 50px 0;
+		padding: 2.6vw 0;
 		> .best-menu__row {
-			padding: 50px 20px;
+			padding: 2.6vw 1.04vw;
 		}
 	}
 	.best-menu__row {
@@ -184,20 +184,24 @@
 		.best-menu__col--split {
 			display: flex;
 			flex-wrap: wrap;
-			margin-top: -50px;
+			margin-top: -2.6vw;
 			> .best-menu__item {
 				width: 50%;
 				height: 50%;
-				padding-top: 50px;
+				padding-top: 2.6vw;
 			}
 		}
 	}
 	.best-menu__item {
+		position: relative;
 		width: 25%;
 		height: 100%;
-		padding: 0 50px;
+		padding: 0 2.08vw;
 		.swiper-container {
 			height: 100%;
+			.best-menu__inner {
+				height: 100%;
+			}
 		}
 		.swiper-wrapper {
 			align-items: stretch;
@@ -206,31 +210,14 @@
 			height: auto;
 		}
 	}
-	.best-menu__inner {
-		height: 100%;
-	}
-	.best-menu__img {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		height: 100%;
-		text-align: center;
-		img {
-			height: 100%;
-			border-radius: 42px;
-		}
-	}
 	.best-menu__info {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
 		position: absolute;
 		left: 0;
-		top: 0;
+		top: 50%;
 		width: 100%;
-		height: 100%;
+		z-index: 5;
 		text-align: center;
+		@include mixins.translate(0, -50%);
 	}
 	.best-menu__info--green {
 		color: #9af54c;
@@ -308,7 +295,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		margin-top: 15px;
+		margin: 15px auto 0;
 		width: 128px;
 		height: 44px;
 		border-width: 1px;
@@ -320,6 +307,17 @@
 		&:focus,
 		&:hover {
 			color: #000;
+		}
+	}
+	.best-menu__img {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		text-align: center;
+		img {
+			height: 100%;
+			border-radius: 42px;
 		}
 	}
 	
@@ -340,7 +338,7 @@
 	
 	@include breakpoints.mobile() {
 		.best-menu__list {
-			padding: 30px 0;
+			padding: 7.69vw 0;
 			> .best-menu__row {
 				padding: 0;
 			}
@@ -351,13 +349,13 @@
 				width: 100%;
 				margin-top: 0;
 				> .best-menu__item {
-					padding-top: 15px;
+					padding-top: 3.85vw;
 				}
 			}
 		}
 		.best-menu__item {
 			width: 50%;
-			padding: 30px 15px;
+			padding: 7.69vw 3.85vw;
 		}
 		.best-menu__img {
 			img {
@@ -461,9 +459,6 @@
 			&:focus,
 			&:hover {
 				background-color: #5eecfa;
-			}
-			&.swiper-button-disabled {
-				display: none;
 			}
 		}
 		.swiper-button-prev {
