@@ -128,9 +128,10 @@
 									<fieldset>
 										<legend class="a11y">검색</legend>
 										<div class="search__row">
-											<label for="searchText" class="a11y">검색어</label>
-											<input type="text" id="searchText" class="search__input" placeholder="SEARCH EVERYTHING">
-											<button type="button" class="search__button"><span class="a11y">검색 버튼</span></button>
+											<div class="search__field">
+												<label for="searchText" class="a11y">검색어</label>
+												<input type="text" id="searchText" class="search__input" placeholder="SEARCH EVERYTHING"><button type="button" class="search__button"><span class="a11y">검색 버튼</span></button>
+											</div>
 										</div>
 										<!-- 인기검색어 -->
 										<div class="search__recommend">
