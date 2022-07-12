@@ -72,7 +72,29 @@ $(document).ready(function(){
 		visualSwiper.slideNext();
 	});
 
-	var bestMenuSwiper = new Swiper('.best-menu .best-menu__item .swiper-container');
+	var bestMenuSwiper = new Swiper('.best-menu .best-menu__item .swiper-container', {
+		speed: 600,
+		loop: true,
+		autoplay: {
+			enabled: false,
+			delay: 2000
+		},
+		breakpointsInverse: true,
+		breakpoints: {
+			750: {
+				allowTouchMove: false
+			}
+		}
+	});
+
+	$(document).on('mouseenter mouseleave', '.desktop .best-menu .best-menu__item', function(event){
+    if (event.type === 'mouseenter') {
+      $(this).find('.swiper-container')[0].swiper.autoplay.start();
+    }
+    if (event.type === 'mouseleave') {
+      $(this).find('.swiper-container')[0].swiper.autoplay.stop();
+    }
+  });
 
 	var celebCurationSwiper = new Swiper('.celeb-curation .celeb-curation__swiper .swiper-container', {
 		navigation: {

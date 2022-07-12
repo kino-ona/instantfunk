@@ -24,11 +24,13 @@
           <div class="head__search">
             <button class="btn__sopen">상세검색열기</button>
 
-            <select class="btn__stype">
-              <option>내용</option>
-              <option>상품명</option>
-              <option>아이디</option>
-            </select>
+            <div class="select">
+              <select class="btn__stype">
+                <option>내용</option>
+                <option>상품명</option>
+                <option>아이디</option>
+              </select>
+            </div>
 
             <div class="search_keyword">
               <input type="text" placeholder="검색어 입력" />
@@ -48,7 +50,62 @@
                 <li><a href="#">조회수순</a></li>
               </ul>
             </div>
-          </div> 
+          </div>
+
+          <div class="search">
+            <div class="search__layer">
+              <div class="search__form">
+								<form action="">
+									<fieldset>
+										<legend>상세검색</legend>
+										<div class="search__row">
+                      <div class="select">
+                        <label for="detailSearchCategory" class="a11y">검색 카테고리</label>
+                        <select name="" id="detailSearchCategory">
+                          <option value="">전체</option>
+                        </select>
+                      </div>
+											<div class="search__field">
+                        <label for="detailSearch" class="a11y">검색어</label>
+                        <input type="text" id="detailSearch" class="search__input" placeholder="검색어 입력">
+                        <button type="button" class="search__button"><span class="a11y">검색 버튼</span></button>
+                      </div>
+                      <input type="checkbox" id="photoChk">
+                      <label for="photoChk">포토리뷰만 보기</label>
+                      <div class="filter">
+                        <div class="filter"></div>                        
+                      </div>
+										</div>
+                    <div class="filter">
+                      <div class="filter__row">
+                        <div class="filter__left">
+                          <p class="filter__label">신장</p>
+                        </div>
+                        <div class="filter__right">
+                          <input type="checkbox" id="filterHight01">
+                          <label for="filterHight01">전체</label>
+                          <input type="checkbox" id="filterHight02">
+                          <label for="filterHight02">150미만</label>
+                          <input type="checkbox" id="filterHight03">
+                          <label for="filterHight03">150~155</label>
+                          <input type="checkbox" id="filterHight04">
+                          <label for="filterHight04">156~160</label>
+                          <input type="checkbox" id="filterHight05">
+                          <label for="filterHight05">160~165</label>
+                          <input type="checkbox" id="filterHight06">
+                          <label for="filterHight06">166~170</label>
+                          <input type="checkbox" id="filterHight07">
+                          <label for="filterHight07">170~175</label>
+                          <input type="checkbox" id="filterHight08">
+                          <label for="filterHight08">176이상</label>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="review__list">

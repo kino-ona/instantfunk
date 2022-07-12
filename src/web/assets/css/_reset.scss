@@ -115,12 +115,10 @@ input[type='email'] {
 	}
 }
 ::-webkit-input-placeholder {
-	padding-left: 9px;
 	font-size: 14px;
 	color: #999;
 }
 ::-moz-placeholder {
-	padding-left: 9px;
 	font-size: 14px;
 	color: #999;
 }
@@ -176,6 +174,13 @@ input[type='radio'] {
 	}
 	& ~ input[type='radio'] {
 		margin-left: 35px;
+	}
+}
+input[type='checkbox'],
+input[type='radio'] {
+	& + label {
+		@include mixins.PtdMedium();
+		letter-spacing: -0.025em;
 	}
 }
 
