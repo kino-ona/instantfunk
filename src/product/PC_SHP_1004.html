@@ -22,7 +22,7 @@
           <h2 class="head__title">상품사용리뷰</h2>
 
           <div class="head__search">
-            <button class="btn__sopen">상세검색열기</button>
+            <button onclick="$('#SearchLayer').show();" class="btn__sopen">상세검색열기</button>
 
             <div class="select">
               <select class="btn__stype">
@@ -41,63 +41,101 @@
 
           <div class="head__sort">
             <div class="review__sort">
-              <p class="review_sort--head">전체 <i class="arrow"></i></p>
+              <button onclick="dropDown(this);" class="review_sort--head"><span>최신순</span> <i class="arrow"></i></button>
               <ul class="review__sorting">
-                <li><a href="#">전체</a></li>
-                <li><a href="#">최신순</a></li>
-                <li><a href="#">평점순</a></li>
-                <li><a href="#">좋아요순</a></li>
-                <li><a href="#">조회수순</a></li>
+                <li class="selected"><button onclick="dropDownSelect(this);" class="sort__select">최신순</button></li>
+                <li><button onclick="dropDownSelect(this);" class="sort__select">평점순</button></li>
+                <li><button onclick="dropDownSelect(this);" class="sort__select">좋아요순</button></li>
+                <li><button onclick="dropDownSelect(this);" class="sort__select">조회수순</button></li>
               </ul>
             </div>
           </div>
 
+          <!-- search layer -->
           <div class="search">
-            <div class="search__layer">
+            <div id="SearchLayer" class="search__layer">
               <div class="search__form">
+                <a onclick="$('#SearchLayer').hide();" class="btn__close"><span class="a11y">닫기</span></a>
 								<form action="">
 									<fieldset>
 										<legend>상세검색</legend>
-										<div class="search__row">
-                      <div class="select">
-                        <label for="detailSearchCategory" class="a11y">검색 카테고리</label>
-                        <select name="" id="detailSearchCategory">
-                          <option value="">전체</option>
-                        </select>
-                      </div>
-											<div class="search__field">
-                        <label for="detailSearch" class="a11y">검색어</label>
-                        <input type="text" id="detailSearch" class="search__input" placeholder="검색어 입력">
-                        <button type="button" class="search__button"><span class="a11y">검색 버튼</span></button>
-                      </div>
-                      <input type="checkbox" id="photoChk">
-                      <label for="photoChk">포토리뷰만 보기</label>
-                      <div class="filter">
-                        <div class="filter"></div>                        
-                      </div>
-										</div>
                     <div class="filter">
                       <div class="filter__row">
                         <div class="filter__left">
                           <p class="filter__label">신장</p>
                         </div>
                         <div class="filter__right">
-                          <input type="checkbox" id="filterHight01">
-                          <label for="filterHight01">전체</label>
-                          <input type="checkbox" id="filterHight02">
-                          <label for="filterHight02">150미만</label>
-                          <input type="checkbox" id="filterHight03">
-                          <label for="filterHight03">150~155</label>
-                          <input type="checkbox" id="filterHight04">
-                          <label for="filterHight04">156~160</label>
-                          <input type="checkbox" id="filterHight05">
-                          <label for="filterHight05">160~165</label>
-                          <input type="checkbox" id="filterHight06">
-                          <label for="filterHight06">166~170</label>
-                          <input type="checkbox" id="filterHight07">
-                          <label for="filterHight07">170~175</label>
-                          <input type="checkbox" id="filterHight08">
-                          <label for="filterHight08">176이상</label>
+                          <p>
+                            <label><input type="checkbox"> 전체</label>
+                          </p>
+                          <p>
+                            <label><input type="checkbox">150미만</label>
+                          </p>
+                          <p>
+                            <label><input type="checkbox">150~155</label>
+                          </p>
+                          <p>
+                            <label><input type="checkbox">156~160</label>
+                          </p>
+                          <p>
+                            <label><input type="checkbox">160~165</label>
+                          </p>
+                          <p>
+                            <label><input type="checkbox">166~170</label>
+                          </p>
+                          <p>
+                            <label><input type="checkbox">170~175</label>
+                          </p>
+                          <p>
+                            <label><input type="checkbox">176이상</label>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="filter__row">
+                        <div class="filter__left">
+                          <p class="filter__label">몸무게</p>
+                        </div>
+                        <div class="filter__right">
+                          <p>
+                            <label><input type="checkbox">전체</label>
+                          </p>
+                          <p>
+                            <label><input type="checkbox">40미만</label>
+                          </p>
+                          <p>
+                            <label><input type="checkbox">41~45</label>
+                          </p>
+                          <p>
+                            <label><input type="checkbox">46~50</label>
+                          </p>
+                          <p>
+                            <label><input type="checkbox">51~55</label>
+                          </p>
+                          <p>
+                            <label><input type="checkbox">56~60</label>
+                          </p>
+                          <p>
+                            <label><input type="checkbox">60~65</label>
+                          </p>
+                          <p>
+                            <label><input type="checkbox">66~70</label>
+                          </p>
+                          <p>
+                            <label><input type="checkbox">71이상</label>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="filter__row">
+                        <div class="filter__left">
+                          <p class="filter__label">착용사이즈</p>
+                        </div>
+                        <div class="filter__right">
+                          <p>
+                            <label><input type="checkbox">전체</label>
+                          </p>
+                          <p>
+                            <label><input type="checkbox">40미만</label>
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -106,6 +144,8 @@
               </div>
             </div>
           </div>
+          <!--// search layer -->
+
         </div>
 
         <div class="review__list">

@@ -111,6 +111,23 @@ function accoSet(setId, multiTF, setFocus) {
 	});
 }
 
+function dropDown(set) {
+	var $sortTxt = $(set).find('span').html();
+
+	if(!$(set).parent('.review__sort').hasClass('isOpen')) {
+		$(set).parent('.review__sort').addClass('isOpen');
+	} else {
+		$(set).parent('.review__sort').removeClass('isOpen');
+	}
+}
+function dropDownSelect(set) {
+	var $sortTxt = $(set).html();
+
+	$(set).parents('.review__sort').removeClass('isOpen');
+	$(set).parents('.review__sort').find('li').removeClass('selected');
+	$(set).parent('li').addClass('selected');
+	$(set).parents('.review__sort').find('.review_sort--head span').html($sortTxt);
+}
 
 
 $(function() {

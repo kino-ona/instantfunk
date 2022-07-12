@@ -275,13 +275,12 @@
 					<div id="prdReview" class="product__section">
 						<div class="review__head">
 							<div class="review__sort">
-								<p class="review_sort--head">전체 <i class="arrow"></i></p>
+								<button onclick="dropDown(this);" class="review_sort--head"><span>최신순</span> <i class="arrow"></i></button>
 								<ul class="review__sorting">
-									<li><a href="#">전체</a></li>
-									<li><a href="#">최신순</a></li>
-									<li><a href="#">평점순</a></li>
-									<li><a href="#">좋아요순</a></li>
-									<li><a href="#">조회수순</a></li>
+									<li class="selected"><button onclick="dropDownSelect(this);" class="sort__select">최신순</button></li>
+									<li><button onclick="dropDownSelect(this);" class="sort__select">평점순</button></li>
+									<li><button onclick="dropDownSelect(this);" class="sort__select">좋아요순</button></li>
+									<li><button onclick="dropDownSelect(this);" class="sort__select">조회수순</button></li>
 								</ul>
 							</div>
 
@@ -873,7 +872,7 @@
 					</div>
 
 					<div class="rv__grade">
-						<dl class="table__form form__margin">
+						<dl class="table__form">
 							<dt>별점입력</dt>
 							<dd>
 								<div class="rv_star">
@@ -888,7 +887,8 @@
 					</div>
 
 					<div class="rv__photo">
-						<ul class="rv_photo_list">
+						<!-- 사진 추가 후 //-->
+						<ul class="rv_photo_list" style="display: none;">
 							<li>
 								<img class="figure" title="" src="/web/assets/images/temp/@product01.png">
 								<button type="button" class="btn__delete"><span class="a11y">삭제</span></button>
@@ -914,7 +914,8 @@
 							</li>
 						</ul>
 
-						<!-- <button class="btn__addphoto"><i></i><span>사진추가</span></button> -->
+						<!-- 사진 추가 전 //-->
+						<button class="btn__addphoto"><i></i><span>사진추가</span></button>
 					</div>
 
 					<div class="rv__additem">
@@ -977,11 +978,24 @@
 						<div class="rv__product">
 							<p class="rv__figure"><img src="/web/assets/images/temp/@product01.png"></p>
 							<div class="rv__box">
-								<p class="rv__prname">Rinen Striped Jacket</p>
+								<div class="rv__head">
+									<p class="review__writter"><span>ININ******</span> 님의 리뷰</p>
+									<p class="rv__date">2022-04-26 14:25</p>
+								</div>
+								<p class="rv__prname">Rinen Striped Jacket Rinen</p>
+								<div class="rv_star">
+									<span class="ic_star"></span>
+									<span class="ic_star"></span>
+									<span class="ic_star"></span>
+									<span class="ic_star_half"></span>
+									<span class="ic_star_blank"></span>
+								</div>
 								<div class="rv__prcnt">
-									<p>2022-04-26 14:25</p>
-									<p>리뷰 999</p>
 									<p>평점 4.8</p>
+									<p>리뷰 999</p>
+									<p>리뷰 999</p>
+									<p>좋아요 999</p>
+									<p>조회수 999</p>
 								</div>
 							</div>
 						</div>
@@ -993,6 +1007,8 @@
 							꼭사세요 두번사세요
 						</div>
 						<div class="review__image">
+							<img src="https://reviewtalktalk.poxo.com/instantfunk/2022/07/06/9796e59eda95c6e7b8937dce72dde644.jpg" alt="20220706_205446.jpg" onerror="this.src='//img.echosting.cafe24.com/skin/base/board/review/@img_thumb.gif';">
+
 							<img src="https://reviewtalktalk.poxo.com/instantfunk/2022/07/06/9796e59eda95c6e7b8937dce72dde644.jpg" alt="20220706_205446.jpg" onerror="this.src='//img.echosting.cafe24.com/skin/base/board/review/@img_thumb.gif';">
 						</div>
 
@@ -1010,21 +1026,6 @@
 						</div>
 					</div>
 					<div class="cont_summary">
-						<p class="review__writter"><span>ININ******</span> 님의 리뷰</p>
-
-						<div class="rv_star">
-							<span class="ic_star"></span>
-							<span class="ic_star"></span>
-							<span class="ic_star"></span>
-							<span class="ic_star"></span>
-							<span class="ic_star_blank"></span>
-						</div>
-						<div class="rv__prcnt">
-							<p>댓글 999</p>
-							<p>좋아요 999</p>
-							<p>조회수 999</p>
-						</div>
-
 						<div class="rv__other">
 							<p class="other__title">다른 상품 리뷰</p>
 							<ul class="other__list">
