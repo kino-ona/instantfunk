@@ -554,6 +554,9 @@
 			top: 50%;
 			width: 100%;
 			@include mixins.translate(-50%, -50%);
+			img {
+				width: 100%;
+			}
 			&:not(:first-child) {
 				opacity: 0;
 			}
