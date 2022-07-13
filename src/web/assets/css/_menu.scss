@@ -36,20 +36,6 @@
 			height: 100%;
 		}
 	}
-	.menu__category {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		width: 380px;
-		height: 180px;
-		margin: -90px 0 0 -190px;
-		border-radius: 100vw;
-		background-color: #fff;
-		font-size: 70px;
-	}
 	.menu__tags {
 		position: absolute;
 		left: 36px;
@@ -328,12 +314,6 @@
 		}
 		.menu__round {
 			padding-top: 133.33%;
-		}
-		.menu__category {
-			width: 170px;
-			height: 83px;
-			font-size: 28px;
-			margin: -41.5px 0 0 -85px;
 		}
 		.menu__tags {
 			left: 12px;

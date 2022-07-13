@@ -4,7 +4,7 @@ $(document).ready(function(){
 		speed: 600,
 		loop: true,
 		pagination: {
-			el: '.visual .swiper-container .swiper-pagination',
+			el: '.visual .visual__pagination',
 			type: 'fraction'
 		},
 		breakpointsInverse: true,
@@ -19,11 +19,17 @@ $(document).ready(function(){
 		var video = visualSwiper.$el.find('video');
 		var target = $('.desktop .visual .visual__control').find('.visual__video');
 
-		visualSwiper.slides.eq(visualSwiper.activeIndex).find('.visual__contents').addClass('visual__contents--fadein');
+		visualSwiper.slides.eq(visualSwiper.activeIndex).find('.visual__theme').addClass('visual__theme--fadein');
+		visualSwiper.slides.eq(visualSwiper.activeIndex).find('.visual__title').addClass('visual__title--fadein');
+		visualSwiper.slides.eq(visualSwiper.activeIndex).find('.visual__link').addClass('visual__link--fadein');
+		visualSwiper.pagination.$el.addClass('visual__pagination--fadein');
+		$('.visual__control').addClass('visual__control--fadein');
 
 		video[visualSwiper.activeIndex].play();
 
 		target.removeClass('visual__video--visible');
+
+		visualSwiper.pagination.destroy();
 	}
 
 	visualSwiper.on('slideChangeTransitionStart', function(){
@@ -87,7 +93,7 @@ $(document).ready(function(){
 		}
 	});
 
-	$(document).on('mouseenter mouseleave', '.desktop .best-menu .best-menu__item', function(event){
+	$(document).on('mouseenter mouseleave', '.desktop .best-menu .best-menu__item:not(.best-menu__item--figure)', function(event){
     if (event.type === 'mouseenter') {
       $(this).find('.swiper-container')[0].swiper.autoplay.start();
     }
@@ -97,20 +103,27 @@ $(document).ready(function(){
   });
 
 	var celebCurationSwiper = new Swiper('.celeb-curation .celeb-curation__swiper .swiper-container', {
+		speed: 600,
+		loop: true,
 		navigation: {
 			nextEl: '.celeb-curation .celeb-curation__swiper .swiper-button-next',
 			prevEl: '.celeb-curation .celeb-curation__swiper .swiper-button-prev'
 		}
 	});
 
-	var screenTarget = $('.celeb-curation__screen');
-	var screenTargetOffset = screenTarget.offset().top;
-	var screenTargetHeight = screenTarget.height();
-
-	$(window).scroll(function(){
+	function celebScreen() {
+		var screenTarget = $('.celeb-curation__screen');
+		var screenTargetOffset = screenTarget.offset().top;
+		var screenTargetHeight = screenTarget.height();
 		var scrollTop = $(window).scrollTop();
+		
 		if (scrollTop >= screenTargetOffset - screenTargetHeight / 3) {
 			screenTarget.addClass('celeb-curation__screen--opened');
 		}
+	}
+	celebScreen();
+
+	$(window).scroll(function(){
+		celebScreen();
 	});
 });
