@@ -32,7 +32,7 @@
 								</ul>
 							</nav>
 							<div class="nav__marquee nav__marquee--campaign">
-								<p class="nav__text">Instant campaign<span>®</span></p>
+								<!-- <p class="nav__text">Instant campaign<span>®</span></p> -->
 								<div class="marquee">
 									<div class="marquee__mask">
 										<p class="marquee__loop">

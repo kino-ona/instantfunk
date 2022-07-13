@@ -199,16 +199,15 @@
 			margin-top: 30px;
 			border-top: 1px solid #000;
 			border-radius: 0 0 42px 42px;
-			font-family: 'Sabon';
-			.nav__text {
-				font-size: 26px;
-				span {
-					position: relative;
-					font-size: 14px;
-					margin-left: 3px;
-					vertical-align: super;
-				}
-			}
+			font-family: 'LibreCaslonText';
+			// .nav__text {
+			// 	font-size: 22px;
+			// 	span {
+			// 		position: relative;
+			// 		margin-left: 3px;
+			// 		vertical-align: super;
+			// 	}
+			// }
 
 			.marquee {
 				position: absolute;
@@ -233,17 +232,26 @@
 			&:hover {
 				.marquee {
 					display: block;
+					background-image: url('../images/bg_campaign.png');
+					background-position: 50% 50%;
+					.marquee__loop {
+						.marquee__text {
+							color: #75fbd3;
+						}
+					}
 				}
 			}
 
 			.marquee {
-				display: none;
-				background-image: url('../images/bg_campaign.png');
-				background-position: 50% 50%;
-				background-color: none;
+				background-color: transparent;
 				.marquee__loop {
 					.marquee__text {
-						color: #75fbd3;
+						span {
+							margin-left: 3px;
+							font-size: 20px;
+							line-height: 10.22px;
+							vertical-align: super;
+						}
 					}
 				}
 			}
