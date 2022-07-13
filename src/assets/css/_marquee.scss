@@ -54,6 +54,7 @@
 	--offset: 20vw;
 	--move-initial: calc(-25% + var(--offset));
 	--move-final: calc(-50% + var(--offset));
+	background-repeat: no-repeat;
 	.marquee__mask {
     display: flex;
 		align-items: center;

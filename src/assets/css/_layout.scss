@@ -30,6 +30,7 @@
 	.header__search {
 		display: block;
 		position: relative;
+		z-index: 5;
 		@include icons.retina-sprite(icons.$ico-header-search-group);
 	}
 	.header__funkplay {
@@ -37,6 +38,7 @@
 		position: absolute;
 		right: 30px;
 		top: 3px;
+		z-index: 5;
 		@include icons.retina-sprite(icons.$bg-header-funkplay-off-group);
 	}
 	.header__funkplay--active {
@@ -57,6 +59,18 @@
 		left: 0;
 		top: 30px;
 		width: 100%;
+		.nav__dimmed {
+			display: none;
+			position: fixed;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			z-index: -1;
+		}
+		.nav__dimmed--opened {
+			display: block;
+		}
 		.nav__container {
 			display: flex;
 			justify-content: center;
@@ -185,11 +199,14 @@
 			margin-top: 30px;
 			border-top: 1px solid #000;
 			border-radius: 0 0 42px 42px;
+			font-family: 'Sabon';
 			.nav__text {
 				font-size: 26px;
 				span {
 					position: relative;
 					font-size: 14px;
+					margin-left: 3px;
+					vertical-align: super;
 				}
 			}
 
@@ -199,16 +216,34 @@
 				top: 0;
 				width: 100%;
 				height: 100%;
+				background-color: #5eecfaff;
 				clip-path: inset(0 round 0 0 42px 42px);
 				.marquee__mask {
 					height: 100%;
-					background-color: #fc4f03;
 				}
 				.marquee__loop {
 					.marquee__text {
 						margin: 0 12px;
-						color: #75fbd3;
 						font-size: 26px;
+					}
+				}
+			}
+		}
+		.nav__marquee--campaign {
+			&:hover {
+				.marquee {
+					display: block;
+				}
+			}
+
+			.marquee {
+				display: none;
+				background-image: url('../images/bg_campaign.png');
+				background-position: 50% 50%;
+				background-color: none;
+				.marquee__loop {
+					.marquee__text {
+						color: #75fbd3;
 					}
 				}
 			}
@@ -216,12 +251,23 @@
 	}
 
 	.search {
+		.search__dimmed {
+			display: none;
+			position: fixed;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			z-index: -1;
+		}
+		.search__dimmed--opened {
+			display: block;
+		}
 		.search__layer {
 			display: none;
 			position: absolute;
 			left: 0;
 			top: 0;
-			z-index: -1;
 			width: 100%;
 			padding: 135px 0 56px;
 			border-radius: 0 0 42px 42px;
@@ -325,11 +371,8 @@
 			top: 22px;
 			@include mixins.sprite(mo_icons.$ico-header-search);
 		}
-		.header__search--show {
-			animation: mobileSearchShow .2s linear forwards;
-		}
 		.header__search--hide {
-			animation: mobileSearchHide .2s linear forwards;
+			display: none;
 		}
 		.header__funkplay {
 			position: static;
@@ -847,24 +890,6 @@
 		}
 		100% {
 			@include mixins.translate(-100vw, 0);
-		}
-	}
-
-	@keyframes mobileSearchShow {
-		0% {
-			opacity: 0;
-		}
-		100% {
-			opacity: 1;
-		}
-	}
-
-	@keyframes mobileSearchHide {
-		0% {
-			opacity: 1;
-		}
-		100% {
-			opacity: 0;
 		}
 	}
 }

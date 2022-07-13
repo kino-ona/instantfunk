@@ -68,3 +68,9 @@ https://blazetype.eu/
 	font-display: block;
 	src: local('AT Sult Extended'), url('../fonts/SurtExtended-ExtendedRegular.woff2') format('woff2'), url('../fonts/SurtExtended-ExtendedRegular.woff') format('woff');
 }
+
+@font-face {
+	font-family: 'Sabon';
+	font-weight: normal;
+	src: local('Sabon Bold'), url('../fonts/Sabon_Bold.ttf') format('truetype');
+}

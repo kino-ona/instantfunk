@@ -32,32 +32,32 @@
 								</ul>
 							</nav>
 							<div class="nav__marquee nav__marquee--campaign">
-								<p class="nav__text">Instant campaign <span>®</span></p>
+								<p class="nav__text">Instant campaign<span>®</span></p>
 								<div class="marquee">
 									<div class="marquee__mask">
 										<p class="marquee__loop">
-											<span class="marquee__text">Instant campaign <span>®</span></span>
-											<span class="marquee__text">Instant campaign <span>®</span></span>
-											<span class="marquee__text">Instant campaign <span>®</span></span>
-											<span class="marquee__text">Instant campaign <span>®</span></span>
+											<span class="marquee__text">Instant campaign<span>®</span></span>
+											<span class="marquee__text">Instant campaign<span>®</span></span>
+											<span class="marquee__text">Instant campaign<span>®</span></span>
+											<span class="marquee__text">Instant campaign<span>®</span></span>
 										</p>
 										<p class="marquee__loop">
-											<span class="marquee__text">Instant campaign <span>®</span></span>
-											<span class="marquee__text">Instant campaign <span>®</span></span>
-											<span class="marquee__text">Instant campaign <span>®</span></span>
-											<span class="marquee__text">Instant campaign <span>®</span></span>
+											<span class="marquee__text">Instant campaign<span>®</span></span>
+											<span class="marquee__text">Instant campaign<span>®</span></span>
+											<span class="marquee__text">Instant campaign<span>®</span></span>
+											<span class="marquee__text">Instant campaign<span>®</span></span>
 										</p>
 										<p class="marquee__loop">
-											<span class="marquee__text">Instant campaign <span>®</span></span>
-											<span class="marquee__text">Instant campaign <span>®</span></span>
-											<span class="marquee__text">Instant campaign <span>®</span></span>
-											<span class="marquee__text">Instant campaign <span>®</span></span>
+											<span class="marquee__text">Instant campaign<span>®</span></span>
+											<span class="marquee__text">Instant campaign<span>®</span></span>
+											<span class="marquee__text">Instant campaign<span>®</span></span>
+											<span class="marquee__text">Instant campaign<span>®</span></span>
 										</p>
 										<p class="marquee__loop">
-											<span class="marquee__text">Instant campaign <span>®</span></span>
-											<span class="marquee__text">Instant campaign <span>®</span></span>
-											<span class="marquee__text">Instant campaign <span>®</span></span>
-											<span class="marquee__text">Instant campaign <span>®</span></span>
+											<span class="marquee__text">Instant campaign<span>®</span></span>
+											<span class="marquee__text">Instant campaign<span>®</span></span>
+											<span class="marquee__text">Instant campaign<span>®</span></span>
+											<span class="marquee__text">Instant campaign<span>®</span></span>
 										</p>
 									</div>
 								</div>
@@ -116,6 +116,7 @@
 							<span class="a11y">FUNK PLAY 보기</span>
 						</button>
 					</div>
+					<div class="nav__dimmed"></div>
 				</div>
 				<div class="header__right">
 					<button type="button" class="header__search">
@@ -161,6 +162,7 @@
 								</form>
 							</div>
 						</div>
+						<div class="search__dimmed"></div>
 					</div>
 				</div>
 			</div>
