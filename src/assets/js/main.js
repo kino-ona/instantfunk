@@ -111,6 +111,30 @@ $(document).ready(function(){
 		}
 	});
 
+	function cubeTopRotate() {
+		var cubeTop = $('.cube').eq(0);
+		var cubeTopOffset = cubeTop.offset().top;
+		var winHeight = $(window).height();
+		var scrollTop = $(window).scrollTop();
+
+		if (scrollTop > cubeTopOffset - winHeight) {
+			cubeTop.addClass('cube--rotated');
+		}
+	}
+	cubeTopRotate();
+
+	function cubeBottomRotate() {
+		var cubeBottom = $('.cube').eq(1);
+		var cubeBottomOffset = cubeBottom.offset().top;
+		var winHeight = $(window).height();
+		var scrollTop = $(window).scrollTop();
+
+		if (scrollTop > cubeBottomOffset - winHeight) {
+			cubeBottom.addClass('cube--rotated');
+		}
+	}	
+	cubeBottomRotate();
+
 	function celebScreen() {
 		var screenTarget = $('.celeb-curation__screen');
 		var screenTargetOffset = screenTarget.offset().top;
@@ -124,6 +148,8 @@ $(document).ready(function(){
 	celebScreen();
 
 	$(window).scroll(function(){
+		cubeTopRotate();
+		cubeBottomRotate();
 		celebScreen();
 	});
 });
