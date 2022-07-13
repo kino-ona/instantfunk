@@ -1,6 +1,5 @@
 @use 'breakpoints';
 @use 'mixins';
-@use 'sass:math';
 
 // main
 .container {
@@ -724,7 +723,7 @@
 		background-color: #fffd72;
 	}
 	.menu__category--acc {
-		background-image: url('../images/bg_menu_category_all.png');
+		background-image: url('../images/bg_menu_category_acc.png');
 		background-position: 50% 50%;
 		background-color: #ffb5d1;
 	}
