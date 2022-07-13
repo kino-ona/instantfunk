@@ -67,23 +67,23 @@ $(document).ready(function(){
     }
   });
 
-  $('.product-list .menu .menu__link').click(function(event){
+  $('.product-list .menu .menu__link, .search__result .menu .menu__link').click(function(event){
     var el = $(this).closest('.menu__item');
     el.find('.menu__layer').addClass('menu__layer--opened');
     event.preventDefault();
   });
 
-  $('.product-list .menu .menu__dimmed').click(function(){
+  $('.product-list .menu .menu__dimmed, .search__result .menu .menu__dimmed').click(function(){
     var el = $(this).closest('.menu__item');
     el.find('.menu__layer').removeClass('menu__layer--opened');
   });
 
-  $('.product-list .menu .menu__button--cart').click(function(){
+  $('.product-list .menu .menu__button--cart, .search__result .menu .menu__button--cart').click(function(){
     var el = $(this).closest('.menu__item');
     el.find('.menu__option').addClass('menu__option--opened');
   });
 
-  $('.product-list .menu .menu__close').click(function(){
+  $('.product-list .menu .menu__close, .search__result .menu .menu__close').click(function(){
     var el = $(this).closest('.menu__item');
     el.find('.menu__option').removeClass('menu__option--opened');
   });
