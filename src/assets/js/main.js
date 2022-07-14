@@ -3,7 +3,7 @@ jQuery.noConflict();
 (function($) {
 	$(document).ready(function(){
 	
-		var visualSwiper = new Swiper('.visual .swiper-container', {
+		var visualSwiper = new Swiper('.visual .swiper', {
 			speed: 600,
 			loop: true,
 			pagination: {
@@ -81,9 +81,15 @@ jQuery.noConflict();
 			visualSwiper.slideNext();
 		});
 	
-		var bestMenuSwiper = new Swiper('.best-menu .best-menu__item .swiper-container', {
+		var bestMenuSwiper = new Swiper('.best-menu .best-menu__item .swiper', {
 			speed: 600,
 			loop: true,
+			effect: 'creative',
+			creativeEffect: {
+				next: {
+					translate: ['100%', 0, 0]
+				}
+			},
 			autoplay: {
 				enabled: false,
 				delay: 2000
@@ -98,14 +104,14 @@ jQuery.noConflict();
 	
 		$(document).on('mouseenter mouseleave', '.desktop .best-menu .best-menu__item:not(.best-menu__item--figure)', function(event){
 			if (event.type === 'mouseenter') {
-				$(this).find('.swiper-container')[0].swiper.autoplay.start();
+				$(this).find('.swiper')[0].swiper.autoplay.start();
 			}
 			if (event.type === 'mouseleave') {
-				$(this).find('.swiper-container')[0].swiper.autoplay.stop();
+				$(this).find('.swiper')[0].swiper.autoplay.stop();
 			}
 		});
 	
-		var celebCurationSwiper = new Swiper('.celeb-curation .celeb-curation__swiper .swiper-container', {
+		var celebCurationSwiper = new Swiper('.celeb-curation .celeb-curation__swiper .swiper', {
 			speed: 600,
 			loop: true,
 			navigation: {
