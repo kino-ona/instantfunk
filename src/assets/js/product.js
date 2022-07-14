@@ -140,10 +140,11 @@ jQuery.noConflict();
   });
 
   $(document).ready(function () {
-
-    $('.menu__size').textfill({
-      maxFontPixels: 100
-    });
+    if($('.menu__size').length > 0) {
+      $('.menu__size').textfill({
+        maxFontPixels: 100
+      });
+    }
   });
   
   /*****
