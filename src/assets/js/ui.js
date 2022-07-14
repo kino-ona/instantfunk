@@ -132,24 +132,49 @@ jQuery.noConflict();
 		});
 	}
 
-	function dropDown(set) {
-		var $sortTxt = $(set).find('span').html();
+	// review sorting
+	$(document).ready(function () {
+		$(document).on('click', '.review_sort--head', function(){
+			var $sortHead = $('.review_sort--head');
 
-		if(!$(set).parent('.review__sort').hasClass('isOpen')) {
-			$(set).parent('.review__sort').addClass('isOpen');
-		} else {
-			$(set).parent('.review__sort').removeClass('isOpen');
-		}
-	}
-	function dropDownSelect(set) {
-		var $sortTxt = $(set).html();
+			if(!$sortHead.parent('.review__sort').hasClass('isOpen')) {
+				$sortHead.parent('.review__sort').addClass('isOpen');
+			} else {
+				$sortHead.parent('.review__sort').removeClass('isOpen');
+			}
+		});
 
-		$(set).parents('.review__sort').removeClass('isOpen');
-		$(set).parents('.review__sort').find('li').removeClass('selected');
-		$(set).parent('li').addClass('selected');
-		$(set).parents('.review__sort').find('.review_sort--head span').html($sortTxt);
-	}
+		$('.review__sorting').find('.sort__select').each(function () {
+			$(this).on('click', function(){
+				var $sortTxt = $(this).html();
 
+				$(this).parents('.review__sort').removeClass('isOpen');
+				$(this).parents('.review__sort').find('li').removeClass('selected');
+				$(this).parent('li').addClass('selected');
+				$(this).parents('.review__sort').find('.review_sort--head span').html($sortTxt);
+			});
+		});
+	})
+
+	// modal show/hide
+	$(document).ready(function () {
+		$('.modal__show').each(function () {
+			$(this).on('click', function(){
+				var $target = $(this).attr('data-layer');
+
+				$('#' + $target).show();
+			});
+		});
+		$('.modal__hide').each(function () {
+			$(this).on('click', function(){
+				var $target = $(this).attr('data-layer');
+
+				$('#' + $target).hide();
+			});
+		});
+
+	})
+	
 
 	$(function() {
 		if($('.footer').length > 0) {

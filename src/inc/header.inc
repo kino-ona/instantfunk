@@ -166,7 +166,6 @@
 													<a href="#" class="search__link">검색어</a>
 												</li>
 											</ul> -->
-										</div>
 										<!-- // 인기검색어 -->
 									</fieldset>
 								</form>

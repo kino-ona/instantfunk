@@ -194,7 +194,7 @@
 						
 						<div class="product__action">
 							<div class="product__act--button">
-								<a onclick="$('#Product_BasketAdd').show();" class="act__btn btn_addtocart">CART</a>
+								<a href="#" data-layer="Product_BasketAdd" class="act__btn btn_addtocart modal__show">CART</a>
 								<a href="#" class="act__btn btn_buynow">BUY</a>
 							</div>
 							<div class="product__act--button">
@@ -275,17 +275,17 @@
 					<div id="prdReview" class="product__section">
 						<div class="review__head">
 							<div class="review__sort">
-								<button onclick="dropDown(this);" class="review_sort--head"><span>최신순</span> <i class="arrow"></i></button>
+								<button class="review_sort--head"><span>최신순</span> <i class="arrow"></i></button>
 								<ul class="review__sorting">
-									<li class="selected"><button onclick="dropDownSelect(this);" class="sort__select">최신순</button></li>
-									<li><button onclick="dropDownSelect(this);" class="sort__select">평점순</button></li>
-									<li><button onclick="dropDownSelect(this);" class="sort__select">좋아요순</button></li>
-									<li><button onclick="dropDownSelect(this);" class="sort__select">조회수순</button></li>
+									<li class="selected"><button class="sort__select">최신순</button></li>
+									<li><button class="sort__select">평점순</button></li>
+									<li><button class="sort__select">좋아요순</button></li>
+									<li><button class="sort__select">조회수순</button></li>
 								</ul>
 							</div>
 
 							<div class="review__etc">
-								<a onclick="$('#Product_ReviewWrite').show();" class="btn__rvWrite">WRITE</a>
+								<a href="#" data-layer="Product_ReviewWrite" class="btn__rvWrite modal__show">WRITE</a>
 							</div>
 						</div>	
 
@@ -306,7 +306,7 @@
 											</p>
 										</div>
 									</a>
-									<a onclick="$('#Product_ReviewView').show();">
+									<a href="#" data-layer="Product_ReviewView" class="modal__show">
 										<div class="rv__review">
 											<p class="rv__text">S은 크롭이래서 살짝 부담스러서 m샀는데 기장이 딱!!이에요 
 												예뻐용 매장에서 피팅해보구 주문했는데 청바지에두 예쁘구 평일 출근룩 교복템이에용
@@ -348,7 +348,7 @@
 											</p>
 										</div>
 									</a>
-									<a onclick="$('#Product_ReviewView').show();">
+									<a href="#" data-layer="Product_ReviewView" class="modal__show">
 										<div class="rv__review">
 											<p class="rv__text">S은 크롭이래서 살짝 부담스러서 m샀는데 기장이 딱!!이에요</p>
 											<p class="rv__thumnb">
@@ -386,7 +386,7 @@
 											</p>
 										</div>
 									</a>
-									<a onclick="$('#Product_ReviewView').show();">
+									<a href="#" data-layer="Product_ReviewView" class="modal__show">
 										<div class="rv__review">
 											<p class="rv__text">S은 크롭이래서 살짝 부담스러서 m샀는데 기장이 딱!!이에요 
 												예뻐용 매장에서 피팅해보구 주문했는데 청바지에두 예쁘구 평일 출근룩 교복템이에용
@@ -502,7 +502,7 @@
 						<div class="review__list-nodata">
 							<div>
 								<p>아직 상품리뷰가 없습니다<br>상품을 구매하고 리뷰를 작성해보세요</p>
-								<a onclick="$('#Product_ReviewWrite').show();" class="btn__rvWrite">WRITE</a>
+								<a href="#" data-layer="Product_ReviewWrite" class="btn__rvWrite modal__show">WRITE</a>
 							</div>
 						</div>
 
@@ -843,13 +843,13 @@
 		<!-- 장바구니담기 팝업 //-->
 		<div module="Product_BasketAdd" id="Product_BasketAdd" class="layer__body product_basketadd">
 			<div class="layer__wrap">
-				<div class="layer__close"><a onclick="$('#Product_BasketAdd').hide();" class="btn__close"><span class="a11y">닫기</span></a></div>
+				<div class="layer__close"><a href="#" data-layer="Product_BasketAdd" class="btn__close modal__hide"><span class="a11y">닫기</span></a></div>
 				<div class="layer__content">
 					<i class="ico_basket"></i>
 					<p>장바구니에 상품이 정상적으로 담겼습니다.</p>
 					<div class="layer__button">
 						<a href="/order/basket.html?delvtype={$delvtype}" class="btn btn__basket">장바구니 이동</a>
-						<a href="#none" onclick="$('#confirmLayer').hide();" class="btn btn__shopping">쇼핑 계속하기</a>
+						<a href="#none" data-layer="confirmLayer" class="btn btn__shopping modal__hide">쇼핑 계속하기</a>
 					</div>
 				</div>
 			</div>
@@ -858,7 +858,7 @@
 		<!-- 리뷰등록 팝업 //-->
 		<div module="" id="Product_ReviewWrite" class="layer__body product_reviewwrite">
 			<div class="layer__wrap">
-				<div class="layer__close"><a onclick="$('#Product_ReviewWrite').hide();" class="btn__close"><span class="a11y">닫기</span></a></div>
+				<div class="layer__close"><a href="#none" data-layer="Product_ReviewWrite" class="btn__close modal__hide"><span class="a11y">닫기</span></a></div>
 				<div class="layer__content">
 					<div class="rv__product">
 						<p class="rv__figure"><img src="/web/assets/images/temp/@product01.png"></p>
@@ -963,7 +963,7 @@
 						</dl>
 					</div>
 					<div class="layer__button">
-						<a onclick="$('#Product_ReviewWrite').hide();" class="btn btn_rvwrite">리뷰작성</a>
+						<a href="#" data-layer="Product_ReviewWrite" class="btn btn_rvwrite modal__hide">리뷰작성</a>
 					</div>
 				</div>
 			</div>
@@ -972,7 +972,7 @@
 		<!-- 리뷰상세 팝업 //-->
 		<div module="" id="Product_ReviewView" class="layer__body product_reviewview">
 			<div class="layer__wrap">
-				<div class="layer__close"><a onclick="$('#Product_ReviewView').hide();" class="btn__close"><span class="a11y">닫기</span></a></div>
+				<div class="layer__close"><a href="#" data-layer="Product_ReviewView" class="btn__close modal__hide"><span class="a11y">닫기</span></a></div>
 				<div class="layer__content">
 					<div class="cont_detail">
 						<div class="rv__product">

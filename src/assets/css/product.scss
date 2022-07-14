@@ -474,7 +474,7 @@
     margin-bottom: 17px;
   }
   .product__name {
-    width: 60%;
+    width: 100%;
     margin-bottom: 10px;
     @include mixins.PtdMedium();
     font-size: 24px;
@@ -1810,6 +1810,20 @@
           margin-right: 5px;
         }
       }
+    }
+  }
+
+  @include breakpoints.mobile() {
+    .head__search {
+      flex-direction: row;
+      flex-wrap: wrap;
+      flex : 1 auto;
+    }
+    input[type=text] {
+      width: auto;
+    }
+    label {
+
     }
   }
 }

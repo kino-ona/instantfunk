@@ -3,7 +3,7 @@
 <head>
 	@@include('../inc/pagehead.inc', {
 		"pagetitle": "인스턴트펑크 공식홈페이지 - 인스턴트펑크 INSTANTFUNK - 상품후기",
-		"webroot": "../"
+		"webroot": "."
 	})
 	<script src="/web/assets/js/modernizr.js"></script>
 	<script src="/web/assets/js/product.js"></script>
@@ -13,7 +13,7 @@
 	<div id="wrap">
 		@@include('../inc/header.inc', {
 			"login": "false",
-			"webroot": ".."
+			"webroot": "."
 		})
 
     <div class="container sub__container">
@@ -22,7 +22,7 @@
           <h2 class="head__title">상품사용리뷰</h2>
 
           <div class="head__search">
-            <button onclick="$('#SearchLayer').show();" class="btn__sopen">상세검색열기</button>
+            <button data-layer="SearchLayer" class="btn__sopen modal__show">상세검색열기</button>
 
             <div class="select">
               <select class="btn__stype">
@@ -41,12 +41,12 @@
 
           <div class="head__sort">
             <div class="review__sort">
-              <button onclick="dropDown(this);" class="review_sort--head"><span>최신순</span> <i class="arrow"></i></button>
+              <button class="review_sort--head"><span>최신순</span> <i class="arrow"></i></button>
               <ul class="review__sorting">
-                <li class="selected"><button onclick="dropDownSelect(this);" class="sort__select">최신순</button></li>
-                <li><button onclick="dropDownSelect(this);" class="sort__select">평점순</button></li>
-                <li><button onclick="dropDownSelect(this);" class="sort__select">좋아요순</button></li>
-                <li><button onclick="dropDownSelect(this);" class="sort__select">조회수순</button></li>
+                <li class="selected"><button class="sort__select">최신순</button></li>
+                <li><button class="sort__select">평점순</button></li>
+                <li><button class="sort__select">좋아요순</button></li>
+                <li><button class="sort__select">조회수순</button></li>
               </ul>
             </div>
           </div>
@@ -55,7 +55,7 @@
           <div class="search">
             <div id="SearchLayer" class="search__layer">
               <div class="search__form">
-                <a onclick="$('#SearchLayer').hide();" class="btn__close"><span class="a11y">닫기</span></a>
+                <a href="#" data-layer="SearchLayer" class="btn__close modal__hide"><span class="a11y">닫기</span></a>
 								<form action="">
 									<fieldset>
 										<legend>상세검색</legend>
@@ -165,7 +165,7 @@
                     </p>
                   </div>
                 </a>
-                <a onclick="$('#Product_ReviewView').show();">
+                <a href="#" data-layer="Product_ReviewView" class="modal__show">
                   <div class="rv__review">
                     <p class="rv__text">S은 크롭이래서 살짝 부담스러서 m샀는데 기장이 딱!!이에요 
                       예뻐용 매장에서 피팅해보구 주문했는데 청바지에두 예쁘구 평일 출근룩 교복템이에용
@@ -208,7 +208,7 @@
                     </p>
                   </div>
                 </a>
-                <a onclick="$('#Product_ReviewView').show();">
+                <a href="#" data-layer="Product_ReviewView" class="modal__show">
                   <div class="rv__review">
                     <p class="rv__text">S은 크롭이래서 살짝 부담스러서 m샀는데 기장이 딱!!이에요</p>
                     <p class="rv__thumnb">
@@ -247,7 +247,7 @@
                     </p>
                   </div>
                 </a>
-                <a onclick="$('#Product_ReviewView').show();">
+                <a href="#" data-layer="Product_ReviewView" class="modal__show">
                   <div class="rv__review">
                     <p class="rv__text">S은 크롭이래서 살짝 부담스러서 m샀는데 기장이 딱!!이에요 
                       예뻐용 매장에서 피팅해보구 주문했는데 청바지에두 예쁘구 평일 출근룩 교복템이에용
