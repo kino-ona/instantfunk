@@ -135,8 +135,18 @@
 											</div>
 										</div>
 										<!-- 인기검색어 -->
-										<div class="search__recommend">
-											<ul class="search__list">
+										<div class="search__list">
+											<p class="search__recommend" module="search_hotkeyword">
+												<!-- <a href="{$hot_keyword_url}" class="search__link">{$hot_keyword_name}</a> -->
+												<a href="#" class="search__link">검색어</a>
+											</p>
+											<p class="search__recommend" module="search_hotkeyword">
+												<!-- <a href="{$hot_keyword_url}" class="search__link">{$hot_keyword_name}</a> -->
+												<a href="#" class="search__link">검색어</a>
+											</p>
+										</div>
+
+											<!-- <ul class="search__list">
 												<li class="search__item">
 													<a href="#" class="search__link">검색어</a>
 												</li>
@@ -155,7 +165,7 @@
 												<li class="search__item">
 													<a href="#" class="search__link">검색어</a>
 												</li>
-											</ul>
+											</ul> -->
 										</div>
 										<!-- // 인기검색어 -->
 									</fieldset>
