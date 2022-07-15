@@ -20,10 +20,10 @@
 
 			<div class="detail__container">
 				<div class="detail__quick">
-					<p><a href="#prdDetail" class="quick_link">DETAIL INFO</a></p>
-					<p><a href="#prdGuide" class="quick_link">SHOP GUIDE</a></p>
-					<p><a href="#prdTalkwalk" class="quick_link">TALKWALK</a></p>
-					<p><a href="#prdReview" class="quick_link">REVIEW</a></p>
+					<p class=""><a href="#" data-section="prdDetail" class="quick_link">DETAIL INFO</a></p>
+					<p><a href="#" data-section="prdGuide" class="quick_link">SHOP GUIDE</a></p>
+					<p><a href="#" data-section="prdTalkwalk" class="quick_link">TALKWALK</a></p>
+					<p><a href="#" data-section="prdReview" class="quick_link">REVIEW</a></p>
 				</div>
 
 				<div class="detail__image">
@@ -210,7 +210,7 @@
 				<!--// detail_info -->
 
 				<div class="product__additional">
-					<div id="prdDetail" class="detail__cont">
+					<div id="prdDetail" class="product__section detail__cont">
 						<img src="/web/assets/images/temp/@productdetail.jpg">
 					</div>
 
@@ -513,7 +513,7 @@
 			</div>
 			<!--// detail__container -->
 
-			<div class="product-list suggest__item">
+			<div class="suggest__item">
 				<p class="suggest__title">suggest item</p>
 				<div class="menu">
 					<div class="menu__container">
@@ -532,50 +532,9 @@
 													<li class="swiper-slide">
 														<div class="menu__img"><img src="/web/assets/images/product.png" alt="상품"></div>
 													</li>
-													<li class="swiper-slide">
-														<div class="menu__img"><img src="/web/assets/images/product.png" alt="상품"></div>
-													</li>
 												</ul>
-												<div class="swiper-pagination"></div>
 											</div>
 										</a>
-										<div class="menu__layer">
-											<div class="menu__dimmed"></div>
-											<div class="menu__buttons">
-												<button type="button" class="menu__button menu__button--cart">CART</button>
-												<a href="#" class="menu__button">DETAIL</a>
-											</div>
-											<div class="menu__option">
-												<div class="menu__sizes">
-													<div>
-														<button type="button" class="menu__size menu__size--selected">F</button>
-													</div>
-													<div>
-														<button type="button" class="menu__size">S</button>
-													</div>
-													<div>
-														<button type="button" class="menu__size">M</button>
-													</div>
-													<div>
-														<button type="button" class="menu__size">L</button>
-													</div>
-													<div>
-														<button type="button" class="menu__size menu__size--disabled">XL</button>
-													</div>
-												</div>
-												<div class="menu__count">
-													<button type="button" class="menu__button"><img src="/web/assets/images/btn_count_down.gif" alt=""></button>
-													<span class="menu__current">1</span>
-													<button type="button"><img src="/web/assets/images/btn_count_up.gif" alt=""></button>
-												</div>
-												<div class="menu__buttons">
-													<button type="button" class="menu__button">ADD TO CART</button>
-												</div>
-												<button class="menu__close">
-													<span class="a11y">닫기</span>
-												</button>
-											</div>
-										</div>
 									</div>
 								</div>
 								<div class="menu__info">
@@ -631,50 +590,9 @@
 													<li class="swiper-slide">
 														<div class="menu__img"><img src="/web/assets/images/product.png" alt="상품"></div>
 													</li>
-													<li class="swiper-slide">
-														<div class="menu__img"><img src="/web/assets/images/product.png" alt="상품"></div>
-													</li>
 												</ul>
-												<div class="swiper-pagination"></div>
 											</div>
 										</a>
-										<div class="menu__layer">
-											<div class="menu__dimmed"></div>
-											<div class="menu__buttons">
-												<button type="button" class="menu__button menu__button--cart">CART</button>
-												<a href="#" class="menu__button">DETAIL</a>
-											</div>
-											<div class="menu__option">
-												<div class="menu__sizes">
-													<div>
-														<button type="button" class="menu__size menu__size--selected">F</button>
-													</div>
-													<div>
-														<button type="button" class="menu__size">S</button>
-													</div>
-													<div>
-														<button type="button" class="menu__size">M</button>
-													</div>
-													<div>
-														<button type="button" class="menu__size">L</button>
-													</div>
-													<div>
-														<button type="button" class="menu__size menu__size--disabled">XL</button>
-													</div>
-												</div>
-												<div class="menu__count">
-													<button type="button" class="menu__button"><img src="/web/assets/images/btn_count_down.gif" alt=""></button>
-													<span class="menu__current">1</span>
-													<button type="button"><img src="/web/assets/images/btn_count_up.gif" alt=""></button>
-												</div>
-												<div class="menu__buttons">
-													<button type="button" class="menu__button">ADD TO CART</button>
-												</div>
-												<button class="menu__close">
-													<span class="a11y">닫기</span>
-												</button>
-											</div>
-										</div>
 									</div>
 								</div>
 								<div class="menu__info">
@@ -702,9 +620,6 @@
 											</div>
 											<div class="menu__swiper swiper-container">
 												<ul class="swiper-wrapper">
-													<li class="swiper-slide">
-														<div class="menu__img"><img src="/web/assets/images/dummy.png" alt="상품"></div>
-													</li>
 													<li class="swiper-slide">
 														<div class="menu__img"><img src="/web/assets/images/dummy.png" alt="상품"></div>
 													</li>
@@ -922,31 +837,37 @@
 						<dl class="table__form">
 							<dt>신장</dt>
 							<dd>
-								<select>
-									<option>선택</option>
-									<option>150미만</option>
-									<option>150~155</option>
-								</select>
+								<div class="select">
+									<select>
+										<option>선택</option>
+										<option>150미만</option>
+										<option>150~155</option>
+									</select>
+								</div>
 							</dd>
 						</dl>
 						<dl class="table__form">
 							<dt>몸무게</dt>
 							<dd>
-								<select>
-									<option>선택</option>
-									<option>40kg미만</option>
-									<option>41~45</option>
-								</select>
+								<div class="select">
+									<select>
+										<option>선택</option>
+										<option>40kg미만</option>
+										<option>41~45</option>
+									</select>
+								</div>
 							</dd>
 						</dl>
 						<dl class="table__form">
 							<dt>착용사이즈</dt>
 							<dd>
-								<select>
-									<option>선택</option>
-									<option>44</option>
-									<option>55</option>
-								</select>
+								<div class="select">
+									<select>
+										<option>선택</option>
+										<option>44</option>
+										<option>55</option>
+									</select>
+								</div>
 							</dd>
 						</dl>
 						<dl class="table__form align__top">

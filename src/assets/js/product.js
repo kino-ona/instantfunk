@@ -111,6 +111,33 @@ jQuery.noConflict();
             $detailInfo.removeClass('on')
             $detailQuick.removeClass('on')
           }
+
+          $('.product__section').each(function(){
+            var secTop = $(this).position().top;
+            var secID = $(this).attr('id')
+
+            
+            if (sT > secTop) {
+              if(secID == 'prdDetail') {
+                $('.detail__quick').find('p').removeClass('selected')
+                $('.detail__quick').find('p').eq(0).addClass('selected')
+              } else if(secID == 'prdGuide') {
+                $('.detail__quick').find('p').removeClass('selected')
+                $('.detail__quick').find('p').eq(1).addClass('selected')
+              } else if(secID == 'prdTalkwalk') {
+                $('.detail__quick').find('p').removeClass('selected')
+                $('.detail__quick').find('p').eq(2).addClass('selected')
+              } else if(secID == 'prdReview') {
+                $('.detail__quick').find('p').removeClass('selected')
+                $('.detail__quick').find('p').eq(3).addClass('selected')
+              } else {
+                // $('.detail__quick').find('p').removeClass('selected')
+              }
+            } 
+            if (sT < $w.height()) {
+              $('.detail__quick').find('p').removeClass('selected')
+            }
+          });
         });
       } else {
         $detailInfo.removeClass('on')
@@ -127,6 +154,15 @@ jQuery.noConflict();
   
         });
       }
+
+      $('.detail__quick').find('p').each(function(){
+        $(this).find('.quick_link').click(function(){
+          var scrollId = $(this).attr('data-section')
+
+          $("html, body").animate({ scrollTop: $('#' + scrollId).position().top + 100 }, 500);
+        });
+      });
+
     };
 
     if($('.card_board').length > 0) {
@@ -140,11 +176,11 @@ jQuery.noConflict();
   });
 
   $(document).ready(function () {
-    if($('.menu__size').length > 0) {
-      $('.menu__size').textfill({
-        maxFontPixels: 100
-      });
-    }
+    // if($('.menu__size').length > 0) {
+    //   $('.menu__size').textfill({
+    //     maxFontPixels: 100
+    //   });
+    // }
   });
   
   /*****
