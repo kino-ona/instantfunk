@@ -434,7 +434,7 @@
       background-color: #dbdbdb;
     }
     .swiper-pagination-bullet-active {
-      background-color: #000000;
+      background-color: #5eecfa;
     }
     .swiper-slide {
       display: flex;
@@ -553,6 +553,7 @@
     }
     .rv__writer {
       font-weight: 500;
+      @include mixins.PtdMedium();
     }
   }
   .product__accordion {
@@ -621,7 +622,7 @@
       .product__name {order: 2; padding-left: 20px; padding-right: 20px;}
       .product__price {order: 3; padding-left: 20px; padding-right: 20px;}
       .product__tag {order: 4; padding-left: 20px; padding-right: 20px;}
-      .product__reivew {order: 5; padding-left: 20px; padding-right: 20px;margin-top: 0;}
+      .product__reivew {order: 5; padding-left: 20px; padding-right: 0;margin-top: 0;}
       .product__accordion {order: 6; padding-left: 20px; padding-right: 20px; max-height: inherit; overflow-y: hidden;}
       .product__action {order: 8; padding-left: 20px; padding-right: 20px;}
       .product__option {order: 7}
@@ -668,9 +669,9 @@
       background-color: #5eecfa;
       width: 100%;
       height: 60px;
-      border-top-left-radius: 40px;
-      border-top-right-radius: 40px;
-      padding: 25px 30px;
+      border-top-left-radius: 36px;
+      border-top-right-radius: 36px;
+      padding: 25px 15px 23px;
       align-items: center;
       justify-content: space-between;
       -webkit-transition: opacity .1s ease-in-out;
@@ -681,11 +682,42 @@
         padding: 2px 10px;
         border: 1px solid #000000;
         border-radius: 35px;
-        font-size: 30px;
+        font-size: 20px;
         font-weight: 700;
       }
       &.hide {
         opacity: 0;
+      }
+    }
+    .product__reivew--list {
+      display: flex;
+      margin: 10px 0 25px;
+      overflow-x: scroll;
+		  -webkit-overflow-scrolling: touch;
+      &:after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+      .rv__item {
+        flex: none;
+		    float: left;
+        width: calc(100% / 1.6);
+        padding: 15px 12px;
+        border:1px solid #000000;
+        border-radius: 15px;
+        margin-right: 8px;
+      }
+      .rv__box {
+        width: calc(100% - 60px);
+        height: 29px;
+        font-size: 12px;
+      }
+      .rv__figure {
+        display: flex;
+        width: 30px;
+        height: 30px;
+        align-items: center;
       }
     }
   }
@@ -1921,6 +1953,8 @@
 
 // suggest__item
 .suggest__item {
+  padding-left: 10px;
+  padding-right: 10px;
   .suggest__title {
     padding-left: 20px;
     padding-bottom: 30px;
@@ -1929,10 +1963,17 @@
     text-transform: uppercase;
   }
   .menu {
+    .menu__list {
+      margin-left: 0;
+    }
     .menu__item {
-      width: calc(25% - 4px);
+      width: 25%;
+      margin-left: 0;
       border-radius: 52px;
       overflow: hidden;
+    }
+    .menu__round {
+      padding-top: 122.883%;
     }
     .marquee {
       height: 66px;
