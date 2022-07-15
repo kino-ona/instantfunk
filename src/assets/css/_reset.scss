@@ -114,6 +114,9 @@ input[type='email'] {
 		padding-right: 60px;
 		border-color: red;
 	}
+	@include breakpoints.mobile() {
+		font-size: 13px;
+	}
 }
 ::-webkit-input-placeholder {
 	font-size: 14px;
@@ -122,6 +125,15 @@ input[type='email'] {
 ::-moz-placeholder {
 	font-size: 14px;
 	color: #999;
+}
+
+@include breakpoints.mobile() {
+	::-webkit-input-placeholder {
+		font-size: 13px;
+	}
+	::-moz-placeholder {
+		font-size: 13px;
+	}
 }
 
 input[type='checkbox'],
