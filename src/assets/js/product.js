@@ -146,9 +146,22 @@ jQuery.noConflict();
         $w.on('scroll', function() {
           var msT = $w.scrollTop();
           var moptPos = $('.detail__container .product__option').position().top - 187;
+          var optH = $('.detail__container .product__option').outerHeight();
+          
+          console.log($('.detail__container .product__option').position().bottom)
           if (msT >= moptPos) {
             $('.mo__fixed__option').addClass('hide')
           }else{
+            $('.mo__fixed__option').find('.opt_top').show()
+            $('.mo__fixed__option').find('.opt_bottom').hide()
+            $('.mo__fixed__option').removeClass('hide')
+          }
+
+          if (msT >= moptPos + optH + 300) {
+            $('.mo__fixed__option').find('.opt_top').hide()
+            $('.mo__fixed__option').find('.opt_bottom').css({
+              'display' : 'flex'
+            })
             $('.mo__fixed__option').removeClass('hide')
           }
   

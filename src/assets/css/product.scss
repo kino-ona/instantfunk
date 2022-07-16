@@ -677,6 +677,22 @@
       -webkit-transition: opacity .1s ease-in-out;
       transition: opacity .1s ease-in-out;
       z-index: 1;
+      .opt_inner {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .opt_bottom {display: none;}
+      .opt__name {
+        font-size: 12px;
+        font-weight: 500;
+        margin-bottom: 2px;
+      }
+      .opt__price {
+        @include mixins.PtdMedium();
+        font-size: 12px;
+      }
       .btn__buy {
         display: inline-block;
         padding: 2px 10px;
