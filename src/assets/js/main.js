@@ -82,17 +82,20 @@ jQuery.noConflict();
 		});
 	
 		var bestMenuSwiper = new Swiper('.best-menu .best-menu__item .swiper', {
-			speed: 600,
-			loop: true,
+			speed: 300,
 			effect: 'creative',
 			creativeEffect: {
 				next: {
-					translate: ['100%', 0, 0]
+					translate: ['100%', 0, 1],
+				},
+				prev: {
+					translate: [0, 0, -1],
 				}
 			},
+			touchEventsTarget: 'container',
 			autoplay: {
 				enabled: false,
-				delay: 2000
+				delay: 500
 			},
 			breakpointsInverse: true,
 			breakpoints: {
@@ -103,11 +106,14 @@ jQuery.noConflict();
 		});
 	
 		$(document).on('mouseenter mouseleave', '.desktop .best-menu .best-menu__item:not(.best-menu__item--figure)', function(event){
-			if (event.type === 'mouseenter') {
+			if (event.type === 'mouseenter') {	
 				$(this).find('.swiper')[0].swiper.autoplay.start();
 			}
 			if (event.type === 'mouseleave') {
 				$(this).find('.swiper')[0].swiper.autoplay.stop();
+				if($(this).find('.swiper')[0].swiper.activeIndex <= $(this).find('.swiper')[0].swiper.slides.length - 1) {
+					$(this).find('.swiper')[0].swiper.slideTo(0);
+				}
 			}
 		});
 	
