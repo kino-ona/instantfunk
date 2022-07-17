@@ -7,6 +7,24 @@ jQuery.noConflict();
         el: '.productDetailswp .swiper-pagination'
       }
     });
+    var productReview = new Swiper('.productReview', {
+      loop: true,
+      speed: 1100,
+      autoplay: false,
+      slidesPerView: 1.5,
+      spaceBetween: 8,
+      direction: 'horizontal',
+      breakpointsInverse: true,
+      breakpoints: {
+        750: {
+          direction: 'vertical',
+          autoplay: true,
+          slidesPerView: 'auto',
+          spaceBetween: 0,
+          allowTouchMove: false
+        }
+      }
+    });
   
     $('.product-list .product-list__trigger').click(function(){
       if (!$(this).hasClass('product-list__trigger--active')) {
