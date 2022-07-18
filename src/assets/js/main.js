@@ -104,13 +104,10 @@ jQuery.noConflict();
 				}
 			},
 			on: {
-				init: function(swiper) {
-					console.log(swiper);
-				},
 				breakpoint: function(swiper, breakpointParams) {
 					if (!breakpointParams.allowTouchMove) {
 						swiper.on('reachEnd', function(swiper){
-							swiper.on('slidePrevTransitionStart', function(swiper){
+							swiper.on('slidePrevTransitionStart', function(swiper){								
 								var offset = '-' + swiper.slides[swiper.slides.length - 1].swiperSlideOffset - swiper.width + 'px';
 								swiper.autoplay.stop();
 								for (var i = 1; i < swiper.slides.length - 1; i++) {
@@ -137,6 +134,7 @@ jQuery.noConflict();
 			if (event.type === 'mouseleave') {
 				if(swiper.activeIndex <= swiper.slides.length - 1) {
 					swiper.slideTo(0);
+					swiper.offAny('slidePrevTransitionEnd');
 				}
 				swiper.autoplay.stop();
 				swiper.update();
