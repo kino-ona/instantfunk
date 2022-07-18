@@ -4,7 +4,7 @@ dist/**/*.html
 dist/web/assets/css
 dist/web/assets/images
 dist/web/assets/js
-web/**/*.html
+web/**/**.html
 web/assets/css
 web/assets/images
 web/assets/js
@@ -12,3 +12,4 @@ src/web/assets/css/sprite
 src/assets/css/sprite
 Data/
 ftp/
+src/메모
