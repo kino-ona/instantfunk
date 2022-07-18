@@ -18,10 +18,10 @@ const
 		inc: 'src/inc/**/*.inc'
 	},
 	dist = {
-		html: 'web',
-		css: 'web/assets/css',
-		js: 'web/assets/js',
-		img: 'web/assets/images'
+		html: 'dist',
+		css: 'dist/assets/css',
+		js: 'dist/assets/js',
+		img: 'dist/assets/images'
 	},
 
 	// modules
@@ -59,8 +59,8 @@ function server(done) {
 	if (browsersync) {
 		browsersync.init({
 			server: {
-				baseDir: './',
-				index: 'web/index.html'
+				baseDir: 'dist',
+				index: 'index.html'
 			},
 			open: false
 		})
@@ -147,7 +147,7 @@ function watchs(done) {
 
 // clean
 function clean(done) {
-	del.sync(['web/*.html', 'web/product', 'web/order', 'web/member', 'web/search', 'web/myshop', 'web/assets/**', '!web/assets/fonts']);
+	del.sync(['dist/*.html', 'dist/product', 'dist/order', 'dist/member', 'dist/search', 'dist/myshop', 'dist/assets/**', '!dist/assets/fonts']);
 	done();
 }
 exports.clean = clean;
@@ -240,7 +240,7 @@ function sprite(done) {
 			verbose: true
 		}
 		))
-		.pipe(dest('web/assets/images/sprite'));
+		.pipe(dest('dist/assets/images/sprite'));
 		
 	const cssStream = spriteData.css
 		.pipe(buffer())
@@ -253,7 +253,7 @@ exports.sprite = sprite;
 
 // clean sprite
 function cleanSprite(done) {
-	del.sync(['web/assets/images/sprite', 'src/assets/css/sprite']);
+	del.sync(['dist/assets/images/sprite', 'dist/assets/css/sprite']);
 	done();
 }
 exports.cleanSprite = cleanSprite;
