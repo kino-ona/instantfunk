@@ -177,7 +177,7 @@ jQuery.noConflict();
   
         $w.on('scroll', function() {
           var msT = $w.scrollTop();
-          var moptPos = $('.detail__container .product__option').position().top - 187;
+          var moptPos = $('.detail__container .product__option').position().top - 277;
           var optH = $('.detail__container .product__option').outerHeight();
           
           console.log($('.detail__container .product__option').position().bottom)

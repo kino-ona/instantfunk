@@ -412,7 +412,9 @@
 .detail__container {
   position: relative;
   width: 100%;
+  max-width: 1920px;
   min-height: 100vh;
+  margin: 0 auto;
   z-index: 1;
   line-height: 1.3;
 }
@@ -452,19 +454,22 @@
       align-items: center;
       justify-content: center;
       height: inherit;
-      padding-top: 100%;
+      border-radius: 68px;
+      overflow: hidden;
       img {
         position: absolute;
         top: 50%;
         left: 50%;
         width: 100%;
         @include mixins.translate(-50%, -50%);
+        object-fit: cover;
       }
     }
   }
   @include breakpoints.mobile() {
     padding:0;
-    height: 64.77vh;
+    // height: 64.77vh;
+    height: 110vw;
     margin-bottom: 5px;
     border-radius: 68px;
     overflow: hidden;
@@ -472,7 +477,7 @@
 }
 .detail_info {
   position: fixed;
-  top: 90px;
+  top: 165px;
   right: 30px;
   bottom: inherit;
   max-width: 360px;
@@ -547,7 +552,9 @@
   }
   .product__reivew--list {
     .rv__item {
+      display: flex;
       padding: 25px 0;
+      align-items: center;
       &:after {
         content: '';
         display: block;
@@ -556,8 +563,18 @@
     }
     .rv__figure {
       float: left;
+      position: relative;
       width: 55px;
+      height: 55px;
       margin-right: 15px;
+      overflow: hidden;
+      border-radius: 15px;
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include mixins.translate(-50%, -50%);
+      }
     }
     .rv__box {
       @include mixins.ellipse(2);
