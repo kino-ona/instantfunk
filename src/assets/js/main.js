@@ -113,13 +113,14 @@ jQuery.noConflict();
 							swiper.on('slidePrevTransitionStart', function(swiper){
 								var offset = '-' + swiper.slides[swiper.slides.length - 1].swiperSlideOffset - swiper.width + 'px';
 								swiper.autoplay.stop();
-									for (var i = 1; i < swiper.slides.length - 1; i++) {
+								for (var i = 1; i < swiper.slides.length - 1; i++) {
 									swiper.slides[i].style.transform = 'translate3d('+offset+', calc(0px), calc(1px)) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1)';
 								}
 								swiper.slides[swiper.slides.length - 1].style.transform = 'translate3d('+offset+', calc(0px), calc(1px)) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1)';
 							});
 							swiper.on('slidePrevTransitionEnd', function(){
 								swiper.update();
+								swiper.autoplay.start();
 							});
 						});
 					}
