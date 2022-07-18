@@ -529,6 +529,11 @@
       }
     }
   }
+  .productReview {
+    position: relative;
+    height: 95px;
+    overflow: hidden;
+  }
   .product__reivew--list {
     .rv__item {
       padding: 25px 0;
@@ -677,6 +682,22 @@
       -webkit-transition: opacity .1s ease-in-out;
       transition: opacity .1s ease-in-out;
       z-index: 1;
+      .opt_inner {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .opt_bottom {display: none;}
+      .opt__name {
+        font-size: 12px;
+        font-weight: 500;
+        margin-bottom: 2px;
+      }
+      .opt__price {
+        @include mixins.PtdMedium();
+        font-size: 12px;
+      }
       .btn__buy {
         display: inline-block;
         padding: 2px 10px;
@@ -694,24 +715,27 @@
         .ic_star {}
       }
     }
+    .productReview {
+      height: auto;
+    }
     .product__reivew--list {
-      display: flex;
+      // display: flex;
       margin: 10px 0 25px;
-      overflow-x: scroll;
-		  -webkit-overflow-scrolling: touch;
+      // overflow-x: scroll;
+		  // -webkit-overflow-scrolling: touch;
       &:after {
         content: '';
         display: block;
         clear: both;
       }
       .rv__item {
-        flex: none;
-		    float: left;
-        width: calc(100% / 1.6);
+        // flex: none;
+		    // float: left;
+        // width: calc(100% / 1.6) !important;
         padding: 15px 12px;
         border:1px solid #000000;
         border-radius: 15px;
-        margin-right: 8px;
+        // margin-right: 8px;
       }
       .rv__box {
         width: calc(100% - 60px);
@@ -1982,6 +2006,11 @@
   .menu {
     .menu__list {
       margin-left: 0;
+    }
+    .menu__swiper {
+      ul {
+        height: 100%;
+      }
     }
     .menu__item {
       width: 25%;

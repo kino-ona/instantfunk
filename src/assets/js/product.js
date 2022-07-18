@@ -7,6 +7,24 @@ jQuery.noConflict();
         el: '.productDetailswp .swiper-pagination'
       }
     });
+    var productReview = new Swiper('.productReview', {
+      loop: true,
+      speed: 1100,
+      autoplay: false,
+      slidesPerView: 1.5,
+      spaceBetween: 8,
+      direction: 'horizontal',
+      breakpointsInverse: true,
+      breakpoints: {
+        750: {
+          direction: 'vertical',
+          autoplay: true,
+          slidesPerView: 'auto',
+          spaceBetween: 0,
+          allowTouchMove: false
+        }
+      }
+    });
   
     $('.product-list .product-list__trigger').click(function(){
       if (!$(this).hasClass('product-list__trigger--active')) {
@@ -84,6 +102,7 @@ jQuery.noConflict();
     $('.product-list .menu .menu__button--cart, .search__result .menu .menu__button--cart').click(function(){
       var el = $(this).closest('.menu__item');
       el.find('.menu__option').addClass('menu__option--opened');
+      optText();
     });
   
     $('.product-list .menu .menu__close, .search__result .menu .menu__close').click(function(){
@@ -91,6 +110,13 @@ jQuery.noConflict();
       el.find('.menu__option').removeClass('menu__option--opened');
     });
 
+    function optText() {
+      if($('.menu__size').length > 0) {
+        $('.menu__size').textfill({
+          maxFontPixels: 100
+        });
+      }
+    }
 
     if($('.detail__container').length > 0) {
       var $w = $(window),
@@ -146,9 +172,22 @@ jQuery.noConflict();
         $w.on('scroll', function() {
           var msT = $w.scrollTop();
           var moptPos = $('.detail__container .product__option').position().top - 187;
+          var optH = $('.detail__container .product__option').outerHeight();
+          
+          console.log($('.detail__container .product__option').position().bottom)
           if (msT >= moptPos) {
             $('.mo__fixed__option').addClass('hide')
           }else{
+            $('.mo__fixed__option').find('.opt_top').show()
+            $('.mo__fixed__option').find('.opt_bottom').hide()
+            $('.mo__fixed__option').removeClass('hide')
+          }
+
+          if (msT >= moptPos + optH + 300) {
+            $('.mo__fixed__option').find('.opt_top').hide()
+            $('.mo__fixed__option').find('.opt_bottom').css({
+              'display' : 'flex'
+            })
             $('.mo__fixed__option').removeClass('hide')
           }
   
@@ -173,14 +212,6 @@ jQuery.noConflict();
       });
       
     }
-  });
-
-  $(document).ready(function () {
-    // if($('.menu__size').length > 0) {
-    //   $('.menu__size').textfill({
-    //     maxFontPixels: 100
-    //   });
-    // }
   });
   
   /*****
