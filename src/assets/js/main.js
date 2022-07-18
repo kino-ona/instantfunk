@@ -97,44 +97,39 @@ jQuery.noConflict();
 				enabled: false,
 				delay: 500
 			},
-			breakpointsInverse: true,
 			breakpoints: {
 				750: {
 					allowTouchMove: false
 				}
 			},
 			on: {
-				breakpoint: function(swiper, breakpointParams) {
-					if (!breakpointParams.allowTouchMove) {
-						swiper.on('reachEnd', function(swiper){
-							swiper.on('slidePrevTransitionStart', function(swiper){								
-								var offset = '-' + swiper.slides[swiper.slides.length - 1].swiperSlideOffset - swiper.width + 'px';
-								swiper.autoplay.stop();
-								for (var i = 1; i < swiper.slides.length - 1; i++) {
-									swiper.slides[i].style.transform = 'translate3d('+offset+', calc(0px), calc(1px)) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1)';
-								}
-								swiper.slides[swiper.slides.length - 1].style.transform = 'translate3d('+offset+', calc(0px), calc(1px)) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1)';
-							});
-							swiper.on('slidePrevTransitionEnd', function(){
-								swiper.update();
-								swiper.autoplay.start();
-							});
-						});
+				slidePrevTransitionStart: function(swiper) {
+					if (!swiper.allowTouchMove) {
+						var offset = '-' + swiper.slides[swiper.slides.length - 1].swiperSlideOffset - swiper.width + 'px';
+						swiper.autoplay.stop();
+						for (var i = 1; i < swiper.slides.length - 1; i++) {
+							swiper.slides[i].style.transform = 'translate3d('+offset+', calc(0px), calc(1px)) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1)';
+						}
+						swiper.slides[swiper.slides.length - 1].style.transform = 'translate3d('+offset+', calc(0px), calc(1px)) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1)';
+						swiper.autoplay.start();
 					}
 				},
+				slidePrevTransitionEnd: function(swiper) {
+					if (!swiper.allowTouchMove) {
+						swiper.update();
+					}
+				}
 			}
 		});
 
 		$(document).on('mouseenter mouseleave', '.desktop .best-menu .best-menu__item:not(.best-menu__item--figure)', function(event){
 			swiper = $(this).find('.swiper')[0].swiper;
 			if (event.type === 'mouseenter') {
-				swiper.update();
 				swiper.autoplay.start();
 			}
 			if (event.type === 'mouseleave') {
 				if(swiper.activeIndex <= swiper.slides.length - 1) {
 					swiper.slideTo(0);
-					swiper.offAny('slidePrevTransitionEnd');
 				}
 				swiper.autoplay.stop();
 				swiper.update();
