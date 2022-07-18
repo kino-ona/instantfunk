@@ -8,6 +8,9 @@ web/**/**.html
 web/assets/css
 web/assets/images
 web/assets/js
+dist/assets/css
+dist/assets/images/
+dist/assets/js
 src/web/assets/css/sprite
 src/assets/css/sprite
 Data/
