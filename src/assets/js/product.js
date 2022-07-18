@@ -115,6 +115,12 @@ jQuery.noConflict();
         $('.menu__size').textfill({
           maxFontPixels: 100
         });
+        $(window).on('resize', function(){
+          $('.menu__size').textfill({
+            maxFontPixels: 100
+          });
+        });
+
       }
     }
 
@@ -210,7 +216,6 @@ jQuery.noConflict();
         padding_x: 0,
         single_column_breakpoint: 1400
       });
-      
     }
   });
   
