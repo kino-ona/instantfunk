@@ -269,6 +269,7 @@
     margin-left: 0;
     margin-right: 0;
     border-bottom: 0;
+    margin-bottom: 0;
     .review__list--item {
       padding-right: 0;
       padding: 20px 0px;
@@ -367,6 +368,7 @@
   @include breakpoints.mobile() {
     height: 36px;
     justify-content: center;
+    margin-right: -56px;
     .btn__prev, .btn__next { 
       width: 36px;
       height: 36px;
@@ -650,7 +652,8 @@
       width: 100%;
       height: 100px;
       border-top: 1px solid #000000;
-      border-radius: 40px;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
     }
     .product__action {
       background-color: #5eecfa;
@@ -660,6 +663,13 @@
       padding-bottom: 25px;
       margin-top: 0;
     }
+
+    .product__act--button {
+      .act__btn {
+        padding: 13px 10px 9px;
+      }
+    }
+
 
     .product__option {
       width: 100%;
@@ -671,8 +681,10 @@
       overflow: hidden;
     }
     .product__accordion {
+      border-top: 0;
       border-bottom: 1px solid #000000;
-      border-radius: 40px;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
       padding-bottom: 25px;
     }
 
@@ -691,7 +703,7 @@
       justify-content: space-between;
       -webkit-transition: opacity .1s ease-in-out;
       transition: opacity .1s ease-in-out;
-      z-index: 1;
+      z-index: 10;
       .opt_inner {
         display: flex;
         width: 100%;
@@ -858,6 +870,7 @@
     .opt__type {
       position: absolute;
       right: 0;
+      top:0;
     }
   }
   .product__etc {
@@ -935,8 +948,18 @@
     .product__name {
       padding-left: 0 !important;
     }
+    .product__etc {
+      height: 35px;
+      align-items: center;
+    }
+    .qty__wrap {
+      height: 100%;
+    }
+    .product__price {
+      margin-bottom: 0;
+    }
   }
-}
+} //option__list
 
 .product__additional {
   width: 100%;
@@ -1072,6 +1095,8 @@
   @include breakpoints.mobile() {
     margin-bottom: 88px;
     .list__bottom {
+      margin-left: 0;
+      margin-right: 0;
       .btn__underline {
         font-size: 10px;
       }
@@ -2071,7 +2096,6 @@
       width: 100%;
       .menu__list {
         display: flex;
-        padding-left: 15px;
         padding-right: 15px;
         overflow-x: scroll;
         -webkit-overflow-scrolling: touch;
