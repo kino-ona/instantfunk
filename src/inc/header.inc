@@ -18,6 +18,8 @@
 									<li class="nav__item"><a href="#" class="nav__link">OUTER</a></li>
 									<li class="nav__item"><a href="#" class="nav__link">TOP</a></li>
 									<li class="nav__item"><a href="#" class="nav__link">BOTTOM</a></li>
+									<li class="nav__item"><a href="#" class="nav__link">INSTANT GOLF</a></li>
+									<li class="nav__item"><a href="#" class="nav__link">INSTANT BODY</a></li>
 									<li class="nav__item"><a href="#" class="nav__link">ACC</a></li>
 									<li class="nav__item"><a href="#" class="nav__link">ETC</a></li>
 								</ul>
