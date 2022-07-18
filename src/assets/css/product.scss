@@ -735,7 +735,7 @@
     .product__reivew--title {
       .review__count {
         .ic_star {
-          @include mixins.sprite(mo_icons.$ico-star-small);
+          // @include mixins.sprite(mo_icons.$ico-star-small);
         }
       }
     }
