@@ -105,11 +105,9 @@ jQuery.noConflict();
 			on: {
 				breakpoint: function(swiper, breakpointParams) {
           if (!breakpointParams.allowTouchMove) {
-            console.log(swiper);
 						swiper.loopDestroy();
 						swiper.params.loop = false;
           } else {
-						console.log(swiper.realIndex);
 						swiper.loopCreate();
 						swiper.params.loop = true;
 						swiper.slideTo(1);
@@ -140,7 +138,6 @@ jQuery.noConflict();
 				swiper.autoplay.start();
 			}
 			if (event.type === 'mouseleave') {
-				console.log(event.type);
 				if(swiper.activeIndex <= swiper.slides.length - 1 && !swiper.activeIndex == 0) {
 					swiper.slideTo(0);
 				}
