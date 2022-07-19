@@ -69,7 +69,6 @@ jQuery.noConflict();
 					translate: [0, 0, -1],
 				}
 			},
-
       pagination: {
         el: '.swiper-pagination',
         type: 'progressbar'

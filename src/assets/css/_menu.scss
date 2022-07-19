@@ -417,6 +417,7 @@
 			}
 		}
 		.menu__swiper {
+			clip-path: inset(0 round 26px);
 			.swiper-pagination-progressbar {
 				display: block;
 				left: 50%;
