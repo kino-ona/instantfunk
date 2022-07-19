@@ -128,7 +128,7 @@ jQuery.noConflict();
 				swiper.autoplay.start();
 			}
 			if (event.type === 'mouseleave') {
-				if(swiper.activeIndex <= swiper.slides.length - 1) {
+				if(swiper.activeIndex <= swiper.slides.length - 1 && !swiper.activeIndex == 0) {
 					swiper.slideTo(0);
 				}
 				swiper.autoplay.stop();
