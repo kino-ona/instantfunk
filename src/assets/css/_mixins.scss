@@ -55,10 +55,10 @@
 	$sprite-offset-y: nth($sprite, 4);
 	$sprite-width: nth($sprite, 5);
 	$sprite-height: nth($sprite, 6);
-	width: calc($sprite-width / 2);
-	height: calc($sprite-height / 2);
-	background-position: calc($sprite-offset-x / 2) calc($sprite-offset-y / 2);
-	background-size: calc(mo_icons.$mo-icons-width / 2) calc(mo_icons.$mo-icons-height / 2);
+	width: round(calc($sprite-width / 2));
+	height: round(calc($sprite-height / 2));
+	background-position: round(calc($sprite-offset-x / 2)) round(calc($sprite-offset-y / 2));
+	background-size: round(calc(mo_icons.$mo-icons-width / 2)) round(calc(mo_icons.$mo-icons-height / 2));
 }
 
 // icons
