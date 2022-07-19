@@ -120,7 +120,7 @@ exports.copyJs = copyJs;
 
 // image
 function image(done) {
-	return src([paths.img, '!src/assets/images/sprite/**'])
+	return src([paths.img, '!src/assets/images/sprite/**/*.png'])
 		.pipe(newer(dist.img))
 		.pipe(imagemin([
 			imagemin.optipng({optimizationLevel: 1})
@@ -138,7 +138,7 @@ function watchs(done) {
 	watch([paths.html, paths.inc], copyHtml);
 	watch(paths.css, compileScss);
 	watch(paths.js, copyJs);
-	watch([paths.img, '!src/assets/images/sprite'], image);
+	watch([paths.img, '!src/assets/images/sprite/**/*.png'], image);
 	watch('src/assets/images/sprite/**/*.png', sprite); // 스프라이트 이미지 감시용
 	// watch('src/assets/images/ico/*.png', sprite); // 스프라이트 이미지 감시용
 	// watch('src/assets/images/ico/m/*.png', spriteMobile); // 스프라이트 이미지 감시용
@@ -221,6 +221,7 @@ function sprite(done) {
 			options.cssName = `_${sprite}.scss`;
 			options.cssTemplate = null;
 			options.cssSpritesheetName = sprite;
+			options.padding = 8;
 			
 			return options;
 		}
