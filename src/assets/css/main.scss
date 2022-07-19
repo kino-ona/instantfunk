@@ -789,22 +789,26 @@
 	}
 	.menu__category--outer {
 		background-image: url('../images/bg_menu_category_outer.png');
-		background-position: 50% 154px;
+		background-position: 50% 7.81vw;
+		background-size: 123.59vw auto;
 		background-color: #b3f977;
 	}
 	.menu__category--bottom {
 		background-image: url('../images/bg_menu_category_bottom.png');
-		background-position: 50% 50%;
+		background-position: 50% -4.27vw;
+		background-size: 48.18vw auto;
 		background-color: #5eecfa;
 	}
 	.menu__category--top {
 		background-image: url('../images/bg_menu_category_top.png');
-		background-position: 50% 78px;
+		background-position: 50% 4.06vw;
+		background-size: 88.49vw auto;
 		background-color: #fffd72;
 	}
 	.menu__category--acc {
 		background-image: url('../images/bg_menu_category_acc.png');
 		background-position: 50% 50%;
+		background-size: 46.25vw auto;
 		background-color: #ffb5d1;
 	}
 	.menu__img {
@@ -837,22 +841,27 @@
 		}
 		.menu__category--outer {
 			background-image: url('../images/m_bg_menu_category_outer.png');
-			background-position: 50% -17.95%;
-			background-size: 212.69% 178.33%;
+			background-position: 50% 18.93vw;
+			background-size: 221.2vw auto;
+			background-color: #b3f977;
 		}
 		.menu__category--bottom {
 			background-image: url('../images/m_bg_menu_category_bottom.png');
-			background-position: 50% 20%;
-			background-size: 89.49% 165.38%;
+			background-position: 50% -13.47vw;
+			background-size: 93.07vw auto;
+			background-color: #5eecfa;
 		}
 		.menu__category--top {
 			background-image: url('../images/m_bg_menu_category_top.png');
-			background-position: 50% 55px;
-			background-size: 154.74% 117.44%;
+			background-position: 50% 14.8vw;
+			background-size: 160.93vw auto;
+			background-color: #fffd72;
 		}
 		.menu__category--acc {
 			background-image: url('../images/m_bg_menu_category_acc.png');
-			background-size: 346px 151.5px;
+			background-position: 50% 50%;
+			background-size: 92.27vw auto;
+			background-color: #ffb5d1;
 		}
 		.menu__img {
 			img {
