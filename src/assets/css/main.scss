@@ -424,6 +424,7 @@
 		}
 		.cube__text {
 			margin: 0 50px;
+			font-weight: 600;
 			font-size: 48px;
 			letter-spacing: -0.05em;
 		}
@@ -492,23 +493,28 @@
 		}
 
 		.cube {
-			height: 45px;
+			height: 35px;
+			.cube__face {
+				padding: 0 10px;
+			}
 			.cube__face--front {
-				transform: rotateY(0deg) translateZ(22.5px);
+				transform: rotateY(0deg) translateZ(17.5px);
 			}
 			.cube__face--top {
-				transform: rotateX(90deg) translateZ(22.5px);
+				transform: rotateX(90deg) translateZ(17.5px);
 			}
 			.cube__face--back {
-				transform: rotateX(180deg) translateZ(22.5px);
+				transform: rotateX(180deg) translateZ(17.5px);
 			}
 			.cube__face--bottom {
-				transform: rotateX(-90deg) translateZ(22.5px);
+				transform: rotateX(-90deg) translateZ(17.5px);
 			}
 			.cube__text {
-				margin: 0 24px;
-				font-size: 30px;
-				letter-spacing: -0.025em;
+				margin: 0;
+				font-size: 24px;
+				&:not(:first-child) {
+					margin-left: 26.5px;
+				}
 			}
 		}
 	}
@@ -882,6 +888,22 @@
 	100% {
 		clip-path: inset(0 round 42px);
 		animation-timing-function: cubic-bezier(0.82, 0, 0.2, 1);
+	}
+}
+
+@include breakpoints.mobile() {
+	@keyframes visual {
+		0% {
+			clip-path: inset(50% round 34px);
+		}
+		50% {
+			clip-path: inset(11.2% round 34px);
+			animation-timing-function: cubic-bezier(0, 0, 0, 1);
+		}
+		100% {
+			clip-path: inset(0 round 34px);
+			animation-timing-function: cubic-bezier(0.82, 0, 0.2, 1);
+		}
 	}
 }
 
