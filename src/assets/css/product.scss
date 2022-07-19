@@ -444,10 +444,10 @@
       height: 2px;
       margin: 0 !important;
       border-radius: 0;
-      background-color: #dbdbdb;
+      background-color: rgba(0, 0, 0, 0.14);
     }
     .swiper-pagination-bullet-active {
-      background-color: #5eecfa;
+      background-color: #000000;
     }
     .swiper-slide {
       display: flex;
@@ -481,7 +481,7 @@
   right: 30px;
   bottom: inherit;
   max-width: 360px;
-  max-height: calc(100vh - 100px);
+  max-height: calc(100vh - 190px);
   padding: 38px 29px 30px;
   background-color: #ffffff;
   border: 1px solid #000000;
@@ -602,7 +602,7 @@
     align-items: center;
     .act__btn {
       flex: 1;
-      padding: 20px 10px 16px;
+      padding: 11px 10px 9px;
       margin-right: 4px;
       font-size: 28px;
       border: 1px solid #000000;
@@ -696,6 +696,9 @@
       border-top-left-radius: 40px;
       border-top-right-radius: 40px;
       overflow: hidden;
+      .qty_input {
+        font-size: 24px;
+      }
     }
     .product__accordion {
       border-top: 0;
@@ -968,6 +971,9 @@
     .product__etc {
       height: 35px;
       align-items: center;
+      .qty_input {
+        font-size: 13px;
+      }
     }
     .qty__wrap {
       height: 100%;
@@ -2127,7 +2133,11 @@
         flex: none;
         float: left;
         width: calc((100%/2.5) - 2px);
-        border-radius: 32px;
+        margin-right: 2px;
+        border-radius: 15px;
+        &:last-child {
+          margin-right: 0;
+        }
       }
       .marquee {
         height: 28.5px;
