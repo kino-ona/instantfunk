@@ -53,9 +53,14 @@ jQuery.noConflict();
 
 		$(document).on('click', '.header .nav__trigger', function(){
 			$('.header .search__layer').removeClass('search__layer--opened');
-			$('.header .nav__dimmed').addClass('nav__dimmed--opened');
+			$('.header .search__dimmed').removeClass('search__dimmed--opened');
 			$(this).siblings('.nav__trigger').removeClass('nav__trigger--active');
 			$(this).toggleClass('nav__trigger--active');
+			if(!$(this).hasClass('nav__trigger--active')) {
+				$('.header .nav__dimmed').removeClass('nav__dimmed--opened');
+			} else {
+				$('.header .nav__dimmed').addClass('nav__dimmed--opened');
+			}
 		});
 
 		$(document).on('click', '.header .nav__dimmed--opened', function(){
@@ -86,6 +91,7 @@ jQuery.noConflict();
 		$(document).on('click', '.header .header__search', function(){
 			const target = $('.header .search__layer');
 			$('.header .nav__trigger').removeClass('nav__trigger--active');
+			$('.header .nav__dimmed').removeClass('nav__dimmed--opened');
 			if (!target.hasClass('search__layer--opened')) {
 				$('.search__dimmed').addClass('search__dimmed--opened');
 				target.addClass('search__layer--opened');
