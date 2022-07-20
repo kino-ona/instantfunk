@@ -14,6 +14,7 @@
 		margin-left: -4px;
 	}
 	.menu__item {
+		overflow: hidden;
 		position: relative;
 		width: calc(100% / 3 - 4px);
 		margin-left: 4px;
@@ -166,13 +167,12 @@
 		z-index: 10;
 		width: 100%;
 		height: 100%;
-		background-color: green;
 		clip-path: inset(0 round 72px);
 		
 		.button {
+			display: block;
 			position: static;
-			padding: 0 4px 4px;
-			opacity: 1;
+			@include mixins.translate(0, 0);
 			.button__item {
 				background-color: #000;
 				color: #fff;
@@ -207,8 +207,8 @@
 			position: absolute;
 			left: 0;
 			top: 0;
-			width: 85%;
-			height: 85%;
+			width: 100%;
+			height: 100%;
 			border: 1px solid #000;
 			border-radius: 50%;
 			// font-size: 6.25vw;
@@ -280,11 +280,12 @@
 
 	.button {
 		position: absolute;
-		left: 4px;
-		right: 4px;
-		bottom: 4px;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		padding: 0 4px 4px;
 		z-index: 5;
-		opacity: 0;
+		@include mixins.translate(-100%, 0);
 		.button__item {
 			flex: 1;
 			display: flex;
@@ -309,16 +310,19 @@
 		}
 	}
 	.button--visible {
+		@include mixins.translate(0, 0);
 		animation-name: menuButtonShow;
 		animation-duration: .1s;
 		animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
 		animation-fill-mode: forwards;
 	}
 	.button--hidden {
-		animation-name: menuButtonHide;
-		animation-duration: .1s;
+		@include mixins.translate(0, 0); 
+		animation-name: menuButtonHide, menuButtonReset;
+		animation-duration: .1s, .00001s;
 		animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
-		animation-fill-mode: forwards;
+		animation-fill-mode: forwards, forwards;
+		animation-delay: 0s, .1s;
 	}
 
 	.marquee {
@@ -341,7 +345,7 @@
 			margin-left: 2px;
 		}
 		.menu__round {
-			padding-top: 133.33%;
+			padding-top: 66.67vw;
 		}
 		.menu__tags {
 			left: 12px;
@@ -448,6 +452,7 @@
 				margin: 3px 0 0 3px;
 			}
 			.menu__size {
+				border-width: 0.5px;
 				font-size: 10.13vw;
 			}
 		}
@@ -506,5 +511,14 @@
 	}
 	100% {
 		opacity: 0;
+	}
+}
+
+@keyframes menuButtonReset {
+	0% {
+		@include mixins.translate(0, 0);
+	}
+	100% {
+		@include mixins.translate(-100%, 0);
 	}
 }
