@@ -158,25 +158,25 @@ jQuery.noConflict();
 		});
 	
 		function cubeTopRotate() {
-			var cubeTop = $('.cube').eq(0);
+			var cubeTop = $('.cube').eq(0).find('.cube__cube');
 			var cubeTopOffset = cubeTop.offset().top;
 			var winHeight = $(window).height();
 			var scrollTop = $(window).scrollTop();
 	
 			if (scrollTop > cubeTopOffset - winHeight) {
-				cubeTop.addClass('cube--rotated');
+				cubeTop.addClass('cube__cube--rotated');
 			}
 		}
 		cubeTopRotate();
 	
 		function cubeBottomRotate() {
-			var cubeBottom = $('.cube').eq(1);
+			var cubeBottom = $('.cube').eq(1).find('.cube__cube');
 			var cubeBottomOffset = cubeBottom.offset().top;
 			var winHeight = $(window).height();
 			var scrollTop = $(window).scrollTop();
 	
 			if (scrollTop > cubeBottomOffset - winHeight) {
-				cubeBottom.addClass('cube--rotated');
+				cubeBottom.addClass('cube__cube--rotated');
 			}
 		}	
 		cubeBottomRotate();
@@ -186,7 +186,7 @@ jQuery.noConflict();
 			var screenTargetOffset = screenTarget.offset().top;
 			var screenTargetHeight = screenTarget.height();
 			var scrollTop = $(window).scrollTop();
-			
+
 			if (scrollTop >= screenTargetOffset - screenTargetHeight / 3) {
 				screenTarget.addClass('celeb-curation__screen--opened');
 			}
