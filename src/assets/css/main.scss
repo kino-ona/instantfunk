@@ -756,6 +756,13 @@
 	}
 }
 
+.menu {
+	.menu__img {
+		img {
+			border-radius: 42px;
+		}
+	}
+}
 .menu--nav {
 	.menu__list {
 		margin: -2px 0 0 -2px;
@@ -817,11 +824,6 @@
 		background-size: 46.25vw auto;
 		background-color: #ffb5d1;
 	}
-	.menu__img {
-		img {
-			border-radius: 42px;
-		}
-	}
 
  	@include breakpoints.mobile() {
 		.menu__list {
@@ -868,11 +870,6 @@
 			background-position: 50% 50%;
 			background-size: 92.27vw auto;
 			background-color: #ffb5d1;
-		}
-		.menu__img {
-			img {
-				border-radius: 32px;
-			}
 		}
 	}
 }
