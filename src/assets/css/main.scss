@@ -377,21 +377,24 @@
 	}
 
 	.cube {
-		position: relative;
 		height: 54px;
-		transform-style: preserve-3d;
-		&.cube--rotated {
-			animation-name: cube;
-			animation-duration: 1s;
-			animation-timing-function: linear;
-			animation-fill-mode: forwards;
-		}
+		@include mixins.transform(translateZ(-28px));
 		&:last-of-type {
 			.cube__face {
 				&:nth-child(odd) {
 					background-color: #fc9738;
 				}
 			}
+		}
+		.cube__cube {
+			height: 100%;
+			transform-style: preserve-3d;
+		}
+		.cube__cube--rotated {
+			animation-name: cube;
+			animation-duration: 1s;
+			animation-timing-function: linear;
+			animation-fill-mode: forwards;
 		}
 		.cube__face {
 			display: flex;
@@ -411,16 +414,16 @@
 			}
 		}
 		.cube__face--front {
-			transform: rotateY(0deg) translateZ(27px);
+			@include mixins.transform(rotateY(0deg) translateZ(27px));
 		}
 		.cube__face--top {
-			transform: rotateX(90deg) translateZ(27px);
+			@include mixins.transform(rotateX(90deg) translateZ(27px));
 		}
 		.cube__face--back {
-			transform: rotateX(180deg) translateZ(27px);
+			@include mixins.transform(rotateX(180deg) translateZ(27px));
 		}
 		.cube__face--bottom {
-			transform: rotateX(-90deg) translateZ(27px);
+			@include mixins.transform(rotateX(-90deg) translateZ(27px));
 		}
 		.cube__text {
 			margin: 0 50px;
@@ -498,16 +501,16 @@
 				padding: 0 10px;
 			}
 			.cube__face--front {
-				transform: rotateY(0deg) translateZ(17.5px);
+				@include mixins.transform(rotateY(0deg) translateZ(17.5px));
 			}
 			.cube__face--top {
-				transform: rotateX(90deg) translateZ(17.5px);
+				@include mixins.transform(rotateX(90deg) translateZ(17.5px));
 			}
 			.cube__face--back {
-				transform: rotateX(180deg) translateZ(17.5px);
+				@include mixins.transform(rotateX(180deg) translateZ(17.5px));
 			}
 			.cube__face--bottom {
-				transform: rotateX(-90deg) translateZ(17.5px);
+				@include mixins.transform(rotateX(-90deg) translateZ(17.5px));
 			}
 			.cube__text {
 				margin: 0;
@@ -699,11 +702,13 @@
 		.celeb-curation__curtain {
 			.celeb-curation__text {
 				font-size: 43px;
-				letter-spacing: -0.02em;
 			}
 		}
 		.celeb-curation__swiper {
 			padding: 43px 0;
+			.swiper {
+				margin: 10px 0;
+			}
 			.swiper-button-prev,
 			.swiper-button-next {
 				bottom: 16px;
@@ -720,8 +725,8 @@
 			}
 		}
 		.celeb-curation__celeb {
-			top: 43px;
-			bottom: 43px;
+			top: 53px;
+			bottom: 53px;
 			clip-path: inset(0 round 21px 21px 21px 21px);
 			.celeb-curation__cut {
 				height: 100%;
@@ -934,6 +939,7 @@
 	}
 	100% {
 		height: 234px;
+		justify-content: initial;
 	}
 }
 
@@ -971,6 +977,7 @@
 @keyframes screenTopText {
 	0% {
 		left: 50%;
+		font-size: 234px;
 		@include mixins.translate(-50%, 0);
 	}
 	100% {
@@ -984,13 +991,15 @@
 @include breakpoints.mobile() {
 	@keyframes screenTopText {
 		0% {
+			font-size: 41px;
 			left: 50%;
+			animation-timing-function: ease-in-out;
 			@include mixins.translate(-50%, 0);
 		}
 		100% {
 			left: 0;
-			padding-bottom: 10px;
 			font-size: 21px;
+			animation-timing-function: ease-in-out;
 			@include mixins.translate(0, 0);
 		}
 	}
@@ -999,6 +1008,7 @@
 @keyframes screenBottomText {
 	0% {
 		left: 50%;
+		font-size: 234px;
 		@include mixins.translate(-50%, 0);
 	}
 	100% {
@@ -1012,13 +1022,15 @@
 @include breakpoints.mobile() {
 	@keyframes screenBottomText {
 		0% {
+			font-size: 41px;
 			left: 50%;
+			animation-timing-function: ease-in-out;
 			@include mixins.translate(-50%, 0);
 		}
 		100% {
 			left: 100%;
-			padding-top: 10px;
 			font-size: 21px;
+			animation-timing-function: ease-in-out;
 			@include mixins.translate(-100%, 0);
 		}
 	}
