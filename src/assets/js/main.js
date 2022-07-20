@@ -107,10 +107,12 @@ jQuery.noConflict();
           if (!breakpointParams.allowTouchMove) {
 						swiper.loopDestroy();
 						swiper.params.loop = false;
-          } else {
+						swiper.slideTo(0, false);
+						swiper.autoplay.stop();
+					} else {
 						swiper.loopCreate();
 						swiper.params.loop = true;
-						swiper.slideTo(1);
+						swiper.slideToLoop(0);
 					}
         },
 				slidePrevTransitionStart: function(swiper) {

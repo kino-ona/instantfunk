@@ -58,7 +58,7 @@ jQuery.noConflict();
       });
     }
   
-    var productListSwiper = new Swiper('.product-list .menu .menu__item .menu__swiper', {
+    var productListSwiper = new Swiper('.product-list .menu .menu__item:not(.menu__item--soldout) .menu__swiper', {
       speed: 300,
 			effect: 'creative',
 			creativeEffect: {
@@ -83,6 +83,28 @@ jQuery.noConflict();
 				}
 			},
 			on: {
+        click: function(swiper){
+          if(swiper.allowTouchMove) {
+            console.log(swiper);
+            if (!swiper.$el.next('.button').hasClass('button--visible')) {
+              swiper.$el.next('.button').removeClass('button--hidden').addClass('button--visible');
+            } else {
+              swiper.$el.next('.button').removeClass('button--visible').addClass('button--hidden');
+            }
+          }
+        },
+        breakpoint: function(swiper, breakpointParams) {
+          if (!breakpointParams.allowTouchMove) {
+						swiper.loopDestroy();
+						swiper.params.loop = false;
+						swiper.slideTo(0, false);
+						swiper.autoplay.stop();
+					} else {
+						swiper.loopCreate();
+						swiper.params.loop = true;
+						swiper.slideToLoop(0);
+					}
+        },
 				slidePrevTransitionStart: function(swiper) {
 					if (!swiper.allowTouchMove) {
 						var offset = '-' + swiper.slides[swiper.slides.length - 1].swiperSlideOffset - swiper.width + 'px';
@@ -118,19 +140,19 @@ jQuery.noConflict();
 			}
     });
   
-    $('.product-list .menu .menu__link, .search__result .menu .menu__link').click(function(event){
+    $('.product-list .menu .menu__link').click(function(event){
       var el = $(this).closest('.menu__item');
       el.find('.menu__layer').addClass('menu__layer--opened');
       event.preventDefault();
     });
   
-    $('.product-list .menu .button__item--cart, .search__result .menu .menu__button--cart').click(function(){
+    $('.product-list .menu .button__item--cart').click(function(){
       var el = $(this).closest('.menu__item');
       el.find('.menu__layer').addClass('menu__layer--opened');
       optText();
     });
   
-    $('.product-list .menu .menu__close, .search__result .menu .menu__close').click(function(){
+    $('.product-list .menu .menu__close').click(function(){
       var el = $(this).closest('.menu__item');
       el.find('.menu__layer').removeClass('menu__layer--opened');
     });
