@@ -160,6 +160,8 @@
   }
   .rv__product {
     display: flex;
+    align-items: center;
+    margin-bottom: 20px;
   }
   .rv__figure {
     width: 48px;
@@ -181,8 +183,17 @@
     @include mixins.PtdMedium();
   }
   .rv__count {
-    width: 90px;
-    align-items: flex-end;
+    display: flex;
+    width: 85px;
+    margin-right: -5px;
+    align-items: center;
+    font-size: 36px;
+    letter-spacing: -1px;
+    text-align: right;
+    @include mixins.PtdMedium();
+    .ic_star {
+      margin-right:9px;
+    }
   }
   .rv__text {
     padding-right: 115px;
@@ -248,9 +259,9 @@
     display: flex;
     margin-top: 38px;
     .info_tag {
-      margin-right: 10px;
+      margin-right: 6px;
       border:1px solid #000000;
-      border-radius: 15px;
+      border-radius: 25px;
       padding:9px 10px;
       @include mixins.PtdMedium();
     }
@@ -1238,6 +1249,7 @@
   }
   .rv__product {
     display: flex;
+    align-items: center;
     padding-bottom: 15px;
     border-bottom: 1px solid #000000;
   }
@@ -1988,6 +2000,13 @@
         }
       }
     }
+    @include breakpoints.mobile() {
+      .search__layer {
+        top: inherit;
+        bottom: 0;
+        width: 100%;
+      }
+    }
   }
 
   @include breakpoints.mobile() {
@@ -2008,6 +2027,10 @@
       flex-direction: row;
       flex-wrap: wrap;
       flex : 1 auto;
+      .select {order: 1;}
+      .search_keyword {order: 2;}
+      .btn__sopen {order: 3; margin: 0; margin-left: 9px;}
+      label {order: 4;}
     }
     .search_keyword {
       width: calc(100% - 185px);
@@ -2039,6 +2062,9 @@
       height: 35px;
       align-items: center;
       margin-top: 15px;
+      input {
+        margin-right: 5px;
+      }
     }
     .btn__sopen {
       height: 35px;
@@ -2054,9 +2080,32 @@
       height: 35px;
       margin-top: 10px;
       .review_sort--head {
-        width: 90px;
+        width: 83px;
         padding: 10px 10px 10px 15px;
         font-size: 13px;
+        border-radius: 15px;
+        .arrow {
+          &:after {
+            width: 7px;
+            height: 7px;
+          }
+        }
+      }
+      .isOpen {
+        .review_sort--head {
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+      }
+      .review__sorting {
+        top: 25px;
+        padding: 8px 10px 12px 15px;
+        .sort__select {
+          padding: 9px 0;
+          font-size: 13px;
+        }
       }
     }
     .review__list--cont {

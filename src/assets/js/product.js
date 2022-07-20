@@ -145,7 +145,6 @@ jQuery.noConflict();
             maxFontPixels: 100
           });
         });
-
       }
     }
 
