@@ -13,7 +13,7 @@
 			@include mixins.PtdRegular();
 		}
 
-		.menu {
+		.product-list {
 			&:not(:first-child) {
 				margin-top: 50px;
 			}
@@ -32,7 +32,7 @@
 				}
 			}
 
-			.menu {
+			.product-list {
 				&:not(:first-child) {
 					margin-top: 20px;
 				}
