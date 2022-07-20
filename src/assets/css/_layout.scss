@@ -768,14 +768,15 @@
 	height: 100%;
 	padding-top: 0;
 	background: {
-		image: url('../images/img_funkplay.png');
+		image: url('../images/img_funkplay0.png');
 		size: 100%;
 		repeat: no-repeat;
 		position: center center;
 	}
+	// opacity: 0;
 	&.__active {
-		transform: translate(0, 0); 
-		animation: funkPlayEffect 1.3s ease-in-out alternate;
+		// transform: translate(0, 0); 
+		// animation: funkPlayEffect 2s ease-in alternate;
 	}
 
 	@include breakpoints.mobile() {
@@ -786,102 +787,50 @@
 		}
 	}
 }
-.img_funkplay.shadow:nth-of-type(1) {
-	opacity: 0;
-	transform: translate(0, 100px); 
-	@include breakpoints.mobile() {
-		transform: translate(0, 50px); 
-	}
-	&.__active {
-		-webkit-animation-delay: 0.0s;
-		animation-delay: 0.0s; 
-		opacity: 0.1;
-	}
-}
-.img_funkplay.shadow:nth-of-type(2) {
-	opacity: 0;
-	transform: translate(0, 100px); 
-	@include breakpoints.mobile() {
-		transform: translate(0, 50px); 
-	}
-	&.__active {
-		-webkit-animation-delay: 0.2s;
-		animation-delay: 0.2s;
-		opacity: 0.2;
-	}
-}
-.img_funkplay.shadow:nth-of-type(3) {
-	opacity: 0;
-	transform: translate(0, 100px); 
-	@include breakpoints.mobile() {
-		transform: translate(0, 50px); 
-	}
-	&.__active {
-		-webkit-animation-delay: 0.3s;
-		animation-delay: 0.3s;
-		opacity: 0.3;
-	}
-}
-.img_funkplay.shadow:nth-of-type(4) {
-	opacity: 0;
-	transform: translate(0, 100px); 
-	@include breakpoints.mobile() {
-		transform: translate(0, 50px); 
-	}
-	&.__active {
-		-webkit-animation-delay: 0.4s;
-		animation-delay: 0.4s;
-		opacity: 0.4;
-	}
-}
-.img_funkplay.shadow:nth-of-type(5) {
-	opacity: 0;
-	transform: translate(0, 100px); 
-	@include breakpoints.mobile() {
-		transform: translate(0, 50px); 
-	}
-	&.__active {
-		-webkit-animation-delay: 0.5s;
-		animation-delay: 0.5s;
-		opacity: 0.5;
-	}
-}
-@-webkit-keyframes funkPlayEffect{
-	0% {
-		transform: translate(0, 100px); 
-	}
-	100% {
-		transform: translate(0, 0); 
-	}
-}
+// @-webkit-keyframes funkPlayEffect{
+// 	0% {
+// 		transform: translate(0, 100px); 
+// 	}
+// 	100% {
+// 		transform: translate(0, 0); 
+// 	}
+// }
 @keyframes funkPlayEffect{
 	0% {
-		transform: translate(0, 100px); 
-	}
-	100% {
-		transform: translate(0, 0); 
-	}
+    background-image: url('../images/img_funkplay0.png');
+  }
+	25% {
+    background-image: url('../images/img_funkplay1.png');
+  }
+	50% {
+    background-image: url('../images/img_funkplay2.png');
+  }
+	75% {
+    background-image: url('../images/img_funkplay3.png');
+  }
+  100% {
+    background-image: url('../images/img_funkplay0.png');
+  }
 }
 
-@include breakpoints.mobile() {
-
-@-webkit-keyframes funkPlayEffect{
-	0% {
-		transform: translate(0, 50px); 
-	}
-	100% {
-		transform: translate(0, 0); 
-	}
-}
-@keyframes funkPlayEffect{
-	0% {
-		transform: translate(0, 50px); 
-	}
-	100% {
-		transform: translate(0, 0); 
-	}
-}
-}
+// @include breakpoints.mobile() {
+// 	@-webkit-keyframes funkPlayEffect{
+// 		0% {
+// 			transform: translate(0, 50px); 
+// 		}
+// 		100% {
+// 			transform: translate(0, 0); 
+// 		}
+// 	}
+// 	@keyframes funkPlayEffect{
+// 		0% {
+// 			transform: translate(0, 50px); 
+// 		}
+// 		100% {
+// 			transform: translate(0, 0); 
+// 		}
+// 	}
+// }
 
 @include breakpoints.mobile() {
 	@keyframes mobileNavOpen {

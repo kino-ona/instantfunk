@@ -32,14 +32,7 @@
 			</div>
 		
 			<div class="footer__funkplay">
-				<div class="shadow-box">
-					<p class="img_funkplay shadow"></p>
-					<p class="img_funkplay shadow"></p>
-					<p class="img_funkplay shadow"></p>
-					<p class="img_funkplay shadow"></p>
-					<p class="img_funkplay shadow"></p>
-				</div>
-				<p class="img_funkplay" alt="funkplay"></p>
+				<div class="img_funkplay"></div>
 				<a href="#" class="btn__funkplay">
 					<div class="marquee">
 						<div class="marquee__mask">
