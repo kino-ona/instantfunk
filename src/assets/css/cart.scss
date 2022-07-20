@@ -1,0 +1,23 @@
+@use 'mixins';
+@use 'sprite/icons';
+@use 'sprite/mo_icons';
+@use 'breakpoints';
+
+.sub__container {
+  width: 100%;
+
+  @include breakpoints.mobile() {
+    padding-top: 65px;
+  }
+  .inner_wrap {
+    max-width: 1280px;
+    margin: 100px auto 0;
+  }
+}
+
+.cart_wrap {
+  .titleArea > h2 {
+    font-size: 60px;
+    font-weight: 500;
+  }
+}
