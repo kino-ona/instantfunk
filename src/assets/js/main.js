@@ -107,12 +107,20 @@ jQuery.noConflict();
           if (!breakpointParams.allowTouchMove) {
 						swiper.loopDestroy();
 						swiper.params.loop = false;
-          } else {
+						swiper.slideTo(0, false);
+						swiper.autoplay.stop();
+					} else {
 						swiper.loopCreate();
 						swiper.params.loop = true;
-						swiper.slideTo(1);
+						swiper.slideToLoop(0);
 					}
         },
+				loopFix: function(swiper) {
+					console.log(0);
+				},
+				beforeLoopFix: function(swiper) {
+					console.log(0);
+				},
 				slidePrevTransitionStart: function(swiper) {
 					if (!swiper.allowTouchMove) {
 						var offset = '-' + swiper.slides[swiper.slides.length - 1].swiperSlideOffset - swiper.width + 'px';
@@ -131,6 +139,16 @@ jQuery.noConflict();
 				}
 			}
 		});
+
+		// for (var i = 0; i < bestMenuSwiper.length; i++) {
+		// 	bestMenuSwiper[i].on('beforeLoopFix', function(){
+		// 		console.log(this);
+		// 	});
+		// 	bestMenuSwiper[i].on('loopFix', function(){
+		// 		console.log(this);
+		// 	});
+		// }
+
 
 		$(document).on('mouseenter mouseleave', '.desktop .best-menu .best-menu__item:not(.best-menu__item--figure)', function(event){
 			swiper = $(this).find('.swiper')[0].swiper;
