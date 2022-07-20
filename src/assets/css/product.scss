@@ -1773,6 +1773,9 @@
         font-size: 10px;
         letter-spacing: -0.02em;
         text-align: center;
+        .product-list__nowrap {
+          white-space: nowrap;
+        }
       }
       .product-list__ico {
         margin-left: 4.5px;

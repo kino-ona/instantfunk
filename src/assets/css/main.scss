@@ -762,6 +762,12 @@
 			border-radius: 42px;
 		}
 	}
+
+	@include breakpoints.mobile() {
+		.menu__round {
+			padding-top: 80vw;
+		}
+	}
 }
 .menu--nav {
 	.menu__list {
