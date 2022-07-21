@@ -1,3 +1,7 @@
+@use 'mixins';
+@use 'sprite/icons';
+@use 'sprite/mo_icons';
+
 .container {
   padding-top:0;
 }
@@ -19,20 +23,30 @@ margin: 100px auto 0;
 .xans-order-basketpackage {
   position: relative;
 }
+.xans-order-basketpackage .xans-order-tabinfo {margin-top: 20px !important;}
 .xans-order-basketpackage .ec-base-table.total table {border: 0;}
 
+
 .cart_wrap .titleArea {
-text-align: left;   
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  text-align: left;   
+  width: calc(100% - 370px);
 }
 .cart_wrap .titleArea > h2 {
-font-size: 60px;
-font-weight: 500;
+  padding: 0;
+  font-size: 60px;
+  font-weight: 500;
+}
+.cart_wrap .titleArea .ico__shipp {
+  @include icons.retina-sprite(icons.$ico-shipp-group);
 }
 
 .neworderListArea {
   width: calc(100% - 370px);
   border:1px solid #000000;
-  border-radius: 30px;
+  border-radius: 35px;
   overflow: hidden;
   padding: 30px;
 }
@@ -42,9 +56,41 @@ font-weight: 500;
 .ec-base-table thead th {
   border: 0 !important;
 }
+.ec-base-table.typeList td {
+  font-family: "Pretendard Variable", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+	font-weight: 500;
+}
+.ec-base-table.typeList tfoot {
+  border-top: 1px solid #000000;
+}
 .ec-base-table.typeList tfoot td {
   border: 0;
   background: none !important;
+}
+.ec-base-table.typeList tfoot .xans-order-selectorder {
+  position: absolute;
+  left: 0;
+}
+.xans-order-basketpackage .ec-base-table tfoot td .gLeft {
+  margin: 0 10px 0 0 !important;
+}
+.xans-order-basketpackage .ec-base-table.typeList td {padding: 0;}
+.ec-base-table.typeList tfoot .ec-base-button {
+  display: flex;
+}
+.ec-base-table.typeList tfoot .select_total-price {
+  font-size: 24px;
+  color: #000000;
+}
+.ec-base-table.typeList .center td.left {
+  padding-left: 0 !important;
+}
+.ec-base-table.typeList .center td.right {
+  padding-right: 0 !important;
+}
+
+.xans-order-basketpackage .ec-base-table td.thumb img {
+  max-width: 100% !important;
 }
 
 .xans-order-totalsummary {
@@ -56,17 +102,77 @@ font-weight: 500;
 .area_delv_info {
   padding: 30px;
   border:1px solid #000000;
-  border-radius: 30px;
+  border-radius: 35px;
   overflow: hidden;
 }
-.area_delv_info  .total_order_price_head > dd {
-text-align: right
+.area_delv_info dl {
+  margin-top: 15px;
+}
+.area_delv_info {
+  .total_order_price_head {
+    padding-bottom: 15px;
+    > dt {
+      margin-bottom: 40px;
+      font-size: 24px;
+    }
+    > dd {
+      text-align: right
+    }
+    strong {
+      font-size: 40px;
+    }
+  }
+}
+.area_delv_info  .total_order_price_head dd,
+.area_delv_info  .area_delv_dl dd,
+.area_delv_info  .area_delv_dl dd * {
+  font-family: "Pretendard Variable", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+	font-weight: 600;
 }
 .area_delv_info .area_delv_dl {
   display: flex;
   justify-content: space-between;
 }
 
+.order_selectorder_new {
+  width: calc(100% - 370px);
+}
+
+.xans-order-basketpackage {
+  .ec-base-button {
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 5px;
+      padding-right: 25px;
+      padding-left: 25px;
+      height: 60px;
+      border:1px solid #000000;
+      border-radius: 30px;
+      font-size: 18px;
+    }
+    .small_button {
+      margin:0 10px 0 0;
+      padding-right: 10px;
+      padding-left: 10px;
+      height: 32px;
+      font-size: 13px;
+    }
+  }
+  .totalorder_button {
+    > div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+
+div.ec-base-help.ec-base-help_new {
+  width: calc(100% - 370px);
+}
 div.ec-base-help.ec-base-help_new > h2,
 div.ec-base-help.ec-base-help_new > h3 {
   background:none;
@@ -80,7 +186,7 @@ div.ec-base-help.ec-base-help_new h4 {
 }
 div.ec-base-help.ec-base-help_new {
   border-color: #000000;
-  border-radius: 30px;
+  border-radius: 35px;
   padding: 40px 30px;
   overflow: hidden;
 }
@@ -93,3 +199,5 @@ div.ec-base-help.ec-base-help_new ol li {
   margin-bottom: 5px;
 }
 div.ec-base-help.ec-base-help_new .inner {width: 100%; margin: 0;margin-top: 25px;}
+
+
