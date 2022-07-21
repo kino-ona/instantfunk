@@ -267,7 +267,7 @@
 			top: 50%;
 			width: 21px;
 			height: 2px;
-			border-radius: 2px;
+			border-radius: 100vw;
 			background-color: #000;
 		}
 		&:before {
@@ -388,7 +388,7 @@
 		}
 		.menu__swiper {
 			clip-path: inset(0 round 26px);
-			.swiper-pagination-progressbar {
+			.swiper-pagination {
 				display: block;
 				left: 50%;
 				top: auto;
@@ -397,7 +397,7 @@
 				height: 2px;
 				margin: 0 auto;
 				background-color: rgba(0,0,0,.14);
-				@include mixins.translate(-50%, 0);
+				@include mixins.transform(translate3d(-50%, 0, 1px));
 			}
 			.swiper-pagination-progressbar-fill {
 				background-color: #fff;
@@ -470,9 +470,11 @@
 			bottom: 96.5px;
 			width: 21px;
 			height: 21px;
+			border-width: 0.5px;
 			&:before,
 			&:after {
 				width: 10px;
+				height: 1px;
 			}
 		}
 
