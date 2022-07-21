@@ -1,0 +1,61 @@
+@use 'mixins';
+@use 'breakpoints';
+
+// list
+.archive-list {
+
+	.menu {
+		.menu__container {
+			padding: 0 1.67vw;
+		}
+		.menu__list {
+			margin-left: -6.15vw;
+		}
+		.menu__item {
+			width: calc(100% / 3 - 6.15vw);
+			margin-left: 6.15vw;
+		}
+		.menu__round {
+			padding-top: 32.29vw;
+		}
+		.menu__info {
+			padding-bottom: 42px;
+		}
+		.menu__name {
+			margin-right: 0;
+			font-size: 20px;
+			line-height: 26px;
+			letter-spacing: -0.02em;
+			@include mixins.ATr();
+		}
+	}
+
+	@include breakpoints.mobile() {
+
+		.menu {
+			.menu__container {
+				padding: 0;
+			}
+			.menu__list {
+				margin-left: -2px;
+			}
+			.menu__item {
+				width: calc(50% - 2px);
+				margin-left: 2px;
+			}
+			.menu__round {
+				padding-top: 66.67vw;
+			}
+			.menu__info {
+				padding-bottom: 26px;
+			}
+			.menu__name {
+				height: 37.5px;
+				font-size: 10px;
+				line-height: 12px;
+				letter-spacing: -0.01em;
+				@include mixins.ellipse(3);
+			}
+		}
+	}
+}
