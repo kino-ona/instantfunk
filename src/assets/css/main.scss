@@ -26,18 +26,19 @@
 		.visual__pagination--fadein {
 			opacity: 0;
 			animation-name: visualCont;
-			animation-duration: .4s;
-			animation-timing-function: cubic-bezier(0.82, 0, 0.2, 1);
+			animation-duration: .2s;
+			animation-timing-function: cubic-bezier(0, 0, 0, 1);
 			animation-fill-mode: forwards;
-			animation-delay: .5s;
+			animation-delay: .3s;
 		}
 	}
 	.visual__mask {
 		overflow: hidden;
 		position: relative;
 		height: 100%;
-		animation-name: visual;
-		animation-duration: 1s;
+		animation-name: visualStart, visualEnd;
+		animation-duration: .2s, .2s;
+		animation-delay: 0s, .2s;
 		animation-fill-mode: forwards;
 	}
 	.visual__video {
@@ -70,10 +71,10 @@
 	.visual__theme--fadein {
 		opacity: 0;
 		animation-name: visualCont;
-		animation-duration: .4s;
-		animation-timing-function: cubic-bezier(0.82, 0, 0.2, 1);
+		animation-duration: .2s;
+		animation-timing-function: cubic-bezier(0, 0, 0, 1);
 		animation-fill-mode: forwards;
-		animation-delay: .2s;
+		animation-delay: .1s;
 	}
 	.visual__title {
 		margin: 40px 0;
@@ -84,10 +85,10 @@
 	.visual__title--fadein {
 		opacity: 0;
 		animation-name: visualCont;
-		animation-duration: .4s;
-		animation-timing-function: cubic-bezier(0.82, 0, 0.2, 1);
+		animation-duration: .2s;
+		animation-timing-function: cubic-bezier(0, 0, 0, 1);
 		animation-fill-mode: forwards;
-		animation-delay: .2s;
+		animation-delay: .1s;
 	}
 	.visual__link {
 		display: inline-flex;
@@ -103,8 +104,8 @@
 	}
 	.visual__link--fadein {
 		opacity: 0;
-		animation: visualCont .4s linear forwards;
-		animation-delay: .5s;
+		animation: visualCont .2s cubic-bezier(0, 0, 0, 1) forwards;
+		animation-delay: .3s;
 	}
 	.visual__control {
 		position: absolute;
@@ -144,19 +145,27 @@
 	.visual__control--fadein {
 		opacity: 0;
 		animation-name: visualCont;
-		animation-duration: .4s;
-		animation-timing-function: cubic-bezier(0.82, 0, 0.2, 1);
+		animation-duration: .2s;
+		animation-timing-function: cubic-bezier(0, 0, 0, 1);
 		animation-fill-mode: forwards;
-		animation-delay: .5s;
+		animation-delay: .3s;
 	}
 	
 	@include breakpoints.mobile() {
 		.visual__container {
-			.swiper-pagination {
+			.visual__pagination {
 				left: calc(50% - 20px);
 				bottom: 111px;
 				font-size: 12px;
 			}
+			.visual__pagination--fadein {
+				animation-duration: .4s;
+				animation-delay: .8s;
+			}
+		}
+		.visual__mask {
+			animation-duration: .4s .4s;
+			animation-delay: 0s, .6s;
 		}
 		.visual__video {
 			video {
@@ -166,15 +175,30 @@
 		.visual__theme {
 			font-size: 12px;
 		}
+		.visual__theme--fadein {
+			animation-duration: .4s;
+			animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+			animation-delay: .2s;
+		}
 		.visual__title {
 			margin: 20px;
 			font-size: 62px;
 			line-height: 54px;
 		}
+		.visual__title--fadein {
+			animation-duration: .4s;
+			animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+			animation-delay: .2s;
+		}
 		.visual__link {
 			width: 92px;
 			height: 31px;
 			font-size: 19px;
+		}
+		.visual__link--fadein {
+			animation-duration: .4s;
+			animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+			animation-delay: .8s;
 		}
 		.visual__control {
 			left: 0;
@@ -191,6 +215,11 @@
 					}
 				}
 			}
+		}
+		.visual__control--fadein {
+			animation-duration: .4s;
+			animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+			animation-delay: .8s;
 		}
 	}
 }
@@ -378,7 +407,7 @@
 
 	.cube {
 		height: 54px;
-		@include mixins.transform(translateZ(-28px));
+		@include mixins.transform(translateZ(-1px));
 		&:last-of-type {
 			.cube__face {
 				&:nth-child(odd) {
@@ -398,7 +427,6 @@
 		}
 		.cube__face {
 			display: flex;
-			justify-content: center;
 			align-items: center;
 			overflow: hidden;
 			position: absolute;
@@ -411,7 +439,7 @@
 				color: #fffe72;
 				.cube__text {
 					&:not(:first-child) {
-						margin-left: 109px;
+						margin-left: 5.68vw;
 					}
 				}
 			}
@@ -420,7 +448,7 @@
 				color: #fff;
 				.cube__text {
 					&:not(:first-child) {
-						margin-left: 74px;
+						margin-left: 3.85vw;
 					}
 				}
 			}
@@ -509,19 +537,18 @@
 		.cube {
 			height: 35px;
 			.cube__face {
-				justify-content: flex-start;
 				padding: 0 10px;
 				&:nth-child(odd) {
 					.cube__text {
 						&:not(:first-child) {
-							margin-left: 26.5px;
+							margin-left: 7.07vw;
 						}
 					}
 				}
 				&:nth-child(even) {
 					.cube__text {
 						&:not(:first-child) {
-							margin-left: 26.5px;
+							margin-left: 7.07vw;
 						}
 					}
 				}
@@ -679,7 +706,7 @@
 		bottom: 234px;
 		z-index: 5;
 		width: 100%;
-		clip-path: inset(0 round 42px 42px 42px 42px);
+		clip-path: inset(0 round 42px);
 		.celeb-curation__cut {
 			position: absolute;
 			left: 50%;
@@ -749,7 +776,7 @@
 		.celeb-curation__celeb {
 			top: 53px;
 			bottom: 53px;
-			clip-path: inset(0 round 21px 21px 21px 21px);
+			clip-path: inset(0 round 21px);
 			.celeb-curation__cut {
 				height: 100%;
 				img {
@@ -767,10 +794,8 @@
 				width: auto;
 				margin: 10px 0 0 0;
 			}
-			.menu__img {
-				img {
-					border-radius: 21px;
-				}
+			.menu__round {
+				clip-path: inset(0 round 21px);
 			}
 			.menu__info {
 				padding: 0 16px 16px;
@@ -784,10 +809,8 @@
 }
 
 .menu {
-	.menu__img {
-		img {
-			border-radius: 42px;
-		}
+	.menu__round {
+		clip-path: inset(0 round 42px);
 	}
 
 	@include breakpoints.mobile() {
@@ -812,7 +835,6 @@
 		justify-content: center;
 		align-items: center;
 		height: 100%;
-		border-radius: 42px;
 		background-repeat: no-repeat;
 		.menu__text {
 			display: flex;
@@ -869,9 +891,9 @@
 		}
 		.menu__round {
 			padding-top: 107.73vw;
+			clip-path: inset(0 round 32px);
 		}
 		.menu__category {
-			border-radius: 32px;
 			.menu__text {
 				width: 170px;
 				height: 63px;
@@ -907,13 +929,21 @@
 	}
 }
 
-@keyframes visual {
+@keyframes visualStart {
 	0% {
 		clip-path: inset(50% round 42px);
+		animation-timing-function: cubic-bezier(0, 0, 0, 1);
 	}
-	50% {
+	100% {
 		clip-path: inset(11.2% round 42px);
 		animation-timing-function: cubic-bezier(0, 0, 0, 1);
+	}
+}
+
+@keyframes visualEnd {
+	0% {
+		clip-path: inset(11.2% round 42px);
+		animation-timing-function: cubic-bezier(0.82, 0, 0.2, 1);
 	}
 	100% {
 		clip-path: inset(0 round 42px);
@@ -922,17 +952,25 @@
 }
 
 @include breakpoints.mobile() {
-	@keyframes visual {
+	@keyframes visualStart {
 		0% {
 			clip-path: inset(50% round 34px);
+			animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 		}
-		50% {
-			clip-path: inset(11.2% round 34px);
-			animation-timing-function: cubic-bezier(0, 0, 0, 1);
+		100% {
+			clip-path: inset(18.13% round 34px);
+			animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+		}
+	}
+
+	@keyframes visualEnd {
+		0% {
+			clip-path: inset(18.13% round 34px);
+			animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 		}
 		100% {
 			clip-path: inset(0 round 34px);
-			animation-timing-function: cubic-bezier(0.82, 0, 0.2, 1);
+			animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 		}
 	}
 }
