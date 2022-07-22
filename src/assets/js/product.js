@@ -53,6 +53,7 @@ jQuery.noConflict();
     }
     
     if ($('.product-list .product-list__trigger').length > 0) {
+      productListSort();
       $(window).scroll(function(){
         productListSort();
       });

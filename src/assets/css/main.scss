@@ -527,7 +527,6 @@
 		.cube {
 			height: 35px;
 			.cube__face {
-				justify-content: center;
 				padding: 0 10px;
 				&:nth-child(odd) {
 					.cube__text {
