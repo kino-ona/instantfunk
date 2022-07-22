@@ -50,48 +50,59 @@ margin: 100px auto 0;
   overflow: hidden;
   padding: 30px;
 }
-.ec-base-table.typeList table {
-  border: 0;
-}
-.ec-base-table thead th {
-  border: 0 !important;
-}
-.ec-base-table.typeList td {
-  font-family: "Pretendard Variable", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-	font-weight: 500;
-}
-.ec-base-table.typeList tfoot {
-  border-top: 1px solid #000000;
-}
-.ec-base-table.typeList tfoot td {
-  border: 0;
-  background: none !important;
-}
-.ec-base-table.typeList tfoot .xans-order-selectorder {
-  position: absolute;
-  left: 0;
-}
-.xans-order-basketpackage .ec-base-table tfoot td .gLeft {
-  margin: 0 10px 0 0 !important;
-}
-.xans-order-basketpackage .ec-base-table.typeList td {padding: 0;}
-.ec-base-table.typeList tfoot .ec-base-button {
-  display: flex;
-}
-.ec-base-table.typeList tfoot .select_total-price {
-  font-size: 24px;
-  color: #000000;
-}
-.ec-base-table.typeList .center td.left {
-  padding-left: 0 !important;
-}
-.ec-base-table.typeList .center td.right {
-  padding-right: 0 !important;
+.xans-order-basketpackage {
+
+  .ec-base-table.typeList table {
+    border: 0;
+  }
+  .ec-base-table thead th {
+    border: 0 !important;
+  }
+  .ec-base-table.typeList td {
+    font-family: "Pretendard Variable", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-weight: 500;
+  }
+  .ec-base-table.typeList tfoot {
+    border-top: 1px solid #000000;
+  }
+  .ec-base-table.typeList tfoot td {
+    padding-top: 20px;
+    border: 0;
+    background: none !important;
+    color:#000000;
+    > div {
+      color: #000000;
+    }
+  }
+  .ec-base-table.typeList tfoot .xans-order-selectorder {
+    position: absolute;
+    left: 0;
+  }
+
+  .ec-base-table tfoot td .gLeft {
+    margin: 0 10px 0 0 !important;
+  }
+  .ec-base-table.typeList td {padding: 0;}
+
+  .ec-base-table.typeList tfoot .ec-base-button {
+    display: flex;
+  }
+  .ec-base-table.typeList tfoot .select_total-price {
+    font-size: 24px;
+    color: #000000;
+  }
+  .ec-base-table.typeList .center td.left {
+    padding-left: 0 !important;
+  }
+  .ec-base-table.typeList .center td.right {
+    padding-right: 0 !important;
+  }
+  .ec-base-table td.thumb img {
+    max-width: 100% !important;
+  }
+
 }
 
-.xans-order-basketpackage .ec-base-table td.thumb img {
-  max-width: 100% !important;
-}
 
 .xans-order-totalsummary {
   position: absolute;
