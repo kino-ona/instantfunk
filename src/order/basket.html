@@ -13,9 +13,6 @@
     </div>
     <div class="titleArea">
       <h2>CART</h2>
-      <div>
-        인스턴트펑크에선 모든상품이 무료배송! <i class="ico__shipp"></i>
-      </div>
     </div>
     <!--@js(/js/cart_all_check.js)-->
     <!-- 장바구니 모듈 Package -->
@@ -56,6 +53,9 @@
                 <li class="{$oversea_select} {$oversea_display|display}"><a href="/order/basket.html?delvtype=B">해외배송상품 ({$basket_oversea_count})</a></li>
             </ul>
             <p class="right {$basket_perd_display|display}">장바구니에 담긴 상품은 {$basket_remove_perd}일 동안 보관됩니다.</p>
+            <div class="tab_moreinfo right">
+              인스턴트펑크에선 모든상품이 무료배송! <i class="ico__shipp"></i>
+            </div>
         </div>
 
         <!-- 장바구니 비어있을 때 -->

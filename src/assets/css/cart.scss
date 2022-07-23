@@ -50,8 +50,45 @@ margin: 100px auto 0;
   overflow: hidden;
   padding: 30px;
 }
-.xans-order-basketpackage {
 
+.xans-order-basketpackage {
+  .xans-order-tabinfo {
+    &.ec-base-tab {
+      width: calc(100% - 370px);
+      .tab_moreinfo {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+      .ico__shipp {
+        @include icons.retina-sprite(icons.$ico-shipp-group);
+      }
+      
+      .menu {
+        background: none;
+        border: 0;
+        li {
+          background: none;
+          border: 0;
+          a {
+            border: 0;
+            font-size: 24px;
+            color: #999999;
+            background: none;
+          }
+        }
+        li.selected {
+          a {
+            font-weight: 500;
+            color:#000000;
+          }
+        }
+      }
+    }
+  }
+}
+
+.xans-order-basketpackage {
   .ec-base-table.typeList table {
     border: 0;
   }
@@ -100,7 +137,6 @@ margin: 100px auto 0;
   .ec-base-table td.thumb img {
     max-width: 100% !important;
   }
-
 }
 
 
