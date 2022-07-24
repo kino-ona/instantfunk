@@ -1,6 +1,7 @@
 @use 'mixins';
 @use 'sprite/icons';
 @use 'sprite/mo_icons';
+@use 'breakpoints';
 
 .container {
   padding-top:0;
@@ -96,19 +97,21 @@ margin: 100px auto 0;
     border: 0 !important;
   }
   .ec-base-table.typeList td {
+    padding: 0;
     font-family: "Pretendard Variable", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-weight: 500;
+    border: 0;
   }
   .ec-base-table.typeList tfoot {
     border-top: 1px solid #000000;
-  }
-  .ec-base-table.typeList tfoot td {
-    padding-top: 20px;
-    border: 0;
-    background: none !important;
-    color:#000000;
-    > div {
-      color: #000000;
+    td {
+      padding-top: 20px;
+      border: 0;
+      background: none !important;
+      color:#000000;
+      > div {
+        color: #000000;
+      }
     }
   }
   .ec-base-table.typeList tfoot .xans-order-selectorder {
@@ -119,14 +122,15 @@ margin: 100px auto 0;
   .ec-base-table tfoot td .gLeft {
     margin: 0 10px 0 0 !important;
   }
-  .ec-base-table.typeList td {padding: 0;}
 
-  .ec-base-table.typeList tfoot .ec-base-button {
-    display: flex;
-  }
-  .ec-base-table.typeList tfoot .select_total-price {
-    font-size: 24px;
-    color: #000000;
+  .ec-base-table.typeList tfoot {
+    .ec-base-button {
+      display: flex;
+    }
+    .select_total-price {
+      font-size: 24px;
+      color: #000000;
+    }
   }
   .ec-base-table.typeList .center td.left {
     padding-left: 0 !important;
@@ -136,6 +140,59 @@ margin: 100px auto 0;
   }
   .ec-base-table td.thumb img {
     max-width: 100% !important;
+  }
+  
+  .ec-base-qty-new {
+    .ec-base-qty {
+      display: flex;
+      width: 90px;
+      margin: 0 auto;
+      align-items: center;
+      justify-content: space-between;
+      input[type="text"] {
+        width: 100%;
+        padding: 0;
+        background: none;
+        border: 0;
+        font-size: 18px;
+        text-align: center;
+        @include mixins.PtdMedium();
+      }
+      a {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+      }
+      .up, .down {
+        position: relative;
+        left: inherit;
+        right: inherit;
+        bottom: inherit;
+        top: inherit;
+        width: 100%;
+        height: 100%;
+        
+      }
+    }
+    .count_change {
+      display: flex;
+      width: 48px;
+      height: 30px;
+      align-items: center;
+      justify-content: center;
+      margin: 10px auto 0;
+      border: 1px solid #000000;
+      border-radius: 15px;
+      font-size: 13px;
+    }
+  }
+  .new-order-empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 600px;
+    padding: 0;
+    font-size: 18px;
   }
 }
 
@@ -247,4 +304,95 @@ div.ec-base-help.ec-base-help_new ol li {
 }
 div.ec-base-help.ec-base-help_new .inner {width: 100%; margin: 0;margin-top: 25px;}
 
+
+// suggest__item
+.suggest__item {
+  width: calc(100% - 370px);
+  padding-left: 10px;
+  padding-right: 10px;
+  .suggest__title {
+    padding-left: 20px;
+    padding-bottom: 30px;
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .menu {
+    .menu__list {
+      margin-left: 0;
+    }
+    .menu__swiper {
+      ul {
+        height: 100%;
+      }
+    }
+    .menu__item {
+      width: 25%;
+      margin-left: 0;
+      border-radius: 25px;
+      overflow: hidden;
+    }
+    .menu__round {
+      padding-top: 122.883%;
+    }
+    .marquee {
+      height: 66px;
+    }
+    .menu__tag {
+      font-size: 24px;
+    }
+    .menu__colors {
+      .menu__color {
+        width: 6px;
+        height: 6px;
+        margin-left: 9px;
+      }
+    }
+  }
+
+  @include breakpoints.mobile() {
+    padding-right: 0;
+    .suggest__title { 
+      font-size: 16px;
+      padding-bottom: 15px;
+      padding-left: 10px;
+    }
+    .menu {
+      width: 100%;
+      .menu__list {
+        display: flex;
+        padding-right: 15px;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+        flex-wrap: inherit;
+        &:after {
+          content: '';
+          display: block;
+          clear: both;
+        }
+      }
+      .menu__item { 
+        flex: none;
+        float: left;
+        width: calc((100%/2.5) - 2px);
+        margin-right: 2px;
+        border-radius: 15px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+      .marquee {
+        height: 28.5px;
+      }
+      .menu__tag {
+        font-size: 12px;
+      }
+      .menu__swiper {
+        .swiper-pagination-progressbar {
+          bottom: 20%;
+        }
+      }
+    }
+  }
+}
 

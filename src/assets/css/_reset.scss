@@ -197,6 +197,37 @@ input[type='radio'] {
 	}
 }
 
+input[type='checkbox'].chk_design {
+	width: 24px;
+	height: 24px;
+	appearance: none;
+	border: 0;
+	border-radius: 50%;
+	background: {
+		image: url('/assets/images/ico_checkbg.png');
+		size: cover;
+		position: center center;
+		repeat: no-repeat;
+	};
+	&:checked {
+		background-color: none;
+		background: {
+			image: url('/assets/images/ico_checkbg_on.png');
+		}
+	}
+}
+input[type='checkbox'].chk_design {
+	width: 24px;
+	height: 24px;
+	& + label {
+		padding-left: 3px;
+		vertical-align: middle;
+	}
+	& ~ input[type='checkbox'] {
+		margin-left: 25px;
+	}
+}
+
 select{
 	appearance: none;
 	width: 100%;
