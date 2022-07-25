@@ -5,7 +5,7 @@
 				</h1>
 				<a class="header__cart">CART <span>(3)</span></a>
 				<button class="header__mobile">MENU</button>
-				<div class="nav">
+				<div class="nav nav--closed">
 					<div class="nav__container">
 						<button type="button" class="nav__trigger">
 							<i class="nav__ico"></i>
