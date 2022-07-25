@@ -3,7 +3,7 @@
 			@content;
 	}
 }
-@mixin mobile($max-width: 750px) {
+@mixin mobile($max-width: 1024px) {
 	@media (max-width: $max-width) {
 			@content;
 	}
