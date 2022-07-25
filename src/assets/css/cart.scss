@@ -22,6 +22,9 @@ width: 100%;
 
   @include breakpoints.mobile() {
     max-width: 100%;
+    margin-top: 30px;
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 
@@ -49,8 +52,13 @@ width: 100%;
     }
     @include breakpoints.mobile() {
       width: 100%;
+      padding-left: 10px;
+      padding-right: 10px;
       > h2 {
-        font-size: 48px;
+        font-size: 24px;
+      }
+      .ico__shipp {
+        @include mixins.sprite(mo_icons.$ico-shipp);
       }
     }
   }
@@ -65,6 +73,7 @@ width: 100%;
 
   @include breakpoints.mobile() {
     width: 100%;
+    padding: 16px;
   }
 }
 
@@ -87,6 +96,7 @@ width: 100%;
       .menu {
         background: none;
         border: 0;
+        margin-bottom: 10px;
         li {
           background: none;
           border: 0;
@@ -109,11 +119,27 @@ width: 100%;
         .menu {
           li {
             a {
-              font-size: 12px;
+              min-width: auto;
+              font-size: 14px;
             }
           }
         }
+        .tab_moreinfo {
+          right: 10px;
+          bottom: inherit;
+          top: -40px;
+          font-size: 10px;
+        }
       }
+    }
+  }
+
+  @include breakpoints.mobile() {
+    padding-left: 10px;
+    padding-right: 10px;
+
+    .xans-order-totalorder {
+      margin-top: 0 !important;
     }
   }
 }
@@ -121,17 +147,58 @@ width: 100%;
 .xans-order-basketpackage {
   .ec-base-table.typeList table {
     border: 0;
+    tbody {
+      .mo_span {
+        display: none;
+      }
+    }
 
     @include breakpoints.mobile() {
       colgroup {display: none;}
       table, thead, tbody, th, td, tr { 
         display: block; 
       }
-      // thead tr { 
-      //   position: absolute;
-      //   top: -9999px;
-      //   left: -9999px;
-      // }
+      thead {
+        display: none;
+      }
+      tfoot {
+        margin-top: 20px;
+        border-top: 0;
+      }
+      tbody {
+        border-bottom: 0;
+        tr {
+          position: relative;
+          height: 185px;
+          td {
+            padding-left: 50%;
+            &:first-child {
+              position: absolute;
+              left: 0;
+              padding-left: 0;
+              z-index: 1;
+            }
+            &.thumb {
+              position: absolute;
+              left: 0;
+              width: 50%;
+              padding-left: 0;
+              img {
+                max-width: 130px !important;
+              }
+            }
+          }
+        }
+        .txt_between {
+          display: flex;
+          justify-content: space-between;
+        }
+        .mo_span {
+          display: inline-block;
+          font-size: inherit;
+        }
+      }
+
     }
   }
   .ec-base-table thead th {
@@ -141,7 +208,11 @@ width: 100%;
     padding: 0;
     font-family: "Pretendard Variable", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-weight: 500;
+    font-size: 12px;
     border: 0;
+    * {
+      font-size: inherit;
+    }
   }
   .ec-base-table.typeList tfoot {
     border-top: 1px solid #000000;
@@ -154,27 +225,51 @@ width: 100%;
         color: #000000;
       }
     }
-  }
-  .ec-base-table.typeList tfoot .xans-order-selectorder {
-    position: absolute;
-    left: 0;
-  }
-
-  .ec-base-table tfoot td .gLeft {
-    margin: 0 10px 0 0 !important;
-  }
-
-  .ec-base-table.typeList tfoot {
+    .xans-order-selectorder {
+      position: absolute;
+      left: 0;
+    }
+    td .gLeft {
+      margin: 0 10px 0 0 !important;
+    }
     .ec-base-button {
       display: flex;
     }
     .select_total-price {
+      font-weight: 500;
       font-size: 24px;
       color: #000000;
     }
+    @include breakpoints.mobile() {
+      td {
+        padding-top: 10px;
+        > div {
+          font-weight: 400;
+          font-size: 12px;
+          &:first-child {
+            border-top: 1px solid #000000;
+          }
+        }
+      }
+      .ec-base-button {
+        padding: 15px 0 0;
+      }
+      .xans-order-selectorder {
+        position: relative;
+        margin-bottom: 20px;
+      }
+    }
   }
+
   .ec-base-table.typeList .center td.left {
     padding-left: 0 !important;
+    @include breakpoints.mobile() {
+      padding-left: 50% !important;
+      strong {
+        font-size: 14px;
+      }
+    }
+    
   }
   .ec-base-table.typeList .center td.right {
     padding-right: 0 !important;
@@ -225,6 +320,29 @@ width: 100%;
       border-radius: 15px;
       font-size: 13px;
     }
+  
+    @include breakpoints.mobile() {
+      display: flex;
+      .count_change {
+        width: 45px;
+        height: 25px;
+        margin: 0;
+        font-size: 10px;
+      }
+      .ec-base-qty { 
+        width: 65px;
+        margin: 0;
+        margin-right: 15px;
+        input[type=text] {
+          font-size: 12px;
+        }
+      }
+      a {
+        width: 15px;
+        height: 15px;
+      }
+
+    }
   }
   .new-order-empty {
     display: flex;
@@ -254,11 +372,9 @@ width: 100%;
   border:1px solid #000000;
   border-radius: 35px;
   overflow: hidden;
-}
-.area_delv_info dl {
-  margin-top: 15px;
-}
-.area_delv_info {
+  dl {
+    margin-top: 15px;
+  }
   .total_order_price_head {
     padding-bottom: 15px;
     > dt {
@@ -272,20 +388,43 @@ width: 100%;
       font-size: 40px;
     }
   }
-}
-.area_delv_info  .total_order_price_head dd,
-.area_delv_info  .area_delv_dl dd,
-.area_delv_info  .area_delv_dl dd * {
-  font-family: "Pretendard Variable", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-	font-weight: 600;
-}
-.area_delv_info .area_delv_dl {
-  display: flex;
-  justify-content: space-between;
+  .total_order_price_head dd,
+  .area_delv_dl dd,
+  .area_delv_dl dd * {
+    font-family: "Pretendard Variable", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-weight: 600;
+  }
+  .area_delv_dl {
+    display: flex;
+    justify-content: space-between;
+  }
+  @include breakpoints.mobile() {
+    padding: 25px 16px;
+    dl {
+      margin-top: 0;
+    }
+    .total_order_price_head {
+      > dt {
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+      strong {
+        font-size: 20px;
+      }
+    }
+    .area_delv_dl {
+      margin-top: 5px;
+      font-size: 12px;
+    }
+  }
 }
 
 .order_selectorder_new {
   width: calc(100% - 370px);
+  @include breakpoints.mobile() {
+    width: 100%;
+  }
+
 }
 
 .xans-order-basketpackage {
@@ -317,38 +456,71 @@ width: 100%;
       justify-content: center;
     }
   }
+  @include breakpoints.mobile() {
+    .ec-base-button {
+      a {
+        height: 50px;
+        font-size: 14px;
+      }
+      .small_button {
+        margin-right: 6px;
+        font-size: 11px;
+      }
+    }
+  }
 }
 
 
 div.ec-base-help.ec-base-help_new {
   width: calc(100% - 370px);
-}
-div.ec-base-help.ec-base-help_new > h2,
-div.ec-base-help.ec-base-help_new > h3 {
-  background:none;
-  border: 0;
-}
-div.ec-base-help.ec-base-help_new > h3 {
- font-size: 24px;   
-}
-div.ec-base-help.ec-base-help_new h4 {
- font-size: 16px;   
-}
-div.ec-base-help.ec-base-help_new {
   border-color: #000000;
   border-radius: 35px;
   padding: 40px 30px;
   overflow: hidden;
+  > h2,
+  > h3 {
+    background:none;
+    border: 0;
+  }
+  > h3 {
+    font-size: 24px;   
+  }
+  h4 {
+    font-size: 16px;   
+  }
+  ol {
+    margin: 15px 0 0 3px;
+    li {
+      background: none;
+      padding: 0;
+      margin-bottom: 5px;
+    }
+  }
+  .inner {width: 100%; margin: 0;margin-top: 25px;}
+
+  @include breakpoints.mobile() {
+    width: calc(100% - 20px);
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 30px 16px;
+    > h3 {
+      padding: 0;
+      font-size: 18px;
+    }
+    .inner {
+      padding: 0;
+      margin-top: 20px;
+    }
+    h4 {
+      font-weight: 500;
+    }
+    ol {
+      li {
+        font-size: 12px;
+      }
+    }
+  }
 }
-div.ec-base-help.ec-base-help_new ol {
-  margin: 15px 0 0 3px;
-}
-div.ec-base-help.ec-base-help_new ol li {
-  background: none;
-  padding: 0;
-  margin-bottom: 5px;
-}
-div.ec-base-help.ec-base-help_new .inner {width: 100%; margin: 0;margin-top: 25px;}
 
 
 // suggest__item
@@ -419,6 +591,7 @@ div.ec-base-help.ec-base-help_new .inner {width: 100%; margin: 0;margin-top: 25p
   }
 
   @include breakpoints.mobile() {
+    width: 100%;
     padding-right: 0;
     .suggest__title { 
       font-size: 16px;
