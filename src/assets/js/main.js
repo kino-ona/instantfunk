@@ -1,7 +1,7 @@
 jQuery.noConflict();
 
 (function($) {
-	$(document).ready(function(){
+	$(function(){
 	
 		var visualSwiper = new Swiper('.visual .swiper', {
 			speed: 600,
