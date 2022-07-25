@@ -7,7 +7,6 @@
 	padding: 0;
 	color: inherit;
 	font: inherit;
-	// font-family: 'AT surt', 'Pretendard Variable', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
 }
 
 *,
@@ -30,9 +29,11 @@
 	overflow-wrap: break-word;
 	tab-size: 4;
 }
-body {
+body, code {
 	min-width: auto;
+	font-family: 'AT surt', 'Pretendard Variable', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
 }
+
 
 ol,
 ul {

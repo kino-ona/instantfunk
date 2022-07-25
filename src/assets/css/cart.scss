@@ -140,6 +140,10 @@ width: 100%;
 
     .xans-order-totalorder {
       margin-top: 0 !important;
+      margin-bottom: 20px !important;
+      &.ec-base-button {
+        padding-bottom: 0;
+      }
     }
   }
 }
@@ -159,7 +163,15 @@ width: 100%;
         display: block; 
       }
       thead {
-        display: none;
+        th {
+          display: none;
+          &:first-child {
+            display: block;
+            text-align: left;
+            padding-top: 0;
+            padding-bottom: 25px;
+          }
+        }
       }
       tfoot {
         margin-top: 20px;
@@ -192,6 +204,7 @@ width: 100%;
         .txt_between {
           display: flex;
           justify-content: space-between;
+          margin-bottom: 5px;
         }
         .mo_span {
           display: inline-block;
@@ -323,6 +336,8 @@ width: 100%;
   
     @include breakpoints.mobile() {
       display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
       .count_change {
         width: 45px;
         height: 25px;
@@ -423,6 +438,7 @@ width: 100%;
   width: calc(100% - 370px);
   @include breakpoints.mobile() {
     width: 100%;
+    padding-right: 10px;
   }
 
 }
