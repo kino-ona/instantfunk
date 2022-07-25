@@ -377,7 +377,7 @@
 		height: 44px;
 		border-width: 1px;
 		border-style: solid;
-		border-radius: 1em;
+		border-radius: 100vw;
 		font-size: 26px;
 		letter-spacing: -0.04em;
 		text-transform: uppercase;
@@ -490,6 +490,17 @@
 				&:not(.best-menu__col--split) {
 					.best-menu__item {
 						height: 126.27vw;
+					}
+					.best-menu__category {
+						font-size: 14px;						
+					}
+					.best-menu__name {
+						font-size: 42px;
+					}
+					.best-menu__link {
+						width: 99px;
+						height: 33px;
+						font-size: 22px;
 					}
 				}
 			}
