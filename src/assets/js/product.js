@@ -1,7 +1,7 @@
 jQuery.noConflict();
 
 (function($) {
-  $(document).ready(function(){
+  $(function(){
     var productSwiper = new Swiper('.productDetailswp', {
       pagination: {
         el: '.productDetailswp .swiper-pagination'
@@ -39,26 +39,6 @@ jQuery.noConflict();
       $(this).parent('.product-list__option').prev('.product-list__trigger').removeClass('product-list__trigger--active').find('.product-list__text').html(item);
     });
   
-    function productListSort() {
-      var target = $('.product-list');
-      var targetOffset = target.offset().top;
-      var targetHeight = target.height();
-      var winHeight = $(window).height();
-  
-      if ($(window).scrollTop() > (targetOffset + targetHeight - winHeight)) {
-        target.find('.product-list__sort').addClass('product-list__sort--absoluted');
-      } else {
-        target.find('.product-list__sort').removeClass('product-list__sort--absoluted');
-      }
-    }
-    
-    if ($('.product-list .product-list__trigger').length > 0) {
-      productListSort();
-      $(window).scroll(function(){
-        productListSort();
-      });
-    }
-  
     var productListSwiper = new Swiper('.product-list .menu .menu__item:not(.menu__item--soldout) .menu__swiper', {
       speed: 300,
 			effect: 'creative',
@@ -84,21 +64,6 @@ jQuery.noConflict();
 				}
 			},
 			on: {
-        // click: function(swiper){
-        //   if(swiper.allowTouchMove) {
-        //     if (!swiper.$el.next('.button').hasClass('button--visible')) {
-        //       swiper.$el.next('.button').removeClass('button--hidden').addClass('button--visible');
-        //       // console.log(swiper.$el.next('.button').find('.button__item--cart'));
-        //       if (swiper.$el.next('.button').hasClass('button--visible')) {
-        //         swiper.$el.closest(document).on('click', '.button__item--cart', function(){
-        //           swiper.$el.closest('.menu__item').find('.menu__layer').addClass('menu__layer--opened');
-        //         });
-        //       }
-        //     } else {
-        //       swiper.$el.next('.button').removeClass('button--visible').addClass('button--hidden');
-        //     }
-        //   }
-        // },
         breakpoint: function(swiper, breakpointParams) {
           if (!breakpointParams.allowTouchMove) {
 						swiper.loopDestroy();

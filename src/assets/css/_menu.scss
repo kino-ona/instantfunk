@@ -324,7 +324,7 @@
 		top: 0;
 		z-index: 10;
 		width: 100%;
-		height: 72px;
+		height: 56px;
 		background-color: #fc4f03;
 	}
 	
@@ -335,6 +335,13 @@
 		.menu__item {
 			width: calc(50% - 2px);
 			margin-left: 2px;
+		}
+		.menu__item--soldout {
+			.menu__swiper {
+				.swiper-pagination {
+					display: none;
+				}
+			}
 		}
 		.menu__round {
 			padding-top: 66.67vw;
