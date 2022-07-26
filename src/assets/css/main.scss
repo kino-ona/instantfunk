@@ -300,6 +300,7 @@
 		color: #9af54c;
 		.best-menu__link {
 			border-color: #9af54c;
+			color:inherit;
 			&:focus,
 			&:hover {
 				background-color: #9af54c;
@@ -310,6 +311,7 @@
 		color: #b2f9ea;
 		.best-menu__link {
 			border-color: #b2f9ea;
+			color:inherit;
 			&:focus,
 			&:hover {
 				background-color: #b2f9ea;
@@ -320,6 +322,7 @@
 		color: #fffe72;
 		.best-menu__link {
 			border-color: #fffe72;
+			color:inherit;
 			&:focus,
 			&:hover {
 				background-color: #fffe72;
@@ -330,7 +333,7 @@
 		color: #fc9738;
 		.best-menu__link {
 			border-color: #fc9738;
-			&:focus,
+			color:inherit;
 			&:hover {
 				background-color: #fc9738;
 			}
@@ -340,6 +343,7 @@
 		color: #b7adf0;
 		.best-menu__link {
 			border-color: #b7adf0;
+			color:inherit;
 			&:focus,
 			&:hover {
 				background-color: #b7adf0;
@@ -350,6 +354,7 @@
 		color: #ff9bc1;
 		.best-menu__link {
 			border-color: #ff9bc1;
+			color:inherit;
 			&:focus,
 			&:hover {
 				background-color: #ff9bc1;
