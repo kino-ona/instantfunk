@@ -231,17 +231,17 @@
 	.best-menu__row {
 		display: flex;
 		&:first-child {
-			.best-menu__item {
+			.best-menu__item, .best-menu__item--figure {
 				&:first-child {
 					margin-right: auto;
 				}
 			}
 		}
 		&:last-child {
-			.best-menu__item {
+			.best-menu__item, .best-menu__item--figure {
 				&:last-child {
 					margin-left: auto;
-				}
+				} 
 			}
 		}
 		&:not(:first-child) {
@@ -268,7 +268,7 @@
 			}
 		}
 	}
-	.best-menu__item {
+	.best-menu__item, .best-menu__item--figure {
 		position: relative;
 		width: 25%;
 		padding: 0 2.29vw;
@@ -754,10 +754,12 @@
 			padding: 0 32px 32px;
 		}
 		.menu__name {
+			max-width: 50%;
 			font-size: 32px;
 			line-height: 36px;
 			letter-spacing: -0.01em;
 			@include mixins.ATr();
+			text-align: left;
 		}
 	}
 	

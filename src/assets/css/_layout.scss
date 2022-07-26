@@ -674,9 +674,7 @@
 				font-size: 10px;
 			}
 		}
-		
 	}
-
 }
 .footer_copyright {
 	&:after {
@@ -719,6 +717,76 @@
 					display: block;
 					padding-bottom: 5px;
 				}
+			}
+		}
+	}
+}
+
+.footer_map.layer__body {
+	.layer__wrap {
+		width: 400px;
+		min-height: 225px;
+		padding: 30px;
+	}
+	.layer__close {
+		top: 27px;
+	}
+	.return__addr {
+		padding-bottom: 14px;
+		margin-bottom: 16px;
+		border-bottom: 1px solid #cccccc;
+		dt {
+			margin-bottom: 9px;
+			font-size: 18px;
+			font-weight: 500;
+		}
+		dd {
+			padding-right: 10%;
+			@include mixins.PtdRegular();
+			line-height: 1.4;
+			a {
+				text-decoration: underline;
+			}
+		}
+	}
+	.return__addr--info {
+		li {
+			display: flex;
+			margin-top: 10px;
+			@include mixins.PtdRegular();
+			letter-spacing: -0.4px;
+			line-height: 1.2;
+			word-break: keep-all;
+		}
+		.addr__title {
+			width: 63px;
+			@include mixins.PtdMedium();
+		}
+	}
+
+  @include breakpoints.mobile() {
+		.layer__wrap {
+			width: calc(100% - 60px);
+			padding: 28px 20px;
+		}
+		.layer__close {
+			top: 20px;
+			right: 25px;
+		}
+		.return__addr {
+			dt {
+				font-size: 16px;
+			}
+			dd {
+				font-size: 12px;
+			}
+		}
+		.return__addr--info {
+			li {
+				font-size: 12px;
+			}
+			.addr__info {
+				width: calc(100% - 63px);
 			}
 		}
 	}
