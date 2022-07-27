@@ -134,10 +134,12 @@
 	}
 	.archive-detail__contents {
 		width: 454px;
-		margin-top: 12px;
+		margin-top: 57px;
 		.archive-detail__row {
 			border-radius: 14px;
-			background-color: #f6f6f6;
+			background: {
+				color: #f6f6f6;
+			}
 			&:not(:first-child) {
 				margin-top: 12px;
 			}
@@ -172,6 +174,7 @@
 			line-height: 24px;
 		}
 	}
+	
 	.archive-detail__info {
 		align-items: center;
 		justify-content: space-between;
@@ -204,6 +207,10 @@
 			background-color: #000;
 			color: #fff;
 		}
+	}
+	.archive-detail__tail {
+		position: absolute;
+		top: 0;
 	}
 
 	.menu {
@@ -256,18 +263,19 @@
 			position: sticky;
 			left: auto;
 			top: auto;
-			bottom: 63px;
+			bottom: 100px;
 		}
 		.archive-detail__trigger {
 			position: absolute;
 			right: 15px;
-			bottom: 15px;
+			bottom: 0;
 			z-index: 25;
 			width: 35px;
 			height: 35px;
 			border-radius: 10px;
-			background-color: #ededed;
+			background-color: transparent;
 			.archive-detail__ico {
+				display: none;
 				width: 16px;
 				height: 16px;
 			}
@@ -276,13 +284,16 @@
 			position: absolute;
 			left: 15px;
 			right: 15px;
-			bottom: 15px;
+			bottom: -12px;
 			z-index: 20;
 			width: auto;
 			margin-top: 0;
-			padding: 25px;
+			margin-bottom: 50px;
+			padding: 25px 25px 0 25px;
 			border-radius: 10px;
 			background-color: #ededed;
+			word-break: keep-all;
+			z-index: 1;
 			.archive-detail__row {
 				border-radius: 0;
 				background-color: transparent;
@@ -300,6 +311,7 @@
 			}
 			.archive-detail__inner {
 				padding: 0;
+				margin-bottom: -12px;
 				.archive-detail__text {
 					font-size: 14px;
 					line-height: 20px;
@@ -313,6 +325,27 @@
 				letter-spacing: -0.02em;
 			}
 		}
+		.archive-detail__tail {
+			position: relative;
+			top: inherit;
+			width: calc(100% - 30px);
+			height: 50px;
+			margin: 0 auto;
+			border-bottom-left-radius: 10px;
+			background: {
+				image: url('../images/archive-detail__tail.png');
+				position: right bottom;
+				size: 50px;
+				repeat: no-repeat;
+			}
+			overflow: hidden;
+			> div {
+				width: calc(100% - 50px);
+				height: 100%;
+				background-color: #ededed;
+			}
+		}
+
 		.archive-detail__dimmed {
 			display: none;
 			position: absolute;
