@@ -128,9 +128,6 @@
 				@include mixins.transform(none);
 			}
 		}
-		& + .archive-detail__contents {
-			display: none;
-		}
 	}
 	.archive-detail__contents {
 		width: 454px;
@@ -174,7 +171,9 @@
 			line-height: 24px;
 		}
 	}
-	
+	.archive-detail__contents--hidden {
+		display: none;
+	}
 	.archive-detail__info {
 		align-items: center;
 		justify-content: space-between;
