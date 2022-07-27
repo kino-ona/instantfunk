@@ -118,6 +118,7 @@
 		background-color: #fff;
 		cursor: pointer;
 		&:hover {
+			background-color: #000;
 			.marquee {
 				.marquee__loop {
 					.marquee__text {
@@ -486,7 +487,7 @@
 			margin-top: -17.73vw;
 			flex-wrap: wrap;
 			&:first-child {
-				.best-menu__item {
+				.best-menu__item, .best-menu__item--figure {
 					&:first-child {
 						margin-right: 0;
 					}
@@ -504,7 +505,7 @@
 			.best-menu__col {
 				width: 100%;
 				&:not(.best-menu__col--split) {
-					.best-menu__item {
+					.best-menu__item, .best-menu__item--figure {
 						height: 126.27vw;
 					}
 					.best-menu__category {
@@ -527,7 +528,7 @@
 				}
 			}
 		}
-		.best-menu__item {
+		.best-menu__item, .best-menu__item--figure {
 			width: 50%;
 			height: 54.27vw;
 			padding: 0 4.53vw;
