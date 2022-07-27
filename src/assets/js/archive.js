@@ -4,6 +4,7 @@ jQuery.noConflict();
   $(function(){
 		$('.archive-detail__trigger').on('click', function(){
 			$(this).toggleClass('archive-detail__trigger--active').closest('.archive-detail__floating').find('.archive-detail__contents').toggleClass('archive-detail__contents--hidden').closest('.archive-detail').find('.archive-detail__dimmed').toggleClass('archive-detail__dimmed--opened');
+			$(this).closest('.archive-detail__tail').toggleClass('archive-detail__tail-toggle');
 		});
 
 		if ($('.archive-detail').length > 0) {
