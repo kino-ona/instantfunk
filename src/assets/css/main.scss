@@ -108,6 +108,7 @@
 		animation-delay: .3s;
 	}
 	.visual__control {
+		overflow: hidden;
 		position: absolute;
 		left: 20px;
 		bottom: 20px;
@@ -119,6 +120,7 @@
 		cursor: pointer;
 		&:hover {
 			background-color: #000;
+			
 			.marquee {
 				.marquee__loop {
 					.marquee__text {
@@ -135,6 +137,14 @@
 		}
 		.visual__video--visible {
 			visibility: visible;
+			video,
+			img {
+				animation-name: videoScale;
+				animation-duration: 6s;
+				animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+				animation-iteration-count: infinite;
+				animation-direction: alternate;
+			}
 		}
 
 		.marquee {
@@ -144,10 +154,9 @@
 			}
 			.marquee__loop {
 				.marquee__text {
-					margin: 0 20px;
-					font-weight: 500;
+					margin: 0 24px;
 					font-size: 80px;
-					letter-spacing: -0.04em;
+					letter-spacing: -0.05em;
 				}
 			}
 		}
@@ -208,13 +217,24 @@
 			width: 50%;
 			height: 105px;
 			border-radius: 34px;
+			&:hover {
+				background-color: #fff;
+				
+				.marquee {
+					.marquee__loop {
+						.marquee__text {
+							color: #000;
+						}
+					}
+				}
+			}
 
 			.marquee {
 				.marquee__loop {
 					.marquee__text {
 						margin: 0 12.5px;
-						font-weight: 400;
 						font-size: 40px;
+						letter-spacing: -0.02em;
 					}
 				}
 			}
@@ -1001,6 +1021,15 @@
 	}
 	100% {
 		opacity: 1;
+	}
+}
+
+@keyframes videoScale {
+	0% {
+		@include mixins.scale(1);
+	}
+	100% {
+		@include mixins.scale(1.2); 
 	}
 }
 
