@@ -232,14 +232,14 @@
 	.best-menu__row {
 		display: flex;
 		&:first-child {
-			.best-menu__item, .best-menu__item--figure {
+			.best-menu__item {
 				&:first-child {
 					margin-right: auto;
 				}
 			}
 		}
 		&:last-child {
-			.best-menu__item, .best-menu__item--figure {
+			.best-menu__item {
 				&:last-child {
 					margin-left: auto;
 				} 
@@ -269,7 +269,7 @@
 			}
 		}
 	}
-	.best-menu__item, .best-menu__item--figure {
+	.best-menu__item {
 		position: relative;
 		width: 25%;
 		padding: 0 2.29vw;
@@ -487,7 +487,7 @@
 			margin-top: -17.73vw;
 			flex-wrap: wrap;
 			&:first-child {
-				.best-menu__item, .best-menu__item--figure {
+				.best-menu__item {
 					&:first-child {
 						margin-right: 0;
 					}
@@ -505,7 +505,7 @@
 			.best-menu__col {
 				width: 100%;
 				&:not(.best-menu__col--split) {
-					.best-menu__item, .best-menu__item--figure {
+					.best-menu__item {
 						height: 126.27vw;
 					}
 					.best-menu__category {
@@ -528,7 +528,7 @@
 				}
 			}
 		}
-		.best-menu__item, .best-menu__item--figure {
+		.best-menu__item {
 			width: 50%;
 			height: 54.27vw;
 			padding: 0 4.53vw;
