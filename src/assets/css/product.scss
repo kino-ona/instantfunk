@@ -1008,8 +1008,8 @@
 } //option__list
 
 .product__additional {
-  width: 100%;
-  margin: 0 auto 175px;
+  width: 100% !important;
+  margin: 0 auto 175px !important;
   padding-left: 256px;
   padding-right: 425px;
   text-align: center;

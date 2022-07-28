@@ -121,6 +121,11 @@
 		font-size: 14px;
 		line-height: 18px;
 		@include mixins.PtdRegular();
+		span {
+			font-size: inherit !important;
+			line-height: inherit !important;
+			color: #000 !important;
+		}
 	}
 	.menu__event {
 		display: inline-flex;
