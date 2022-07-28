@@ -7,6 +7,15 @@ jQuery.noConflict();
 			$(this).closest('.archive-detail__tail').toggleClass('archive-detail__tail-toggle');
 		});
 
+		$(document).on('click', '.mobile .archive-detail .archive-detail__dimmed', function(){
+			if ($(this).hasClass('archive-detail__dimmed--opened')) {
+				$(this).removeClass('archive-detail__dimmed--opened');
+				$('.archive-detail .archive-detail__trigger').addClass('archive-detail__trigger--active');
+				$('.archive-detail .archive-detail__contents').addClass('archive-detail__contents--hidden');
+				$('.archive-detail .archive-detail__tail').addClass('archive-detail__tail-toggle');
+			} 
+		});
+
 		if ($('.archive-detail').length > 0) {
 			var elementTop, elementBottom, viewportTop, viewportBottom;
 

@@ -35,7 +35,7 @@
 							</nav>
 							<div class="nav__marquee nav__marquee--campaign">
 								<!-- <p class="nav__text">Instant campaign<span>®</span></p> -->
-								<div class="marquee">
+								<a href="#" class="marquee">
 									<div class="marquee__mask">
 										<p class="marquee__loop">
 											<span class="marquee__text">Instant campaign<span>®</span></span>
@@ -62,7 +62,7 @@
 											<span class="marquee__text">Instant campaign<span>®</span></span>
 										</p>
 									</div>
-								</div>
+								</a>
 							</div>
 						</div>
 						<button type="button" class="nav__trigger">CLOSET</button>
