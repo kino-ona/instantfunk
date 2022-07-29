@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc', {
+		"pagetitle": "인스턴트펑크 공식홈페이지 - 인스턴트펑크 INSTANTFUNK - 아이디 찾기",
+		"webroot": "../"
+	})
+	<link rel="stylesheet" href="../assets/css/member.css">
+</head>
+<body>
+	<div id="wrap">
+		@@include('../inc/header.inc', {
+			"login": "false",
+			"webroot": "../"
+		})
+
+    <div class="container">
+			<div class="member">
+				<div class="member__container">
+					<div class="member__header">
+						<div class="member__title">
+							<p class="member__text">아이디찾기</p>
+						</div>
+						<p class="member__desc">
+							가입하신 방법에 따라 아이디 찾기가 가능합니다. 법인사업자 회원 또는<br>
+							외국인 회원의 경우 법인명과 법인번호 또는 이름과 등록번호를 입력해 주세요.
+						</p>
+					</div>
+					<div class="member__body">
+						<div class="member__card">
+							<div module="member_findid">
+								<fieldset>
+									<div class="form">
+										<div class="form__row">
+											<div class="form__label">
+												<label for="searchType" class="form__text">회원유형</label>
+											</div>
+											<div class="form__group form__group--full">
+												<select id="searchType" name="searchType">
+													<option value="indi" selected="selected">개인회원</option>
+													<option value="indibuis">개인 사업자회원</option>
+													<option value="corp">법인 사업자회원</option>
+													<option value="fore">외국인회원</option>
+												</select>
+												<!-- {$form.searchType} -->
+											</div>
+											<div class="form__group">
+												<input type="radio" id="check_method1" name="check_method" checked>
+												<label for="check_method1">이메일</label>
+												<input type="radio" id="check_method2" name="check_method">
+												<label for="check_method2">휴대폰번호</label>
+												<!-- {$form.check_method} -->
+											</div>
+										</div>
+										<div class="form__row">
+											<div id="name_view" class="form__label">
+												<label for="name_lable" class="form__text">이름</label>
+											</div>
+											<div class="form__group form__group--full">
+												<input type="text" id="name_lable">
+												<!-- {$form.name} -->
+											</div>
+										</div>
+										<div class="form__row">
+											<div id="email_view" class="form__label">
+												<label for="email" class="form__text">이메일로 찾기</label>
+											</div>
+											<div class="form__group form__group--full">
+												<input type="text" id="email">
+												<!-- {$form.email} -->
+											</div>
+										</div>
+									</div>
+								</fieldset>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+    </div>
+
+		@@include('../inc/footer.inc', {
+			"webroot": "../"
+		})
+	</div>
+</body>
+</html>

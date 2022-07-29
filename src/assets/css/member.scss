@@ -10,6 +10,36 @@
 		margin: 0 auto;
 		padding: 0 1.67vw;
 	}
+	.member__header {
+		margin-bottom: 50px;
+		.member__title {
+			text-align: center;
+			.member__text {
+				font-weight: 500;
+				font-size: 32px;
+				letter-spacing: -0.025em;
+			}
+		}
+		.member__desc {
+			margin-top: 30px;
+			font-size: 18px;
+			line-height: 24px;
+			letter-spacing: -0.025em;
+			text-align: center;
+		}
+	}
+	.member__body {
+		max-width: 500px;
+		margin: 0 auto;
+	}
+	.member__card {
+		padding: 35px 32px;
+		border: 1px solid #000;
+		border-radius: 42px;
+		&:not(:first-child) {
+			margin-top: 10px;
+		}
+	}
 
 	.login {
 		.login__container {
@@ -69,9 +99,6 @@
 					&:not(:first-child) {
 						margin-top: 4px;
 					}
-				}
-				.login__input {
-					@include mixins.PtdRegular();
 				}
 			}
 			.login__save {
@@ -146,6 +173,33 @@
 					@include icons.retina-sprite(icons.$ico-login-kakao-group);
 				}
 			}
+		}
+	}
+
+	.form {
+		.form__row {
+			&:not(:first-child) {
+				margin-top: 30px;
+			}
+		}
+		.form__label {
+			display: flex;
+			padding: 0 9px;
+			.form__text {
+				letter-spacing: -0.025em;
+				@include mixins.PtdMedium();
+			}
+		}
+		.form__group {
+			padding: 0 9px;
+			margin-top: 12px;
+		}
+		.form__group--full {
+			padding: 0;
+		}
+
+		.select {
+			width: 100%;
 		}
 	}
 

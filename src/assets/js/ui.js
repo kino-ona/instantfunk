@@ -111,6 +111,7 @@ jQuery.noConflict();
 		});
 
 		$(document).on('click', '.header .search__dimmed--opened', function(){
+			$(this).removeClass('search__dimmed--opened');
 			$('.header .search__layer').removeClass('search__layer--opened');
 		});
 
