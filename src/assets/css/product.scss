@@ -2276,3 +2276,13 @@
     }
   }
 }
+
+#capp-shop-new-product-optionselect-backlayer {
+  display: none !important;
+}
+
+#capp-shop-new-product-optionselect-layer {
+  visibility: hidden;
+  -webkit-clip-path: inset(0 round 72px);
+  clip-path: inset(0 round 72px);
+}

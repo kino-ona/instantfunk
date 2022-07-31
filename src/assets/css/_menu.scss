@@ -306,6 +306,20 @@
 				color: #fff;
 			}
 		}
+
+		.button__item--cart {
+			position: relative;
+			img {
+				display: block;
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				// visibility: hidden;
+				z-index: 1;
+			}
+		}
 	}
 	.button--visible {
 		@include mixins.translate(0, 0);
