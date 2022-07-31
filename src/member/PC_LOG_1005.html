@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc', {
+		"pagetitle": "인스턴트펑크 공식홈페이지 - 인스턴트펑크 INSTANTFUNK - 비밀번호 찾기 - 임시 비밀번호 전송 - 완료",
+		"webroot": "../"
+	})
+	<link rel="stylesheet" href="../assets/css/member.css">
+</head>
+<body>
+	<div id="wrap">
+		@@include('../inc/header.inc', {
+			"login": "false",
+			"webroot": "../"
+		})
+
+    <div class="container">
+			<div class="member">
+				<div class="member__container">
+					<div class="member__header">
+						<div class="member__title">
+							<p class="member__text">비밀번호 찾기</p>
+						</div>
+						<p class="member__desc">임시 비밀번호가 고객님 휴대폰 번호로 전송되었습니다.</p>
+						<!-- <p class="member__desc {$display_email_method|display}">임시 비밀번호가 고객님 메일로 전송되었습니다.</p>
+						<p class="member__desc {$display_mobile_method|display}">임시 비밀번호가 고객님 휴대폰 번호로 전송되었습니다.</p> -->
+					</div>
+					<div class="member__body">
+						<div class="member__card member__card--result">
+							<div module="member_findpasswdresult">
+								<p class="member__temporary">
+									<span class="member__semibold">Instantfunk12</span> 회원님 임시 비밀번호를<br>
+									<span class="member__semibold">Instant@naver.com</span> 으로 보내드렸습니다<br>
+									고객님 즐거운 쇼핑 하세요!
+								</p>
+								<!-- <p class="member__temporary">
+									<span class="member__semibold">{$id}</span> 회원님 임시 비밀번호를<br>
+									<span class="member__semibold {$display_email_method|display}">{$email}</span><span class="member__semibold {$display_mobile_method|display}">{$mobile}</span> 으로 보내드렸습니다<br>
+									고객님 즐거운 쇼핑 하세요!
+								</p> -->
+							</div>
+						</div>
+						<div class="button">
+							<div class="button__container">
+								<a href="#" class="button__item button__item--black button__item--large">로그인</a>
+								<a href="#" class="button__item button__item--large">홈으로</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+    </div>
+
+		@@include('../inc/footer.inc', {
+			"webroot": "../"
+		})
+	</div>
+</body>
+</html>

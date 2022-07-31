@@ -98,7 +98,7 @@ input[type='email'] {
 	height: 58px;
 	padding: 0 14px;
 	border: 1px solid #f4f4f7;
-	border-radius: 58px;
+	border-radius: 100vw;
 	background-color: #f4f4f7;
 	color: #000;
 	font-size: 18px;
@@ -281,11 +281,12 @@ select{
 	appearance: none;
 	width: 100%;
 	height: 58px;
-	padding: 0 40px 0 25px;
+	padding: 0 40px 0 24px;
 	border: 1px solid #f4f4f7;
-	border-radius: 58px;
+	border-radius: 100vw;
 	background-color: #f4f4f7;
 	font-size: 18px;
+	letter-spacing: -0.025em;
 	cursor: pointer;
 	outline: none;
 	&:not([readonly]):not([disabled]):not([aria-invalid='true']) {
@@ -309,8 +310,10 @@ select{
 	}
 
   @include breakpoints.mobile() {
-		height: 48px;
+		padding: 0 40px 0 13.5px;
+		height: 50px;
 		font-size: 14px;
+		letter-spacing: -0.012em;
 	}
 }
 
