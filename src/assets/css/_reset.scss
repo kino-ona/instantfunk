@@ -104,6 +104,7 @@ input[type='email'] {
 	font-size: 18px;
 	outline: none;
 	letter-spacing: -0.025em;
+	@include mixins.PtdRegular();
 	&:not([readonly]):not([disabled]):not([aria-invalid='true']) {
 		&:focus {
 			border-color: #5eecfa;
@@ -161,6 +162,7 @@ input[type='radio'] {
 	appearance: none;
 	border: 1px solid #000;
 	border-radius: 50%;
+	cursor: pointer;
 	&:checked {
 		background-color: #000;
 	}
@@ -168,9 +170,9 @@ input[type='radio'] {
 input[type='checkbox'] {
 	width: 14px;
 	height: 14px;
-	& ~ input[type='checkbox'] {
-		margin-left: 25px;
-	}
+	// & ~ input[type='checkbox'] {
+	// 	margin-left: 25px;
+	// }
 }
 input[type='radio'] {
 	position: relative;
@@ -199,13 +201,13 @@ input[type='radio'] {
 		}
 	}
 	& + label {
-		padding-left: 2px;
+		// padding-left: 2px;
 		font-size: 18px;
 		@include mixins.PtdMedium();
 	}
-	& ~ input[type='radio'] {
-		margin-left: 35px;
-	}
+	// & ~ input[type='radio'] {
+	// 	margin-left: 35px;
+	// }
 }
 input[type='checkbox'],
 input[type='radio'] {
@@ -289,6 +291,7 @@ select{
 	letter-spacing: -0.025em;
 	cursor: pointer;
 	outline: none;
+	@include mixins.PtdRegular();
 	&:not([readonly]):not([disabled]):not([aria-invalid='true']) {
 		&:focus {
 			border-color: #5eecfa;

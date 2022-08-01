@@ -38,20 +38,22 @@
 											</div>
 											<div class="login__form">
 												<div class="login__row">
-													<label for="userId" class="a11y">ID</label>
 													<input type="text" id="userId" class="login__input" placeholder="User ID">
 													<!-- {$form.member_id} -->
 												</div>
 												<div class="login__row">
-													<label for="userPw" class="a11y">PASSWORD</label>
 													<input type="password" id="userPw" class="login__input" placeholder="User ID">
 													<!-- {$form.member_passwd} -->
 												</div>
 											</div>
 											<div class="login__save">
-												<input type="checkbox" id="saveId">
-												<label for="saveId">아이디 저장</label>
-												<!-- {$form.member_check_save_id} -->
+												<div class="check">
+													<div class="check__inner">
+														<input type="checkbox" id="saveId">
+														<label for="saveId">아이디 저장</label>
+														<!-- {$form.member_check_save_id} -->
+													</div>
+												</div>
 											</div>
 											<div class="login__button">
 												<a href="#" class="login__login" onclick="{$form.member_passwd}">SIGN IN</a>

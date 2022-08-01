@@ -24,58 +24,60 @@
 						<p class="member__desc">회원님의 개인정보를 안전하게 보호하고, 개인정보 도용으로 인한 피해를 방지하기위해 90일 이상 비밀번호를 변경하지 않은 경우 비밀번호 변경을 권장하고 있습니다.</p>
 					</div>
 					<div class="member__body">
-						<div class="member__card">
-							<div module="member_passwordreset">
+						<div module="member_passwordreset">
+							<div class="member__group">
 								<fieldset>
 									<legend class="a11y">비밀번호 재설정</legend>
-									<div class="form">
-										<div class="form__row">
-											<div class="form__label">
-												<span class="form__text">아이디</span>
-											</div>
-											<div class="form__set">
-												<div class="form__field">
-													<div class="form__col form__col--offset">
-														<p class="form__id">Instantfunk12</p>
-													</div>
+									<div class="member__card">
+										<div class="form">
+											<div class="form__row">
+												<div class="form__label">
+													<span class="form__text">아이디</span>
 												</div>
-												<!-- <p class="form__text">{$member_id}</p> -->
-											</div>
-										</div>
-										<div class="form__row">
-											<div class="form__label">
-												<span class="form__text">새 비밀번호</span>
-											</div>
-											<div class="form__set">
-												<div class="form__field">
-													<div class="form__col">
-														<input type="password" placeholder="영문 대소문자/숫자/특수문자 중 3가지 이상 조합,8자~16자">
-														<!-- {$form.new_passwd} -->
+												<div class="form__set">
+													<div class="form__field">
+														<div class="form__col form__col--offset">
+															<p class="form__id">Instantfunk12</p>
+														</div>
 													</div>
+													<!-- <p class="form__text">{$member_id}</p> -->
 												</div>
 											</div>
-										</div>
-										<div class="form__row">
-											<div class="form__label">
-												<span class="form__text">새 비밀번호 확인</span>
+											<div class="form__row">
+												<div class="form__label">
+													<span class="form__text">새 비밀번호</span>
+												</div>
+												<div class="form__set">
+													<div class="form__field">
+														<div class="form__col">
+															<input type="password" placeholder="영문 대소문자/숫자/특수문자 중 3가지 이상 조합,8자~16자">
+															<!-- {$form.new_passwd} -->
+														</div>
+													</div>
+												</div>
 											</div>
-											<div class="form__set">
-												<div class="form__field">
-													<div class="form__col">
-														<input type="password">
-														<!-- {$form.new_passwd_confirm} -->
+											<div class="form__row">
+												<div class="form__label">
+													<span class="form__text">새 비밀번호 확인</span>
+												</div>
+												<div class="form__set">
+													<div class="form__field">
+														<div class="form__col">
+															<input type="password">
+															<!-- {$form.new_passwd_confirm} -->
+														</div>
 													</div>
 												</div>
 											</div>
 										</div>
 									</div>
+									<div class="button">
+										<div class="button__container">
+											<a href="#" class="button__item button__item--black button__item--large">비밀번호 변경하기</a>
+											<a href="#" class="button__item button__item--large">취소</a>
+										</div>
+									</div>
 								</fieldset>
-							</div>
-						</div>
-						<div class="button">
-							<div class="button__container">
-								<a href="#" class="button__item button__item--black button__item--large">비밀번호 변경하기</a>
-								<a href="#" class="button__item button__item--large">취소</a>
 							</div>
 						</div>
 					</div>
