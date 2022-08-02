@@ -23,8 +23,27 @@
 	}
 	.member__container--join-result {
 		max-width: none;
+		padding-left: 2.67vw;
+		padding-right: 2.67vw;
 		.member__header {
 			margin-bottom: 90px;
+			.member__title {
+				.member__text {
+					font-weight: 600;
+					font-size: 14.9vw;
+					letter-spacing: -0.02em;
+					white-space: nowrap;
+					span {
+						position: relative;
+						margin: 0 -2.08vw 0 -2.86vw;
+						color: #2cdee4;
+						font-family: 'Baskerville';
+						font-style: italic;
+						font-size: 16.98vw;
+						-webkit-text-stroke: 2px #000;
+					}
+				}
+			}
 		}
 		.member__body {
 			.member__group {
@@ -631,6 +650,15 @@
 		.member__container--join-result {
 			.member__header {
 				margin-bottom: 70px;
+				.member__title {
+					.member__text {
+						margin: 0 -2.4vw 0 -2.93vw;
+						font-size: 16.27vw;
+						span {
+							font-size: 18.67vw;
+						}
+					}
+				}
 			}
 			.member__card {
 				padding: 32px 30px;
