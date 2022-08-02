@@ -1,0 +1,235 @@
+@use 'mixins';
+@use 'sprite/icons';
+@use 'sprite/mo_icons';
+@use 'breakpoints';
+
+.container {
+  padding-top:0;
+}
+.sub__container {
+width: 100%;
+}
+@media (max-width: 750px) {
+.sub__container {
+  padding-top: 65px;
+}
+}
+.sub__container .inner_wrap {
+  max-width: 1310px;
+  margin: 180px auto 0;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @include breakpoints.mobile() {
+    max-width: 100%;
+    margin-top: 30px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+
+.order_wrap {
+  input[type='checkbox'] {
+    width: 24px;
+    height: 24px;
+    appearance: none;
+    border: 0;
+    border-radius: 50%;
+    background: {
+      image: url('/assets/images/ico_checkbg.png');
+      size: cover;
+      position: center center;
+      repeat: no-repeat;
+    };
+    &:checked {
+      background-color: none;
+      background: {
+        image: url('/assets/images/ico_checkbg_on.png');
+      }
+    }
+  }
+  input[type='checkbox'] {
+    width: 24px;
+    height: 24px;
+    & + label {
+      padding-left: 3px;
+      vertical-align: middle;
+    }
+    & ~ input[type='checkbox'] {
+      margin-left: 25px;
+    }
+  }
+
+  .titleArea {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    text-align: left;   
+    width: calc(100% - 370px);
+    > h2 {
+      padding: 0;
+      font-size: 32px;
+      font-weight: 500;
+    }
+    .ico__shipp {
+      @include icons.retina-sprite(icons.$ico-shipp-group);
+    }
+    @include breakpoints.mobile() {
+      width: 100%;
+      padding-left: 10px;
+      padding-right: 10px;
+      > h2 {
+        font-size: 24px;
+      }
+      .ico__shipp {
+        @include mixins.sprite(mo_icons.$ico-shipp);
+      }
+    }
+  }
+
+  .orderListArea {
+    width: calc(100% - 370px);
+    border:1px solid #000000;
+    border-radius: 35px;
+    overflow: hidden;
+    padding: 30px;
+  
+    @include breakpoints.mobile() {
+      width: 100%;
+      padding: 16px;
+    }
+    .ec-base-table {
+      thead {
+        th {
+          font-weight: 500;
+          &:nth-child(1) {
+            width: 50px;
+            text-align: left;
+          }
+          &:nth-child(2) {
+            width: 150px;
+            color:#ffffff;
+            text-align: left;
+          }
+          &:nth-child(3) {
+            width: 225px;
+            text-align: left;
+          }
+        }
+      }
+      tbody {
+        td {
+          padding-left: 0 !important;
+          padding: 30px 5px !important;
+          font-family: "Pretendard Variable", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+          font-size: 16px;
+          color: #000000;
+          &:nth-child(1) {
+            padding-left: 0 !important;
+            text-align: left;
+          }
+          &:nth-child(2) {
+            padding-left: 0 !important;
+            padding-right: 40px;
+            text-align: left;
+          }
+          &:nth-child(3) {
+            padding-left: 0 !important;
+            padding-right: 15px !important;
+            text-align: left;
+            strong {
+              font-size: 16px;
+              font-weight: 500;
+            }
+          }
+          .option, .quantity {
+            margin: 0;
+            font-size: 14px;
+            font-weight: 400;
+            color: #707070;
+          }
+          .divflex {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+          }
+        }
+      }
+      tfoot {
+        border-top: 1px solid #000000;
+        td {
+          border: 0;
+          background: none;
+        }
+      }
+    }
+
+  }
+
+  .orderArea {
+    width: calc(100% - 370px);
+    border:1px solid #000000;
+    border-radius: 35px;
+    overflow: hidden;
+    padding: 30px;
+  
+    @include breakpoints.mobile() {
+      width: 100%;
+      padding: 16px;
+    }
+  }
+  .totalArea {
+    width: 370px;
+    border:1px solid #000000;
+    border-radius: 35px;
+    overflow: hidden;
+  }
+
+  .xans-order-form {
+    .ec-base-table {
+      colgroup {
+        display: none;
+      }
+      thead {
+        th {
+          border: 0;
+        }
+      }
+      &.typeList.gBorder {
+        table {
+          border: 0;
+        }
+        tbody {
+          td {
+            border: 0;
+          }
+        }
+      }
+      .txtInfo {
+        color: #000000;
+        img {
+          display: none;
+        }
+      }
+      td.thumb {
+        img {
+          max-width: 110px;
+        }
+      }
+    }
+    
+    .orderListArea {
+      .title {
+        height: auto;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        border-bottom: 0;
+        line-height: inherit;
+        background: transparent;
+      }
+    }
+  }
+
+}
