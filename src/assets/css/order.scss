@@ -30,6 +30,22 @@ width: 100%;
 
 
 .order_wrap {
+  position: relative;
+  .small_button {
+    display: flex;
+    align-items: center;
+    margin:0 10px 0 0;
+    padding-right: 10px;
+    padding-left: 10px;
+    height: 32px;
+    font-size: 14px;
+    border: 1px solid #000000;
+    border-radius: 25px;
+    &.btn_delete {
+      width: 70px;
+    }
+  }
+
   input[type='checkbox'] {
     width: 24px;
     height: 24px;
@@ -67,6 +83,7 @@ width: 100%;
     align-items: flex-end;
     text-align: left;   
     width: calc(100% - 370px);
+    margin:0 0 30px;
     > h2 {
       padding: 0;
       font-size: 32px;
@@ -94,12 +111,16 @@ width: 100%;
     border-radius: 35px;
     overflow: hidden;
     padding: 30px;
+    margin-bottom: 10px;
   
     @include breakpoints.mobile() {
       width: 100%;
       padding: 16px;
     }
     .ec-base-table {
+      table {
+        border: 0;
+      }
       thead {
         th {
           font-weight: 500;
@@ -147,12 +168,7 @@ width: 100%;
             margin: 0;
             font-size: 14px;
             font-weight: 400;
-            color: #707070;
-          }
-          .divflex {
-            display: flex;
-            align-items: center;
-            margin-top: 10px;
+            color: #000000;
           }
         }
       }
@@ -161,10 +177,50 @@ width: 100%;
         td {
           border: 0;
           background: none;
+          padding: 16px 0 0;
+        }
+      }
+
+      @include breakpoints.mobile() {
+        tr {
+          position: relative;
+          display: block;
+        }
+        td {
+          display: block;
+          width: 50%;
+          margin-left: 50%;
+          &:first-child, &.thumb {
+            position: absolute;
+            left: 0;
+            top:0;
+            margin-left: 0;
+          }
         }
       }
     }
 
+    .divflex {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      &.space {
+        margin-top: 0;
+        justify-content: space-between;
+      }
+    }
+    .order_discount {
+      font-size: 14px;
+    }
+    .product_delete-area {
+      display: flex;
+      align-items: center;
+      span {
+        display: inline-block;
+        letter-spacing: -1px;
+        color:#000000;
+      }
+    }
   }
 
   .orderArea {
@@ -178,8 +234,87 @@ width: 100%;
       width: 100%;
       padding: 16px;
     }
+    .title {
+      height: auto;
+      margin: 0 0 45px !important;
+      padding: 0;
+      border: 0;
+      border-bottom: 0;
+      line-height: inherit;
+      background: transparent;
+      font-size: 24px;
+      font-weight: 500;
+      h3 {
+        font-size: inherit;
+        font-weight: inherit;
+      }
+      .required {
+        font-size: 14px;
+      }
+    }
+
+    .ec-base-table {
+      tbody {
+        th, td {
+          padding: 1px 0;
+          border: 0;
+          background: none;
+        }
+        th {
+          padding-top: 15px;
+        }
+        tr:first-child {
+          th {
+            padding: 10px 0;
+          }
+          td {
+            padding: 10px 0;
+          }
+        }
+      }
+      th {
+        width: 100px;
+      }
+      input[type=text], select {
+        min-width: 110px;
+        height: 56px;
+        padding: 0 40px 0 24px;
+        border: 0;
+        font-size: 14px;
+      }
+      textarea {
+        min-height: 130px;
+        border-radius: 25px;
+        background-color: #f4f4f7;
+        padding: 20px 40px 20px 24px;
+        border: 0;
+        font-size: 14px;
+      }
+
+      .ec-shop-deliverySimpleForm {
+        tr:first-child th {
+          padding-top: 25px;
+        }
+        select {
+          margin-top:2px;
+        }
+      }
+    }
+    .use_delivery_cell {
+      input {
+        text-align: center;
+      }
+    }
+    input[type=radio] {
+      & + label {
+        font-size: 14px;
+      }
+    }
   }
   .totalArea {
+    position: absolute;
+    right: 0;
+    top: 62px;
     width: 370px;
     border:1px solid #000000;
     border-radius: 35px;
@@ -188,6 +323,12 @@ width: 100%;
 
   .xans-order-form {
     .ec-base-table {
+      table {
+        border: none;
+        &::before {
+          display: none;
+        }
+      }
       colgroup {
         display: none;
       }
@@ -228,8 +369,40 @@ width: 100%;
         border-bottom: 0;
         line-height: inherit;
         background: transparent;
+        font-size: 24px;
+        font-weight: 500;
+        > h3 {
+          font-size: inherit;
+          font-weight: inherit;
+        }
       }
     }
   }
 
+  .payArea {
+    width: calc(100% - 370px);
+    border-color: #000000;
+    border-radius: 35px;
+    overflow: hidden;
+    padding: 30px;
+
+  }
+
+  .ec-base-help {
+    width: calc(100% - 370px);
+    border-color: #000000;
+    border-radius: 35px;
+    overflow: hidden;
+    padding: 30px;
+
+     > h2, > h3 {
+       background: none;
+       border: none;
+       font-size: 24px;
+     }
+    .inner {
+      width: 100%;
+      font-family: "Pretendard Variable", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    }
+  }
 }
