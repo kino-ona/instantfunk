@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc', {
+		"pagetitle": "인스턴트펑크 공식홈페이지 - 인스턴트펑크 INSTANTFUNK - 마이페이지",
+		"webroot": "../"
+	})
+	<link rel="stylesheet" href="../assets/css/myshop.css">
+</head>
+<body>
+	<div id="wrap">
+		@@include('../inc/header.inc', {
+			"login": "false",
+			"webroot": "../"
+		})
+
+    <div class="container">
+			<div class="myshop">
+				<div class="myshop__container myshop__container--main">
+					<div class="myshop___articles">
+						<div class="myshop__article">
+							<div class="myshop__row myshop__row--col2">
+								<div class="myshop__roundbox myshop__roundbox--fill myshop__roundbox--user">
+									<div module="myshop_asyncbenefit" class="myshop__inner">
+										<div class="myshop__header">
+											<p class="myshop__title">WELCOME</p>
+										</div>
+										<p class="myshop__my">안녕하세요 “<span class="myshop__name">홍길동</span>”  회원님</p>
+										<div class="myshop__info">
+											<p class="myshop__tear">Quintet</p>
+										</div>
+									</div>
+								</div>
+								<div class="myshop__roundbox myshop__roundbox--split myshop__roundbox--pink">
+									<div module="myshop_asyncbankbook" class="myshop__inner">
+										<div class="myshop__header">
+											<p class="myshop__title">MY INFO</p>
+										</div>
+										<div class="myshop__detail">
+											<dl class="myshop__list">
+												<div class="myshop__item">
+													<dt>가용적립금</dt>
+													<dd>
+														<div class="myshop__label">
+															<span class="myshop__current">8,000</span>
+															<span class="myshop__unit">₩</span>
+														</div>
+														<div class="button">
+															<div class="button__container">
+																<a href="#" class="button__item">조회하기</a>
+															</div>
+														</div>
+													</dd>
+												</div>
+												<div class="myshop__item">
+													<dt>사용적립금</dt>
+													<dd>
+														<div class="myshop__label">
+															<span class="myshop__current">9,000</span>
+															<span class="myshop__unit">₩</span>
+														</div>
+													</dd>
+												</div>
+												<div class="myshop__item">
+													<dt>총 적립금</dt>
+													<dd>
+														<div class="myshop__label">
+															<span class="myshop__current">17,000</span>
+															<span class="myshop__unit">₩</span>
+														</div>
+													</dd>
+												</div>
+												<div class="myshop__item">
+													<dt>쿠폰</dt>
+													<dd>
+														<div class="myshop__label myshop__label--reverse">
+															<span class="myshop__current">3</span>
+															<span class="myshop__unit">개</span>
+														</div>
+														<div class="button">
+															<div class="button__container">
+																<a href="#" class="button__item">조회하기</a>
+															</div>
+														</div>
+													</dd>
+												</div>
+											</dl>
+											<div class="myshop__bottom">
+												<div class="myshop__sum">
+													<div class="myshop__left">
+														<p class="myshop__text">총주문 <span class="myshop__total">3</span> 회</p>
+													</div>
+													<div class="myshop__right">
+														<div class="myshop__label">
+															<span class="myshop__current">683,200</span>
+															<span class="myshop__unit">₩</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="myshop__roundbox myshop__roundbox--split myshop__roundbox--green">
+									<div module="myshop_orderstate" class="myshop__inner">
+										<div class="myshop__header">
+											<p class="myshop__title">MY ORDER</p>
+											<span class="myshop__sub">최근 3개월 기준</span>
+										</div>
+										<div class="myshop__detail">
+											<dl class="myshop__list">
+												<div class="myshop__item">
+													<dt>입금전</dt>
+													<dd>
+														<div class="myshop__label myshop__label--reverse">
+															<span class="myshop__current">8</span>
+															<span class="myshop__unit">건</span>
+														</div>
+													</dd>
+												</div>
+												<div class="myshop__item">
+													<dt>배송준비중</dt>
+													<dd>
+														<div class="myshop__label myshop__label--reverse">
+															<span class="myshop__current">4</span>
+															<span class="myshop__unit">건</span>
+														</div>
+													</dd>
+												</div>
+												<div class="myshop__item">
+													<dt>배송중</dt>
+													<dd>
+														<div class="myshop__label myshop__label--reverse">
+															<span class="myshop__current">3</span>
+															<span class="myshop__unit">건</span>
+														</div>
+													</dd>
+												</div>
+												<div class="myshop__item">
+													<dt>배송완료</dt>
+													<dd>
+														<div class="myshop__label myshop__label--reverse">
+															<span class="myshop__current">6</span>
+															<span class="myshop__unit">건</span>
+														</div>
+													</dd>
+												</div>
+											</dl>
+											<div class="myshop__bottom">
+												<ul class="myshop__cs-list">
+													<li class="myshop__cs-item">
+														취소 <a href="#" class="myshop__cs-link">1</a>건
+													</li>
+													<li class="myshop__cs-item">
+														교환 <a href="#" class="myshop__cs-link">1</a>건
+													</li>
+													<li class="myshop__cs-item">
+														반품 <a href="#" class="myshop__cs-link">1</a>건
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="myshop__article">
+							<div id="myshopMain" module="myshop_main">
+								<div class="myshop__row myshop__row--col4">
+									<div class="myshop__roundbox">
+										<div class="myshop__inner">
+											<div class="myshop__header">
+												<p class="myshop__title">ORDER</p>
+											</div>
+											<p class="myshop__desc">주문내역 조회</p>
+											<div class="myshop__ico myshop__ico--order">
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="myshop__roundbox">
+										<div class="myshop__inner">
+											<div class="myshop__header">
+												<p class="myshop__title">PROFILE</p>
+											</div>
+											<p class="myshop__desc">회원정보</p>
+											<div class="myshop__ico myshop__ico--profile">
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="myshop__roundbox">
+										<div class="myshop__inner">
+											<div class="myshop__header">
+												<p class="myshop__title">CART</p>
+											</div>
+											<p class="myshop__desc">장바구니</p>
+											<div class="myshop__ico myshop__ico--cart">
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="myshop__roundbox">
+										<div class="myshop__inner">
+											<div class="myshop__header">
+												<p class="myshop__title">MILEAGE</p>
+											</div>
+											<p class="myshop__desc">적립금</p>
+											<div class="myshop__ico myshop__ico--mileage">
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="myshop__roundbox">
+										<div class="myshop__inner">
+											<div class="myshop__header">
+												<p class="myshop__title">COUPON</p>
+											</div>
+											<p class="myshop__desc">쿠폰</p>
+											<div class="myshop__ico myshop__ico--coupon">
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="myshop__roundbox">
+										<div class="myshop__inner">
+											<div class="myshop__header">
+												<p class="myshop__title">BOARD</p>
+											</div>
+											<p class="myshop__desc">게시물 관리</p>
+											<div class="myshop__ico myshop__ico--board">
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="myshop__roundbox">
+										<div class="myshop__inner">
+											<div class="myshop__header">
+												<p class="myshop__title">ADDRESS</p>
+											</div>
+											<p class="myshop__desc">배송 주소록 관리</p>
+											<div class="myshop__ico myshop__ico--address">
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="myshop__roundbox">
+										<div class="myshop__inner">
+											<div class="myshop__header">
+												<p class="myshop__title">REVIEW</p>
+											</div>
+											<p class="myshop__desc">상품 리뷰 관리</p>
+											<div class="myshop__ico myshop__ico--review">
+												<i></i>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		@@include('../inc/footer.inc', {
+			"webroot": "../"
+		})
+	</div>
+</body>
+</html>

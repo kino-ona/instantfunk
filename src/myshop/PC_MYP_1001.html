@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc', {
+		"pagetitle": "인스턴트펑크 공식홈페이지 - 인스턴트펑크 INSTANTFUNK - 마이페이지 - 주문내역조회",
+		"webroot": "../"
+	})
+	<link rel="stylesheet" href="../assets/css/myshop.css">
+</head>
+<body>
+	<div id="wrap">
+		@@include('../inc/header.inc', {
+			"login": "false",
+			"webroot": "../"
+		})
+
+    <div class="container">
+			<div class="myshop">
+				<div class="myshop__container">
+					<div class="tab">
+						<div module="Myshop_OrderHistoryTab">
+							<ul class="tab__list">
+								<li class="tab__item selected">
+									<a href="#" class="tab__link">주문내역조회 <span class="tab__unit">(2)</span></a>
+								</li>
+								<li class="tab__item">
+									<a href="#" class="tab__link">취소/교환/반품 <span class="tab__unit">(2)</span></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="filter">
+						<div module="Myshop_OrderHistoryHead">
+							<fieldset>
+								<legend class="a11y">검색기간설정</legend>
+								<div class="filter__row">
+									<div class="filter__left">
+										<div class="select">
+											<select name="" id="">
+												<option value="">전체</option>
+											</select>
+										</div>
+										<div class="calendar">
+											<div class="calendar__form">
+												<input type="text" class="calendar__input" value="2022-01-01" readonly>
+												<button class="calendar__ico"><span class="a11y">달력</span></button>
+											</div>
+										</div>
+										<div class="filter__unit">~</div>
+										<div class="calendar">
+											<div class="calendar__form">
+												<input type="text" class="calendar__input" value="2022-01-01" readonly>
+												<button class="calendar__ico"><span class="a11y">달력</span></button>
+											</div>
+										</div>
+										<button type="button" class="filter__search">조회</button>
+									</div>
+									<div class="filter__right">
+										<div class="review__sort">
+											<button class="review_sort--head"><span>오늘</span> <i class="arrow"></i></button>
+											<ul class="review__sorting">
+												<li class="selected"><button class="sort__select">오늘</button></li>
+												<li><button class="sort__select">1주일</button></li>
+												<li><button class="sort__select">1개월</button></li>
+												<li><button class="sort__select">3개월</button></li>
+												<li><button class="sort__select">6개월</button></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</fieldset>
+						</div>
+					</div>
+					<div class="myshop__articles">
+						<div class="myshop__article">
+							<div class="myshop__row">
+								<div class="myshop__roundbox">
+									<div module="Myshop_OrderHistoryListitem">
+										<div class="product">
+											<div class="myshop__header">
+												<p class="myshop__title">기본정보</p>
+											</div>
+											<div class="product__thead">
+												<div class="product__tr">
+													<div class="product__td">상품정보</div>
+													<div class="product__td">주문일자/주문번호</div>
+													<div class="product__td">수량</div>
+													<div class="product__td">상품구매금액</div>
+													<div class="product__td">주문처리상태</div>
+													<div class="product__td">취소/교환/반품</div>
+												</div>
+											</div>
+											<div class="product__tbody">
+												<div class="product__tr">
+													<div class="product__td product__td--img">
+														<img src="../assets/images/@img_product01.png" alt="">
+													</div>
+													<div class="product__td">
+														<div class="product__row">
+															<div class="product__col">
+																<p class="product__name">
+																	Minen Striped<br>
+																	Jacket
+																</p>
+																<div class="product__info">
+																	<span class="product__size">S <span>사이즈</span></span>
+																	<span class="product__count">/ 1개</span>
+																	<p class="product__price">₩135,000</p>
+																</div>
+															</div>
+															<div class="product__col">
+																<div class="product__group">
+																	<div class="product__left">주문번호</div>
+																	<div class="product__right">
+																		<a href="#" class="product__order">20220502-0000284</a>
+																	</div>
+																</div>
+																<div class="product__group">
+																	<div class="product__left">주문일자</div>
+																	<div class="product__right">
+																		<p class="product__date">2022-05-02</p>
+																	</div>
+																</div>
+																<div class="product__group product__mobile">
+																	<div class="product__left">주문처리상태</div>
+																	<div class="product__right">배송완료</div>
+																</div>
+																<div class="product__group product__mobile">
+																	<div class="product__left">취소/교환/반품</div>
+																	<div class="product__right">-</div>
+																</div>
+																<div class="button">
+																	<div class="button__container">
+																		<a href="#" class="button__item">주문취소</a>
+																		<a href="#" class="button__item">교환신청</a>
+																	</div>
+																</div>
+															</div>
+															<div class="product__col">1</div>
+															<div class="product__col">₩135,000</div>
+															<div class="product__col">입금전</div>
+															<div class="product__col">-</div>
+														</div>
+													</div>
+												</div>
+												<div class="product__tr">
+													<div class="product__td product__td--img">
+														<img src="../assets/images/@img_product01.png" alt="">
+													</div>
+													<div class="product__td">
+														<div class="product__row">
+															<div class="product__col">
+																<p class="product__name">
+																	Minen Striped<br>
+																	Jacket
+																</p>
+																<div class="product__info">
+																	<span class="product__size">S <span>사이즈</span></span>
+																	<span class="product__count">/ 1개</span>
+																	<p class="product__price">₩135,000</p>
+																</div>
+															</div>
+															<div class="product__col">
+																<div class="product__group">
+																	<div class="product__left">주문번호</div>
+																	<div class="product__right">
+																		<a href="#" class="product__order">20220502-0000284</a>
+																	</div>
+																</div>
+																<div class="product__group">
+																	<div class="product__left">주문일자</div>
+																	<div class="product__right">
+																		<p class="product__date">2022-05-02</p>
+																	</div>
+																</div>
+																<div class="product__group product__mobile">
+																	<div class="product__left">주문처리상태</div>
+																	<div class="product__right">배송완료</div>
+																</div>
+																<div class="product__group product__mobile">
+																	<div class="product__left">취소/교환/반품</div>
+																	<div class="product__right">-</div>
+																</div>
+																<div class="button">
+																	<div class="button__container">
+																		<a href="#" class="button__item">주문취소</a>
+																		<a href="#" class="button__item">교환신청</a>
+																	</div>
+																</div>
+															</div>
+															<div class="product__col">1</div>
+															<div class="product__col">₩135,000</div>
+															<div class="product__col">입금전</div>
+															<div class="product__col">-</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="product__tfoot">
+												<div class="product__tr">
+													<p class="product__total"><span class="product__text">총</span> ₩405,000</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div module="Myshop_OrderHistoryPaging" class="review_paging">
+						<p><a href="#" class="btn__prev"><img src="../assets/images/btn_review_prev.gif" alt="이전 페이지"></a></p>
+						<div class="paging_number">
+							<p><span>1</span>/<span>9</span></p>
+						</div>
+						<p><a href="#" class="btn__next"><img src="../assets/images/btn_review_next.gif" alt="다음 페이지"></a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		@@include('../inc/footer.inc', {
+			"webroot": "../"
+		})
+	</div>
+</body>
+</html>

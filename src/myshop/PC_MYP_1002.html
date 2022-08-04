@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc', {
+		"pagetitle": "인스턴트펑크 공식홈페이지 - 인스턴트펑크 INSTANTFUNK - 마이페이지 - 주문내역조회 - 주문상세조회",
+		"webroot": "../"
+	})
+	<link rel="stylesheet" href="../assets/css/myshop.css">
+</head>
+<body>
+	<div id="wrap">
+		@@include('../inc/header.inc', {
+			"login": "false",
+			"webroot": "../"
+		})
+
+    <div class="container">
+			<div class="myshop">
+				<div class="myshop__container">
+					<div class="myshop__header">
+						<p class="myshop__title">주문상세조회</p>
+					</div>
+					<div module="MyShop_OrderHistoryDetail" unroll="1">
+						<div class="myshop__articles">
+							<div class="myshop__article">
+								<div class="myshop__row myshop__row--col2">
+									<div class="myshop__roundbox">
+										<div class="myshop__header">
+											<div class="myshop__title">
+												<p class="myshop__title">주문정보</p>
+											</div>
+										</div>
+										<div class="board">
+											<div class="board__row">
+												<div class="board__board">
+													<div class="board__tbody">
+														<div class="board__tr">
+															<div class="board__left">주문번호</div>
+															<div class="board__right">20220502-0000284</div>
+														</div>
+														<div class="board__tr">
+															<div class="board__left">주문일자</div>
+															<div class="board__right">2022-05-02 13 : 18 : 02</div>
+														</div>
+														<div class="board__tr">
+															<div class="board__left">주문자</div>
+															<div class="board__right">홍길동</div>
+														</div>
+														<div class="board__tr">
+															<div class="board__left">주문처리상태</div>
+															<div class="board__right">
+																<div class="reverse">
+																	<div class="reverse__item">입금전</div>
+																	<div class="reverse__item">
+																		<div class="button">
+																			<div class="button__container">
+																				<a href="#" class="button__item">주문취소</a>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="myshop__roundbox">
+										<div class="myshop__header">
+											<div class="myshop__title">
+												<p class="myshop__title">결제예정 금액</p>
+											</div>
+										</div>
+										<div class="board">
+											<div class="board__row">
+												<div class="board__board">
+													<div class="board__tbody">
+														<div class="board__tr">
+															<div class="board__left">총 주문 금액</div>
+															<div class="board__right">
+																<div class="reverse">
+																	<div class="reverse__item">₩383,000</div>
+																	<div class="reverse__item">
+																		<div class="button">
+																			<div class="button__container">
+																				<a href="#" class="button__item">내역보기</a>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="board__tr">
+															<div class="board__left">결제수단</div>
+															<div class="board__right">
+																<div class="payment">
+																	<div class="reverse">
+																		<div class="reverse__item">무통장입금</div>
+																		<div class="reverse__item">
+																			<div class="button">
+																				<div class="button__container">
+																					<a href="#" class="button__item">
+																						인터넷뱅킹 바로가기
+																						<i class="button__ico button__ico--arrow-right"></i>
+																					</a>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<p class="payment__detail">
+																		입금자 : <span class="payment__current">홍길동</span>, 계좌번호 : <span class="payment">신한은행 140-012-368968</span>
+																		<span class="payment__seller">(주)인스턴트펑크인터내셔널</span>
+																	</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="board__tfoot">
+														<p class="board__total"><span class="board__text">총 결제금액</span> ₩405,000</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="myshop__article">
+								<div class="myshop__row">
+									<div class="myshop__roundbox">
+										<div class="product">
+											<div class="myshop__header">
+												<p class="myshop__title">주문내역</p>
+											</div>
+											<div class="product__thead">
+												<div class="product__tr">
+													<div class="product__td">상품정보</div>
+													<div class="product__td">주문일자/주문번호</div>
+													<div class="product__td">수량</div>
+													<div class="product__td">상품구매금액</div>
+													<div class="product__td">주문처리상태</div>
+													<div class="product__td">취소/교환/반품</div>
+												</div>
+											</div>
+											<div class="product__tbody">
+												<div class="product__tr">
+													<div class="product__td product__td--img">
+														<img src="../assets/images/@img_product01.png" alt="">
+													</div>
+													<div class="product__td">
+														<div class="product__row">
+															<div class="product__col">
+																<p class="product__name">
+																	Minen Striped<br>
+																	Jacket
+																</p>
+																<div class="product__info">
+																	<span class="product__size">S <span>사이즈</span></span>
+																	<span class="product__count">/ 1개</span>
+																	<p class="product__price">₩135,000</p>
+																</div>
+															</div>
+															<div class="product__col">
+																<div class="product__group">
+																	<div class="product__left">주문번호</div>
+																	<div class="product__right">
+																		<a href="#" class="product__order">20220502-0000284</a>
+																	</div>
+																</div>
+																<div class="product__group">
+																	<div class="product__left">주문일자</div>
+																	<div class="product__right">
+																		<p class="product__date">2022-05-02</p>
+																	</div>
+																</div>
+																<div class="product__group product__mobile">
+																	<div class="product__left">주문처리상태</div>
+																	<div class="product__right">배송완료</div>
+																</div>
+																<div class="product__group product__mobile">
+																	<div class="product__left">취소/교환/반품</div>
+																	<div class="product__right">-</div>
+																</div>
+																<div class="button">
+																	<div class="button__container">
+																		<a href="#" class="button__item">주문취소</a>
+																		<a href="#" class="button__item">교환신청</a>
+																	</div>
+																</div>
+															</div>
+															<div class="product__col">1</div>
+															<div class="product__col">₩135,000</div>
+															<div class="product__col">입금전</div>
+															<div class="product__col">-</div>
+														</div>
+													</div>
+												</div>
+												<div class="product__tr">
+													<div class="product__td product__td--img">
+														<img src="../assets/images/@img_product01.png" alt="">
+													</div>
+													<div class="product__td">
+														<div class="product__row">
+															<div class="product__col">
+																<p class="product__name">
+																	Minen Striped<br>
+																	Jacket
+																</p>
+																<div class="product__info">
+																	<span class="product__size">S <span>사이즈</span></span>
+																	<span class="product__count">/ 1개</span>
+																	<p class="product__price">₩135,000</p>
+																</div>
+															</div>
+															<div class="product__col">
+																<div class="product__group">
+																	<div class="product__left">주문번호</div>
+																	<div class="product__right">
+																		<a href="#" class="product__order">20220502-0000284</a>
+																	</div>
+																</div>
+																<div class="product__group">
+																	<div class="product__left">주문일자</div>
+																	<div class="product__right">
+																		<p class="product__date">2022-05-02</p>
+																	</div>
+																</div>
+																<div class="product__group product__mobile">
+																	<div class="product__left">주문처리상태</div>
+																	<div class="product__right">배송완료</div>
+																</div>
+																<div class="product__group product__mobile">
+																	<div class="product__left">취소/교환/반품</div>
+																	<div class="product__right">-</div>
+																</div>
+																<div class="button">
+																	<div class="button__container">
+																		<a href="#" class="button__item">주문취소</a>
+																		<a href="#" class="button__item">교환신청</a>
+																	</div>
+																</div>
+															</div>
+															<div class="product__col">1</div>
+															<div class="product__col">₩135,000</div>
+															<div class="product__col">입금전</div>
+															<div class="product__col">-</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="product__tfoot">
+												<div class="product__tr">
+													<p class="product__total"><span class="product__text">총</span> ₩405,000</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="myshop__article">
+								<div class="myshop__roundbox">
+									<div class="myshop__header">
+										<p class="myshop__title">배송정보</p>
+									</div>
+									<div class="board">
+										<div class="board__row">
+											<div class="board__board board__board--left">
+												<div class="board__tbody">
+													<div class="board__tr">
+														<div class="board__left">받으시는분</div>
+														<div class="board__right">홍길동</div>
+													</div>
+													<div class="board__tr">
+														<div class="board__left">우편번호</div>
+														<div class="board__right">1111</div>
+													</div>
+													<div class="board__tr">
+														<div class="board__left">주소</div>
+														<div class="board__right">서울특별시 강남구 강남대로126길 21 (논현동)</div>
+													</div>
+												</div>
+											</div>
+											<div class="board__board board__board--left">
+												<div class="board__tbody">
+													<div class="board__tr">
+														<div class="board__left">일반전화</div>
+														<div class="board__right">02-1111-1111</div>
+													</div>
+													<div class="board__tr">
+														<div class="board__left">휴대전화</div>
+														<div class="board__right">010-1111-1111</div>
+													</div>
+													<div class="board__tr">
+														<div class="board__left">배송메시지</div>
+														<div class="board__right">현관문앞에 놔둬주시고 건물 출입구 비밀번호는 1234# 입니다</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="button">
+									<div class="button__container button__container--left">
+										<button type="button" class="button__item">세금계산서 신청</button>
+										<button type="button" class="button__item">현금영수증 신청</button>
+										<button type="button" class="button__item">거래명세서 인쇄</button>
+										<button type="button" class="button__item button__item--end">주문목록 보기</button>
+									</div>
+								</div>
+							</div>
+							<div class="myshop__article">
+								<div class="myshop__roundbox">
+									<div class="myshop__header">
+										<p class="myshop__title">이용안내</p>
+									</div>
+									<div class="bullet">
+										<div class="bullet__grid">
+											<div class="bullet__group">
+												<p class="bullet__title">부가가치세법 변경에 따른 신용카드매출전표 및 세금계산서 변경 안내</p>
+												<ul class="bullet__list">
+													<li class="bullet__item">
+														<div class="bullet__row">
+															<span class="bullet__unit">1.</span>
+															<span class="bullet__text">현금영수증은 1원 이상의 현금성거래(무통장입금, 실시간계좌이체, 에스크로, 예치금 에 대해 발행이 됩니다.</span>
+														</div>
+													</li>
+													<li class="bullet__item">
+														<div class="bullet__row">
+															<span class="bullet__unit">2.</span>
+															<span class="bullet__text">현금영수증 발행 금액에는 배송비는 포함되고, 적립금사용액은 포함되지 않습니다.</span>
+														</div>
+													</li>
+													<li class="bullet__item">
+														<div class="bullet__row">
+															<span class="bullet__unit">3.</span>
+															<span class="bullet__text">현금연수증 발행 취소의 경우는 시간 제한이 없습니다. (국세청의 정책에 따라 변경 될 수 있습니다.)</span>
+														</div>
+													</li>
+													<li class="bullet__item">
+														<div class="bullet__row">
+															<span class="bullet__unit">4.</span>
+															<span class="bullet__text">현금영수증이나 세금계산서 중 하나만 발행 가능 합니다.</span>
+														</div>
+													</li>
+												</ul>
+											</div>
+											<div class="bullet__group">
+												<p class="bullet__title">세금계산서 발행 안내</p>
+												<ul class="bullet__list">
+													<li class="bullet__item">
+														<div class="bullet__row">
+															<span class="bullet__unit">1.</span>
+															<span class="bullet__text">부가가치세법 제 54조에 의거하여 세금계산서는 배송완료일로부터 다음달 10일까지만 요청하실 수 있습니다.</span>
+														</div>
+													</li>
+													<li class="bullet__item">
+														<div class="bullet__row">
+															<span class="bullet__unit">2.</span>
+															<span class="bullet__text">세금계산서는 사업자만 신청하실 수 있습니다.</span>
+														</div>
+													</li>
+													<li class="bullet__item">
+														<div class="bullet__row">
+															<span class="bullet__unit">3.</span>
+															<span class="bullet__text">배송이 완료된 주문에 한하여 세금계산서 발행신청이 가능합니다.</span>
+														</div>
+													</li>
+													<li class="bullet__item">
+														<div class="bullet__row">
+															<span class="bullet__unit">4.</span>
+															<span class="bullet__text">[세금계산서 신청]버튼을 눌러 세금계산서 신청양식을 작성 후 팩스로 사업자등록증사본을 보내셔야 세금계산서 발행이 가능합니다.</span>
+														</div>
+													</li>
+													<li class="bullet__item">
+														<div class="bullet__row">
+															<span class="bullet__unit">5.</span>
+															<span class="bullet__text">[세금계산서 인쇄]버튼을 누르면 발행된 세금계산서를 인쇄하실 수 있습니다.</span>
+														</div>
+													</li>
+													<li class="bullet__item">
+														<div class="bullet__row">
+															<span class="bullet__unit">6.</span>
+															<span class="bullet__text">세금계산서는 실결제금액에 대해서만 발행됩니다. (적립금과 할인금액은 세금계산서 금액에서 제외됨)</span>
+														</div>
+													</li>
+												</ul>
+											</div>
+											<div class="bullet__group">
+												<p class="bullet__title">현금영수증 이용안내</p>
+												<ul class="bullet__list">
+													<li class="bullet__item">
+														<div class="bullet__row">
+															<span class="bullet__unit">1.</span>
+															<span class="bullet__text">변경된 부가가치세법에 의거, 2004,7.1 이후 신용카드로 결제하신 주문에 대해서는 세금계산서 발행이 불가하며 신용카드 매출전표로 부가가치세 신고를 하셔야합니다. (부가가치세법 시행령 57조)</span>
+														</div>
+													</li>
+													<li class="bullet__item">
+														<div class="bullet__row">
+															<span class="bullet__unit">2.</span>
+															<span class="bullet__text">[전체 상품 주문] 버튼을 누르시면 장바구니의 구분없이 선택한 모든 상품에 대한 주문/결제가 이루어집니다.</span>
+														</div>
+													</li>
+												</ul>
+											</div>
+											<div class="bullet__group">
+												<p class="bullet__title">신용카드매출전표 발행 안내</p>
+												<p class="bullet__item">
+													<div class="bullet__row">
+														<span class="bullet__unit">1.</span>
+														<span class="bullet__text">신용카드 결제는 사용하는 PG사 명의로 발행됩니다.</span>
+													</div>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		@@include('../inc/footer.inc', {
+			"webroot": "../"
+		})
+	</div>
+</body>
+</html>
