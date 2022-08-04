@@ -5,6 +5,49 @@
 
 // member
 .member {
+	input[type=text], input[type=password] {
+		height: 58px;
+    padding: 0 14px;
+    border: 1px solid #f4f4f7;
+		color: #000;
+    font-size: 18px;
+	}
+	input[type=radio]:checked:before,
+	input[type=radio]:checked:after {
+		display: none;
+	}
+	input[type=checkbox], input[type=radio] {
+		margin-right: 5px;
+		border: 1px solid #000;
+		& + label {
+			margin-right: 15px;
+			font-size: 14px;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+	select {
+		height: 58px;
+		padding: 0 14px;
+		border: 1px solid #f4f4f7;
+		color: #000;
+		&#hint {
+			width: 100%;
+		}
+	}
+	
+	ul, ol {
+		margin-top: 10px;
+		li {
+			padding:5px 0;
+		}
+	}
+	.grid {
+		input[type=text] {
+			margin-top: 15px;
+		}
+	}
 	.member__container {
 		max-width: calc(1360px + 3.37vw);
 		margin: 0 auto;
@@ -18,6 +61,14 @@
 		.member__body {
 			.member__group {
 				max-width: none;
+			}
+		}
+		.member__card {
+			.table__table .table__row  {
+				margin-bottom: 15px;
+				&:last-child {
+					margin-bottom: 5px;
+				}
 			}
 		}
 	}
@@ -243,7 +294,7 @@
 			height: 44.06vw;
 			max-height: 846px;
 			border-radius: 30px;
-			background: url('../images/bg_login_visual.png') no-repeat 50% 50%;
+			background: url('/assets/images/bg_login_visual.png') no-repeat 50% 50%;
 			.login__text {
 				display: none;
 			}
@@ -392,8 +443,10 @@
 			display: flex;
 			align-items: center;
 			.form__col {
+				display: flex;
 				flex: 1;
 				margin-left: 2px;
+				align-items: center;
 				&:first-child {
 					margin-left: 0;
 				}
@@ -501,13 +554,21 @@
 			.table__row {
 				display: flex;
 				align-items: baseline;
-				min-height: 58px;
 				padding: 1px 0;
+				margin-bottom: 5px;
+				// min-height: 58px;
 				.table__left {
-					width: 101px;
+					width: 140px;
 				}
 				.table__right {
 					flex: 1;
+				}
+				input + span {
+					display: block;
+					padding-left: 10px;
+					margin-top: 5px;
+					font-size: 12px;
+					@include mixins.PtdRegular();
 				}
 			}
 		}
@@ -794,7 +855,7 @@
 				height: 50px;
 				border-top: 1px solid #000;
 				border-radius: 0;
-				background: url('../images/m_bg_login_visual.png') no-repeat 0 -36.13vw;
+				background: url('/assets/images/m_bg_login_visual.png') no-repeat 0 -36.13vw;
 				background-size: 101.6vw auto;
 				.login__text {
 					display: block;
@@ -1061,5 +1122,8 @@
 				}
 			}
 		}
+	}
+	.ec-base-chk {
+		vertical-align: middle;
 	}
 }

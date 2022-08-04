@@ -246,6 +246,15 @@ width: 100%;
       width: 100%;
       padding: 16px;
     }
+    .ico_required {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background-color: #31cdd6;
+      border-radius: 100%;
+      overflow: hidden;
+      vertical-align: top;
+    }
     .title {
       height: auto;
       padding: 0;
@@ -348,25 +357,6 @@ width: 100%;
       }
     }
   }
-  .totalArea {
-    width: calc(100% - 370px);
-    padding: 30px;
-    margin-bottom: 10px;
-    border:1px solid #000000;
-    border-radius: 35px;
-    overflow: hidden;
-    .title {
-      font-size: 24px;
-      > h3 {
-        font-size: inherit;
-      }
-    }
-    .total {
-      th {
-        background: none !important;
-      }
-    }
-  }
 
   .xans-order-form {
     .title {
@@ -392,8 +382,9 @@ width: 100%;
           border: 0;
         }
         tbody {
-          td {
+          td, th {
             border: 0;
+            padding-left: 0;
           }
         }
       }
@@ -437,15 +428,203 @@ width: 100%;
       &::after {
         display: none;
       }
+      .title {
+        display: flex;
+        justify-content: space-between;
+        height: auto;
+        padding: 0;
+        border: 0;
+        border-bottom: 0;
+        line-height: inherit;
+        background: transparent;
+        font-size: 24px;
+        font-weight: 500;
+        > h3 {
+          font-size: inherit;
+          font-weight: inherit;
+        }
+        > span {
+          font-size: 14px;
+        }
+      }
       .total {
         float: inherit;
         position: absolute;
         right: 0;
         top: 62px;
         margin: 0;
+        width: 370px;
+        > div {
+          position: fixed;
+          top: 220px;
+          width: 360px;
+        }
+      }
+      .method {
+        display: flex;
+        padding: 0;
+        border: 0;
+        .ec-base-label {
+          flex:1;
+          margin: 0;
+          margin-right: 10px;
+          padding: 20px;
+          border-radius: 30px;
+          border: 1px solid #d9d9d9;
+          overflow: hidden;
+          &:last-child {
+            margin-right: 0;
+          }
+          label {
+            margin: 0 0 0 5px;
+            font-size: 14px;
+          }
+        }
+      }
+      .payment {
+        > .ec-base-table {
+          tbody {
+            th, td {
+              padding: 0;
+              border: 0;
+              background-color: transparent;
+            }
+            th {
+              width: 100px;
+            }
+          }
+          input[type=text] {
+            width: auto;
+            height: 56px;
+            border: 0;
+          }
+          select {
+            width: 40%;
+            height: 56px;
+            border: 0;
+          }
+        }
+      }
+    }
+
+    .totalArea {
+      position: relative;
+      display: flex;
+      width: calc(100% - 370px);
+      margin-bottom: 10px;
+      font-family: "Pretendard Variable", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+      > div {
+        flex: 1;
+        padding: 60px 30px 30px;
+        border:1px solid #000000;
+        border-radius: 35px;
+        overflow: hidden;
+        align-items: center;
+      }
+      .title {
+        position: absolute;
+        left: 30px;
+        top: 30px;
+        font-size: 24px;
+        border: 0;
+        border-radius: 0;
+        padding: 0;
+        > h3 {
+          font-size: inherit;
+        }
+      }
+      .ec-base-table.total {
+        position: relative;
+        min-height: 300px;
+        table {
+          position: initial;
+        }
+        th {
+          background: none !important;
+        }
+        td {
+          text-align: right;
+        }
+        th, td {
+          height: auto;
+        }
+        tr {
+          &:last-child {
+            display: flex;
+            position: absolute;
+            bottom: 30px;
+            width: calc(100% - 60px);
+            border-top: 1px solid #000000;
+            justify-content:space-between;
+          }
+        }
+        .btn_total-detail {
+          display: inline-flex;
+          width: 70px;
+          justify-content: center;
+          margin-left: 10px;
+        }
+      }
+      .discount_detail.detail {
+        margin-left: 10px;
+        tbody {
+          th, td {
+            padding: 9px 0 8px 0;
+            border: none;
+            background: none !important;
+          }
+          th {
+            width: 140px;
+          }
+          td {
+            width: calc(100% - 140px);
+            text-align: right;
+            &.td_full {
+              width: 100%;
+              text-align: left;
+              input[type=text] {
+                width: 100% !important;  
+              }
+            }
+          }
+        }
+        tr {
+          display: flex;
+        }
+  
+        input[type=text] {
+          height: 56px;
+        }
+        .mileage_field {
+          th {
+            padding-top: 30px;
+          }
+          .mileage_title {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-size: 18px;
+            font-weight: 500;
+            color:#000000;
+            p {
+              font-size: 14px;
+              text-align: right;
+            }
+            .txtWarn {
+              color: #31cdd6;
+            }
+          }
+        }
+        .info {
+          li {
+            background: none;
+            padding-left: 0;
+          }
+        }
       }
     }
   }
+  // .xans-order-form
 
   .ec-base-help {
     width: calc(100% - 370px);
@@ -462,6 +641,12 @@ width: 100%;
     .inner {
       width: 100%;
       font-family: "Pretendard Variable", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    }
+    ol {
+      li {
+        padding-left: 0;
+        background: none;
+      }
     }
   }
 }
