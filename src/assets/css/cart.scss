@@ -287,8 +287,13 @@ width: 100%;
   .ec-base-table.typeList .center td.right {
     padding-right: 0 !important;
   }
-  .ec-base-table td.thumb img {
-    max-width: 100% !important;
+  .ec-base-table td.thumb {
+    padding-bottom: 15px;
+    img {
+      max-width: 85% !important;
+      border-radius: 25px;
+      overflow: hidden;
+    }
   }
   
   .ec-base-qty-new {

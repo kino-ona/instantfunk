@@ -426,6 +426,8 @@ width: 100%;
       td.thumb {
         img {
           max-width: 110px;
+          border-radius: 25px;
+          overflow: hidden;
         }
       }
     }
