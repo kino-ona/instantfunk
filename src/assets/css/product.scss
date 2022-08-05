@@ -45,6 +45,7 @@
   }
 }
 .review_sort--head {
+  display: inherit;
   position: relative;
   width: 120px;
   padding: 15px 10px 15px 20px;
@@ -775,7 +776,7 @@
           height: 13px;
           margin-right: 5px;
           background: {
-            image: url('../images/ico_star_xs.png');
+            image: url('/assets/images/ico_star_xs.png');
             size: cover;
             position: center center;
           }
