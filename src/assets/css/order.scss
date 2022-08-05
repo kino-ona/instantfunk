@@ -28,7 +28,6 @@ width: 100%;
   }
 }
 
-
 .order_wrap {
   position: relative;
   .small_button {
@@ -46,6 +45,10 @@ width: 100%;
     }
     &.btn_gobank {
       display: inline-flex;
+    }
+    &.btn_zipcode {
+      display: inline-flex;
+      width: 75px;
     }
   }
   input[type='radio'] {
@@ -261,6 +264,9 @@ width: 100%;
       vertical-align: top;
     }
     .title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       height: auto;
       padding: 0;
       border: 0;
@@ -274,6 +280,8 @@ width: 100%;
         font-weight: inherit;
       }
       .required {
+        position: relative;
+        margin: 0;
         font-size: 14px;
       }
     }
@@ -286,6 +294,7 @@ width: 100%;
           border: 0;
           background: none;
           vertical-align: middle;
+          @include mixins.PtdRegular();
         }
         th {
           padding-top: 5px;
@@ -300,7 +309,7 @@ width: 100%;
         }
       }
       th {
-        width: 100px;
+        width: 140px;
       }
       input[type=text], select {
         min-width: 110px;
@@ -352,8 +361,23 @@ width: 100%;
         display: inline-flex;
         justify-content: center;
       }
-      .btn_zipcode {
-        width: 75px;
+    }
+    #ozipcode1 {
+      max-width: 180px;
+    }
+    .ec-orderform-emailRow {
+      select {
+        max-width: 180px;
+      }
+    }
+    .noMember {
+      input[type=password] {
+        min-width: 110px;
+        height: 56px;
+        padding: 0 40px 0 24px;
+        border: 0;
+        font-size: 14px;
+        margin-top: 2px !important;
       }
     }
     input[type=radio] {
@@ -520,6 +544,9 @@ width: 100%;
             }
           }
         }
+        .paymentAgree {
+          margin: 20px 0 0;
+        }
       }
       .method {
         display: flex;
@@ -570,6 +597,29 @@ width: 100%;
         tbody {
           td {
             padding-bottom: 2px !important;
+          }
+        }
+      }
+      .agree {
+        input[type=radio] {
+          & + label {
+            font-size: 14px;
+          }
+        }
+        .cash {
+          tbody {
+            th, td {
+              padding-left: 0;
+              border: 0;
+              background: transparent;
+            }
+          }
+          .mobile {
+            input[type=text], select {
+              width: 90px !important;
+              height: 46px;
+              text-align: center;
+            }
           }
         }
       }
@@ -746,6 +796,205 @@ width: 100%;
 
   .ec-base-help {
     width: calc(100% - 370px);
+    border-color: #000000;
+    border-radius: 35px;
+    overflow: hidden;
+    padding: 30px;
+
+     > h2, > h3 {
+       background: none;
+       border: none;
+       font-size: 24px;
+    }
+    h4 {
+      font-size: 14px;
+    }
+    .inner {
+      width: 100%;
+      font-family: "Pretendard Variable", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    }
+    ol {
+      li {
+        margin-bottom: 6px;
+      }
+    }
+  }
+}
+
+.order_result_wrap {
+  .ec-base-box.typeMember {
+    display: none;
+  }
+  .titleArea {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    text-align: left;   
+    width: calc(100% - 370px);
+    margin:0 0 30px;
+    > h2 {
+      padding: 0;
+      font-size: 32px;
+      font-weight: 500;
+    }
+    .ico__shipp {
+      @include icons.retina-sprite(icons.$ico-shipp-group);
+    }
+    @include breakpoints.mobile() {
+      width: 100%;
+      padding-left: 10px;
+      padding-right: 10px;
+      > h2 {
+        font-size: 24px;
+      }
+      .ico__shipp {
+        @include mixins.sprite(mo_icons.$ico-shipp);
+      }
+    }
+  }
+  .xans-order-result {
+    .orderInfo {
+      float: left;
+      width: calc(50% - 5px);
+      min-height: 260px;
+      margin: 0;
+      background-image: none;
+      background: {
+        color: #5eecfa;
+      }
+      border: 1px solid #000000;
+      border-radius: 35px;
+      overflow: hidden;
+      padding: 30px;  
+      margin-bottom: 10px;
+      @include mixins.PtdRegular();
+      strong {
+        font-size: 14px;
+      }
+      p {
+        strong {
+          font-size: 24px;
+        }
+      }
+    }
+    .orderArea {
+      float: left;
+      width: calc(50% - 5px);
+      min-height: 260px;
+      margin-left: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #000000;
+      border-radius: 35px;
+      overflow: hidden;
+      padding: 30px;  
+      .title {
+        margin: 0;
+        margin-bottom: 25px;
+        font-size: 24px;
+        > h3 {
+          font-size: inherit;
+        }
+      }
+      .ec-base-table {
+        table {
+          border: 0;
+          &::before {
+            display: none;
+          }
+        }
+        tbody {
+          th, td {
+            padding: 0;
+            border: 0;
+            padding-bottom: 15px;
+            background: transparent;
+            @include mixins.PtdRegular();
+          }
+        }
+      }
+    }
+
+    .orderListArea {
+      clear: both;
+      border: 1px solid #000000;
+      border-radius: 35px;
+      overflow: hidden;
+      padding: 30px;  
+      .title {
+        margin: 0;
+        margin-bottom: 25px;
+        font-size: 24px;
+        > h3 {
+          font-size: inherit;
+        }
+      }
+      .ec-base-table {
+        table {
+          border: 0;
+        }
+        thead {
+          th {
+            border: 0;
+            background: transparent;
+          }
+        }
+        tbody, tfoot {
+          td {
+            border: 0;
+            background: transparent;
+          }
+        }
+        tfoot {
+          td {
+            border-top: 1px solid #000000;
+          }
+        }
+        
+      }
+    }
+
+    .totalArea {
+      position: relative;
+      float: left;
+      width: calc(50% - 5px);
+      min-height: 440px;
+      border: 1px solid #000000;
+      border-radius: 35px;
+      overflow: hidden;
+      padding: 30px;  
+      margin-top: 10px;
+      &:before {
+        content: '총 결제금액';
+        display: block;
+        margin-bottom: 25px;
+        font-size: 24px;
+      }
+    }
+    .shipping_area {
+      float: left;
+      width: calc(50% - 5px);
+      min-height: 440px;
+      margin-top: 10px;
+    }
+    .ec-base-button {
+      clear: both;
+      a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 5px;
+        padding-right: 25px;
+        padding-left: 25px;
+        height: 60px;
+        border: 1px solid #000000;
+        border-radius: 30px;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .ec-base-help {
+    width: 100%;
     border-color: #000000;
     border-radius: 35px;
     overflow: hidden;

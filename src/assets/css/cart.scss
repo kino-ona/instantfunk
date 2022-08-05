@@ -406,7 +406,7 @@ width: 100%;
   .total_order_price_head dd,
   .area_delv_dl dd,
   .area_delv_dl dd * {
-    font-family: "Pretendard Variable", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    @include mixins.PtdRegular();
     font-weight: 600;
   }
   .area_delv_dl {
