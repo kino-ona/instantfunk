@@ -44,6 +44,9 @@ width: 100%;
     &.btn_delete {
       width: 70px;
     }
+    &.btn_gobank {
+      display: inline-flex;
+    }
   }
   input[type='radio'] {
     border: 1px solid #000000;
@@ -560,6 +563,13 @@ width: 100%;
             width: 40%;
             height: 56px;
             border: 0;
+          }
+        }
+      }
+      .ec-base-table {
+        tbody {
+          td {
+            padding-bottom: 2px !important;
           }
         }
       }
