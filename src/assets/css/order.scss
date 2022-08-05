@@ -82,9 +82,11 @@ width: 100%;
       margin-left: 25px;
     }
   }
+  
   .ec-base-table {
+    input[type=text]:focus,input[type=password]:focus,
     select:not([readonly]):not([disabled]):not([aria-invalid=true]):focus {
-      background-color: #f4f4f7;
+      background-color: #f4f4f7 !important; 
     }
   }
 
@@ -456,8 +458,64 @@ width: 100%;
         width: 370px;
         > div {
           position: fixed;
-          top: 220px;
+          // top: 220px;
           width: 360px;
+          border:1px solid #000000;
+          border-radius: 35px;
+          overflow: hidden;
+          padding: 27px 27px 10px;
+        }
+        h4 {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          margin: 0;
+          font-size: 24px;
+          font-weight: 500;
+          span {
+            order: 1;
+          }
+          strong {
+            order: 2;
+            font-size: 14px;
+            color: #31cdd6;
+            text-decoration: underline;
+          }
+        }
+        .price {
+          margin: 30px 0 0;
+          color:#000000;
+          input#total_price {
+            width: auto;
+            background: none;
+            color:#000000;
+            font-size: 32px;
+          }
+        }
+        .button {
+          position: relative;
+          a {
+            > span {
+              display: inline-flex;
+              justify-content: center;
+              width: 100%;
+              background-color: #000000;
+              border-radius: 35px;
+              color:#ffffff;
+              font-size: 82px;
+              text-align: center;
+            }
+          }
+        }
+        .mileage {
+          margin-top: 10px;
+          .ec-base-desc {
+            border: 0;
+            dt {
+              text-align: left;
+            }
+          }
         }
       }
       .method {
@@ -623,6 +681,56 @@ width: 100%;
         }
       }
     }
+
+    .ec-base-layer {
+      border-radius: 35px;
+      .close {
+        right: 10px;
+        top: 10px;
+        width:30px;
+        height:30px;
+        &:before, &:after {
+          position: absolute;
+          left: 15px;
+          content: ' ';
+          height: 20px;
+          width: 1px;
+          background-color: #000;
+        }
+        &:before {
+          transform: rotate(45deg);
+        }
+        &:after {
+          transform: rotate(-45deg);
+        }
+        img {
+          display: none;
+        }
+      }
+      .content {
+        position: relative;
+        padding: 25px;
+        > p {
+          padding-bottom: 15px;
+          font-size: 28px;
+          text-align: left;
+          &::before {
+            content: 'TOTAL';
+            display: block;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color:#000000;
+          }
+        }
+      }
+      .ec-base-desc.typeDot {
+        padding-top: 15px;
+        .term {
+          background: none;
+          padding-left: 0;
+        }
+      }
+    }
   }
   // .xans-order-form
 
@@ -637,15 +745,17 @@ width: 100%;
        background: none;
        border: none;
        font-size: 24px;
-     }
+    }
+    h4 {
+      font-size: 14px;
+    }
     .inner {
       width: 100%;
       font-family: "Pretendard Variable", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     }
     ol {
       li {
-        padding-left: 0;
-        background: none;
+        margin-bottom: 6px;
       }
     }
   }
