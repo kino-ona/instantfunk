@@ -162,7 +162,7 @@ width: 100%;
         td {
           padding-left: 0 !important;
           padding: 30px 5px !important;
-          font-family: "Pretendard Variable", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+          @include mixins.PtdRegular();
           font-size: 16px;
           color: #000000;
           &:nth-child(1) {
@@ -632,7 +632,7 @@ width: 100%;
       display: flex;
       width: calc(100% - 370px);
       margin-bottom: 10px;
-      font-family: "Pretendard Variable", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+      @include mixins.PtdRegular();
       > div {
         flex: 1;
         padding: 60px 30px 30px;
@@ -855,6 +855,9 @@ width: 100%;
     }
   }
   .xans-order-result {
+    * {
+      @include mixins.PtdRegular();
+    }
     .orderInfo {
       float: left;
       width: calc(50% - 5px);
@@ -971,6 +974,19 @@ width: 100%;
         margin-bottom: 25px;
         font-size: 24px;
       }
+      table {
+        border: 0 !important;
+        th, td {
+          border: 0 !important;
+          background: none !important;
+          padding-left: 0;
+        }
+        tbody {
+          td {
+            text-align: right;
+          }
+        }
+      }
     }
     .shipping_area {
       float: left;
@@ -993,6 +1009,7 @@ width: 100%;
         font-size: 18px;
       }
     }
+
   }
 
   .ec-base-help {
