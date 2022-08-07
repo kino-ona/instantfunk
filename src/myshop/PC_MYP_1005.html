@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 	@@include('../inc/pagehead.inc', {
-		"pagetitle": "인스턴트펑크 공식홈페이지 - 인스턴트펑크 INSTANTFUNK - 마이페이지 - 주문내역조회 - 주문상세조회",
+		"pagetitle": "인스턴트펑크 공식홈페이지 - 인스턴트펑크 INSTANTFUNK - 마이페이지 - 반품신청",
 		"webroot": "../"
 	})
 	<link rel="stylesheet" href="../assets/css/myshop.css">
@@ -18,109 +18,10 @@
 			<div class="myshop">
 				<div class="myshop__container">
 					<div class="myshop__header">
-						<p class="myshop__title">주문상세조회</p>
+						<p class="myshop__title">반품신청</p>
 					</div>
-					<div module="MyShop_OrderHistoryDetail" unroll="1">
+					<div module="Myshop_OrderHistoryApplyReturn">
 						<div class="myshop__articles">
-							<div class="myshop__article">
-								<div class="myshop__row myshop__row--col2">
-									<div class="myshop__roundbox">
-										<div class="myshop__header">
-											<div class="myshop__title">
-												<p class="myshop__title">주문정보</p>
-											</div>
-										</div>
-										<div class="board">
-											<div class="board__row">
-												<div class="board__board">
-													<div class="board__tbody">
-														<div class="board__tr">
-															<div class="board__left">주문번호</div>
-															<div class="board__right">20220502-0000284</div>
-														</div>
-														<div class="board__tr">
-															<div class="board__left">주문일자</div>
-															<div class="board__right">2022-05-02 13 : 18 : 02</div>
-														</div>
-														<div class="board__tr">
-															<div class="board__left">주문자</div>
-															<div class="board__right">홍길동</div>
-														</div>
-														<div class="board__tr">
-															<div class="board__left">주문처리상태</div>
-															<div class="board__right">
-																<div class="reverse">
-																	<div class="reverse__item">입금전</div>
-																	<div class="reverse__item">
-																		<div class="button">
-																			<div class="button__container">
-																				<a href="#" class="button__item">주문취소</a>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="myshop__roundbox">
-										<div class="myshop__header">
-											<div class="myshop__title">
-												<p class="myshop__title">결제예정 금액</p>
-											</div>
-										</div>
-										<div class="board">
-											<div class="board__row">
-												<div class="board__board">
-													<div class="board__tbody">
-														<div class="board__tr">
-															<div class="board__left">총 주문 금액</div>
-															<div class="board__right">
-																<div class="reverse">
-																	<div class="reverse__item">₩383,000</div>
-																	<div class="reverse__item">
-																		<div class="button">
-																			<div class="button__container">
-																				<a href="#" class="button__item">내역보기</a>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-														<div class="board__tr">
-															<div class="board__left">결제수단</div>
-															<div class="board__right">
-																<div class="payment">
-																	<p class="payment__type">무통장입금</p>
-																	<div class="button">
-																		<div class="button__container">
-																			<a href="#" class="button__item">
-																				인터넷뱅킹 바로가기
-																				<i class="button__ico button__ico--arrow-right"></i>
-																			</a>
-																		</div>
-																	</div>
-																	<p class="payment__detail">
-																		입금자 : <span class="payment__current">홍길동</span>, 계좌번호 : <span class="payment__current">신한은행 140-012-368968</span>
-																		<span class="payment__seller">(주)인스턴트펑크인터내셔널</span>
-																	</p>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="board__tfoot">
-														<p class="board__total"><span class="board__text">총 결제금액</span> ₩405,000</p>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
 							<div class="myshop__article">
 								<div class="myshop__row">
 									<div class="myshop__roundbox">
@@ -130,7 +31,11 @@
 											</div>
 											<div class="product__thead">
 												<div class="product__tr">
-													<div class="product__td">&nbsp;</div>
+													<div class="product__td">
+														<div class="check">
+															<div class="check__inner"><input type="radio"></div>
+														</div>
+													</div>
 													<div class="product__td">상품정보</div>
 													<div class="product__td">주문일자/주문번호</div>
 													<div class="product__td">수량</div>
@@ -142,6 +47,9 @@
 											<div class="product__tbody">
 												<div class="product__tr">
 													<div class="product__td product__td--img">
+														<div class="check">
+															<div class="check__inner"><input type="radio"></div>
+														</div>
 														<img src="../assets/images/@img_product01.png" alt="">
 													</div>
 													<div class="product__td">
