@@ -33,6 +33,7 @@ width: 100%;
   .small_button {
     display: flex;
     align-items: center;
+    justify-content: center;
     margin:0 10px 0 0;
     padding-right: 10px;
     padding-left: 10px;
@@ -76,10 +77,13 @@ width: 100%;
         image: url('/assets/images/ico_checkbg_on.png');
       }
     }
+
+    @include breakpoints.mobile() { 
+      width: 18px;
+      height: 18px;
+    }
   }
   input[type='checkbox'] {
-    width: 24px;
-    height: 24px;
     & + label {
       padding-left: 3px;
       vertical-align: middle;
@@ -134,7 +138,7 @@ width: 100%;
   
     @include breakpoints.mobile() {
       width: 100%;
-      padding: 16px;
+      padding: 17px;
     }
     .ec-base-table {
       table {
@@ -160,6 +164,7 @@ width: 100%;
       }
       tbody {
         td {
+          border: 0;
           padding-left: 0 !important;
           padding: 30px 5px !important;
           @include mixins.PtdRegular();
@@ -252,7 +257,7 @@ width: 100%;
   
     @include breakpoints.mobile() {
       width: 100%;
-      padding: 16px;
+      padding: 17px;
     }
     .ico_required {
       display: inline-block;
@@ -573,6 +578,7 @@ width: 100%;
       }
       .payment {
         > .ec-base-table {
+          padding: 20px 0 20px;
           tbody {
             th, td {
               padding: 0;
@@ -621,6 +627,116 @@ width: 100%;
               width: 90px !important;
               height: 46px;
               text-align: center;
+            }
+          }
+        }
+      }
+      @include breakpoints.mobile() {
+        width: 100%;
+        padding: 17px;
+        .payment {
+          float: none;
+
+          .ec-base-table {
+            input[type=text] {
+              width: 100%;
+            }
+            select {
+              width: calc(100% - 125px);
+              height: 56px;
+            }
+          }
+        }
+        .method {
+          float: none;
+          display: block;
+          &::after {
+            content: '';
+            clear:both;
+            display: block;
+          }
+          .ec-base-label {
+            float: left;
+            width: calc((100% / 3) - 4px);
+            height: 80px;
+            padding: 10px;
+            border-radius: 15px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            &:nth-child(3n) {
+              margin-right: 0;
+            }
+            &:nth-child(3n + 1) {
+              clear: both;
+            }
+            label {
+              display: block;
+              margin: 0;
+              font-size: 12px;
+              letter-spacing: -1px;
+            }
+          }
+        }
+        .ec-base-table {
+          div {
+            margin-left: 0;
+          }
+          .ec-base-help {
+            margin:0;
+            padding:0;
+            background: none;
+            border-radius: 0;
+          }
+          tbody {
+            th, td {
+              display: block;
+            }
+          }
+        }
+        .agree {
+          padding: 0;
+          padding-bottom: 10px;
+          tbody {
+            th, td {
+              display: block;
+              border: 0;
+              padding: 5px 0;
+            }
+          }
+          .cash .mobile {
+            select, input[type=text] {
+              width:calc(33.3333333333% - 11px) !important;
+              min-width:calc(33.3333333333% - 11px) !important;
+            }
+          }
+        }
+        .total {
+          clear:both;
+          float: none;
+          position: relative;
+          top: inherit;
+          right: inherit;
+          width: 100%;
+          background: transparent;
+          border-top: 1px solid #000000;
+          padding-top: 15px;
+          > div {
+            position: relative;
+            width: 100%;
+            border:0;
+            border-radius: 0;
+            padding:0;
+          }
+          h4 span {
+            font-size: 18px;
+          }
+          .button a {
+            display: block;
+            width: 200px;
+            margin: 0 auto;
+            > span {
+              padding: 10px 0;
+              font-size: 32px;
             }
           }
         }
@@ -742,6 +858,13 @@ width: 100%;
           }
         }
       }
+      @include breakpoints.mobile() {
+        display: block;
+        width: 100%;
+        .discount_detail.detail {
+          margin-left: 0;
+        }
+      }
     }
 
     .ec-base-layer {
@@ -792,6 +915,17 @@ width: 100%;
           padding-left: 0;
         }
       }
+      @include breakpoints.mobile() {
+        width: calc(100% - 100px);
+        .content {
+          > p {
+            font-size: 18px;
+            &::before {
+              font-size:12px;
+            }
+          }
+        }
+      }
     }
   }
   // .xans-order-form
@@ -818,6 +952,181 @@ width: 100%;
     ol {
       li {
         margin-bottom: 6px;
+      }
+    }
+  }
+}
+
+@include breakpoints.mobile() {
+  .order_wrap {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    .small_button {
+      height: 26px;
+      padding-left:5px;
+      padding-right: 5px;
+      font-size: 12px;
+    }
+    .xans-order-form {
+      .title {
+        font-size: 18px !important;
+      }
+      .orderListArea {
+        overflow: inherit;
+        .title {
+          margin-bottom: 50px !important;
+        }
+        .ec-base-table {
+          // flex-direction: row;
+          tbody {
+            tr {
+              display: block;
+              padding-bottom: 40px;
+              &:last-child {
+                padding-bottom: 20px;
+              }
+            }
+            td {
+              padding-left: 0 !important;
+              padding-right: 0 !important;
+              padding-top: 0 !important;
+              padding-bottom: 5px !important;
+              text-align: right;
+              font-size: 14px;
+              &:nth-child(1),  &:nth-child(2), &:nth-child(3){
+                text-align: left;
+              }
+              strong {
+                line-height: 1.2;
+              }
+            }
+          }
+          tfoot {
+            td {
+              &:first-child {
+                position: relative;
+                width: 100%;
+              }
+            }
+          }
+        }
+        .product_delete-area {
+          span {
+            display: none;
+          }
+        }
+        input[type=checkbox] {
+          margin-top: -55px;
+          z-index: 10;
+        }
+      }
+      #omessage, #fmessage, #question {
+        width: 100%;
+      }
+      .totalArea {
+        .title {
+          left: 17px;
+          top: 17px;
+        }
+        .total {
+          min-height: auto !important;
+          padding-top: 50px;
+          margin-bottom: 10px;
+          tr:last-child {
+            display: revert !important;
+            position: relative !important;
+            bottom: 0 !important;
+            width: 100% !important;
+            td {
+              font-size: 18px;
+              font-weight: 700;
+            }
+          }
+          th, td {
+            padding: 6px 0 7px;
+          }
+        }
+        > div {
+          padding: 17px 17px 17px;
+        }
+      }
+    }
+    .ec-base-help {
+      width: 100%;
+      padding: 17px;
+      > h3 {
+        padding: 0;
+        font-size: 18px;
+      }
+      .inner {
+        padding: 0;
+        ul {
+          margin-left: 0;
+        }
+      }
+    }
+    .ec-base-table {
+      thead {
+        display: none;
+      }
+      td {
+        border: 0;
+      }
+      input[type=text], select {
+        min-width: calc((100% / 3) - 10px) !important;
+        padding:0 20px 0 20px !important;
+      }
+    }
+    .orderArea {
+      .title {
+        .required {
+          margin-top: 0 !important;
+        }
+      }
+      .ec-base-table {
+        table {
+          display: block;
+          tbody {
+            display: block;
+          }
+        }
+      }
+      .typeWrite {
+        tbody {
+          tr {
+            display: block;
+            padding-bottom: 10px;
+          }
+          th, td {
+            display: block;
+          }
+          th {
+            padding-bottom: 0 !important;
+          }
+        }
+        .address {
+          word-break: break-all;
+          .recent {
+            display: inline;
+            &::before {
+              content: '';
+              display: block;
+              height:5px;
+            }
+          }
+        }
+      }
+      .use_address_field {
+        input[type=text] {
+          width: 100% !important
+        }
+        span.grid {display: none;}
+      }
+    }
+    .xans-order-form {
+      #oemail1, #oemail2, #oemail3 {
+        min-width: calc((100% / 2) - 13px) !important;
+        width: calc((100% / 2) - 13px) !important;
       }
     }
   }

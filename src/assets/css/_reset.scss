@@ -261,15 +261,17 @@ input[type='checkbox'].chk_design {
 		repeat: no-repeat;
 	};
 	&:checked {
-		background-color: none;
+		background-color: transparent;
 		background: {
 			image: url('../images/ico_checkbg_on.png');
 		}
 	}
+	@include breakpoints.mobile() { 
+		width: 18px;
+		height: 18px;
+	}
 }
 input[type='checkbox'].chk_design {
-	width: 24px;
-	height: 24px;
 	& + label {
 		padding-left: 3px;
 		vertical-align: middle;

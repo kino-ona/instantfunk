@@ -5,6 +5,10 @@
 
 
 #popup {
+  @include breakpoints.mobile() {
+    width: 100%;
+  }
+
   .address_layer.ec-base-layer,
   .address_layer-write.ec-base-layer {
     .header {

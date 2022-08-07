@@ -205,6 +205,9 @@ width: 100%;
           display: flex;
           justify-content: space-between;
           margin-bottom: 5px;
+          img {
+            display: none;
+          }
         }
         .mo_span {
           display: inline-block;
