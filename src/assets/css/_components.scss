@@ -39,6 +39,7 @@
 }
 
 .check {
+	display: flex;
 	.check__inner {
 		display: inline-flex;
 		&:not(:first-child) {
@@ -87,6 +88,9 @@
 	.button__container--left {
 		justify-content: flex-start;
 	}
+	.button__container--right {
+		justify-content: flex-end;
+	}
 	.button__item {
 		display: flex;
 		justify-content: center;
@@ -115,6 +119,13 @@
 		height: 60px;
 		font-weight: 500;
 		font-size: 18px;
+	}
+	.button__item--underline {
+		height: auto !important;
+		padding: 0 !important;
+		border: 0;
+		font-size: inherit;
+		text-decoration: underline;
 	}
 	.button__ico--arrow-right {
 		@include mixins.iconArrow($direction: 'right', $width: 25px, $height: 12px, $thick: 1px, $color: #000, $display: inline-block, $position: relative);
@@ -161,15 +172,18 @@
 		@include mixins.PtdMedium();
 	}
 	.bullet__list {
-		line-height: 24px;
+		line-height: 18px;
 		letter-spacing: -0.025em;
 		@include mixins.PtdRegular();
 	}
 	.bullet__item {
 		&:not(li) {
-			line-height: 24px;
+			line-height: 18px;
 			letter-spacing: -0.025em;
 			@include mixins.PtdRegular();
+		}
+		&:not(div):not(p):not(span) {
+			margin-top: 6px;
 		}
 		.bullet__row {
 			display: flex;
@@ -190,13 +204,11 @@
 		}
 		.bullet__list {
 			font-size: 12px;
-			line-height: 16px;
 			letter-spacing: -0.012em;
 			@include mixins.PtdRegular();
 		}
 		.bullet__item {
 			&:not(li) {
-				line-height: 16px;
 				letter-spacing: -0.012em;
 			}
 			.bullet__row {
@@ -216,6 +228,9 @@
 	}
 	.form__row--small {
 		max-width: 123px;
+	}
+	.form__row--xsmedium {
+		width: 30%;
 	}
 	.form__row--smedium {
 		width: 45%;
@@ -252,18 +267,6 @@
 			align-items: center;
 			&:first-child {
 				margin-left: 0;
-			}
-			.form__group {
-				position: relative;
-				.form__msg {
-					position: absolute;
-					right: 25px;
-					top: 50%;
-					color: #999;
-					letter-spacing: -0.025em;
-					@include mixins.translate(0, -50%);
-					@include mixins.PtdRegular();
-				}
 			}
 		}
 		.form__col--unit {
@@ -317,6 +320,11 @@
 			}
 		 }
 	}
+	.form__msg {
+		&:not(:first-child) {
+			margin-top: 10px;
+		}
+	}
 
 	.select {
 		width: 100%;
@@ -331,6 +339,9 @@
 		}
 		.form__row--small {
 			max-width: 182px;
+		}
+		.form__row--xsmedium {
+			width: 55%;
 		}
 		.form__row--smedium {
 			width: 70%;
@@ -391,22 +402,57 @@
 }
 
 .table {
+	letter-spacing: -0.025em;
+	@include mixins.PtdRegular();
+	.table__header {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		margin-bottom: 40px;
+		&:not(:first-child) {
+			margin-top: 60px;
+		}
+		.table__right {
+
+			.required {
+				padding-right: 0;
+				padding-left: 18px;
+				&:before {
+					left: 0;
+					top: 50%;
+					right: auto;
+					width: 10px;
+					height: 10px;
+					margin-top: -5px;
+				}
+			}
+		}
+		.table__title {
+			font-weight: 500;
+			font-size: 24px;
+		}
+	}
 	.table__table {
 		.table__row {
-			display: flex;
+			display: grid;
+			grid-template-columns: 140px 1fr;
 			align-items: baseline;
+			align-content: center;
 			padding: 1px 0;
 			min-height: 58px;
+			&:first-child {
+				padding-top: 0;
+			}
 			&:last-child {
 				padding-bottom: 0;
 			}
 			.table__left {
-				width: 140px;
-				letter-spacing: -0.025em;
-				@include mixins.PtdMedium();
+				// width: 140px;
+				font-weight: 500;
 			}
 			.table__right {
 				flex: 1;
+				line-height: 18px;
 			}
 			input + span {
 				display: block;
@@ -416,9 +462,15 @@
 				@include mixins.PtdRegular();
 			}
 		}
+		.table__row--separate {
+			padding-top: 30px;
+		}
 	}
 
 	.form {
+		&:not(:first-child) {
+			margin-top: 10px;
+		}
 		.form__row {
 			&:not(:first-child) {
 				margin-top: 2px;
@@ -435,17 +487,46 @@
 	}
 
 	@include breakpoints.mobile() {
+		letter-spacing: -0.012em;
+		.table__header {
+			margin-bottom: 30px;
+			&:not(:first-child) {
+				margin-top: 40px;
+			}
+			.table__right {
+
+				.required {
+					padding-left: 16.5px;
+					&:before {
+						width: 9px;
+						height: 9px;
+						margin-top: -4.5px;
+					}
+				}
+			}
+			.table__title {
+				font-size: 18px;
+			}
+		}
 		.table__table {
 			.table__row {
 				display: block;
+				min-height: 0;
 				padding: 0;
+				&:last-child {
+					padding-top: 0;
+				}
 				&:not(:first-child) {
 					margin-top: 20px;
 				}
 				.table__left {
-					width: auto;
+					// width: auto;
 					margin-bottom: 10px;
 					font-size: 12px;
+				}
+				.table__right {
+					font-size: 12px;
+					line-height: 16px;
 				}
 			}
 		}

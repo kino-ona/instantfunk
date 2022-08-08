@@ -12,9 +12,13 @@
 		color: #000;
     font-size: 18px;
 	}
-	input[type=radio]:checked:before,
-	input[type=radio]:checked:after {
-		display: none;
+	input[type='radio'] {
+		width: 15px;
+		height: 15px;
+		&:before,
+		&:after {
+			display: none;
+		}
 	}
 	input[type=checkbox], input[type=radio] {
 		margin-right: 5px;
@@ -195,19 +199,6 @@
 				font-size: 24px;
 				letter-spacing: -0.025em;
 				@include mixins.PtdMedium();
-			}
-
-			.required {
-				padding-right: 0;
-				padding-left: 18px;
-				&:before {
-					left: 0;
-					top: 50%;
-					right: auto;
-					width: 10px;
-					height: 10px;
-					margin-top: -5px;
-				}
 			}
 		}
 
@@ -618,15 +609,6 @@
 				.member__title {
 					font-size: 18px;
 					letter-spacing: -0.012em;
-				}
-
-				.required {
-					padding-left: 16.5px;
-					&:before {
-						width: 9px;
-						height: 9px;
-						margin-top: -4.5px;
-					}
 				}
 			}
 		}

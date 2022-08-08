@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc', {
+		"pagetitle": "인스턴트펑크 공식홈페이지 - 인스턴트펑크 INSTANTFUNK - 마이페이지 - 적립금 조회 - 적립 내역 보기",
+		"webroot": "../"
+	})
+	<link rel="stylesheet" href="../assets/css/myshop.css">
+</head>
+<body>
+	<div id="wrap">
+		@@include('../inc/header.inc', {
+			"login": "false",
+			"webroot": "../"
+		})
+
+    <div class="container">
+			<div class="myshop">
+				<div module="Myshop_mileageHistoryPackage">
+					<div class="myshop__container">
+						<div class="tab">
+							<ul class="tab__list">
+								<li class="tab__item selected">
+									<a href="#" class="tab__link">적립내역보기</a>
+								</li>
+								<li class="tab__item">
+									<a href="#" class="tab__link">미가용적립내역보기</a>
+								</li>
+								<li class="tab__item">
+									<a href="#" class="tab__link">미가용쿠폰/회원등급적립내역</a>
+								</li>
+							</ul>
+						</div>
+						<div class="myshop__row">
+							<div class="myshop__articles">
+								<div class="myshop__article">
+									<div class="myshop__row">
+										<div class="myshop__roundbox">
+											<div module="myshop_historyList">
+												<div class="myshop__header">
+													<p class="myshop__title">적립내역보기</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="myshop__sticky">
+								<div class="myshop__roundbox">
+									<div module="myshop_summary">
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		@@include('../inc/footer.inc', {
+			"webroot": "../"
+		})
+	</div>
+</body>
+</html>

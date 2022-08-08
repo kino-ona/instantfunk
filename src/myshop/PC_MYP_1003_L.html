@@ -142,7 +142,7 @@
 											<div class="product__tbody">
 												<div class="product__tr">
 													<div class="product__td product__td--img">
-														<img src="../assets/images/@img_product01.png" alt="">
+														<div class="product__img"><img src="../assets/images/@img_product01.png" alt=""></div>
 													</div>
 													<div class="product__td">
 														<div class="product__row">
@@ -170,14 +170,6 @@
 																		<p class="product__date">2022-05-02</p>
 																	</div>
 																</div>
-																<div class="product__group product__mobile">
-																	<div class="product__left">주문처리상태</div>
-																	<div class="product__right">배송완료</div>
-																</div>
-																<div class="product__group product__mobile">
-																	<div class="product__left">취소/교환/반품</div>
-																	<div class="product__right">-</div>
-																</div>
 																<div class="button">
 																	<div class="button__container">
 																		<a href="#" class="button__item">주문취소</a>
@@ -185,16 +177,44 @@
 																	</div>
 																</div>
 															</div>
-															<div class="product__col">1</div>
-															<div class="product__col">₩135,000</div>
-															<div class="product__col">입금전</div>
-															<div class="product__col">-</div>
+															<div class="product__col product__col--mobile-hidden">
+																<span class="product__group">
+																	<div class="product__left">수량</div>
+																	<div class="product__right">1</div>
+																</span>
+															</div>
+															<div class="product__col product__col--mobile-hidden">
+																<div class="product__group">
+																	<div class="product__left">상품구매금액</div>
+																	<div class="product__right">₩135,000</div>
+																</div>
+															</div>
+															<div class="product__col">
+																<div class="product__group">
+																	<div class="product__left">주문처리상태</div>
+																	<div class="product__right">입금전</div>
+																</div>
+															</div>
+															<div class="product__col">
+																<div class="product__group">
+																	<div class="product__left">취소/교환/반품</div>
+																	<div class="product__right">-</div>
+																</div>
+															</div>
+															<div class="product__col product__col--desktop-hidden">
+																<div class="button">
+																	<div class="button__container">
+																		<a href="#" class="button__item">주문취소</a>
+																		<a href="#" class="button__item">교환신청</a>
+																	</div>
+																</div>
+															</div>
 														</div>
 													</div>
 												</div>
 												<div class="product__tr">
 													<div class="product__td product__td--img">
-														<img src="../assets/images/@img_product01.png" alt="">
+														<div class="product__img"><img src="../assets/images/@img_product01.png" alt=""></div>
 													</div>
 													<div class="product__td">
 														<div class="product__row">
@@ -222,14 +242,6 @@
 																		<p class="product__date">2022-05-02</p>
 																	</div>
 																</div>
-																<div class="product__group product__mobile">
-																	<div class="product__left">주문처리상태</div>
-																	<div class="product__right">배송완료</div>
-																</div>
-																<div class="product__group product__mobile">
-																	<div class="product__left">취소/교환/반품</div>
-																	<div class="product__right">-</div>
-																</div>
 																<div class="button">
 																	<div class="button__container">
 																		<a href="#" class="button__item">주문취소</a>
@@ -237,10 +249,38 @@
 																	</div>
 																</div>
 															</div>
-															<div class="product__col">1</div>
-															<div class="product__col">₩135,000</div>
-															<div class="product__col">입금전</div>
-															<div class="product__col">-</div>
+															<div class="product__col product__col--mobile-hidden">
+																<span class="product__group">
+																	<div class="product__left">수량</div>
+																	<div class="product__right">1</div>
+																</span>
+															</div>
+															<div class="product__col product__col--mobile-hidden">
+																<div class="product__group">
+																	<div class="product__left">상품구매금액</div>
+																	<div class="product__right">₩135,000</div>
+																</div>
+															</div>
+															<div class="product__col">
+																<div class="product__group">
+																	<div class="product__left">주문처리상태</div>
+																	<div class="product__right">입금전</div>
+																</div>
+															</div>
+															<div class="product__col">
+																<div class="product__group">
+																	<div class="product__left">취소/교환/반품</div>
+																	<div class="product__right">-</div>
+																</div>
+															</div>
+															<div class="product__col product__col--desktop-hidden">
+																<div class="button">
+																	<div class="button__container">
+																		<a href="#" class="button__item">주문취소</a>
+																		<a href="#" class="button__item">교환신청</a>
+																	</div>
+																</div>
+															</div>
 														</div>
 													</div>
 												</div>
@@ -418,42 +458,58 @@
 			</div>
 		</div>
 
-		<!-- 현금영수증 신청 팝업 -->
-		<div class="layer__body receipt-request" style="display: block;">
+		<!-- 세금계산서 신청 팝업 -->
+		<div class="layer__body" style="display: block;">
 			<div class="layer__wrap">
 				<div class="layer__close"><a href="#" class="btn__close modal__hide"><span class="a11y">닫기</span></a></div>
 				<div class="layer__header">
-					<p class="layer__title">현금영수증 신청양식 작성</p>
+					<p class="layer__title">세금계산서 신청양식 작성</p>
 				</div>
 				<div class="layer__content">
+					<div class="layer__note">
+						<p class="layer__title">도움말</p>
+						<p class="layer__desc">
+							세금 계산서 발행 신청을 위해 아래 모든 입력사항을 빠짐없이 입력하십시오.<br>
+							[확인] 버튼을 눌러주십시오. 비영리 법인인 경우는 종목과 업태를 입력하지 않아도 됩니다.<br>
+							신청양식 작성 후 사업자 등록증 사본을 팩스 로 보내주십시오
+						</p>
+					</div>
 					<div class="table">
+						<div class="table__header">
+							<p class="table__title">주문내역</p>
+						</div>
 						<div class="table__table">
 							<div class="table__row">
-								<div class="table__left">구분</div>
+								<div class="table__left">
+									<label for="requestName" class="form__text">신청자 이름</label>
+								</div>
 								<div class="table__right">
-									<div class="check">
-										<div class="check__inner">
-											<input type="radio" id="receiptMemberType01" name="receiptMemberType" checked="">
-											<label for="receiptMemberType01">개인</label>
-										</div>
-										<div class="check__inner">
-											<input type="radio" id="receiptMemberType02" name="receiptMemberType">
-											<label for="receiptMemberType02">법인</label>
+									<div class="form">
+										<div class="form__row form__row--small">
+											<div class="form__set">
+												<div class="form__field">
+													<div class="form__col">
+														<input type="text" id="requestName">
+													</div>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 							<div class="table__row">
-								<div class="table__left">핸드폰 번호</div>
+								<div class="table__left">
+									<div class="form__label">신청자 전화번호</div>
+								</div>
 								<div class="table__right">
 									<div class="form">
-										<div class="form__row">
+										<div class="form__row form__row--medium">
 											<div class="form__set">
 												<div class="form__field">
 													<div class="form__col">
 														<div class="select">
 															<select name="" id="">
-																<option value="">010</option>
+																<option value="">02</option>
 															</select>
 														</div>
 													</div>
@@ -469,17 +525,174 @@
 									</div>
 								</div>
 							</div>
+							<div class="table__row">
+								<div class="table__left">E-Mail</div>
+								<div class="table__right">
+									<div class="form">
+										<div class="form__row form__row--xlarge">
+											<div class="form__set">
+												<div class="form__field form__field--email">
+													<div class="form__col">
+														<input type="text">
+													</div>
+													<div class="form__col form__col--unit">@</div>
+													<div class="form__col">
+														<input type="text">
+													</div>
+													<div class="form__col">
+														<div class="select">
+															<select name="" id="">
+																<option value="">직접입력</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="table__header">
+							<p class="table__title">사업자 정보</p>
+						</div>
+						<div class="table__table">
+							<div class="table__row">
+								<div class="table__left">사업자 구분</div>
+								<div class="table__right">
+									<div class="check">
+										<div class="check__inner">
+											<input type="radio" id="memberType01" name="memberType" checked="">
+											<label for="memberType01">개인</label>
+										</div>
+										<div class="check__inner">
+											<input type="radio" id="memberType02" name="memberType">
+											<label for="memberType02">법인</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__left">
+									<label for="requestBizNumber">사업자 등록번호</label>
+								</div>
+								<div class="table__right">
+									<div class="form">
+										<div class="form__row form__row--smedium">
+											<div class="form__set">
+												<div class="form__field">
+													<div class="form__col">
+														<input type="text" id="requestBizNumber">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__left">
+									<label for="requestBizName">상호(법인명)</label>
+								</div>
+								<div class="table__right">
+									<div class="form">
+										<div class="form__row form__row--smedium">
+											<div class="form__set">
+												<div class="form__field">
+													<div class="form__col">
+														<input type="text" id="requestBizName">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__left">사업장 주소</div>
+								<div class="table__right">
+									<div class="form">
+										<div class="form__row form__row--medium">
+											<div class="form__set">
+												<div class="form__field">
+													<div class="form__col">
+														<input type="text">
+													</div>
+													<div class="form__btn">
+														<div class="button">
+															<div class="button__container">
+																<a href="#" class="button__item">우편번호</a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="form__row">
+											<div class="form__set">
+												<div class="form__field">
+													<div class="form__col">
+														<input type="text" placeholder="기본주소">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="form__row">
+											<div class="form__set">
+												<div class="form__field">
+													<div class="form__col">
+														<input type="text" placeholder="나머지주소(선택입력가능)">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__left">업태</div>
+								<div class="table__right">
+									<div class="form">
+										<div class="form__row form__row--smedium">
+											<div class="form__set">
+												<div class="form__field">
+													<div class="form__col">
+														<input type="text">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__left">종목</div>
+								<div class="table__right">
+									<div class="form">
+										<div class="form__row form__row--smedium">
+											<div class="form__set">
+												<div class="form__field">
+													<div class="form__col">
+														<input type="text">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="button">
 						<div class="button__container">
-							<button type="button" class="button__item button__item--medium button__item--black">현금영수증 신청</button>
+							<button type="button" class="button__item button__item--medium">확인</button>
+							<button type="button" class="button__item button__item--medium button__item--black">취소</button>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- // 현금영수증 신청 팝업 -->
+		<!-- // 세금계산서 신청 팝업 -->
 
 		@@include('../inc/footer.inc', {
 			"webroot": "../"
