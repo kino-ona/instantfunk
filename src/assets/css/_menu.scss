@@ -319,6 +319,10 @@
 				// visibility: hidden;
 				z-index: 1;
 			}
+
+			@include breakpoints.mobile() {
+				display: none;
+			}
 		}
 	}
 	.button--visible {

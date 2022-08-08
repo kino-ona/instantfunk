@@ -853,7 +853,8 @@
     }
   }
 }
-.product__opt--list {
+.product__opt--list,
+.xans-product-option {
   margin-bottom: 14px;
   &:after {
     content: '';
@@ -875,7 +876,7 @@
       clear: left;
     }
   }
-  .opt__button {
+  .opt__button, li>a {
     position: absolute;
     left: 0;
     top: 0;
@@ -899,6 +900,18 @@
       opacity: 0.2;
       pointer-events: none;
     }
+  }
+
+  @include breakpoints.mobile() {
+    margin-bottom: 0;
+    padding-bottom: 15px;
+  }
+}
+.xans-product-option {
+  li>a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 .option__list {
@@ -2287,4 +2300,212 @@
   -webkit-clip-path: inset(0 round 72px);
   clip-path: inset(0 round 72px);
   overflow: hidden;
+}
+
+.detail_info #totalProducts {
+  colgroup {display: none;}
+  tfoot {
+    border-top: 1px solid #000000;
+    td {
+      background: transparent;
+      .total__price {
+        strong {
+          font-size: 24px;
+          @include mixins.PtdSemiBold();
+        }
+      }
+    }
+  }
+  tbody {
+    tr {
+      position: relative;
+      clear:both;
+      overflow: hidden;
+      display: block;
+      padding-bottom: 10px;
+    }
+
+    @include breakpoints.mobile() {
+      tr {
+        padding-bottom: 15px;
+      }
+    }
+  }
+  .option_products {
+    clear:both;
+    overflow: hidden;
+    td {
+      display: block;
+      border: 0;
+      padding-left: 0;
+      padding-right: 0;
+      @include mixins.PtdRegular();
+      .product {
+        @include mixins.PtdMedium();
+        br {display: none;}
+        span {
+          color:#000000;
+        }
+      }
+      &:first-child {
+        border: 0;
+      }
+      &:nth-child(2) {
+        display: flex;
+        align-items: center;
+      }
+      &:nth-child(2),
+      .right {
+        float: left;
+        width: 50%;
+      }
+      .right {
+        text-align: right;
+      }
+      .quantity {
+        position: relative;
+        display: flex;
+        width: 90px !important;
+        height: 30px !important;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-right: 9px;
+        border: 1px solid #000000;
+        border-radius: 40px;
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+        input {
+          width: calc(100% - 30px);
+          height: 100%;
+          padding: 0;
+          background-color: transparent;
+          border: none;
+          text-align: center;
+          @include mixins.PtdRegular();
+          font-size: 14px;
+          border-radius: 0;
+        }
+        .up, .down {
+          width: 15px;
+          height: 15px;
+          background: {
+            size: 10px;
+            repeat: no-repeat;
+            position: center center;
+          }
+          img {
+            visibility: hidden;
+          }
+        }
+        .up {
+          top: 50%;
+          right: 10px;
+          left: inherit;
+          @include mixins.transform(translateY(-50%));
+          background: {
+            image: url('/assets/images/btn_count_up.png');
+          }
+        }
+        .down {
+          top: 50%;
+          bottom: inherit;
+          left: 10px;
+          right: inherit;
+          @include mixins.transform(translateY(-50%));
+          background: {
+            image: url('/assets/images/btn_count_down.png');
+          }
+        }
+      }
+      .delete {
+        width: 10px;
+        height: 10px;
+        @include icons.retina-sprite(icons.$ico-close-10-group);
+        img {
+          visibility: hidden;
+        }
+      }
+    }
+    @include breakpoints.mobile() {
+      .product {
+        padding-right: 30%;
+      }
+      p:not(.product) {
+        position: relative;
+        display: flex;
+        width: 90px !important;
+        height: 30px !important;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top: 9px;
+        border: 1px solid #000000;
+        border-radius: 40px;
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+        input {
+          width: calc(100% - 30px);
+          height: 100%;
+          padding: 0;
+          background-color: transparent;
+          border: none;
+          text-align: center;
+          @include mixins.PtdRegular();
+          font-size: 14px;
+          border-radius: 0;
+        }
+        .up, .down {
+          position: absolute;
+          width: 15px;
+          height: 15px;
+          background: {
+            size: 10px;
+            repeat: no-repeat;
+            position: center center;
+          }
+          img {
+            visibility: hidden;
+          }
+        }
+        .up {
+          top: 50%;
+          right: 10px;
+          left: inherit;
+          @include mixins.transform(translateY(-50%));
+          background: {
+            image: url('/assets/images/btn_count_up.png');
+          }
+        }
+        .down {
+          top: 50%;
+          bottom: inherit;
+          left: 10px;
+          right: inherit;
+          @include mixins.transform(translateY(-50%));
+          background: {
+            image: url('/assets/images/btn_count_down.png');
+          }
+        }
+      }
+      td {
+        padding-bottom: 0 !important;
+        &.right {
+          float: none;
+          width: 100%;
+          justify-content: flex-end;
+          padding: 0 !important;
+          margin-top: -20px;
+        }
+        &.center {
+          padding: 0 !important;
+        }
+        .delete {
+          position: absolute;
+          right: 0;
+          top: 15px;
+        }
+      }
+    }
+  }
 }
