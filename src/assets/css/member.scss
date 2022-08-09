@@ -393,11 +393,14 @@
 							background-color: #dfdfdf;
 						}
 					}
+					.login__menu {
+						margin-left: 14px;
+					}
 				}
 			}
 		}
 		.login__sns {
-			margin-top: auto;
+			// margin-top: auto;
 			.login__title {
 				font-size: 12px;
 				letter-spacing: -0.025em;
@@ -1154,5 +1157,71 @@
 	}
 	.ec-base-chk {
 		vertical-align: middle;
+	}
+
+	.xans-myshop-orderhistorynologin {
+		padding-top: 30px;
+		padding-bottom: 40px;
+		border-top: 1px solid #000000;
+
+		ul {
+			li {
+				padding-bottom: 10px;
+				strong {
+					display: block;
+					padding-bottom: 10px;
+					padding-left: 5px;
+				}
+			}
+		}
+		.nologin_info {
+			padding-top: 5px;
+			color: #999999;
+		}
+
+		input[type=text], input[type=password] {
+			height: 58px;
+			line-height: inherit;
+		}
+		.button {
+			position: relative;
+			display: inline-block;
+			width: 100%;
+			margin: 0 auto 0;
+			padding-top: 30px;
+			input[type=image] {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 280px;
+				height: 80px;
+				margin: 0 auto;
+				border: 1px solid #000;
+				border-radius: 100vw;
+			}
+			span {
+				position: absolute;
+				left: 50%;
+				@include mixins.translate(-50%, 0);
+				margin-top: 18px;
+				font-weight: 500;
+				font-size: 42px;
+				letter-spacing: -0.01em;
+				@include mixins.ATm();
+				color:#000000;
+			}
+		}
+    @include breakpoints.mobile() {
+			.button {
+				span {
+					font-size: 28px;
+					letter-spacing: 0;
+				}
+				input[type=image] {
+					width: 210px;
+					height: 60px;
+				}
+			}
+		}
 	}
 }
