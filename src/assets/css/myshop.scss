@@ -234,6 +234,12 @@
 				}
 			}
 		}
+
+		@include breakpoints.mobile() {
+			> .button {
+				padding: 0;
+			}
+		}
 	}
 	.myshop__row {
 		display: grid;
@@ -419,7 +425,20 @@
 			.product__tbody {
 				display: flex;
 				align-items: center;
+
+				@include breakpoints.mobile() {
+					.product__col {
+						&:not(:nth-child(1)):not(:nth-child(2)) {
+							display: none;
+						}
+						&:nth-child(2) {
+							width: 100%;
+							margin-top: 20px;
+						}
+					}
+				}	
 			}
+
 		}
 		.product__tbody {
 			.product__tr {
@@ -575,6 +594,10 @@
 				}
 				.board__right {
 					flex: 1;
+
+					@include breakpoints.mobile() {
+						font-size: 14px;
+					}
 				}
 			}
 			.board__left {
@@ -797,10 +820,10 @@
 
 			.select {
 				min-width: 0;
-				width: 87.5px;
+				width: 99.5px;
 				select {
 					height: 36.5px;
-					font-size: 13px;
+					font-size: 12px;
 				}
 			}
 			
@@ -847,15 +870,25 @@
 		}
 
 		.calendar {
+			.hasDatepicker {
+				font-size: 12px;
+				text-align: left;
+			}
 			.calendar__form {
+				width: auto;
+				height: 36.5px;
+				padding-left: 5px;
+				padding-right: 9px;
 				.calendar__ico {
 					right: 12.5px;
 					top: 50%;
 					margin-top: -8px;
 				}
 			}
-			.calendar__ico {
+			.calendar__ico,
+			.ui-datepicker-trigger {
 				@include mixins.sprite(mo_icons.$ico-calendar);
+				margin-left: 6px;
 			}
 		}
 
@@ -879,13 +912,16 @@
 					.product__col {
 						font-size: 12px;
 						letter-spacing: -0.012em;
-						&:not(:nth-child(1)):not(:nth-child(2)) {
-							display: none;
-						}
-						&:nth-child(2) {
-							width: 100%;
-							margin-top: 20px;
-						}
+						width: 100% !important;
+						margin-top: 10px;
+						text-align: right;
+						// &:not(:nth-child(1)):not(:nth-child(2)) {
+						// 	display: none;
+						// }
+						// &:nth-child(2) {
+						// 	width: 100%;
+						// 	margin-top: 20px;
+						// }
 					}
 				}
 				.product__group {
@@ -960,6 +996,49 @@
 			}
 		}
 	}
+
+
+	.ec-base-table {
+		table {
+			border: 0;
+			&:before {
+				display: none;
+			}
+			tbody {
+				th, td {
+					border: 0;
+					background: transparent;
+				}
+				td {
+					text-align: right;
+				}
+			}
+		}
+		@include breakpoints.mobile() {
+			tbody {
+				th, td {
+					padding:5px 0 6px 0
+				}
+			}
+		}
+
+	}
+	
+  @include breakpoints.mobile() {
+		.button {
+			.button__item {
+				font-size: 12px;
+			}
+		}
+
+		.bullet {
+			.bullet__grid {
+				display: block;
+				margin-top: 0;
+			}
+		}
+	}
+
 }
 
 .ec-base-layer {
@@ -967,36 +1046,38 @@
 	.header {
 		display: none;
 	}
+	.close {
+		right: 10px;
+		top: 10px;
+		width:30px;
+		height:30px;
+		&:before, &:after {
+			position: absolute;
+			left: 15px;
+			content: ' ';
+			height: 20px;
+			width: 1px;
+			background-color: #000;
+		}
+		&:before {
+			transform: rotate(45deg);
+		}
+		&:after {
+			transform: rotate(-45deg);
+		}
+		img {
+			display: none;
+		}
+	}
+	.content {
+		position: relative;
+		padding: 25px;
+	}
 	&.totalDetail {
 		left: inherit !important;
 		right: 10px;
 		width: 300px;
-		.close {
-			right: 10px;
-			top: 10px;
-			width:30px;
-			height:30px;
-			&:before, &:after {
-				position: absolute;
-				left: 15px;
-				content: ' ';
-				height: 20px;
-				width: 1px;
-				background-color: #000;
-			}
-			&:before {
-				transform: rotate(45deg);
-			}
-			&:after {
-				transform: rotate(-45deg);
-			}
-			img {
-				display: none;
-			}
-		}
 		.content {
-			position: relative;
-			padding: 25px;
 			> p {
 				padding-bottom: 15px;
 				font-size: 28px;
@@ -1011,4 +1092,5 @@
 			}
 		}
 	}
+
 }

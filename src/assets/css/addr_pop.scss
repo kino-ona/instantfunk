@@ -201,4 +201,23 @@
     }
   }
   // .address_layer
+
+  .xans-myshop-orderissuetax {
+    h3 {
+      margin: 20px 0 10px 0;
+      font-size: 18px;
+    }
+    #mall_addr_btn {
+      margin-top:17px;
+    }
+    .ec-base-table.typeWrite {
+      padding-top: 15px !important;
+      tr:last-child td, 
+      tr:last-child td {
+        padding-top: 0 !important;
+      }
+    }
+  }
+
+  
 }
