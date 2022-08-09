@@ -10,6 +10,9 @@
 		margin: 0 auto;
 		padding: 0 3.37vw;
 	}
+	.xans-myshop-orderhistorydetail {
+		position: relative;
+	}
 	.myshop__container--main {
 		max-width: none;
 		padding: 0 0.21vw;
@@ -343,7 +346,15 @@
 
 	.calendar {
 		.calendar__form {
+			display: inline-flex;
+			align-items: center;
 			position: relative;
+			width: 158px;
+			height: 45px;
+			padding-left: 17px;
+			border: 1px solid #000;
+			background-color: #fff;
+			border-radius: 100vw;
 			.calendar__ico {
 				position: absolute;
 				right: 16px;
@@ -351,16 +362,29 @@
 				margin-top: -10px;
 			}
 		}
-		.calendar__input {
-			width: 158px;
-			padding-left: 17px;
-			border-color: #000;
-			color: #000;
-			background-color: #fff;
+		.hasDatepicker {
+			width: 77%;
+			border: 0;
+			background-color:transparent;
 			font-size: 17px;
+			color: #000;
 		}
+		// .calendar__input {
+		// 	width: 158px;
+		// 	padding-left: 17px;
+		// 	border-color: #000;
+		// 	color: #000;
+		// 	background-color: #fff;
+		// 	font-size: 17px;
+		// }
 		.calendar__ico {
 			@include icons.retina-sprite(icons.$ico-calendar-group);
+		}
+		.ui-datepicker-trigger {
+			@include icons.retina-sprite(icons.$ico-calendar-group);
+			img {
+				visibility: hidden;
+			}
 		}
 	}
 
@@ -389,6 +413,12 @@
 				&:nth-child(6) {
 					width: 15%;
 				}
+			}
+		}
+		.xans-myshop-orderhistorylistitem {
+			.product__tbody {
+				display: flex;
+				align-items: center;
 			}
 		}
 		.product__tbody {
@@ -478,7 +508,7 @@
 			font-size: 18px;
 			line-height: 20px;
 			letter-spacing: -0.025em;
-			@include mixins.ellipse(2);
+			@include mixins.ellipse(4);
 			@include mixins.PtdRegular();
 		}
 		.product__info {
@@ -927,6 +957,57 @@
 		.board {
 			.board__row {
 				display: block;
+			}
+		}
+	}
+}
+
+.ec-base-layer {
+	border-radius: 35px;
+	.header {
+		display: none;
+	}
+	&.totalDetail {
+		left: inherit !important;
+		right: 10px;
+		width: 300px;
+		.close {
+			right: 10px;
+			top: 10px;
+			width:30px;
+			height:30px;
+			&:before, &:after {
+				position: absolute;
+				left: 15px;
+				content: ' ';
+				height: 20px;
+				width: 1px;
+				background-color: #000;
+			}
+			&:before {
+				transform: rotate(45deg);
+			}
+			&:after {
+				transform: rotate(-45deg);
+			}
+			img {
+				display: none;
+			}
+		}
+		.content {
+			position: relative;
+			padding: 25px;
+			> p {
+				padding-bottom: 15px;
+				font-size: 28px;
+				text-align: left;
+				&::before {
+					content: 'TOTAL';
+					display: block;
+					margin-bottom: 10px;
+					font-size: 14px;
+					color:#000000;
+				}
 			}
 		}
 	}

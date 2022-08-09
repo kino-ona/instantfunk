@@ -31,7 +31,7 @@ width: 100%;
 .order_wrap {
   position: relative;
   .small_button {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     margin:0 10px 0 0;
@@ -52,6 +52,7 @@ width: 100%;
       width: 75px;
     }
   }
+  
   input[type='radio'] {
     border: 1px solid #000000;
     &:checked:before, &:checked:after {
@@ -1134,6 +1135,28 @@ width: 100%;
 }
 
 .order_result_wrap {
+  .small_button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin:0 10px 0 0;
+    padding-right: 10px;
+    padding-left: 10px;
+    height: 32px;
+    font-size: 14px;
+    border: 1px solid #000000;
+    border-radius: 25px;
+    &.btn_delete {
+      width: 70px;
+    }
+    &.btn_gobank {
+      display: inline-flex;
+    }
+    &.btn_zipcode {
+      display: inline-flex;
+      width: 75px;
+    }
+  }
   .ec-base-box.typeMember {
     display: none;
   }
@@ -1324,8 +1347,6 @@ width: 100%;
       padding-right: 10px;
       .title {
         font-size: 18px !important;
-        h3 {
-        }
       }
       .orderInfo {
         float: none;
@@ -1489,4 +1510,68 @@ width: 100%;
       }
     }
   }
+
+  .xans-order-result {
+    .totalDetail {
+      border-radius: 35px;
+      .close {
+        right: 10px;
+        top: 10px;
+        width:30px;
+        height:30px;
+        &:before, &:after {
+          position: absolute;
+          left: 15px;
+          content: ' ';
+          height: 20px;
+          width: 1px;
+          background-color: #000;
+        }
+        &:before {
+          transform: rotate(45deg);
+        }
+        &:after {
+          transform: rotate(-45deg);
+        }
+        img {
+          display: none;
+        }
+      }
+      .content {
+        position: relative;
+        padding: 25px;
+        > p {
+          padding-bottom: 15px;
+          font-size: 28px;
+          text-align: left;
+          &::before {
+            content: 'TOTAL';
+            display: block;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color:#000000;
+          }
+        }
+      }
+      .ec-base-desc.typeDot {
+        padding-top: 15px;
+        .term {
+          background: none;
+          padding-left: 0;
+        }
+      }
+      @include breakpoints.mobile() {
+        width: calc(100% - 100px);
+        .content {
+          > p {
+            font-size: 18px;
+            &::before {
+              font-size:12px;
+            }
+          }
+        }
+      }
+    }
+  }
+
 }
