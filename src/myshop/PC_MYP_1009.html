@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc', {
+		"pagetitle": "인스턴트펑크 공식홈페이지 - 인스턴트펑크 INSTANTFUNK - 마이페이지 - 회원 정보 수정",
+		"webroot": "../"
+	})
+	<link rel="stylesheet" href="../assets/css/myshop.css">
+</head>
+<body>
+	<div id="wrap">
+		@@include('../inc/header.inc', {
+			"login": "false",
+			"webroot": "../"
+		})
+
+    <div class="container">
+			<div class="myshop">
+				<div class="myshop__container">
+					<div class="myshop__header">
+						<p class="myshop__title">회원 정보 수정</p>
+					</div>
+					<div class="myshop__row">
+						<div class="myshop__articles">
+							<div class="myshop__article">
+								<div class="myshop__row">
+									<div class="myshop__roundbox">
+										<div module="member_edit">
+											<div class="table">
+												<div class="table__header">
+													<div class="table__left">
+														<p class="table__title">기본정보</p>
+													</div>
+													<div class="table__right">
+														<span class="required">필수입력사항</span>
+													</div>
+												</div>
+												<div class="table__table">
+													<div class="table__row">
+														<div class="table__left">
+															<span class="required">아이디</span>
+														</div>
+														<div class="table__right">
+															<div class="form">
+																<div class="form__row form__row--medium">
+																	<div class="form__set">
+																		<div class="form__field">
+																			<div class="form__col">
+																				<input type="text" placeholder="영문소문자/숫자, 4~16자">
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="table__row">
+														<div class="table__left">
+															<span class="required">비밀번호</span>
+														</div>
+														<div class="table__right">
+															<div class="form">
+																<div class="form__row form__row--large">
+																	<div class="form__set">
+																		<div class="form__field">
+																			<div class="form__col">
+																				<input type="password" placeholder="영문 대소문자/숫자/특수문자 중 3가지 이상 조합, 8자~16자">
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="table__row">
+														<div class="table__left">
+															<span class="required">비밀번호 확인</span>
+														</div>
+														<div class="table__right">
+															<div class="form">
+																<div class="form__row form__row--large">
+																	<div class="form__set">
+																		<div class="form__field">
+																			<div class="form__col">
+																				<input type="password">
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="table__row">
+														<div class="table__left">
+															<span class="required">이름</span>
+														</div>
+														<div class="table__right">
+															<div class="form">
+																<div class="form__row form__row--small">
+																	<div class="form__set">
+																		<div class="form__field">
+																			<div class="form__col">
+																				<input type="text">
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="table__row">
+														<div class="table__left">
+															<span class="required">주소</span>
+														</div>
+														<div class="table__right">
+															<div class="form">
+																<div class="form__row form__row--smedium">
+																	<div class="form__set">
+																		<div class="form__field">
+																			<div class="form__col">
+																				<input type="text">
+																			</div>
+																			<div class="form__btn">
+																				<div class="button">
+																					<div class="button__container">
+																						<a href="#" id="{$btn_find_post}" class="button__item">우편번호</a>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="form__row">
+																	<div class="form__set">
+																		<div class="form__field">
+																			<div class="form__col">
+																				<input type="text" placeholder="기본주소">
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="form__row">
+																	<div class="form__set">
+																		<div class="form__field">
+																			<div class="form__col">
+																				<input type="text" placeholder="나머지주소(선택입력가능)">
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="table__row">
+														<div class="table__left">일반전화</div>
+														<div class="table__right">
+															<div class="form">
+																<div class="form__row form__row--medium">
+																	<div class="form__set">
+																		<div class="form__field">
+																			<div class="form__col">
+																				<div class="select">
+																					<select name="" id="">
+																						<option value="">02</option>
+																					</select>
+																				</div>
+																			</div>
+																			<div class="form__col">
+																				<input type="text">
+																			</div>
+																			<div class="form__col">
+																				<input type="text">
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="table__row">
+														<div class="table__left">
+															<span class="required">휴대전화</span>
+														</div>
+														<div class="table__right">
+															<div class="form">
+																<div class="form__row form__row--medium">
+																	<div class="form__set">
+																		<div class="form__field">
+																			<div class="form__col">
+																				<div class="select">
+																					<select name="" id="">
+																						<option value="">010</option>
+																					</select>
+																				</div>
+																			</div>
+																			<div class="form__col">
+																				<input type="text">
+																			</div>
+																			<div class="form__col">
+																				<input type="text">
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="table__row table__row--separate">
+														<div class="table__left">
+															<span class="required">SNS 수신여부</span>
+														</div>
+														<div class="table__right">
+															<div class="check">
+																<div class="check__inner">
+																	<input type="radio" id="snsmsg01" name="snsmsg" checked>
+																	<label for="snsmsg01">수신함</label>
+																</div>
+																<div class="check__inner">
+																	<input type="radio" id="snsmsg02" name="snsmsg">
+																	<label for="snsmsg02">수신안함</label>
+																</div>
+															</div>
+															<div class="form">
+																<p class="form__msg">쇼핑몰에서 제공하는 유익한 이벤트 소식을 sns로 받아보실 수 있습니다.</p>
+															</div>
+														</div>
+													</div>
+													<div class="table__row table__row--separate">
+														<div class="table__left">
+															<span class="required">이메일</span>
+														</div>
+														<div class="table__right">
+															<div class="form">
+																<div class="form__row form__row--xlarge">
+																	<div class="form__set">
+																		<div class="form__field form__field--email">
+																			<div class="form__col">
+																				<input type="text">
+																			</div>
+																			<div class="form__col form__col--unit">@</div>
+																			<div class="form__col">
+																				<input type="text">
+																			</div>
+																			<div class="form__col">
+																				<div class="select">
+																					<select name="" id="">
+																						<option value="">직접입력</option>
+																					</select>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<p class="form__msg">
+																	이메일을 통해 주문처리과정을 보내드립니다<br>
+																	이메일 주소란에는 반드시 수신가능한 이메일 주소를 입력해주세요
+																</p>
+															</div>
+														</div>
+													</div>
+													<div class="table__row table__row--separate">
+														<div class="table__left">
+															<span class="required">이메일 수신여부</span>
+														</div>
+														<div class="table__right">
+															<div class="check">
+																<div class="check__inner">
+																	<input type="radio" id="emailSnsmsg01" name="emailSnsmsg" checked>
+																	<label for="emailSnsmsg01">수신함</label>
+																</div>
+																<div class="check__inner">
+																	<input type="radio" id="emailSnsmsg02" name="emailSnsmsg">
+																	<label for="emailSnsmsg02">수신안함</label>
+																</div>
+															</div>
+															<div class="form">
+																<p class="form__msg">쇼핑몰에서 제공하는 유익한 이벤트 소식을 이메일로 받아보실 수 있습니다.</p>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="table__header">
+													<p class="table__title">추가정보</p>
+												</div>
+												<div class="table__table">
+													<div class="table__row">
+														<div class="table__left">
+															<span class="required">성별</span>
+														</div>
+														<div class="table__right">
+															<div class="check">
+																<div class="check__inner">
+																	<input type="radio" id="Gender01" name="gender" checked>
+																	<label for="Gender01">남자</label>
+																</div>
+																<div class="check__inner">
+																	<input type="radio" id="Gender02" name="gender">
+																	<label for="Gender02">여자</label>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="table__row">
+														<div class="table__left">
+															<span class="required">생년월일</span>
+														</div>
+														<div class="table__right">
+															<div class="form">
+																<div class="form__row">
+																	<div class="form__set">
+																		<div class="form__field form__field--mix">
+																			<div class="form__col">
+																				<input type="text" placeholder="년">
+																			</div>
+																			<div class="form__col">
+																				<input type="text" placeholder="월">
+																			</div>
+																			<div class="form__col">
+																				<input type="text" placeholder="일">
+																			</div>
+																			<div class="form__col">
+																				<div class="check">
+																					<div class="check__inner">
+																						<input type="radio" id="birth01" name="birth" checked>
+																						<label for="birth01">양력</label>
+																					</div>
+																					<div class="check__inner">
+																						<input type="radio" id="birth02" name="birth">
+																						<label for="birth02">음력</label>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="button">
+									<div class="button__container">
+										<a href="#" class="button__item button__item--large button__item--black">회원정보수정</a>
+										<a href="#" class="button__item button__item--large">취소</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="myshop__aside">
+							<div class="myshop__roundbox myshop__roundbox--user">
+								<div module="myshop_asyncbenefit">
+									<p class="myshop__my">
+										안녕하세요<br>
+										“<span class="myshop__name">홍길동</span>”  회원님
+									</p>
+									<div class="myshop__info">
+										<p class="myshop__tear">Quintet</p>
+										<p class="myshop__benefit">퀀텟 회원등급혜택 상시할인 10% + 적립 5%</p>
+										<div class="button">
+											<div class="button__container button__container--left">
+												<a href="#" class="button__item">회원탈퇴</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		@@include('../inc/footer.inc', {
+			"webroot": "../"
+		})
+	</div>
+</body>
+</html>

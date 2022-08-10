@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 	@@include('../inc/pagehead.inc', {
-		"pagetitle": "인스턴트펑크 공식홈페이지 - 인스턴트펑크 INSTANTFUNK - 마이페이지 - 주문내역조회",
+		"pagetitle": "인스턴트펑크 공식홈페이지 - 인스턴트펑크 INSTANTFUNK - 마이페이지 - 취소/반품/교환 내역",
 		"webroot": "../"
 	})
 	<link rel="stylesheet" href="../assets/css/myshop.css">
@@ -20,10 +20,10 @@
 					<div class="tab">
 						<div module="Myshop_OrderHistoryTab">
 							<ul class="tab__list">
-								<li class="tab__item selected">
+								<li class="tab__item">
 									<a href="#" class="tab__link">주문내역조회 <span class="tab__unit">(2)</span></a>
 								</li>
-								<li class="tab__item">
+								<li class="tab__item selected">
 									<a href="#" class="tab__link">취소/반품/교환 내역 <span class="tab__unit">(2)</span></a>
 								</li>
 							</ul>
@@ -75,10 +75,10 @@
 						<div class="myshop__article">
 							<div class="myshop__row">
 								<div class="myshop__roundbox">
-									<div module="Myshop_OrderHistoryListitem">
+									<div module="">
 										<div class="product">
 											<div class="myshop__header">
-												<p class="myshop__title">기본정보</p>
+												<p class="myshop__title">주문내역</p>
 											</div>
 											<div class="product__thead">
 												<div class="product__tr">
@@ -144,102 +144,39 @@
 															<div class="product__col">
 																<div class="product__group">
 																	<div class="product__left">주문처리상태</div>
-																	<div class="product__right">입금전</div>
+																	<div class="product__right">
+																		<span>배송완료</span>
+																		<div class="button">
+																			<div class="button__container">
+																				<a href="#" class="button__item">교환철회</a>
+																				<a href="#" class="button__item">리뷰작성</a>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 															</div>
 															<div class="product__col">
 																<div class="product__group">
 																	<div class="product__left">취소/교환/반품</div>
-																	<div class="product__right">-</div>
+																	<div class="product__right">
+																		<div class="button">
+																			<div class="button__container">
+																				<button type="button" class="button__item button__item--underline">상세정보</button>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 															</div>
 															<div class="product__col product__col--desktop-hidden">
 																<div class="button">
 																	<div class="button__container">
-																		<a href="#" class="button__item">주문취소</a>
-																		<a href="#" class="button__item">교환신청</a>
+																		<a href="#" class="button__item">교환철회</a>
+																		<a href="#" class="button__item">리뷰작성</a>
 																	</div>
 																</div>
 															</div>
 														</div>
 													</div>
-												</div>
-												<div class="product__tr">
-													<div class="product__td product__td--img">
-														<div class="product__img"><img src="../assets/images/@img_product01.png" alt=""></div>
-													</div>
-													<div class="product__td">
-														<div class="product__row">
-															<div class="product__col">
-																<p class="product__name">
-																	Minen Striped<br>
-																	Jacket
-																</p>
-																<div class="product__info">
-																	<span class="product__size">S <span>사이즈</span></span>
-																	<span class="product__count">/ 1개</span>
-																	<p class="product__price">₩135,000</p>
-																</div>
-															</div>
-															<div class="product__col">
-																<div class="product__group">
-																	<div class="product__left">주문번호</div>
-																	<div class="product__right">
-																		<a href="#" class="product__order">20220502-0000284</a>
-																	</div>
-																</div>
-																<div class="product__group">
-																	<div class="product__left">주문일자</div>
-																	<div class="product__right">
-																		<p class="product__date">2022-05-02</p>
-																	</div>
-																</div>
-																<div class="button">
-																	<div class="button__container">
-																		<a href="#" class="button__item">주문취소</a>
-																		<a href="#" class="button__item">교환신청</a>
-																	</div>
-																</div>
-															</div>
-															<div class="product__col product__col--mobile-hidden">
-																<span class="product__group">
-																	<div class="product__left">수량</div>
-																	<div class="product__right">1</div>
-																</span>
-															</div>
-															<div class="product__col product__col--mobile-hidden">
-																<div class="product__group">
-																	<div class="product__left">상품구매금액</div>
-																	<div class="product__right">₩135,000</div>
-																</div>
-															</div>
-															<div class="product__col">
-																<div class="product__group">
-																	<div class="product__left">주문처리상태</div>
-																	<div class="product__right">입금전</div>
-																</div>
-															</div>
-															<div class="product__col">
-																<div class="product__group">
-																	<div class="product__left">취소/교환/반품</div>
-																	<div class="product__right">-</div>
-																</div>
-															</div>
-															<div class="product__col product__col--desktop-hidden">
-																<div class="button">
-																	<div class="button__container">
-																		<a href="#" class="button__item">주문취소</a>
-																		<a href="#" class="button__item">교환신청</a>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="product__tfoot">
-												<div class="product__tr">
-													<p class="product__total"><span class="product__text">총</span> ₩405,000</p>
 												</div>
 											</div>
 										</div>

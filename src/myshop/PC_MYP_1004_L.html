@@ -458,6 +458,69 @@
 			</div>
 		</div>
 
+		<!-- 현금영수증 신청 팝업 -->
+		<div class="layer__body receipt-request" style="display: block;">
+			<div class="layer__wrap">
+				<div class="layer__close"><a href="#" class="btn__close modal__hide"><span class="a11y">닫기</span></a></div>
+				<div class="layer__header">
+					<p class="layer__title">현금영수증 신청양식 작성</p>
+				</div>
+				<div class="layer__content">
+					<div class="table">
+						<div class="table__table">
+							<div class="table__row">
+								<div class="table__left">구분</div>
+								<div class="table__right">
+									<div class="check">
+										<div class="check__inner">
+											<input type="radio" id="receiptMemberType01" name="receiptMemberType" checked="">
+											<label for="receiptMemberType01">개인</label>
+										</div>
+										<div class="check__inner">
+											<input type="radio" id="receiptMemberType02" name="receiptMemberType">
+											<label for="receiptMemberType02">법인</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__left">핸드폰 번호</div>
+								<div class="table__right">
+									<div class="form">
+										<div class="form__row">
+											<div class="form__set">
+												<div class="form__field">
+													<div class="form__col">
+														<div class="select">
+															<select name="" id="">
+																<option value="">010</option>
+															</select>
+														</div>
+													</div>
+													<div class="form__col">
+														<input type="text">
+													</div>
+													<div class="form__col">
+														<input type="text">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="button">
+						<div class="button__container">
+							<button type="button" class="button__item button__item--medium button__item--black">현금영수증 신청</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // 현금영수증 신청 팝업 -->
+
 		@@include('../inc/footer.inc', {
 			"webroot": "../"
 		})

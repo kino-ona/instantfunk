@@ -13,9 +13,13 @@
 		color: #000;
     font-size: 18px;
 	}
-	input[type=radio]:checked:before,
-	input[type=radio]:checked:after {
-		display: none;
+	input[type='radio'] {
+		width: 15px;
+		height: 15px;
+		&:before,
+		&:after {
+			display: none;
+		}
 	}
 	input[type=checkbox], input[type=radio] {
 		margin-right: 5px;
@@ -196,19 +200,6 @@
 				font-size: 24px;
 				letter-spacing: -0.025em;
 				@include mixins.PtdMedium();
-			}
-
-			.required {
-				padding-right: 0;
-				padding-left: 18px;
-				&:before {
-					left: 0;
-					top: 50%;
-					right: auto;
-					width: 10px;
-					height: 10px;
-					margin-top: -5px;
-				}
 			}
 		}
 
@@ -428,122 +419,6 @@
 		}
 	}
 
-	.form {
-		.form__row {
-			&:not(:first-child) {
-				margin-top: 30px;
-			}
-		}
-		.form__row--small {
-			max-width: 123px;
-		}
-		.form__row--smedium {
-			width: 45%;
-		}
-		.form__row--medium {
-			width: 55%;
-		}
-		.form__row--large {
-			width: 80%;
-		}
-		.form__row--xlarge {
-			width: 90%;
-		}
-		.form__label {
-			display: flex;
-			padding: 0 9px;
-			.form__text {
-				letter-spacing: -0.025em;
-				@include mixins.PtdMedium();
-			}
-		}
-		.form__set {
-			&:not(:first-child) {
-				margin-top: 12px;
-			}
-		}
-		.form__field {
-			display: flex;
-			align-items: center;
-			.form__col {
-				display: flex;
-				flex: 1;
-				margin-left: 2px;
-				align-items: center;
-				&:first-child {
-					margin-left: 0;
-				}
-				.form__group {
-					position: relative;
-					.form__msg {
-						position: absolute;
-						right: 25px;
-						top: 50%;
-						color: #999;
-						letter-spacing: -0.025em;
-						@include mixins.translate(0, -50%);
-						@include mixins.PtdRegular();
-					}
-				}
-			}
-			.form__col--unit {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				flex: none;
-				width: 22px;
-				margin: 0;
-				font-size: 18px;
-				letter-spacing: -0.025em;
-				@include mixins.PtdMedium();
-				& + .form__col {
-					margin-left: 0;
-				}
-			}
-			.form__col--offset {
-				padding: 0 9px;
-			}
-			.form__btn {
-				margin-left: 8px;
-			}
-			.form__id {
-				font-size: 20px;
-				@include mixins.PtdRegular();
-			}
-			
-			::-webkit-input-placeholder {
-				@include mixins.PtdRegular();
-			}
-			::-moz-placeholder {
-				@include mixins.PtdRegular();
-			}
-		}
-		.form__field--email {
-			.form__col {
-				&:last-child {
-					flex: .7;
-					margin-left: 7px;
-				}
- 			}
-		}
-		.form__field--mix {
-			.form__col {
-				max-width: 123px;
-				&:last-child {
-					flex-basis: 0%;
-					max-width: auto;
-					margin-left: 15px;
-					white-space: nowrap;
-				}
- 			}
-		}
-
-		.select {
-			width: 100%;
-			min-width: 0;
-		}
-	}
-
 	.board {
 		.board__row {
 			display: flex;
@@ -569,65 +444,6 @@
 					@include mixins.PtdMedium();
 				}
 			}
-		}
-	}
-
-	.table {
-		.table__table {
-			.table__row {
-				display: flex;
-				align-items: baseline;
-				padding: 1px 0;
-				margin-bottom: 5px;
-				// min-height: 58px;
-				.table__left {
-					width: 140px;
-				}
-				.table__right {
-					flex: 1;
-				}
-				input + span {
-					display: block;
-					padding-left: 10px;
-					margin-top: 5px;
-					font-size: 12px;
-					@include mixins.PtdRegular();
-				}
-			}
-		}
-
-		.form {
-			.form__row {
-				&:not(:first-child) {
-					margin-top: 2px;
-				}
-			}
-			.form__field {
-				::-webkit-input-placeholder {
-					text-align: right;
-				}
-				::-moz-placeholder {
-					text-align: right;
-				}
-			}
-		}
-	}
-
-	.required {
-		position: relative;
-		padding-right: 13px;
-		letter-spacing: -0.025em;
-		@include mixins.PtdRegular();
-		&:before {
-			content: '';
-			display: block;
-			position: absolute;
-			top: 3px;
-			right: 0;
-			width: 6px;
-			height: 6px;
-			border-radius: 50%;
-			background-color: #31cdd6;
 		}
 	}
 
@@ -798,15 +614,6 @@
 					font-size: 18px;
 					letter-spacing: -0.012em;
 				}
-
-				.required {
-					padding-left: 16.5px;
-					&:before {
-						width: 9px;
-						height: 9px;
-						margin-top: -4.5px;
-					}
-				}
 			}
 		}
 		.member__card--result {
@@ -975,72 +782,6 @@
 			}
 		}
 
-		.form {
-			.form__row {
-				&:not(:first-child) {
-					margin-top: 15px;
-				}
-			}
-			.form__row--small {
-				max-width: 182px;
-			}
-			.form__row--smedium {
-				width: 70%;
-			}
-			.form__row--medium {
-				width: 80%;
-			}
-			.form__row--large {
-				width: auto;
-			}
-			.form__row--xlarge {
-				width: auto;
-			}
-			.form__label {
-				.form__text {
-					font-size: 12px;
-					letter-spacing: -0.012em;
-				}
-			}
-			.form__set {
-				&:not(:first-child) {
-					margin-top: 10px;
-				}
-			}
-			.form__field {
-				.form__col--unit {
-					width: 15px;
-					font-size: 14px;
-					letter-spacing: -0.012em;
-				}
-				.form__id {
-					font-size: 14px;
-					letter-spacing: -0.012em;
-				}
-			}
-			.form__field--email {
-				.form__col {
-					&:last-child {
-						flex: 1;
-						margin-left: 2px;
-					}
-				 }
-			}
-			.form__field--mix {
-				flex-wrap: wrap;
-				.form__col {
-					max-width: 123px;
-					&:last-child {
-						flex: none;
-						width: 100%;
-						max-width: none;
-						margin-left: 0;
-						margin-top: 11.5px;
-					}
-				 }
-			}
-		}
-
 		.board {
 			.board__row {
 				letter-spacing: -0.012em;
@@ -1061,45 +802,6 @@
 						@include mixins.PtdMedium();
 					}
 				}
-			}
-		}
-
-		.table {
-			.table__table {
-				.table__row {
-					display: block;
-					padding: 0;
-					&:not(:first-child) {
-						margin-top: 20px;
-					}
-					.table__left {
-						width: auto;
-						margin-bottom: 10px;
-						font-size: 12px;
-					}
-				}
-			}
-
-			.form {
-				.form__field {
-					::-webkit-input-placeholder {
-						text-align: left;
-					}
-					::-moz-placeholder {
-						text-align: left;
-					}
-				}
-			}
-		}
-
-		.required {
-			padding-right: 11px;
-			font-size: 12px;
-			letter-spacing: -0.012em;
-			&:before {
-				top: 3px;
-				width: 4px;
-				height: 4px;
 			}
 		}
 

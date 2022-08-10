@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc', {
+		"pagetitle": "인스턴트펑크 공식홈페이지 - 인스턴트펑크 INSTANTFUNK - 마이페이지 - 적립금 조회 - 적립 내역 보기",
+		"webroot": "../"
+	})
+	<link rel="stylesheet" href="../assets/css/myshop.css">
+</head>
+<body>
+	<div id="wrap">
+		@@include('../inc/header.inc', {
+			"login": "false",
+			"webroot": "../"
+		})
+
+    <div class="container">
+			<div class="myshop">
+				<div class="myshop__container">
+					<div module="Myshop_mileageHistoryPackage">
+						<div class="tab">
+							<ul class="tab__list">
+								<li class="tab__item selected">
+									<a href="#" class="tab__link">적립내역보기</a>
+								</li>
+								<li class="tab__item">
+									<a href="#" class="tab__link">미가용적립내역보기</a>
+								</li>
+								<li class="tab__item">
+									<a href="#" class="tab__link">미가용쿠폰/회원등급적립내역</a>
+								</li>
+							</ul>
+						</div>
+						<div class="myshop__row">
+							<div class="myshop__articles">
+								<div class="myshop__article">
+									<div class="myshop__row">
+										<div class="myshop__roundbox">
+											<div module="myshop_historyList">
+												<div class="myshop__header">
+													<p class="myshop__title">적립내역보기</p>
+												</div>
+												<div class="table-detail">
+													<div class="table-detail__thead">
+														<div class="table-detail__tr">
+															<div class="table-detail__th table-detail__left table-detail__20">주문날짜</div>
+															<div class="table-detail__th table-detail__20">적립금</div>
+															<div class="table-detail__th table-detail__flex table-detail__left">내용</div>
+														</div>
+													</div>
+													<div class="table-detail__tbody">
+														<div class="table-detail__tr">
+															<div class="table-detail__td table-detail__20 table-detail__left">2022-04-19</div>
+															<div class="table-detail__td table-detail__20">₩400</div>
+															<div class="table-detail__td table-detail__flex table-detail__left">SNS 수신동의 + 이메일 수신동의 적립금</div>
+														</div>
+														<div class="table-detail__tr">
+															<div class="table-detail__td table-detail__20 table-detail__left">2022-04-19</div>
+															<div class="table-detail__td table-detail__20">₩400</div>
+															<div class="table-detail__td table-detail__flex table-detail__left">SNS 수신동의 + 이메일 수신동의 적립금</div>
+														</div>
+														<div class="table-detail__tr">
+															<div class="table-detail__td table-detail__20 table-detail__left">2022-04-19</div>
+															<div class="table-detail__td table-detail__20">₩400</div>
+															<div class="table-detail__td table-detail__flex table-detail__left">SNS 수신동의 + 이메일 수신동의 적립금</div>
+														</div>
+													</div>
+													<div class="table-detail__tfoot">
+														<div class="table-detail__tr table-detail__tr--right">
+															<p class="table-detail__total">
+																<span class="table-detail__unit">총</span>
+																<span class="table-detail__price">₩6,840</span>
+															</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="myshop__aside">
+								<div class="myshop__roundbox myshop__roundbox--mileage">
+									<div module="myshop_summary">
+										<div class="myshop__header">
+											<p class="myshop__title">
+												적립금
+											</p>
+											<i class="myshop__ico"></i>
+										</div>
+										<div class="board">
+											<div class="board__board">
+												<div class="board__tbody">
+													<div class="board__tr">
+														<div class="board__left">총 적립금</div>
+														<div class="board__right">₩6,840</div>
+													</div>
+													<div class="board__tr">
+														<div class="board__left">사용된 적립금</div>
+														<div class="board__right">₩63,000</div>
+													</div>
+													<div class="board__tr">
+														<div class="board__left">환불예정 적립금</div>
+														<div class="board__right">₩80</div>
+													</div>
+													<div class="board__tr">
+														<div class="board__left">미가용 적립금</div>
+														<div class="board__right">₩300</div>
+													</div>
+													<div class="board__tr">
+														<div class="board__left">사용가능 적립금</div>
+														<div class="board__right">₩3000</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>			
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="myshop__row">
+						<div class="myshop__short">
+							<div module="myshop_historyPaging" class="review_paging">
+								<p><a href="#" class="btn__prev"><img src="../assets/images/btn_review_prev.gif" alt="이전 페이지"></a></p>
+								<div class="paging_number">
+									<p><span>1</span>/<span>9</span></p>
+								</div>
+								<p><a href="#" class="btn__next"><img src="../assets/images/btn_review_next.gif" alt="다음 페이지"></a></p>
+							</div>
+							<div class="myshop__roundbox">
+								<div class="myshop__header">
+									<p class="myshop__title">적립금안내</p>
+								</div>
+								<div class="bullet">
+									<ul class="bullet__list">
+										<li class="bullet__item">
+											<div class="bullet__row">
+												<span class="bullet__unit">1.</span>
+												<span class="bullet__text">주문으로 발생한 적립금은 배송완료 후 7일 부터 실제 사용 가능한 적립금으로 전환됩니다.</span>
+											</div>
+										</li>
+										<li class="bullet__item">
+											<div class="bullet__row">
+												<span class="bullet__unit">2.</span>
+												<span class="bullet__text">배송완료 시점으로부터 7일 동안은 미가용 적립금으로 분류됩니다.</span>
+											</div>
+										</li>
+										<li class="bullet__item">
+											<div class="bullet__row">
+												<span class="bullet__unit">3.</span>
+												<span class="bullet__text">미가용 적립금은 반품, 구매취소 등을 대비한 임시 적립금으로 사용가능 적립금으로 전환되기까지 상품구매에 사용하실 수 없습니다.</span>
+											</div>
+										</li>
+										<li class="bullet__item">
+											<div class="bullet__row">
+												<span class="bullet__unit">4.</span>
+												<span class="bullet__text">사용가능 적립금(총적립금-사용된적립금-미가용적립금)은 상품구매 시 바로 사용가능합니다.</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		@@include('../inc/footer.inc', {
+			"webroot": "../"
+		})
+	</div>
+</body>
+</html>
