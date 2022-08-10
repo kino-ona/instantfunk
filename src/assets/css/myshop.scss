@@ -426,7 +426,11 @@
 
 		.calendar {
 			.calendar__input {
-				height: 45px;
+				height: 100%;
+				padding: 0;
+				border: 0;
+				background-color: #fff;
+				color: #000;
 			}
 		}
 
@@ -1156,8 +1160,7 @@
 				flex: 1;
 				.calendar__input {
 					width: 100%;
-					height: 36.5px;
-					padding-left: 12px;
+					padding-left: 7.5px;
 					font-size: 13px;
 				}
 			}
@@ -1412,7 +1415,7 @@
 
 		.table-detail {
 			&:not(:first-child) {
-
+				
 			}
 			.table-detail__thead {
 				display: none;
