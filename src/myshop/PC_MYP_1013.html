@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc', {
+		"pagetitle": "인스턴트펑크 공식홈페이지 - 인스턴트펑크 INSTANTFUNK - 마이페이지 - 마이쿠폰 목록",
+		"webroot": "../"
+	})
+	<link rel="stylesheet" href="../assets/css/myshop.css">
+</head>
+<body>
+	<div id="wrap">
+		@@include('../inc/header.inc', {
+			"login": "false",
+			"webroot": "../"
+		})
+
+    <div class="container">
+			<div class="myshop">
+				<div class="myshop__container myshop__container--wide">
+					<div class="myshop__header">
+						<p class="myshop__title">마이쿠폰 목록</p>
+						<span class="myshop__unit">사용가능쿠폰 5개</span>
+					</div>
+					<div class="myshop__row">
+						<div class="myshop__articles">
+							<div class="myshop__article">
+								<div class="coupon">
+									<div module="myshop_CouponList">
+										<ul class="coupon__list">
+											<li class="coupon__item coupon__item--summer">
+												<div class="coupon__coupon">
+													<div class="coupon__top">
+														<p class="coupon__category">SS22 상품</p>
+
+													</div>
+													<div class="coupon__bottom">
+														<p class="coupon__date">2022/05/21 - 2022/06/21</p>
+													</div>
+												</div>
+											</li>
+											<li class="coupon__item">
+												<div class="coupon__coupon">
+													<div class="coupon__top">
+														<p class="coupon__category">SS22 상품</p>
+
+													</div>
+													<div class="coupon__bottom">
+														<p class="coupon__date">2022/05/21 - 2022/06/21</p>
+													</div>
+												</div>
+											</li>
+											<li class="coupon__item">
+												<div class="coupon__coupon">
+													<div class="coupon__top">
+														<p class="coupon__category">SS22 상품</p>
+
+													</div>
+													<div class="coupon__bottom">
+														<p class="coupon__date">2022/05/21 - 2022/06/21</p>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="myshop__aside">
+							<div class="myshop__roundbox myshop__roundbox--coupon">
+								<div module="myshop_CouponSerial">
+									<div class="myshop__header">
+										<p class="myshop__title">쿠폰인증번호 등록하기</p>
+									</div>
+									<div class="form">
+										<div class="form__row">
+											<div class="form__set">
+												<div class="form__field">
+													<div class="form__col">
+														<input type="text">
+													</div>
+												</div>
+												<p class="form__msg">
+													반드시 쇼핑몰에서 발행한 쿠폰만 등록해주세요<br>
+													10~35자 일련번호 “-”제외
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="button">
+										<div class="button__container">
+											<button type="button" class="button__item button__item--large button__item--black">등록하기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="myshop__row">
+						<div class="myshop__short">
+							<div module="myshop_CouponListPaging" class="review_paging">
+								<p><a href="#" class="btn__prev"><img src="../assets/images/btn_review_prev.gif" alt="이전 페이지"></a></p>
+								<div class="paging_number">
+									<p><span>1</span>/<span>9</span></p>
+								</div>
+								<p><a href="#" class="btn__next"><img src="../assets/images/btn_review_next.gif" alt="다음 페이지"></a></p>
+							</div>
+							<div class="myshop__roundbox">
+								<div class="myshop__header">
+									<p class="myshop__title">쿠폰 이용안내</p>
+								</div>
+								<div class="bullet">
+									<ul class="bullet__list">
+										<li class="bullet__item">
+											<span class="bullet__unit">1.</span>
+											<span class="bullet__text">쿠폰인증번호 등록하기에서 쇼핑몰에서 발행한 종이쿠폰/시리얼쿠폰/모바일쿠폰 등의 인증번호를</span>
+										</li>
+										<li class="bullet__item">
+											<span class="bullet__unit">2.</span>
+											<span class="bullet__text">등록하시면 온라인쿠폰으로 발급되어 사용이 가능합니다</span>
+										</li>
+										<li class="bullet__item">
+											<span class="bullet__unit">3.</span>
+											<span class="bullet__text">쿠폰은 주문 시 1회에 한해 적용되며, 1회 사용 시 재 사용이 불가능합니다</span>
+										</li>
+										<li class="bullet__item">
+											<span class="bullet__unit">4.</span>
+											<span class="bullet__text">쿠폰은 적용 가능한 상품이 따로 적용되어 있는 경우 해당 상품 구매 시에만 사용이가능합니다</span>
+										</li>
+										<li class="bullet__item">
+											<span class="bullet__unit">5.</span>
+											<span class="bullet__text">특정한 종이쿠폰/시리얼쿠폰/모바일쿠폰의 경우 단 1회만 사용이 가능할 수 있습니다.</span>
+										<li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		@@include('../inc/footer.inc', {
+			"webroot": "../"
+		})
+	</div>
+</body>
+</html>

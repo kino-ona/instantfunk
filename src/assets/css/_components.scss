@@ -321,6 +321,9 @@
 		 }
 	}
 	.form__msg {
+		line-height: 18px;
+		letter-spacing: -0.025em;
+		@include mixins.PtdRegular();
 		&:not(:first-child) {
 			margin-top: 10px;
 		}
@@ -397,6 +400,11 @@
 					margin-top: 11.5px;
 				}
 			 }
+		}
+		.form__msg {
+			font-size: 12px;
+			line-height: 16px;
+			letter-spacing: -0.012em;
 		}
 	}
 }

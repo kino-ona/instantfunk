@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 	@@include('../inc/pagehead.inc', {
-		"pagetitle": "인스턴트펑크 공식홈페이지 - 인스턴트펑크 INSTANTFUNK - 마이페이지 - 적립금 조회 - 적립 내역 보기",
+		"pagetitle": "인스턴트펑크 공식홈페이지 - 인스턴트펑크 INSTANTFUNK - 마이페이지 - 적립금 조회 - 미가용 적립 내역 보기",
 		"webroot": "../"
 	})
 	<link rel="stylesheet" href="../assets/css/myshop.css">
@@ -17,13 +17,13 @@
     <div class="container">
 			<div class="myshop">
 				<div class="myshop__container">
-					<div module="Myshop_mileageHistoryPackage">
+					<div module="Myshop_mileageUnavailPackage">
 						<div class="tab">
 							<ul class="tab__list">
-								<li class="tab__item selected">
+								<li class="tab__item">
 									<a href="#" class="tab__link">적립내역보기</a>
 								</li>
-								<li class="tab__item">
+								<li class="tab__item selected">
 									<a href="#" class="tab__link">미가용적립내역보기</a>
 								</li>
 								<li class="tab__item">
@@ -36,9 +36,9 @@
 								<div class="myshop__article">
 									<div class="myshop__row">
 										<div class="myshop__roundbox">
-											<div module="myshop_historyList">
+											<div module="myshop_unavailList">
 												<div class="myshop__header">
-													<p class="myshop__title">적립내역보기</p>
+													<p class="myshop__title">미가용적립내역보기</p>
 												</div>
 												<div class="table-detail table-detail--mileage">
 													<div class="table-detail__thead">
@@ -121,7 +121,7 @@
 					</div>
 					<div class="myshop__row">
 						<div class="myshop__short">
-							<div module="myshop_historyPaging" class="review_paging">
+							<div module="myshop_unavailPaging" class="review_paging">
 								<p><a href="#" class="btn__prev"><img src="../assets/images/btn_review_prev.gif" alt="이전 페이지"></a></p>
 								<div class="paging_number">
 									<p><span>1</span>/<span>9</span></p>
