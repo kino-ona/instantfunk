@@ -1827,7 +1827,6 @@
 	}
 }
 
-
 // review
 .review__container {
 	.list__bottom {
@@ -2114,9 +2113,6 @@
   } 
 
   @include breakpoints.mobile() {
-    // margin-top: 50px !important;
-    // padding-left: 15px;
-    // padding-right: 15px;
     .rvwrap__head {
 			display: block;
       height: inherit;
@@ -2472,4 +2468,30 @@
 			.review__list--line {display: none;}
 		}
 	} //.review__list--cont 
+}
+
+// membership 
+.membership_row {
+	display: flex;
+	// justify-content: space-between;
+	border-top: 1px solid #000000;
+	> div {
+		// flex:1;
+		width: calc(100% / 3);
+	}
+	.membership_head {
+		padding: 40px 0;	
+		font-size: 24px;
+		font-weight: 500;
+	}
+	.membership_item {
+		padding: 40px 0 70px;	
+		font-size: 18px;
+		line-height: 1.5;
+    @include mixins.PtdRegular();
+		p, li {
+			font-size: inherit;
+			font-family: inherit;
+		}
+	}
 }
