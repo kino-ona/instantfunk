@@ -90,7 +90,7 @@
 			padding: 40px;
 			border: 0;
 			background-color: #ececec;
-			> .myshop__inner {
+			.myshop__inner {
 				display: flex;
 				flex-direction: column;
 				position: relative;
@@ -107,7 +107,7 @@
 		.myshop__roundbox--user {
 			padding: 40px 30px;
 			border: 0;
-			background: url('../images/bg_mypage_pattern.png') repeat 0 -30px #31cdd6;
+			background: url('/assets/images/bg_mypage_pattern.png') repeat 0 -30px #31cdd6;
 			.myshop__header {
 				margin-bottom: 20px;
 			}
@@ -212,6 +212,152 @@
 		.myshop__current {
 			font-size: 36px;
 		}
+
+		@include breakpoints.mobile() {
+			.myshop__article {
+				.myshop__row {
+					display: block;
+				}
+				.myshop__row--col4 {
+					display: grid;
+					grid-template-columns: repeat(auto-fit, minmax(calc(50% - 4px), auto));
+					.myshop__roundbox {
+						height: 34vw;
+						padding: 20px;
+						margin-bottom: 0;
+						.myshop__header {
+							margin-top: 6px;
+							font-size: 10px;
+							.myshop__title {
+								@include mixins.ATm();
+							}
+						}
+						.myshop__desc {
+							font-size: 9px;
+						}
+						.myshop__ico--order {
+							i {
+								@include mixins.sprite(mo_icons.$ico-myshop-order);
+							}
+						}
+						.myshop__ico--profile {
+							i {
+								@include mixins.sprite(mo_icons.$ico-myshop-profile);
+							}
+						}
+						.myshop__ico--cart {
+							i {
+								@include mixins.sprite(mo_icons.$ico-myshop-cart);
+							}
+						}
+						.myshop__ico--mileage {
+							i {
+								@include mixins.sprite(mo_icons.$ico-myshop-mileage);
+							}
+						}
+						.myshop__ico--coupon {
+							i {
+								@include mixins.sprite(mo_icons.$ico-myshop-coupon);
+							}
+						}
+						.myshop__ico--board {
+							i {
+								@include mixins.sprite(mo_icons.$ico-myshop-board);
+							}
+						}
+						.myshop__ico--address {
+							i {
+								@include mixins.sprite(mo_icons.$ico-myshop-address);
+							}
+						}
+						.myshop__ico--review {
+							i {
+								@include mixins.sprite(mo_icons.$ico-myshop-review);
+							}
+						}
+					}
+				}
+			}
+
+			.myshop__current {
+				font-size: 13px;
+			}
+			.myshop__unit {
+				font-size: 13px;
+			}
+			.myshop__roundbox {
+				margin-bottom: 3px;
+				.myshop__header {
+					margin-bottom: 27.5px;
+					.myshop__title {
+						font-size: 14px;
+					}
+				}
+				.myshop__detail {
+					.myshop__list {
+						display: block;
+						.myshop__item  {
+							display: flex;
+							align-items: center;
+							justify-content: space-between;
+							padding-bottom: 15px;
+						}
+						dt {
+							margin-bottom: 0;
+							font-size: 13px;
+						}
+						dd {
+							display: flex;
+							align-items: center;
+							.myshop__label {order:2}
+							.button {order:1;margin-right: 6px;}
+						}
+						.button {
+							margin: 0;
+						}
+					}
+					.myshop__bottom {
+						padding: 0;
+						padding-top: 15px;
+						border: 0;
+					}
+					.myshop__sum {
+						.myshop__text {
+							font-size: 13px;
+						}
+						.myshop__current {
+							font-size: 18px;
+							font-weight: 500;
+						}
+					}
+				}
+			}
+			.myshop__roundbox--user {
+				height: 66.67vw;
+				padding: 20px;
+				.myshop__my {
+					font-size: 18px;
+					line-height: 1.2;
+				}
+				.myshop__name {
+					&:after {
+						content: '';
+						display: block;
+					}
+				}
+				.myshop__tear {
+					font-size: 42px;
+				}
+			}
+			.myshop__roundbox--split {
+				height: 60.67vw;
+				padding: 20px;
+			}
+			.myshop__roundbox--pink {
+				height: 66.67vw;
+			}
+			
+		}
 	}
 	.myshop__header {
 		margin-bottom: 30px;
@@ -225,7 +371,7 @@
 		display: flex;
 		gap: 10px;
 		position: relative;
-		> div {
+		> div{
 			flex: 1;
 		}
 		.myshop__aside {
