@@ -549,6 +549,7 @@
 			}
 			.product__td--img {
 				display: flex;
+				align-items: flex-start;
 				flex: 0 0 183px;
 				padding-right: 15px;
 			}
@@ -1412,7 +1413,7 @@
 
 		.table-detail {
 			&:not(:first-child) {
-
+				
 			}
 			.table-detail__thead {
 				display: none;
