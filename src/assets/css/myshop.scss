@@ -7,6 +7,32 @@
 
 .myshop {
 	padding: 0 3.37vw;
+	.div_margin {
+		margin: 10px 0 20px;
+	}
+
+  .small_button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin:0 10px 0 0;
+    padding-right: 10px;
+    padding-left: 10px;
+    height: 32px;
+    font-size: 14px;
+    border: 1px solid #000000;
+    border-radius: 25px;
+    &.btn_delete {
+      width: 70px;
+    }
+    &.btn_gobank {
+      display: inline-flex;
+    }
+    &.btn_zipcode {
+      display: inline-flex;
+      width: 75px;
+    }
+  }
 	.myshop__container {
 		max-width: 1280px;
 		margin: 0 auto;
@@ -427,6 +453,10 @@
 			}
 		}
 
+		#reason_select {
+			height: 58px;
+		}
+
 		@include breakpoints.mobile() {
 			> .button {
 				padding: 0;
@@ -452,6 +482,10 @@
 		}
 		.myshop__desc {
 			letter-spacing: -0.025em;
+		}
+
+		input[type=radio], input[type=checkbox] {
+			border: 1px solid #000000;
 		}
 	}
 	.myshop__roundbox--user {
@@ -541,6 +575,70 @@
 			letter-spacing: -0.025em;
 			@include mixins.PtdRegular();
 		}
+	}
+	.pickuplist_article {
+		input[type=text] {
+			height: 58px;
+		}
+		.form__field {
+			margin-bottom: 20px;
+			label {
+				margin-right: 15px;
+			}
+		}
+		.pickup_direct {
+			margin-bottom: 5px;
+			align-items: center;
+			input[type=text] {
+				width: 20%;
+				margin-right: 5px;
+			}
+		}
+	}
+	.pickup_detail {
+		.form {
+			.form__col {
+				vertical-align: middle;
+			}
+			br {display: none;}
+		}
+		.select {
+			label {
+				margin-right: 15px;
+			}
+		}
+		select, input[type=text] {
+			height: 58px;
+		}
+		.pickup_address {
+			a {
+				&:after {
+					content: '';
+					display: block;
+					clear:both;
+				}
+			}
+			.zipcode_button {
+				position: relative;
+				margin-left: 10px;
+				span {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					position: absolute;
+					left:0;
+					top: 0;
+					width: 100%;
+					height: 100%;
+					color:#000000;
+				}
+			}
+		}
+	}
+	.refund_info {
+	}
+	.button {
+		margin-top: 15px;
 	}
 
 	.filter {
@@ -795,6 +893,14 @@
 			@include mixins.ellipse(4);
 			@include mixins.PtdRegular();
 		}
+		.product_order-info {
+			margin-bottom: 20px;
+			font-size: 16px;
+			line-height: 1.3;
+			a {
+				font-weight: 500;
+			}
+		}
 		.product__info {
 			margin-top: 40px;
 			.product__size {
@@ -957,6 +1063,11 @@
 			justify-content: flex-end;
 			align-items: center;
 			gap: 10px;
+			.reverse__item {
+				.button {
+					margin-top: 0;
+				}
+			}
 		}
 
 		.payment {
@@ -1453,6 +1564,9 @@
 			}
 			.product__tr {
 				align-items: flex-start;
+			}
+			.product_order-info {
+				font-size: 14px;
 			}
 			.product__name {
 				display: block;
