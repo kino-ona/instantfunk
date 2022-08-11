@@ -7,6 +7,21 @@
 
 .myshop {
 	padding: 0 3.37vw;
+	input[type=text], input[type=password] {
+		height: 58px;
+    padding: 0 14px;
+    border: 1px solid #f4f4f7;
+		color: #000;
+    font-size: 18px;
+	}
+	select {
+		height: 58px;
+		padding: 0 40px 0 24px;
+		border: 1px solid #f4f4f7;
+		border-radius: 100vw;
+		background-color: #f4f4f7;
+		font-size: 18px;
+	}
 	.div_margin {
 		margin: 10px 0 20px;
 	}
@@ -815,6 +830,7 @@
 			}
 			.product__row {
 				display: flex;
+				align-items: center;
 				.product__col {
 					display: flex;
 					flex-direction: column;
@@ -974,6 +990,15 @@
 					margin-top: -1px;
 					background-color: #000;
 				}
+			}
+		}
+
+		.product__number {
+			input[type=text] {
+				background: transparent;
+				border: 0;
+				text-align: center;
+				font-size: 18px;
 			}
 		}
 
