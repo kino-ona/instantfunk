@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc', {
+		"pagetitle": "인스턴트펑크 공식홈페이지 - 인스턴트펑크 INSTANTFUNK - 마이페이지 - 취소신청",
+		"webroot": "../"
+	})
+	<link rel="stylesheet" href="../assets/css/myshop.css">
+</head>
+<body>
+	<div id="wrap">
+		@@include('../inc/header.inc', {
+			"login": "false",
+			"webroot": "../"
+		})
+
+    <div class="container">
+			<div class="myshop">
+				<div class="myshop__container">
+					<div class="myshop__header">
+						<p class="myshop__title">취소신청</p>
+					</div>
+					<div module="">
+						<div class="myshop__articles">
+							<div class="myshop__article">
+								<div class="myshop__row">
+									<div class="myshop__roundbox">
+										<div class="product">
+											<div class="myshop__header">
+												<p class="myshop__title">주문내역</p>
+											</div>
+											<div class="product__thead">
+												<div class="product__tr">
+													<div class="product__td"></div>
+													<div class="product__td">상품정보</div>
+													<div class="product__td">수량</div>
+													<div class="product__td">신청수량</div>
+													<div class="product__td">상품구매금액</div>
+													<div class="product__td">주문처리상태</div>
+												</div>
+											</div>
+											<div class="product__tbody">
+												<div class="product__tr">
+													<div class="product__td product__td--img">
+														<div class="product__img">
+                              <img src="../assets/images/@img_product01.png" alt=""></div>
+													</div>
+													<div class="product__td">
+														<div class="product__row">
+															<div class="product__col">
+                                <p class="product_order-info">2022-08-09<br><a href="#">[20220809-0000089]</a></p>
+																<p class="product__name">
+																	Minen Striped<br>
+																	Jacket
+																</p>
+																<div class="product__info">
+																	<span class="product__size">S <span>사이즈</span></span>
+																	<span class="product__count">/ 1개</span>
+																	<p class="product__price">₩135,000</p>
+																</div>
+															</div>
+															<div class="product__col product__col--mobile-hidden">
+																<div class="product__group">
+																	<div class="product__left">수량</div>
+																	<div class="product__right">1</div>
+																</div>
+															</div>
+															<div class="product__col">
+																<div class="product__group">
+																	<div class="product__left">신청수량</div>
+																	<div class="product__right">
+																		<div class="product__count">
+																			<button type="button" class="product__control product__control--up"><span class="a11y">증가</span></button>
+																			<div class="product__number">1</div>
+																			<button type="button" class="product__control product__control--down"><span class="a11y">감소</span></button>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="product__col product__col--mobile-hidden">
+																<div class="product__group">
+																	<div class="product__left">상품구매금액</div>
+																	<div class="product__right">₩135,000</div>
+																</div>
+															</div>
+															<div class="product__col">
+																<div class="product__group">
+																	<div class="product__left">주문처리상태</div>
+																	<div class="product__right">입금전</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="myshop__article">
+								<div class="myshop__roundbox">
+									<div class="myshop__header">
+										<p class="myshop__title">취소사유</p>
+									</div>
+									<div class="table">
+										<div class="table__table">
+											<div class="table__row">
+												<div class="table__left">사유선택</div>
+												<div class="table__right">
+													<div class="form">
+														<div class="form__row form__row--xsmedium">
+															<div class="form__set">
+																<div class="form__field">
+																	<div class="form__col">
+																		<div class="select">
+																			<select name="" id="">
+																				<option value="">선택하세요</option>
+																			</select>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="table__row">
+												<div class="table__left">상세사유</div>
+												<div class="table__right">
+													<div class="form">
+														<div class="form__row">
+															<div class="form__set">
+																<div class="form__field">
+																	<div class="form__col">
+																		<textarea name="" id=""></textarea>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+              <div class="myshop__article">
+								<div class="myshop__roundbox">
+									<div class="myshop__header">
+										<p class="myshop__title">환불 정보</p>
+									</div>
+									<div class="table">
+										<div class="table__table">
+											<div class="table__row">
+												<div class="table__left">환불계좌</div>
+                        <div class="table__right">
+													<div class="form">
+                            <a href="#" class="small_button">환불계좌등록</a>
+                            <!-- <p class="ec-base-help txtWarn">현금환불 발생시 등록된 환불계좌로 환불 처리 됩니다.</p> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+								<div class="button">
+									<div class="button__container">
+										<button type="button" class="button__item button__item--large button__item--black">교환신청</button>
+										<a href="#" class="button__item button__item--large">이전페이지</a>
+									</div>
+								</div>
+              </div>
+              
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		@@include('../inc/footer.inc', {
+			"webroot": "../"
+		})
+	</div>
+</body>
+</html>

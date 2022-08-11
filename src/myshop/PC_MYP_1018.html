@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc', {
+		"pagetitle": "인스턴트펑크 공식홈페이지 - 인스턴트펑크 INSTANTFUNK - 마이페이지 - 멤버십프로그램",
+		"webroot": "../"
+	})
+	<script src="../assets/js/modernizr.js"></script>
+	<script src="../assets/js/product.js"></script>
+	<link rel="stylesheet" href="../assets/css/myshop.css">
+</head>
+<body>
+	<div id="wrap">
+		@@include('../inc/header.inc', {
+			"login": "false",
+			"webroot": "../"
+		})
+
+    <div class="container">
+			<div class="myshop">
+				
+        <div class="myshop__container">
+					<div class="myshop__header">
+						<p class="myshop__title">멤버십 프로그램</p>
+					</div>
+
+          <div class="membership_row">
+            <div class="membership_head">
+              내등급 확인
+            </div>
+            <div class="membership_item2">
+              <div class="membership_item">
+                안녕하세요 홍길동 회원님!<br>
+                회원님의 등급은 일반회원 이십니다.
+              </div>
+              <div class="membership_item">
+                <ul>
+                  <li>0원 이상 구매시 0%을 추가할인</li>
+                  <li>0원 이상 구매시 3%을 추가적립</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="membership-table_info">
+            <p><i></i>옆으로 밀어서 확인</p>
+          </div>
+          <div class="membership_row row-table">
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>일반회원</th>
+                  <th>솔로</th>
+                  <th>듀오</th>
+                  <th>트리오</th>
+                  <th>콰르텟</th>
+                  <th>퀀텟</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>선정기준</td>
+                  <td>-</td>
+                  <td>50만원이상</td>
+                  <td>150만원이상</td>
+                  <td>300만원이상</td>
+                  <td>500만원이상</td>
+                  <td>1000만원이상</td>
+                </tr>
+                <tr>
+                  <td>상시할인</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>5%</td>
+                  <td>7%</td>
+                  <td>10%</td>
+                </tr>
+                <tr>
+                  <td>룩북 쿠폰</td>
+                  <td>10% 할인 X 1장</td>
+                  <td>10% 할인 X 1장</td>
+                  <td>10% 할인 X 1장</td>
+                  <td>10% 할인 X 1장</td>
+                  <td>10% 할인 X 1장</td>
+                  <td>10% 할인 X 1장</td>
+                </tr>
+                <tr>
+                  <td>적립금</td>
+                  <td>3%</td>
+                  <td>3%</td>
+                  <td>3%</td>
+                  <td>4%</td>
+                  <td>5%</td>
+                  <td>5%</td>
+                </tr>
+                <tr>
+                  <td>생일축하 쿠폰</td>
+                  <td>1만원</td>
+                  <td>1만원</td>
+                  <td>1만원</td>
+                  <td>1만원</td>
+                  <td>1만원</td>
+                  <td>1만원</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="membership_row">
+            <div class="membership_head">
+              이용안내
+            </div>
+            <div class="membership_item2 item_full">
+              회원등급은 공식홈페이지의 누적 실구매금액을 기준으로만 산정됩니다. (외부입점몰 제외)<br>
+              등급은 영업일 기준, 결제완료 다음 날 오전 11시에 갱신됩니다.(주말, 연휴기간에는 갱신되지 않습니다)<br>
+              멤버십에 대한 상세내용은 변경될 수 있습니다. 
+            </div>
+          </div>
+          <div class="membership_row">
+            <div class="membership_head">
+              적립금
+            </div>
+            <div class="membership_item2 item_full">
+              실 결제금액의 3% 적립 (트리오 4%, 콰르텟 5%, 퀀텟5%)<br>
+              결제금액 5,000원 이상부터 사용가능<br>
+              적립금은 배송완료 7일 이후 적립<br>
+              회원가입 시 이메일/SMS 모두 수신동의할 경우 3,000원 적립금 지급<br>
+              적립금은 회원자격이 상실되는 시점까지 유효, 회원자격이 상실될 경우 소멸<br>
+              적립일로부터 1년 이내에 사용가능, 1년이 초과된 경우 소멸
+            </div>
+          </div>
+
+          <div class="membership_button">
+            <a href="#" class="button">내 적립금 확인하기</a>
+          </div>
+        </div>
+			</div>
+		</div>
+
+		@@include('../inc/footer.inc', {
+			"webroot": "../"
+		})
+	</div>
+</body>
+</html>
