@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc', {
+		"pagetitle": "인스턴트펑크 공식홈페이지 - 인스턴트펑크 INSTANTFUNK - 마이페이지 - 배송 주소록 관리",
+		"webroot": "../"
+	})
+	<link rel="stylesheet" href="../assets/css/myshop.css">
+</head>
+<body>
+	<div id="wrap">
+		@@include('../inc/header.inc', {
+			"login": "false",
+			"webroot": "../"
+		})
+
+    <div class="container">
+			<div class="myshop">
+				<div class="myshop__container">
+					<div class="myshop__header">
+						<p class="myshop__title">배송 주소록 관리</p>
+					</div>
+					<div class="myshop__articles">
+						<div class="myshop__article">
+							<div class="myshop__roundbox">
+								<div module="myshop_AddrList">
+									<div class="table-detail table-detail--address">
+										<div class="table-detail__thead">
+											<div class="table-detail__tr">
+												<div class="table-detail__th table-detail__auto">
+													<input type="checkbox">
+												</div>
+												<div class="table-detail__th table-detail__10">주소록 고정</div>
+												<div class="table-detail__th table-detail__10">배송지명</div>
+												<div class="table-detail__th table-detail__10">수령인</div>
+												<div class="table-detail__th table-detail__12">일반전화</div>
+												<div class="table-detail__th table-detail__12">휴대전화</div>
+												<div class="table-detail__th table-detail__flex table-detail__left">주소</div>
+												<div class="table-detail__th table-detail__10">수정</div>
+											</div>
+										</div>
+										<div class="table-detail__tbody">
+											<div class="table-detail__tr">
+												<div class="table-detail__td table-detail__auto">
+													<input type="checkbox">
+												</div>
+												<div class="table-detail__td table-detail__10">
+													<div class="button">
+														<div class="button__container">
+															<div class="button">
+																<button type="button" class="button__item button__item--black">고정</button>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="table-detail__td table-detail__10">집</div>
+												<div class="table-detail__td table-detail__10">홍길동</div>
+												<div class="table-detail__td table-detail__12">02-1111-1111</div>
+												<div class="table-detail__td table-detail__12">010-1111-1111</div>
+												<div class="table-detail__td table-detail__flex table-detail__left">
+													<p class="table-detail__text">(06114)서울특별시 강남구 강남대로 126길 (논현동) 마포레미안 푸르지오 11층 1102호</p>
+												</div>
+												<div class="table-detail__td table-detail__10">
+													<div class="button">
+														<div class="button__container">
+															<div class="button">
+																<button type="button" class="button__item">수정하기</button>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="table-detail__td table-detail__td--mobile">
+													<div class="address">
+														<div class="address__container">
+															<div class="address__box">
+																<div class="address__row address__row--flex">
+																	<div class="address__group">
+																		<span class="address__name">집</span>
+																		<span class="address__recipient">(홍길동)</span>
+																	</div>
+																	<div class="button">
+																		<div class="button__container">
+																			<button type="button" class="button__item button__item--black">고정</button>
+																		</div>
+																	</div>
+																</div>
+																<div class="address__row">
+																	<p class="address__address">(06114)서울특별시 강남구 강남대로 126길 (논현동) 마포레미안 푸르지오 11층 1102호</p>
+																</div>
+																<div class="address__row address__row--flex">
+																	<span class="address__call">02-1111-1111</span>
+																	<span class="address__call">010-1111-1111</span>
+																</div>
+															</div>
+															<div class="button">
+																<div class="button__container">
+																	<a href="#" class="button__item">수정</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="table-detail__tr">
+												<div class="table-detail__td table-detail__auto">
+													<input type="checkbox">
+												</div>
+												<div class="table-detail__td table-detail__10">
+													<div class="button">
+														<div class="button__container">
+															<div class="button">
+																<button type="button" class="button__item">해제</button>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="table-detail__td table-detail__10">집</div>
+												<div class="table-detail__td table-detail__10">회사</div>
+												<div class="table-detail__td table-detail__12">02-1111-1111</div>
+												<div class="table-detail__td table-detail__12">010-1111-1111</div>
+												<div class="table-detail__td table-detail__flex table-detail__left">
+													<p class="table-detail__text">(06114)서울특별시 강남구 강남대로 126길 (논현동) 마포레미안 푸르지오 11층 1102호</p>
+												</div>
+												<div class="table-detail__td table-detail__10">
+													<div class="button">
+														<div class="button__container">
+															<div class="button">
+																<button type="button" class="button__item">수정하기</button>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="table-detail__td table-detail__td--mobile">
+													<div class="address">
+														<div class="address__container">
+															<div class="address__box">
+																<div class="address__row address__row--flex">
+																	<div class="address__group">
+																		<span class="address__name">회사</span>
+																		<span class="address__recipient">(홍길동)</span>
+																	</div>
+																	<div class="button">
+																		<div class="button__container">
+																			<button type="button" class="button__item">해제</button>
+																		</div>
+																	</div>
+																</div>
+																<div class="address__row">
+																	<p class="address__address">(06114)서울특별시 강남구 강남대로 126길 (논현동) 마포레미안 푸르지오 11층 1102호</p>
+																</div>
+																<div class="address__row address__row--flex">
+																	<span class="address__call">02-1111-1111</span>
+																	<span class="address__call">010-1111-1111</span>
+																</div>
+															</div>
+															<div class="button">
+																<div class="button__container">
+																	<a href="#" class="button__item">수정</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="button">
+								<div class="button__container">
+									<a href="#" class="button__item button__item--large">선택 주소록 삭제</a>
+									<a href="#" class="button__item button__item--large button__item--black">배송지 등록</a>
+								</div>
+							</div>
+						</div>
+						<div class="myshop__article">
+							<div class="myshop__roundbox">
+								<div class="myshop__header">
+									<p class="myshop__title">배송주소록 유의사항</p>
+								</div>
+								<div class="bullet">
+									<ul class="bullet__list">
+										<li class="bullet__item">
+											<div class="bullet__row">
+												<span class="bullet__unit">1.</span>
+												<span class="bullet__text">배송 주소록은 최대 10개까지 등록할 수 있으며, 별도로 등록하지 않을 경우 최근 배송 주소록 기준으로 자동 업데이트됩니다.</span>
+											</div>
+										</li>
+										<li class="bullet__item">
+											<div class="bullet__row">
+												<span class="bullet__unit">2.</span>
+												<span class="bullet__text">자동 업데이트를 원하지 않을 경우 주소록 고정 선택을 선택하시면 선택된 주소록은 업데이트 대상에서 제외합니다.</span>
+											</div>
+										</li>
+										<li class="bullet__item">
+											<div class="bullet__row">
+												<span class="bullet__unit">3.</span>
+												<span class="bullet__text">기본 배송지는 1개만 저장됩니다. 다른 배송지로 설정하시면 기본 배송지가 변경됩니다.</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		@@include('../inc/footer.inc', {
+			"webroot": "../"
+		})
+	</div>
+</body>
+</html>

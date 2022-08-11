@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	@@include('../inc/pagehead.inc', {
+		"pagetitle": "인스턴트펑크 공식홈페이지 - 인스턴트펑크 INSTANTFUNK - 마이페이지 - 게시물 관리",
+		"webroot": "../"
+	})
+	<link rel="stylesheet" href="../assets/css/myshop.css">
+</head>
+<body>
+	<div id="wrap">
+		@@include('../inc/header.inc', {
+			"login": "false",
+			"webroot": "../"
+		})
+
+    <div class="container">
+			<div class="myshop">
+				<div class="myshop__container">
+					<div module="myshop_BoardPackage">
+						<div class="myshop__header myshop__header--filter">
+							<p class="myshop__title">게시물 관리</p>
+							<div class="filter">
+								<div class="filter__row">
+									<div class="filter__left">
+										<div module="myshop_boardListHead">
+											<div class="select">
+												<select name="" id="">
+													<option value="">작성일자</option>
+												</select>
+											</div>
+										</div>
+										<div module="myshop_boardlistSearch">
+											<fieldset>
+												<legend class="a11y">게시물 검색</legend>
+												<div class="filter__row">
+													<div class="select">
+														<select name="" id="">
+															<option value="">글쓴이</option>
+														</select>
+													</div>
+													<input type="text" placeholder="검색어 입력">
+													<button type="button" class="filter__search">조회</button>
+												</div>
+											</fieldset>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="myshop__articles">
+							<div class="myshop__article">
+								<div class="myshop__roundbox">
+									<div module="myshop_boardList">
+										<div class="table-detail table-detail--notice">
+											<div class="table-detail__thead">
+												<div class="table-detail__tr">
+													<div class="table-detail__th table-detail__10">번호</div>
+													<div class="table-detail__th table-detail__flex table-detail__left">제목</div>
+													<div class="table-detail__th table-detail__20">작성자</div>
+													<div class="table-detail__th table-detail__10">조회</div>
+												</div>
+											</div>
+											<div class="table-detail__tbody">
+												<div class="table-detail__tr">
+													<div class="table-detail__td table-detail__10">4</div>
+													<div class="table-detail__td table-detail__flex table-detail__left">
+														<div class="notice">
+															<div class="notice__category">
+																<p class="notice__text">상품 Q&amp;A</p>
+																<i class="notice__ico"></i>
+															</div>
+															<div class="notice__notice">
+																<span class="notice__flag notice__flag--answer">답변</span>
+																<a href="#" class="notice__text">배송지를 잘못 입력했습니다</a>
+																<p class="notice__writer">대표관리자</p>
+																<p class="notice__date">2022-05-19</p>
+															</div>
+														</div>
+													</div>
+													<div class="table-detail__td table-detail__20">대표관리자</div>
+													<div class="table-detail__td table-detail__10">3</div>
+												</div>
+												<div class="table-detail__tr">
+													<div class="table-detail__td table-detail__10">4</div>
+													<div class="table-detail__td table-detail__flex table-detail__left">
+														<div class="notice">
+															<div class="notice__category">
+																<p class="notice__text">상품 Q&amp;A</p>
+																<i class="notice__ico notice__ico--lock"></i>
+															</div>
+															<div class="notice__notice">
+																<span class="notice__flag">내글</span>
+																<a href="#" class="notice__text">배송지를 잘못 입력했습니다</a>
+																<p class="notice__writer">홍**</p>
+																<p class="notice__date">2022-05-19</p>
+															</div>
+														</div>
+													</div>
+													<div class="table-detail__td table-detail__20">홍**</div>
+													<div class="table-detail__td table-detail__10">3</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		@@include('../inc/footer.inc', {
+			"webroot": "../"
+		})
+	</div>
+</body>
+</html>

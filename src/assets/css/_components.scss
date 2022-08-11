@@ -556,7 +556,7 @@
 	position: relative;
 	padding-right: 13px;
 	letter-spacing: -0.025em;
-	@include mixins.PtdRegular();
+	@include mixins.PtdMedium();
 	&:before {
 		content: '';
 		display: block;
