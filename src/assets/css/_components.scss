@@ -740,6 +740,7 @@
 		border: 1px solid #000000;
 		border-radius: 42px;
 		padding: 25px;
+		background-color: #ffffff;
 		
 		.rv__product {
 			display: flex;
@@ -869,16 +870,21 @@
 		}
 	}
 	.reviewSearch {
+		display: flex;
 		position: relative;
     width: 100%;
     height: 44px;
     margin-bottom: 20px;
     align-items: center;
+		border:1px solid red;
     &:after {
       content: '';
       display: block;
       clear: both;
       overflow: hidden;
     }
+		.sorting {
+			display: flex;
+		}
 	}
 }
