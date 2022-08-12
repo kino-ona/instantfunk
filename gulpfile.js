@@ -254,7 +254,7 @@ exports.sprite = sprite;
 
 // clean sprite
 function cleanSprite(done) {
-	del.sync(['dist/assets/images/sprite', 'dist/assets/css/sprite']);
+	del.sync(['dist/assets/images/sprite', 'src/assets/css/sprite']);
 	done();
 }
 exports.cleanSprite = cleanSprite;
