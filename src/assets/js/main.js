@@ -12,7 +12,7 @@ jQuery.noConflict();
 			},
 			breakpointsInverse: true,
 			breakpoints: {
-				750: {
+				1024: {
 					allowTouchMove: false
 				}
 			}
@@ -100,7 +100,7 @@ jQuery.noConflict();
 				delay: 500
 			},
 			breakpoints: {
-				750: {
+				1024: {
 					allowTouchMove: false
 				}
 			},

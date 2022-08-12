@@ -16,7 +16,7 @@ jQuery.noConflict();
       direction: 'horizontal',
       breakpointsInverse: true,
       breakpoints: {
-        750: {
+        1024: {
           direction: 'vertical',
           autoplay: true,
           slidesPerView: 'auto',
@@ -59,7 +59,7 @@ jQuery.noConflict();
 				delay: 500
 			},
 			breakpoints: {
-				750: {
+				1024: {
 					allowTouchMove: false
 				}
 			},
@@ -151,7 +151,7 @@ jQuery.noConflict();
       $detailInfo = $('.detail_info');
       $detailQuick = $('.detail__quick');
 
-      if($w.width() > 750) {
+      if($w.width() > 1024) {
         $w.on('scroll', function() {
           var sT = $w.scrollTop();
           var val = $(document).height() - $w.height() - (footerHei + $lastPos);
