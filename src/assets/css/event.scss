@@ -1,0 +1,41 @@
+@use 'mixins';
+@use 'sprite/icons';
+@use 'sprite/mo_icons';
+@use 'breakpoints';
+
+// event
+.event {
+	.event__container {
+		max-width: 1600px;
+		margin: 0 auto;
+	}
+
+	.product-list {
+		margin-top: 6.25vw;
+	}
+
+	.menu {
+		.menu__item {
+			// max-height: 648px;
+		}
+		.menu__round {
+			padding-top: calc(122.73% - 4px);
+		}
+	}
+
+	@include breakpoints.mobile() {
+		.event__container {
+			padding: 0;
+		}
+
+		.product-list {
+			margin-top: 8vw;
+		}
+
+		.menu {
+			.menu__round {
+				padding-top: 66.67vw;
+			}
+		}
+	}
+}

@@ -36,7 +36,7 @@ jQuery.noConflict();
 		winSizeCheck();
 		function winSizeCheck() {
 			let winWidth = $(window).width();
-			if (winWidth >= 750) {
+			if (winWidth >= 1024) {
 				$('html').removeClass('mobile');
 				$('html').addClass('desktop');
 				$('.nav').removeClass('nav--opened nav--closed');
