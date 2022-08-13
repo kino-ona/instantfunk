@@ -4,20 +4,22 @@
 @use 'breakpoints';
 
 // myshop
-
-input[type='radio'] {
-	width: 15px;
-	height: 15px;
-	&:before,
-	&:after {
-		display: none !important;
-	}
-	& + label {
-		font-size: inherit;
-	}
-}
-
 .myshop {
+	input[type='radio'], input[type='checkbox'] {
+		width: 15px;
+		height: 15px;
+		border: 1px solid #000000;
+		&:before,
+		&:after {
+			display: none !important;
+		}
+		& + label {
+			font-size: inherit;
+		}
+	}
+	input[type='checkbox'] {
+		border-radius: 0;
+	}
 	input[type=text], input[type=password] {
 		height: 58px;
     padding: 0 14px;
