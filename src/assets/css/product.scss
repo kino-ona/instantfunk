@@ -2511,7 +2511,8 @@
   }
 } 
 
-.xans-smartreview-displist {
+
+.xans-smartreview-displist.reviewArea {
 	position: relative;
 	max-width: 1280px;
 	margin: 0 auto;
@@ -2661,15 +2662,55 @@
     height: 44px;
     margin-bottom: 20px;
     align-items: center;
-		border:1px solid red;
+    border: 0;
+    padding: 0;
     &:after {
       content: '';
       display: block;
       clear: both;
       overflow: hidden;
     }
+    .ctrl {
+      input[type=checkbox] {
+        border: 1px solid #000000;
+      }
+    }
 		.sorting {
 			display: flex;
+      height: 44px;
+      align-items: center;
+      justify-content: center;
+      padding: 0 20px;
+      border-radius: 50px;
+      border:1px solid #000000;
+      li {
+        font-size: 14px;
+        line-height: normal;
+        &:before {
+          background: transparent;
+        }
+      }
 		}
+    .searchWrap {
+      .ec-board-list-search-type {
+        appearance: auto;
+        width: 165px;
+        height: 44px;
+        border: 1px solid #000000;
+        background-color: #ffffff;
+        font-size: 14px;
+        margin: 0 3px;
+      }
+      .search {
+        width: 320px;
+        height: 44px;
+        border: 1px solid #000000;
+        border-radius: 100vw;
+        overflow: hidden;
+        input[type=text] {
+          font-size: 14px;
+        }
+      }
+    }
 	}
 }
