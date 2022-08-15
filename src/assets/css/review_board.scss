@@ -1,0 +1,81 @@
+@use 'mixins';
+@use 'sprite/icons';
+@use 'sprite/mo_icons';
+@use 'breakpoints';
+
+.review__container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 3.37vw;
+  box-sizing: content-box;
+  .reviewArea {
+    .reviewList {
+      > ul {
+        margin: 0;
+      }
+    }
+    .reviewSearch {
+      .ctrl {
+        .btnSearch {
+          &:after {
+            margin: 0;
+          }
+        }
+      }
+    }
+    .btnMore {
+      width: 70px;
+      height: 100%;
+      margin: 0 6px;
+      border: 1px solid #000000;
+      background: #ffffff;
+      border-radius: 14px;
+      align-items: center;
+      vertical-align: middle;
+      text-align: center;
+    }
+  }
+
+  .ec-board-list-item {
+    border-radius: 42px;
+    // padding: 10px;
+    border-color:#000000 !important;
+    .grid_inner {
+      padding: 20px;
+    }
+  }
+  .review__list--cont {
+    .rv__product {
+      justify-content: space-between;
+      > div {
+        display: flex;
+      }
+      .rv__box {
+        width: auto;
+      }
+    }
+    .rv__text {
+      font-size: 22px;
+      font-weight: 400;
+    }
+    .rv__prcode {
+      font-weight: 400;
+    }
+    .rv__count {
+      width: auto;
+      font-size: 24px;
+    }
+    .rv__thumnb {
+      width: 90px;
+      height: 90px;
+      border-radius: 21px;
+    }
+    .rv__morecnt {
+      align-items: center;
+      justify-content: space-between;
+    }
+    .morecnt_section {
+      margin-right: 0;
+    }
+  }
+}
