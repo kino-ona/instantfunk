@@ -76,6 +76,14 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 	width: 100%;
+	border: 0;
+	caption {display: none;}
+	tbody, tfoot, thead {
+		border: 0;
+		td {
+			border: 0;
+		}
+	}
 }
 
 input,
@@ -288,8 +296,15 @@ select{
 	padding: 0 40px 0 24px;
 	border: 1px solid #f4f4f7;
 	border-radius: 100vw;
-	background-color: #f4f4f7;
+	background: {
+		color: #f4f4f7;
+		image: url('/assets/images/bg_select@2x.png');
+		size: 11px;
+		repeat: no-repeat;
+		position: right 10px center;
+	}
 	font-size: 18px;
+	font: initial;
 	letter-spacing: -0.025em;
 	cursor: pointer;
 	outline: none;

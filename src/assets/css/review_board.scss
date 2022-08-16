@@ -25,6 +25,9 @@
           }
         }
       }
+      .searchWrap .ec-board-list-search-type {
+        appearance: none;
+      }
     }
     .btnMore {
       width: 70px;
@@ -58,7 +61,7 @@
       }
     }
     .rv__text {
-      font-size: 22px;
+      font-size: 18px;
       font-weight: 400;
     }
     .rv__prcode {
@@ -74,11 +77,21 @@
       border-radius: 21px;
     }
     .rv__morecnt {
+      margin-top: 5px;
       align-items: center;
       justify-content: space-between;
+      & + .rv__morecnt { 
+        margin-top: 20px;
+        justify-content: flex-start;
+      }
     }
     .morecnt_section {
-      margin-right: 0;
+      display: flex;
+      align-items: center;
+      margin-right: 10px;
+    }
+    .btn__rvlike {
+      margin-right: 3px;
     }
   }
 
@@ -164,4 +177,70 @@
 	.ico_reviewcnt {
 		@include icons.retina-sprite(icons.$ico_reviewcnt-group);
 	}
+
+  @include breakpoints.mobile() {
+    .reviewArea {
+      .rvwrap__head {
+        height: auto;
+        margin-bottom: 0;
+        .head__title {
+          margin-bottom: 15px;
+          font-size: 20px;
+        }
+      }
+      .reviewSearch {
+        display: block;
+        height: auto;
+        .sorting {
+          justify-content: flex-start;
+        }
+        .ctrl {
+          position: relative;
+          top: inherit;
+          right: inherit;
+          margin-top: 5px;
+          .searchWrap {
+            width: 100%;
+            margin-right: 0;
+            .search {
+              width: 100%;
+              margin-left: 0;
+            }
+          }
+        }
+        label {
+          position: absolute;
+          right: 0;
+        }
+        .select {
+          display: flex;
+          max-width: 100px;
+          height: auto !important;
+          margin-bottom: 5px;
+        }
+        select {
+          height: 40px !important;
+        }
+      }
+      .reviewSearch + .searchArea, 
+      .reviewCategory.displaynone + .searchArea {
+        margin-top: 0;
+      }
+      .reviewList {
+        > ul {
+          height: auto !important;
+          .grid {
+            position: relative !important;
+            float: none;
+            width: calc(100% - 6px) !important;
+            left: inherit !important;
+            top: inherit !important;
+            margin-bottom: 15px;
+            border-radius: 24px;
+          }
+        }
+      }
+      
+    }
+  }
 }
