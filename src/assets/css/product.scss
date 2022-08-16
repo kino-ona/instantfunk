@@ -256,7 +256,7 @@
   .btn__rvlike {
     display: inline-block;
     @include icons.retina-sprite(icons.$ico-like-group);
-    &.seleted {
+    &.selected {
       @include icons.retina-sprite(icons.$ico-like-on-group);
     }
   }
@@ -282,7 +282,7 @@
     bottom: 10px;
     display: inline-block;
     @include icons.retina-sprite(icons.$ico-share-group);
-    &.seleted {
+    &.selected {
     }
   }
 
@@ -354,7 +354,7 @@
     .btn__rvlike {
       width: 16px;
       @include mixins.sprite(mo_icons.$ico-like);
-      &.seleted {
+      &.selected {
         @include mixins.sprite(mo_icons.$ico-like-on);
       }
     }
@@ -1575,14 +1575,14 @@
   .btn__rvlike {
     display: inline-block;
     @include icons.retina-sprite(icons.$ico-like-group);
-    &.seleted {
+    &.selected {
       @include icons.retina-sprite(icons.$ico-like-on-group);
     }
   }
   .btn__rvshare {
     display: inline-block;
     @include icons.retina-sprite(icons.$ico-share-group);
-    &.seleted {
+    &.selected {
     }
   }
   .review__writter {
@@ -2651,7 +2651,7 @@
 			bottom: 10px;
 			display: inline-block;
 			@include icons.retina-sprite(icons.$ico-share-group);
-			&.seleted {
+			&.selected {
 			}
 		}
 	}

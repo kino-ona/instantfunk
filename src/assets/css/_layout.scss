@@ -848,39 +848,39 @@
 	}
 }
 
-.shadow-box {
-	opacity: 1;
-	@include mixins.transition(1.7s, ease-in);
-	&.__active {
-		opacity: 0;
-	}
-}
-.img_funkplay {
-	position: absolute;
-	transform: translate(0, 100px); 
-	width: 100%;
-	height: 100%;
-	padding-top: 0;
-	background: {
-		image: url('../images/img_funkplay0.png');
-		size: 100%;
-		repeat: no-repeat;
-		position: center center;
-	}
-	// opacity: 0;
-	&.__active {
-		// transform: translate(0, 0); 
-		// animation: funkPlayEffect 2s ease-in alternate;
-	}
+// .shadow-box {
+// 	opacity: 1;
+// 	@include mixins.transition(1.7s, ease-in);
+// 	&.__active {
+// 		opacity: 0;
+// 	}
+// }
+// .img_funkplay {
+// 	position: absolute;
+// 	transform: translate(0, 100px); 
+// 	width: 100%;
+// 	height: 100%;
+// 	padding-top: 0;
+// 	background: {
+// 		image: url('../images/img_funkplay0.png');
+// 		size: 100%;
+// 		repeat: no-repeat;
+// 		position: center center;
+// 	}
+// 	// opacity: 0;
+// 	&.__active {
+// 		// transform: translate(0, 0); 
+// 		// animation: funkPlayEffect 2s ease-in alternate;
+// 	}
 
-	@include breakpoints.mobile() {
-		transform: translate(0, 50px); 
-		background: {
-			image: url('../images/m_img_funkplay.png');
-			size: 100%;
-		}
-	}
-}
+// 	@include breakpoints.mobile() {
+// 		transform: translate(0, 50px); 
+// 		background: {
+// 			image: url('../images/m_img_funkplay.png');
+// 			size: 100%;
+// 		}
+// 	}
+// }
 // @-webkit-keyframes funkPlayEffect{
 // 	0% {
 // 		transform: translate(0, 100px); 
@@ -889,23 +889,23 @@
 // 		transform: translate(0, 0); 
 // 	}
 // }
-@keyframes funkPlayEffect{
-	0% {
-    background-image: url('../images/img_funkplay0.png');
-  }
-	25% {
-    background-image: url('../images/img_funkplay1.png');
-  }
-	50% {
-    background-image: url('../images/img_funkplay2.png');
-  }
-	75% {
-    background-image: url('../images/img_funkplay3.png');
-  }
-  100% {
-    background-image: url('../images/img_funkplay0.png');
-  }
-}
+// @keyframes funkPlayEffect{
+// 	0% {
+//     background-image: url('../images/img_funkplay0.png');
+//   }
+// 	25% {
+//     background-image: url('../images/img_funkplay1.png');
+//   }
+// 	50% {
+//     background-image: url('../images/img_funkplay2.png');
+//   }
+// 	75% {
+//     background-image: url('../images/img_funkplay3.png');
+//   }
+//   100% {
+//     background-image: url('../images/img_funkplay0.png');
+//   }
+// }
 
 // @include breakpoints.mobile() {
 // 	@-webkit-keyframes funkPlayEffect{
