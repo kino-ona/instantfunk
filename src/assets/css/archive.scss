@@ -92,6 +92,11 @@
 		z-index: 20;
 		margin: -214px 0 214px 40px;
 	}
+	.archive-detail__floating--absoluted {
+		position: absolute;
+		left: 0;
+		margin-top: 0;
+	}
 	.archive-detail__trigger {
 		display: flex;
 		align-items: center;
