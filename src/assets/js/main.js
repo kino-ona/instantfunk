@@ -25,7 +25,7 @@ jQuery.noConflict();
 			visualSwiper.slides.eq(visualSwiper.activeIndex).find('.visual__theme').addClass('visual__theme--fadein');
 			visualSwiper.slides.eq(visualSwiper.activeIndex).find('.visual__title').addClass('visual__title--fadein');
 			visualSwiper.slides.eq(visualSwiper.activeIndex).find('.visual__link').addClass('visual__link--fadein');
-			visualSwiper.pagination.$el.addClass('visual__pagination--fadein');
+			// visualSwiper.pagination.$el.addClass('visual__pagination--fadein');
 			$('.visual__control').addClass('visual__control--fadein');
 	
 			video[visualSwiper.activeIndex].play();

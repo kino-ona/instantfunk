@@ -15,22 +15,24 @@
 		}
 		.visual__pagination {
 			display: flex;
-			left: calc(510px - 31px);
-			bottom: 240px;
+			left: auto;
+			top: -30px;
+			right: 0;
+			bottom: auto;
 			width: auto;
 			color: #fff;
 			font-weight: 600;
 			font-size: 18px;
 			transition: none;
 		}
-		.visual__pagination--fadein {
-			opacity: 0;
-			animation-name: visualCont;
-			animation-duration: .2s;
-			animation-timing-function: cubic-bezier(0, 0, 0, 1);
-			animation-fill-mode: forwards;
-			animation-delay: .3s;
-		}
+		// .visual__pagination--fadein {
+		// 	opacity: 0;
+		// 	animation-name: visualCont;
+		// 	animation-duration: .2s;
+		// 	animation-timing-function: cubic-bezier(0, 0, 0, 1);
+		// 	animation-fill-mode: forwards;
+		// 	animation-delay: .3s;
+		// }
 	}
 	.visual__mask {
 		overflow: hidden;
@@ -108,13 +110,11 @@
 		animation-delay: .3s;
 	}
 	.visual__control {
-		overflow: hidden;
 		position: absolute;
 		left: 20px;
 		bottom: 20px;
 		z-index: 1;
 		width: 490px;
-		height: 210px;
 		border-radius: 36px;
 		background-color: #fff;
 		cursor: pointer;
@@ -130,10 +130,9 @@
 			}
 		}
 		.visual__video {
+			overflow: hidden;
 			visibility: hidden;
-			video {
-				border-radius: 32px;
-			}
+			border-radius: 36px;
 		}
 		.visual__video--visible {
 			visibility: visible;
@@ -148,7 +147,7 @@
 		}
 
 		.marquee {
-			height: 100%;
+			height: 210px;
 			.marquee__mask {
 				height: 100%;
 			}
@@ -173,13 +172,12 @@
 	@include breakpoints.mobile() {
 		.visual__container {
 			.visual__pagination {
-				left: calc(50% - 20px);
-				bottom: 111px;
+				top: -18.5px;
 				font-size: 12px;
 			}
-			.visual__pagination--fadein {
-				animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-			}
+			// .visual__pagination--fadein {
+			// 	animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+			// }
 		}
 		.visual__mask {
 			animation-duration: .2s .3s;
@@ -215,7 +213,6 @@
 			left: 0;
 			bottom: 0;
 			width: 50%;
-			height: 105px;
 			border-radius: 34px;
 			&:hover {
 				background-color: #fff;
@@ -228,8 +225,12 @@
 					}
 				}
 			}
+			.visual__video {
+				border-radius: 34px;
+			}
 
 			.marquee {
+				height: 105px;
 				.marquee__loop {
 					.marquee__text {
 						margin: 0 12.5px;
@@ -455,29 +456,19 @@
 		.cube__face {
 			display: flex;
 			align-items: center;
+			justify-content: space-evenly;
 			overflow: hidden;
 			position: absolute;
 			width: 100%;
 			height: 100%;
-			padding: 0 32px;
 			white-space: nowrap;
 			&:nth-child(odd) {
 				background-color: #ffb5d1;
 				color: #fffe72;
-				.cube__text {
-					&:not(:first-child) {
-						margin-left: 5.68vw;
-					}
-				}
 			}
 			&:nth-child(even) {
 				background-color: #5eecfa;
 				color: #fff;
-				.cube__text {
-					&:not(:first-child) {
-						margin-left: 3.85vw;
-					}
-				}
 			}
 		}
 		.cube__face--front {
@@ -575,18 +566,17 @@
 		.cube {
 			height: 35px;
 			.cube__face {
-				padding: 0 10px;
 				&:nth-child(odd) {
 					.cube__text {
-						&:not(:first-child) {
-							margin-left: 7.07vw;
+						&:nth-child(4) ~ .cube__text {
+							display: none;
 						}
 					}
 				}
 				&:nth-child(even) {
 					.cube__text {
-						&:not(:first-child) {
-							margin-left: 7.07vw;
+						&:nth-child(3) ~ .cube__text {
+							display: none;
 						}
 					}
 				}
@@ -869,6 +859,7 @@
 	}
 	.menu__round {
 		padding-top: 56.2vw;
+		clip-path: inset(0 round 3.75vw);
 	}
 	.menu__category {
 		display: flex;
@@ -922,12 +913,25 @@
 
  	@include breakpoints.mobile() {
 		.menu__list {
-			display: block;
+			display: flex;
+			flex-direction: column;
 			margin: -1px 0 0 0;
 		}
 		.menu__item {
 			width: auto;
 			margin: 1px 0 0 0;
+			&:nth-child(1) {
+				order: 0;
+			}
+			&:nth-child(2) {
+				order: 2;
+			}
+			&:nth-child(3) {
+				order: 1;
+			}
+			&:nth-child(4) {
+				order: 3;
+			}
 		}
 		.menu__round {
 			padding-top: 107.73vw;
@@ -938,8 +942,16 @@
 				width: 170px;
 				height: 63px;
 				border-width: 3px;
+				border-color: #fff;
+				background-color: #fff;
+				color: #000;
 				font-size: 28px;
 				letter-spacing: 0;
+				&:hover {
+					background-color: #fff;
+					color: #000;
+					mix-blend-mode: initial;
+				}
 			}
 		}
 		.menu__category--outer {
