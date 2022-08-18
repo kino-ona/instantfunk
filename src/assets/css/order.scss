@@ -291,6 +291,9 @@ width: 100%;
         position: relative;
         margin: 0;
         font-size: 14px;
+        &:before {
+          display: none;
+        }
       }
     }
 
@@ -524,7 +527,7 @@ width: 100%;
           margin: 30px 0 0;
           color:#000000;
           input#total_price {
-            width: auto;
+            // width: auto;
             background: none;
             color:#000000;
             font-size: 32px;
