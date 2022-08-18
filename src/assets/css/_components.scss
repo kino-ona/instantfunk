@@ -420,9 +420,9 @@
 		align-items: flex-end;
 		justify-content: space-between;
 		margin-bottom: 40px;
-		// &:not(:first-child) {
-		// 	margin-top: 60px;
-		// }
+		&:not(:first-child) {
+			margin-top: 60px;
+		}
 		.table__right {
 
 			.required {
