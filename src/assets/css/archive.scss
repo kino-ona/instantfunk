@@ -92,6 +92,11 @@
 		z-index: 20;
 		margin: -214px 0 214px 40px;
 	}
+	.archive-detail__floating--fixed {
+		position: absolute;
+		left: 40px;
+		margin: 0;
+	}
 	.archive-detail__floating--absoluted {
 		position: absolute;
 		left: 0;
@@ -289,7 +294,8 @@
 		}
 		.archive-detail__floating {
 			order: initial;
-			top: auto;
+			position: sticky !important;
+			top: auto !important;
 			bottom: 80px;
 			margin: 0;
 		}

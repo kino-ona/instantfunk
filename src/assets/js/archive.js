@@ -26,14 +26,26 @@ jQuery.noConflict();
 				viewportBottom = viewportTop + $(window).height();
 				return (elementBottom > viewportTop && elementTop < viewportBottom);
 			}
+
+			var menu = $('.archive-detail').find('.menu');
+			var menuChild = menu.find('.menu__item').length;
+			var menuHeight = menu.height();
+			var offset = menuHeight - $(window).height();
+
+			if (menuChild > 2) {
+				if ($(window).scrollTop() >= offset) {
+					$('.desktop .archive-detail .archive-detail__floating').addClass('archive-detail__floating--absoluted').css('top', menuHeight / (Math.round(menuChild / 2)) * (Math.round(menuChild / 2) - 1) + 160);
+				} else {
+					$('.desktop .archive-detail .archive-detail__floating').removeClass('archive-detail__floating--absoluted').css('top', '');
+				}
+			} else {
+				$('.desktop .archive-detail .archive-detail__floating').addClass('archive-detail__floating--fixed');
+			}
 			
 			$(window).scroll(function(){
-				var menu = $('.archive-detail').find('.menu');
-				var menuChild = menu.find('.menu__item').length;
-				var menuHeight = menu.height();
-				var winH = $(window).height();
+				
 				var scroll = $(window).scrollTop();
-				var offset = menuHeight - winH;
+				
 				$('video').each(function(){
 					if (isScrolledIntoView(this) == true) {
 						$(this)[0].play();
@@ -42,10 +54,12 @@ jQuery.noConflict();
 					}
 				});
 
-				if (scroll >= offset) {
-					$('.desktop .archive-detail .archive-detail__floating').addClass('archive-detail__floating--absoluted').css('top', menuHeight / (menuChild / 2) * 2 + 160);
-				} else {
-					$('.desktop .archive-detail .archive-detail__floating').removeClass('archive-detail__floating--absoluted').css('top', '');
+				if (menuChild > 2) {
+					if (scroll >= offset) {
+						$('.desktop .archive-detail .archive-detail__floating').addClass('archive-detail__floating--absoluted').css('top', menuHeight / (Math.round(menuChild / 2)) * (Math.round(menuChild / 2) - 1) + 160);
+					} else {
+						$('.desktop .archive-detail .archive-detail__floating').removeClass('archive-detail__floating--absoluted').css('top', '');
+					}
 				}
 			});
 
