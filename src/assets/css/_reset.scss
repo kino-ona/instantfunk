@@ -143,6 +143,9 @@ input[type='email'] {
 	font-size: 14px;
 	color: #999;
 }
+::-ms-reveal {
+	display: none;
+}
 
 @include breakpoints.mobile() {
 	input[type='text'],
