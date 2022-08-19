@@ -517,6 +517,11 @@ width: 100%;
           border-radius: 35px;
           overflow: hidden;
           padding: 27px 27px 10px;
+          &.on {
+            position: absolute;
+            bottom: 0;
+            top: inherit;
+          }
         }
         h4 {
           display: flex;
