@@ -53,17 +53,20 @@ width: 100%;
       width: 75px;
     }
   }
-  
+   
   input[type='radio'] {
+    width: 17px;
+    height: 17px;
     border: 1px solid #000000;
+    margin-right: 5px;
     &:checked:before, &:checked:after {
       display: none;
     }
   }
 
   input[type='checkbox'] {
-    width: 24px;
-    height: 24px;
+    width: 17px;
+    height: 17px;
     appearance: none;
     border: 0;
     border-radius: 50%;
@@ -329,14 +332,23 @@ width: 100%;
         border: 0;
         font-size: 14px;
         margin-top: 2px !important;
+        &:focus {
+          border:1px solid #31cdd6;
+          background-color: #ffffff;
+        }
       }
       textarea {
+        width: 100% !important;
         min-height: 130px;
         border-radius: 25px;
         background-color: #f4f4f7;
         padding: 20px 40px 20px 24px;
         border: 0;
         font-size: 14px;
+        &:focus {
+          border:1px solid #31cdd6;
+          background-color: #ffffff;
+        }
       }
 
       .ec-shop-deliverySimpleForm {
@@ -393,6 +405,7 @@ width: 100%;
     }
     input[type=radio] {
       & + label {
+        margin-right: 13px;
         font-size: 14px;
       }
     }
@@ -573,12 +586,65 @@ width: 100%;
           border-radius: 30px;
           border: 1px solid #d9d9d9;
           overflow: hidden;
+          &:before {
+            content: '';
+            display: block;
+            width: 25px;
+            height: 23px;
+            margin-bottom: 20px;
+            background: {
+              repeat: no-repeat;
+              size: auto 100%;
+              position: 0 center;
+            }
+          }
           &:last-child {
             margin-right: 0;
           }
           label {
             margin: 0 0 0 5px;
             font-size: 14px;
+          }
+          &:first-child {
+            &:before {
+              background: {
+                image: url('../images/ico_payment01.png');
+              }
+            }
+          }
+          &:nth-child(2) {
+            &:before {
+              background: {
+                image: url('../images/ico_payment02.png');
+              }
+            }
+          }
+          &:nth-child(3) {
+            &:before {
+              background: {
+                image: url('../images/ico_payment03.png');
+              }
+            }
+          }
+          &:nth-child(4) {
+            &:before {
+              background: {
+                image: url('../images/ico_payment04.png');
+              }
+            }
+          }
+          &:nth-child(5) {
+            &:before {
+              background: {
+                image: url('../images/ico_payment05.png');
+              }
+            }
+          }
+
+          @include breakpoints.mobile() {
+            &:before {
+              background-size: auto 20px;
+            }
           }
         }
       }
@@ -617,11 +683,18 @@ width: 100%;
       .agree {
         input[type=radio] {
           & + label {
+            margin-right: 10px;
             font-size: 14px;
           }
         }
         .cash {
           tbody {
+            th {
+              width: 120px;
+            }
+            td {
+              width: calc(100% - 120px);
+            }
             th, td {
               padding-left: 0;
               border: 0;
@@ -634,6 +707,9 @@ width: 100%;
               height: 46px;
               text-align: center;
             }
+          }
+          #cashreceipt_reg_no {
+            width: auto;
           }
         }
       }
@@ -662,24 +738,37 @@ width: 100%;
             display: block;
           }
           .ec-base-label {
+            position: relative;
             float: left;
-            width: calc((100% / 3) - 4px);
-            height: 80px;
-            padding: 10px;
+            display: flex;
+            width: calc((100% / 2) - 5px);
+            height: 90px;
+            padding: 45px 10px 10px;
             border-radius: 15px;
             margin-right: 5px;
             margin-bottom: 5px;
-            &:nth-child(3n) {
+            &:before {
+              position: absolute;
+              left:10px;
+              top: 10px;
+              margin-bottom: 0;
+            }
+            &:nth-child(2n) {
               margin-right: 0;
             }
-            &:nth-child(3n + 1) {
+            &:nth-child(4n + 1) {
               clear: both;
             }
             label {
-              display: block;
+              display: inline-block;
+              width: calc(100% - 20px);
               margin: 0;
               font-size: 12px;
               letter-spacing: -1px;
+            }
+            input[type=radio] {
+              width: 15px;
+              height: 15px;
             }
           }
         }
@@ -707,6 +796,17 @@ width: 100%;
               display: block;
               border: 0;
               padding: 5px 0;
+            }
+          }
+          .cash {
+            tbody {
+              td {
+                width: 100%;
+              }
+            }
+            select {
+              width: 100%;
+              text-align: left !important;
             }
           }
           .cash .mobile {
@@ -933,6 +1033,29 @@ width: 100%;
         }
       }
     }
+
+    .termArea {
+      width: calc(100% - 370px);
+      border: 1px solid #000000;
+      border-radius: 35px;
+      overflow: hidden;
+      padding: 30px;
+      margin-bottom: 10px;
+      .check {
+        display: flex;
+        align-items: center;
+        background: transparent;
+        border: 0;
+        margin: 0;
+        font-size: 24px;
+      }
+      .box {
+        h4 {
+          font-size: 14px;
+          line-height: 1.2;
+        }
+      }
+    }
   }
   // .xans-order-form
 
@@ -953,9 +1076,10 @@ width: 100%;
     }
     .inner {
       width: 100%;
-      font-family: "Pretendard Variable", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+      padding: 0;
+      @include mixins.PtdRegular();
     }
-    ol {
+    ol, ul {
       li {
         margin-bottom: 6px;
       }
@@ -1126,13 +1250,19 @@ width: 100%;
         input[type=text] {
           width: 100% !important
         }
-        span.grid {display: none;}
+        span.grid {
+          padding-left: 10px;
+          font-size: 10px;
+        }
       }
     }
     .xans-order-form {
       #oemail1, #oemail2, #oemail3 {
-        min-width: calc((100% / 2) - 13px) !important;
-        width: calc((100% / 2) - 13px) !important;
+        min-width: calc((100% / 3) - 9px) !important;
+        width: calc((100% / 3) - 9px) !important;
+        @include breakpoints.mobile() {
+          padding: 0 15px 0 15px !important
+        }
       }
     }
   }
@@ -1194,6 +1324,13 @@ width: 100%;
   .xans-order-result {
     * {
       @include mixins.PtdRegular();
+    }
+
+    .ec-base-button a {
+      &:hover {
+        background-color: #000000 !important;
+        color:#ffffff !important;
+      }
     }
     .orderInfo {
       float: left;
@@ -1261,7 +1398,7 @@ width: 100%;
       border: 1px solid #000000;
       border-radius: 35px;
       overflow: hidden;
-      padding: 30px;  
+      padding: 30px; 
       .title {
         margin: 0;
         margin-bottom: 25px;
