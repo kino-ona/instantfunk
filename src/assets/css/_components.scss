@@ -591,6 +591,17 @@
 		position: absolute;
 		overflow:hidden;
 	}
+	@include breakpoints.mobile() {
+		li {
+			position: relative !important;
+			width: 100% !important;
+			left: inherit !important;
+			top: inherit !important;
+			border-bottom: 1px solid #000000;
+			margin-bottom: 20px;
+			padding-bottom: 10px;
+		}
+	}
 }
 
 // list bottom area
