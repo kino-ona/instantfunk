@@ -16,6 +16,9 @@
 		& + label {
 			font-size: inherit;
 		}
+		& ~ input[type='radio'], input[type='checkbox'] {
+			margin-left: 35px;
+		}
 	}
 	input[type='checkbox'] {
 		border-radius: 0;
@@ -1480,6 +1483,12 @@
 			.review_sort--head {
 				border-bottom-right-radius: 0;
 				border-bottom-left-radius: 0;
+				.arrow {
+					&:after {
+						margin-top: 5px;
+						transform: rotate(-45deg);
+					}
+				}
 			}
 			.review__sorting {
 				display: block;
@@ -1809,6 +1818,7 @@
 					position: absolute;
 					right: 20px;
 					top: 68px;
+					z-index: 5;
 				}
 			}
 			.filter__unit {
