@@ -108,10 +108,6 @@
 		justify-content: space-between;
     &:after {
       display: none;
-      // content: '';
-      // display: block;
-      // clear: both;
-      // overflow: hidden;
     }
   }
   select {
@@ -352,4 +348,220 @@
       }
     }
   } // mobile
+}
+
+.reviewArea {
+  #ec-board-review-read .reviewWrap {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+  .reviewLayer.typeRead {
+    display: flex;
+    width: 800px;
+    height: 100%;
+    max-height: 900px;
+    background: #ffffff;
+    border: 1px solid #000;
+    border-radius: 42px;
+    overflow: hidden;
+    z-index: 101;
+    * {
+      @include mixins.PtdRegular();
+      color:#000000;
+    }
+    .close {
+      top: 30px;
+      right: 30px;
+      .btnClose {
+        width: 18px;
+        height: 18px;
+        background: {
+          image: url('../images/btn_close.png');
+          size: cover;
+        }
+        
+      }
+    }
+    .reviewContent {
+      float: none;
+      width: calc(100% - 280px);
+      height: 100%;
+      min-height: 100%;
+      padding: 35px 30px;
+      border-right: 1px solid #000000;
+      overflow-y: auto;
+      .view {
+        .text {
+          font-size: 24px;
+        }
+        img {
+          max-width: 100%;
+        }
+      }
+      .commentWrite {
+        background: #ffffff;
+        text-align: left;
+        .count {
+          margin-left: 0;
+          padding-left: 0;
+        }
+      }
+    }
+    .prdInfo {
+      padding-top: 0;
+      .summary {
+        text-align: left;
+      }
+      .heading {
+        font-size: 20px;
+        font-weight: 500;
+        strong {
+          font-weight: inherit;
+        }
+      }
+      .price {
+        color:#000000;
+      }
+      .info {
+        dt, dd {
+          font-size: 14px;
+          color:#000000;
+        }
+      }
+    }
+  }
+  .fixedBar {
+    float: none;
+    width: 280px;
+  }
+  .writerInfo {
+    position: relative;
+    width: calc(100% - 60px);
+    padding: 0;
+    padding: 60px 30px 35px;
+    .writer {
+      border-bottom: 0;
+      font-size: 18px;
+      font-weight: 600;
+      text-align: left;
+    }
+    .info {
+      margin-bottom: 30px;
+      text-align: left;
+      dt, dd {
+        color:#000000;
+      }
+      dt {
+        width: 60px;
+        padding: 0;
+        &:before {
+          display: none;
+        }
+      }
+    }
+    .heading {
+      margin: 20px 0 0 0;
+      font-size: 18px;
+      font-weight: 500;
+      border-bottom: 0;
+      text-align: left;
+    }
+    .otherList {
+      li {
+        width: 60px;
+        height: 60px;
+        border: 0;
+        border-radius: 20px;
+        margin: 0;
+        margin-right: 2px;
+        margin-bottom: 2px;
+        overflow: hidden;
+      }
+    }
+  }
+
+	@include breakpoints.mobile() {
+    #ec-board-review-read .reviewWrap {
+      width: 100%;
+      min-height: auto;
+      max-height: inherit;
+      height: calc(100% - 55px);
+      top: 55px;
+      bottom: 0;
+      border-radius: 42px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      overflow-y: auto;
+    }
+    .reviewLayer.typeRead {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      top: 0 !important;
+      height: auto;
+      overflow-y: auto;
+      margin: 0;
+      max-height: inherit;
+      width: 100%;
+      left: 0;
+      border-radius: 0;
+      border: 0;
+      .close {
+        right: 10px;
+        top: 20px;
+      }
+      .prdInfo {
+        padding-left: 110px;
+        .heading {
+          font-size: 18px;
+        }
+      }
+      .ec-board-grade {
+        margin:0 0 10px;
+      }
+      .reviewContent {
+        order: 2;
+        width: calc(100% - 40px);
+        border-right: 0;
+        padding: 0;
+        margin: 20px 20px;
+        overflow-y: hidden;
+        border-bottom: 0;
+        .view {
+          .text {
+            font-size: 16px;
+          }
+        }
+      }
+      .fixedBar {
+        order: 1;
+        width: calc(100% - 40px);
+        padding: 0 0 20px;
+        margin: 0 20px;
+        border-bottom: 1px solid #000000;
+      }
+    }
+    .writerInfo {
+      width: 100%;
+      padding: 50px 0 0 0;
+      .heading {
+        font-size: 14px;
+      }
+      .info {
+        margin-bottom: 20px;
+        &::after {
+          content: '';
+          display: block;
+          clear:both;
+        }
+        dl {
+          float: left;
+          width: 50%;
+          margin-top: 0;
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
 }
