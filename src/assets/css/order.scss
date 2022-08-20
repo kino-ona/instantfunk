@@ -409,6 +409,17 @@ width: 100%;
         font-size: 14px;
       }
     }
+
+    @include breakpoints.mobile() {
+      .use_address_field {
+        #rzipcode1 {
+          max-width: 140px;
+        }
+      }
+      input[type=text] {
+        max-width: 100%;
+      }
+    }
   }
 
   .xans-order-form {
@@ -1058,6 +1069,28 @@ width: 100%;
         h4 {
           font-size: 14px;
           line-height: 1.2;
+        }
+      }
+
+      @include breakpoints.mobile() {
+        width: 100%;
+        padding: 17px;
+        // .check {
+        //   input[type=checkbox] {
+        //     width: 30px;
+        //   }
+        // }
+        .box {
+          padding-left: 0;
+          h4 {
+            position: relative;
+          }
+          textarea {
+            padding:15px;
+            border-radius: 25px;
+            font-size: 12px;
+            line-height: 1.5;
+          }
         }
       }
     }

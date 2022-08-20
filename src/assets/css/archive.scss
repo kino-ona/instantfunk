@@ -353,6 +353,7 @@
 				.archive-detail__text {
 					font-size: 14px;
 					line-height: 20px;
+					padding-right: 10px;
 					&:not(:first-child) {
 						margin-top: 20px;
 					}
@@ -367,13 +368,13 @@
 			position: relative;
 			top: inherit;
 			width: calc(100% - 30px);
-			height: 55px;
+			height: 57px;
 			margin: 0 auto;
 			border-bottom-left-radius: 10px;
 			background: {
 				image: url('../images/archive-detail__tail.png');
 				position: right bottom;
-				size: 55px;
+				size: 57px;
 				repeat: no-repeat;
 			}
 			overflow: hidden;
