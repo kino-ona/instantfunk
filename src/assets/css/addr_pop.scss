@@ -4,13 +4,149 @@
 @use 'breakpoints';
 
 
+* {
+	margin: 0;
+	padding: 0;
+	color: inherit;
+	font: inherit;
+}
+body, code {
+	min-width: auto;
+	font-family: 'AT surt', 'Pretendard Variable', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+}
+ol,
+ul {
+	list-style:none
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	max-width: 100%;
+}
+
+fieldset,
+img,
+textarea,
+iframe {
+	border: 0;
+}
+
+button {
+	appearance: none;
+	background: none;
+	border: 0;
+	cursor: pointer;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+body {
+	a {
+		font-family: inherit;
+	}
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	border: 0;
+	caption {display: none;}
+	tbody, tfoot, thead {
+		border: 0;
+		td {
+			border: 0;
+		}
+	}
+}
+
 #popup {
+  select{
+    appearance: none;
+    width: 100%;
+    height: 58px;
+    padding: 0 25px 0 15px;
+    border: 1px solid #f4f4f7;
+    border-radius: 100vw;
+    background: {
+      color: #f4f4f7;
+      image: url('/assets/images/bg_select@2x.png');
+      size: 11px;
+      repeat: no-repeat;
+      position: right 20px center;
+    }
+    font-size: 18px;
+    font: initial;
+    letter-spacing: -0.025em;
+    cursor: pointer;
+    outline: none;
+    @include mixins.PtdRegular();
+    &:not([readonly]):not([disabled]):not([aria-invalid='true']) {
+      &:focus {
+        border-color: #5eecfa;
+        background-color: #fff;
+      }
+    }
+    &[disabled] {
+      background-color: #F7F7F7;
+      color: #999;
+    }
+    &[readonly] {
+      background-color: #F7F7F7;
+      color: #999;
+    }
+    &[aria-invalid='true'] {
+      position: relative;
+      padding-right: 60px;
+      border-color: red;
+    }
+  
+    @include breakpoints.mobile() {
+      padding: 0 40px 0 13.5px;
+      height: 50px;
+      font-size: 14px;
+      letter-spacing: -0.012em;
+    }
+  }
   @include breakpoints.mobile() {
     width: 100%;
   }
+  .a11y {display: none;}
+
+  a {
+    &:hover {
+      background-color: #000000;
+      color:#ffffff;
+    }
+  }
+
+  .btnClose {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    width: 18px;
+    height: 18px;
+    background: {
+      color: #ffffff;
+      image: url('../images/btn_close.png');
+      size: cover;
+      repeat: no-repeat;
+      position: 0 0;
+    }
+    @include breakpoints.mobile() {
+      top: 17px;
+      right: 20px;
+    }
+  }
 
   .address_layer.ec-base-layer,
-  .address_layer-write.ec-base-layer {
+  .address_layer-write.ec-base-layer,
+  .ui_layer.ec-base-layer {
     .header {
       background: #ffffff;
       h1 {
@@ -199,6 +335,34 @@
         overflow: hidden;
       }
     }
+
+    @include breakpoints.mobile() {
+      .content {
+        padding-top: 0;
+      }
+      .header {
+        h1 {
+          font-size: 18px;
+        }
+      }
+      &.ec-base-layer {
+        padding-bottom: 30px;
+      }
+
+      &.xans-coupon-selectnew {
+        .selectList {
+          h3 {
+            font-size: 16px;
+          }
+          tbody {
+            th, td {
+              padding: 10px 0;
+              font-size:13px;
+            }
+          }
+        }
+      }
+    }
   }
   // .address_layer
 
@@ -216,6 +380,44 @@
       tr:last-child td {
         padding-top: 0 !important;
       }
+    }
+  }
+
+  .xans-coupon-selectnew {
+    .selectList {
+      padding: 20px 0 0;
+      margin-bottom: 20px;
+      border-top: 1px solid #000000;
+      h3 {
+        margin-bottom: 15px;
+        font-size: 18px;
+      }
+      tbody {
+        th, td  {
+          padding: 15px 0;
+          font-size: 14px;
+          text-align: left;
+        }
+      }
+    }
+    .title {
+      h3 {
+        font-size: 14px;
+      }
+    }
+    ul {
+      li {
+        padding: 5px 0;
+        font-size: 14px;
+      }
+    }
+    .help {
+      p {
+        font-size: 14px;
+      }
+    }
+    .ec-base-button {
+      border-top: 1px solid #000000 !important;
     }
   }
 

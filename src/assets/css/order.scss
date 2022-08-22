@@ -52,6 +52,9 @@ width: 100%;
       display: inline-flex;
       width: 75px;
     }
+    &:last-child {
+      margin-right: 0;
+    }
   }
    
   input[type='radio'] {
@@ -1752,5 +1755,12 @@ width: 100%;
       }
     }
   }
+}
 
+@include breakpoints.mobile() {
+  #couponLayer {
+    iframe {
+      height: 100vh !important;
+    }
+  }
 }
