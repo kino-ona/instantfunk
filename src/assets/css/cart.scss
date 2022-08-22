@@ -7,7 +7,7 @@
   padding-top:0;
 }
 .sub__container {
-width: 100%;
+  width: 100%;
 }
 @media (max-width: 750px) {
 .sub__container {
@@ -237,7 +237,7 @@ width: 100%;
   .ec-base-table.typeList td {
     padding: 0;
     @include mixins.PtdMedium();
-    font-size: 18px;
+    font-size: 16px;
     border: 0;
     color:#000000;
     * {

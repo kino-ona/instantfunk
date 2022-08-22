@@ -75,7 +75,7 @@ width: 100%;
     border-radius: 50%;
     background: {
       image: url('/assets/images/ico_checkbg.png');
-      size: cover;
+      size: 100%;
       position: center center;
       repeat: no-repeat;
     };
@@ -458,6 +458,14 @@ width: 100%;
       .txtInfo {
         color: #000000;
         img {
+          display: none;
+        }
+        @include breakpoints.mobile() {
+          display: none;
+        }
+      }
+      @include breakpoints.mobile() {
+        .grid  {
           display: none;
         }
       }
@@ -866,6 +874,17 @@ width: 100%;
           }
         }
       }
+      .payHelp {
+        margin-left: 100px;
+        .ec-base-help {
+          padding: 0;
+          margin:0 0 2px 0;
+          padding-left: 18px;
+          border-radius: 0;
+          font-size: 12px;
+          @include mixins.PtdRegular();
+        }
+      }
     }
 
     .totalArea {
@@ -1066,6 +1085,7 @@ width: 100%;
         background: transparent;
         border: 0;
         margin: 0;
+        padding: 0;
         font-size: 24px;
       }
       .box {
@@ -1077,14 +1097,11 @@ width: 100%;
 
       @include breakpoints.mobile() {
         width: 100%;
-        padding: 17px;
-        // .check {
-        //   input[type=checkbox] {
-        //     width: 30px;
-        //   }
-        // }
+        padding: 20px;
         .box {
           padding-left: 0;
+          margin-left: 0;
+          margin-right: 0;
           h4 {
             position: relative;
           }
@@ -1292,6 +1309,7 @@ width: 100%;
           width: 100% !important
         }
         span.grid {
+          display: none;
           padding-left: 10px;
           font-size: 10px;
         }
@@ -1527,6 +1545,14 @@ width: 100%;
     @include breakpoints.mobile() {
       padding-left: 10px;
       padding-right: 10px;
+      table {
+        table-layout: initial;
+      }
+      .ec-base-layer {
+        .header {
+          display: none;
+        }
+      }
       .title {
         font-size: 18px !important;
       }
@@ -1551,6 +1577,7 @@ width: 100%;
       .totalArea {
         float: none;
         width: 100%;
+        min-height: auto;
         margin-left: 0;
         padding: 20px;
         &::before {

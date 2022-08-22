@@ -750,8 +750,10 @@
 					}
 				}
 				.login__util {
+					display: block;
 					gap: 10px;
 					margin-top: 11.5px;
+					text-align: center;
 					.login__menu {
 						letter-spacing: -0.012em;
 						&:not(:first-child) {
@@ -760,6 +762,12 @@
 								height: 11px;
 								margin-top: -5.5px;
 							}
+						}
+					}
+					#noMemberWrap {
+						margin-top: 15px;
+						&:before {
+							display: none;
 						}
 					}
 				}

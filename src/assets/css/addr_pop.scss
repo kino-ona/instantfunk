@@ -126,6 +126,24 @@ table {
     }
   }
 
+  .mo-table_scroll {
+    display: none;
+    margin-bottom:10px;
+    p {
+      display: flex;
+      align-items: center;
+      font-size: 10px;
+    }
+    i {
+      display: inline-block;
+      margin-right: 7px;
+      @include mixins.sprite(mo_icons.$ico_scroller);
+    }
+    @include breakpoints.mobile() {
+      display: block;
+    }
+  } 
+
   .btnClose {
     position: absolute;
     right: 25px;
@@ -361,6 +379,24 @@ table {
               font-size:13px;
             }
           }
+        }
+      }
+
+      &.xans-myshop-addrlist {
+        .ec-base-table.typeList {
+          width: 100%;
+          overflow-x: scroll;
+          -webkit-overflow-scrolling: touch;
+          .scroll {
+            width: 760px;
+            max-height: inherit;
+            overflow-x: auto;
+            overflow-y: auto;
+          }
+          table {
+            width: 760px;
+          }
+
         }
       }
     }
