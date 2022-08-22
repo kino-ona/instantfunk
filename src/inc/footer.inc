@@ -1,4 +1,4 @@
-<div class="footer">
+<div class="footer" data-footer=true>
 	<div class="footer__container">
 		<div class="footer__section">
 			<ul class="footer__link">

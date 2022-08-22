@@ -193,29 +193,51 @@ jQuery.noConflict();
 	
 
 	$(function() {
-		if($('.footer').length > 0) {
-			var $w = $(window),
-				footerHei = $('.footer').outerHeight();
-
+		if ($('[data-footer=true]').length) {
+			const $w = $(window);
+			let timeout = null;
+	
 			$w.on('scroll', function() {
-				var sT = $w.scrollTop();
-				var val = $(document).height() - $w.height() - footerHei;
-
+				const sT = window.pageYOffset + window.innerHeight
+				const val = window.pageYOffset + document.querySelector('.footer_copyright').getBoundingClientRect().top
+	
 				if (sT > val) {
-					var a0 = setTimeout(function(){
-						$('.footer .img_funkplay').addClass('__active')
-						$('.footer .shadow-box').addClass('__active')
-					}, 600);
-					var a0 = setTimeout(function(){
-						$('.footer .btn__funkplay').addClass('__active')
-					}, 2000);
+					clearTimeout(timeout);
+					timeout = setTimeout(function() {
+						$('.footer .btn__funkplay').addClass('__active');
+					}, 200);
 				} else {
-					$('.footer .img_funkplay').removeClass('__active')
-					$('.footer .shadow-box').removeClass('__active')
-					$('.footer .btn__funkplay').removeClass('__active')
+					$('.footer .btn__funkplay').removeClass('__active');
 				}
 			});
 
+			/*
+			* Footer Scroll Event
+			**/
+			const setLogoAnimation = () => {
+				const $footer = document.querySelector('.footer')
+				const fHeight = $footer.getBoundingClientRect().height
+				const fContainerHeight = $footer.querySelector('.footer__container').getBoundingClientRect().height
+				const fLogoHeight = $footer.querySelector('.footer__funkplay').getBoundingClientRect().height
+				const fCopyrightHeight = $footer.querySelector('.footer_copyright').getBoundingClientRect().height
+				const startPosition = window.pageYOffset + $footer.querySelector('.footer__funkplay').getBoundingClientRect().top + fLogoHeight / 2
+				const scrollRange = fHeight - fContainerHeight - fCopyrightHeight
+				
+				let distance = window.matchMedia('only screen and (max-width: 1024px)').matches ? fLogoHeight / 9 : fLogoHeight / 5
+				let scrollProgress = ((window.pageYOffset + window.innerHeight - startPosition) / scrollRange).toFixed(5)
+	
+				scrollProgress = scrollProgress < 0 ? 0 : scrollProgress > 1 ? 1 : scrollProgress
+				if (scrollProgress >= 1) {
+					window.removeEventListener('scroll', setLogoAnimation)
+					window.removeEventListener('resize', setLogoAnimation)
+				}
+				
+				$footer.style.setProperty('--distance', `${distance}px`)
+				$footer.style.setProperty('--progress', `${scrollProgress}`)
+			}
+	
+			window.addEventListener('scroll', setLogoAnimation)
+			window.addEventListener('resize', setLogoAnimation)
 		}
 	});
 })(jQuery);

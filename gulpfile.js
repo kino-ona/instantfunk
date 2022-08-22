@@ -14,7 +14,7 @@ const
 		html: 'src/**/*.html',
 		css: 'src/assets/css/**/*.scss',
 		js: 'src/assets/js/**/*.js',
-		img: 'src/assets/images/**/*{jpg,gif,png}',
+		img: 'src/assets/images/**/*{jpg,gif,png,svg}',
 		inc: 'src/inc/**/*.inc'
 	},
 	dist = {
@@ -123,7 +123,13 @@ function image(done) {
 	return src([paths.img, '!src/assets/images/sprite/**/*.png'])
 		.pipe(newer(dist.img))
 		.pipe(imagemin([
-			imagemin.optipng({optimizationLevel: 1})
+			imagemin.optipng({optimizationLevel: 1}),
+			imagemin.svgo({
+        plugins: [
+            {removeViewBox: true},
+            {cleanupIDs: false}
+        ]
+    })
 		], {
 			verbose: true
 		}
