@@ -34,7 +34,7 @@ jQuery.noConflict();
 
 			if (menuChild > 2) {
 				if ($(window).scrollTop() >= offset) {
-					$('.desktop .archive-detail .archive-detail__floating').addClass('archive-detail__floating--absoluted').css('top', menuHeight / (Math.round(menuChild / 2)) * (Math.round(menuChild / 2) - 1) + 160);
+					$('.desktop .archive-detail .archive-detail__floating').addClass('archive-detail__floating--absoluted').css('top', `calc(${menuHeight / (Math.round(menuChild / 2)) * (Math.round(menuChild / 2) - 1)}px + 8.33vw)`);
 				} else {
 					$('.desktop .archive-detail .archive-detail__floating').removeClass('archive-detail__floating--absoluted').css('top', '');
 				}
@@ -56,7 +56,7 @@ jQuery.noConflict();
 
 				if (menuChild > 2) {
 					if (scroll >= offset) {
-						$('.desktop .archive-detail .archive-detail__floating').addClass('archive-detail__floating--absoluted').css('top', menuHeight / (Math.round(menuChild / 2)) * (Math.round(menuChild / 2) - 1) + 160);
+						$('.desktop .archive-detail .archive-detail__floating').addClass('archive-detail__floating--absoluted').css('top', `calc(${menuHeight / (Math.round(menuChild / 2)) * (Math.round(menuChild / 2) - 1)}px + 8.33vw)`);
 					} else {
 						$('.desktop .archive-detail .archive-detail__floating').removeClass('archive-detail__floating--absoluted').css('top', '');
 					}
