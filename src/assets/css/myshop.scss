@@ -431,7 +431,7 @@
 				padding: 20px;
 			}
 			.myshop__roundbox--pink {
-				height: 66.67vw;
+				height: 70.67vw;
 			}
 			
 		}
@@ -2215,9 +2215,18 @@
 						grid-column: 2 / 3;
 						padding-right: 0;
 						font-size: 18px;
+						text-align: right;
 					}
 					&:nth-child(3) {
 						grid-row: 1 / 2;
+						text-align: left;
+					}
+					&:nth-child(4) {
+						font-size: 12px;
+						text-align: left;
+					}
+					&.table-detail__flex {
+						// display: none;
 					}
 				}
 			}
@@ -3423,7 +3432,7 @@
 			}
 		}
 		&.row-table {
-			margin-right: -4vw;
+			// margin-right: -4vw;
 			overflow-x: scroll;
 			-webkit-overflow-scrolling: touch;
 			border-bottom: 1px solid #000000;
