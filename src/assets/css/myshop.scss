@@ -63,6 +63,12 @@
       display: inline-flex;
       width: 75px;
     }
+		&:first-child {
+			margin-right: 0;
+		}
+		@include breakpoints.mobile() {
+			font-size: 12px;
+		}
   }
 	.myshop__container {
 		max-width: 1280px;
@@ -504,6 +510,30 @@
 
 			> .button {
 				margin-bottom: 50px;
+				.button__container--left {
+					> div {
+						display: flex;
+					}
+					.button__item--end {
+						margin-left: auto;
+						margin-right: initial;
+						background-color: #000000;
+						color: #ffffff;
+					}
+
+					@include breakpoints.mobile() {
+						> div {
+							display: inline-block;
+							width: 70%;
+							.button__item {
+								display: inline-flex;
+								width: 100px;
+								margin-right: 5px;
+								margin-bottom: 5px;
+							}
+						}
+					}
+				}
 			}
 		}
 		.myshop__row {
@@ -1221,7 +1251,7 @@
 		}
 		.table-detail__td {
 			padding-right: 15px;
-			font-size: 18px;
+			font-size: 16px;
 			text-align: center;
 			.table-detail__text {
 				line-height: 28px;
@@ -1612,6 +1642,35 @@
 			}
 		}
 	}
+	.xans-myshop-orderhistorylistitem {
+		.product__col {
+			p {
+				margin: 3px 0;
+			}
+			.button__item.small_button {
+				width: 100px;
+				margin: 0 auto 5px;
+			}
+		}
+
+		@include breakpoints.mobile() {
+			.product__col {
+				.product__right {
+					flex:1;
+				}
+				.button__item.small_button {
+					width: auto;
+				}
+			}
+		}
+		.product__mobile.product__group {
+			display: none;
+			@include breakpoints.mobile() {
+				display: flex !important;
+				justify-content: flex-end !important;
+			}
+		}
+	}
 
 	@include breakpoints.mobile() {
 		select {
@@ -1813,6 +1872,7 @@
 				.filter__left {
 					flex: 1;
 					gap: 1.5px;
+					// justify-content: space-between;
 				}
 				.filter__right {
 					position: absolute;
@@ -1840,7 +1900,7 @@
 			}
 			
 			.calendar {
-				flex: 1;
+				// flex: 1;
 				.calendar__input {
 					width: 100%;
 					padding-left: 7.5px;
