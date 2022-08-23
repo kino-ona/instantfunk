@@ -1928,7 +1928,7 @@
 
 		.tab {
 			margin: 0 -2vw 26px;
-			overflow-x: auto;
+			overflow-x: scroll;
 			overflow-y: hidden;
 			.tab__item {
 				&:not(:first-child) {
@@ -1946,6 +1946,9 @@
 				font-size: 18px;
 				letter-spacing: -0.012em;
 				white-space: nowrap;
+			}
+			&::-webkit-scrollbar {
+				display: none;;
 			}
 		}
 
