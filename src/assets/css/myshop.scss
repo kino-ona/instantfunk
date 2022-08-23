@@ -1716,29 +1716,35 @@
 				.filter__row {
 					gap: 1.5px;
 					height: auto;
-					flex-wrap: wrap;
+					// flex-wrap: wrap;
 					.filter__left {
 						display: grid;
-						grid-template-columns: 99.5px 1fr;
-						align-items: flex-start;
-						> * {
-							display: grid;
-						}
+						// flex-wrap: wrap;
+						grid-template-columns: 1fr 1fr;
+						// align-items: flex-start;
+						// > * {
+						// 	display: grid;
+						// }
+					}
+
+					.select {
+						// width: calc(50% - 1.5px);
+						width: 100%;
 					}
 					.filter__row {
-						display: grid;
-						grid-template-columns: 99.5px 1fr;
+						// display: grid;
+						grid-column: 1 / 3;
 					}
 				}
 				.filter__search {
 					display: flex;
 					height: 36.5px;
-					grid-column: 2 / 3;
+					// grid-column: 2 / 3;
 				}
 
-				.select {
-					min-width: 99.5px;
-				}
+				// .select {
+					// min-width: 99.5px;
+				// }
 
 				input[type='text'],
 				input[type='password'],
