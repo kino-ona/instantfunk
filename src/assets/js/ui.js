@@ -216,28 +216,28 @@ jQuery.noConflict();
 			**/
 			const setLogoAnimation = () => {
 				const $footer = document.querySelector('.footer')
-				const fHeight = $footer.getBoundingClientRect().height
-				const fContainerHeight = $footer.querySelector('.footer__container').getBoundingClientRect().height
 				const fLogoHeight = $footer.querySelector('.footer__funkplay').getBoundingClientRect().height
-				const fCopyrightHeight = $footer.querySelector('.footer_copyright').getBoundingClientRect().height
+				const fCsHeight = $footer.querySelector('.footer__cs').getBoundingClientRect().height
 				const startPosition = window.pageYOffset + $footer.querySelector('.footer__funkplay').getBoundingClientRect().top + fLogoHeight / 2
-				const scrollRange = fHeight - fContainerHeight - fCopyrightHeight
+				const scrollRange = fCsHeight + fLogoHeight / 2
 				
 				let distance = window.matchMedia('only screen and (max-width: 1024px)').matches ? fLogoHeight / 9 : fLogoHeight / 5
 				let scrollProgress = ((window.pageYOffset + window.innerHeight - startPosition) / scrollRange).toFixed(5)
 	
-				scrollProgress = scrollProgress < 0 ? 0 : scrollProgress > 1 ? 1 : scrollProgress
 				if (scrollProgress >= 1) {
 					window.removeEventListener('scroll', setLogoAnimation)
 					window.removeEventListener('resize', setLogoAnimation)
 				}
 				
+				scrollProgress = scrollProgress < 0 ? 0 : scrollProgress > 1 ? 1 : scrollProgress
 				$footer.style.setProperty('--distance', `${distance}px`)
 				$footer.style.setProperty('--progress', `${scrollProgress}`)
 			}
 	
 			window.addEventListener('scroll', setLogoAnimation)
 			window.addEventListener('resize', setLogoAnimation)
+	
+			/* //220823 DFY 작업 END */
 		}
 	});
 })(jQuery);
