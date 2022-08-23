@@ -3467,3 +3467,14 @@
 		}
 	}
 }
+
+.myshop .myshop__container {
+	.xans-myshop-addrregister {
+		@include breakpoints.mobile() {
+			.form .form__row--smedium {
+				width: 100%;
+			}
+		}
+	}
+
+}
