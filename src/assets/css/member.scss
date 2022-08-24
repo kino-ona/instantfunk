@@ -686,10 +686,12 @@
 			padding-top: 60px;
 			margin-top: 0;
 			margin-bottom: -124px;
+			height: calc(var(--vh, 1vh) * 100 - 100px);
 			.login__container {
 				flex-direction: column-reverse;
 				position: relative;
 				padding-bottom: 65px;
+				height: 100%;
 				.login__left {
 					position: absolute;
 					left: -4vw;
@@ -699,6 +701,7 @@
 					// margin: 15px -4vw 0;
 				}
 				.login__right {
+					overflow-y: auto;
 					flex-basis: initial;
 					margin-left: 0;
 					padding-top: 0;
