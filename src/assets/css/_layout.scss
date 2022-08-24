@@ -103,6 +103,17 @@
 			&:not(:first-child) {
 				margin-left: 10px;
 			}
+			&:hover {
+				background-color: #000;
+				color: #fff;
+				.nav__ico {
+					&:before,
+					&:after {
+						top: 50%;
+						background-color: #fff;
+					}
+				}
+			}
 			.nav__ico {
 				display: flex;
 				align-self: center;
@@ -465,6 +476,14 @@
 			.nav__menu {
 				&:last-child {
 					padding-bottom: 0;
+				}
+			}
+			.nav__menu--category {
+				.nav__link {
+					&:focus,
+					&:hover {
+						color: #000;
+					}
 				}
 			}
 			.nav__menu--theme {

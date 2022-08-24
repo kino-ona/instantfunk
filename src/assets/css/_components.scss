@@ -447,7 +447,8 @@
 		.table__row {
 			display: grid;
 			grid-template-columns: 140px 1fr;
-			align-items: baseline;
+			// align-items: baseline;
+			align-items: center;
 			align-content: center;
 			padding: 1px 0;
 			min-height: 58px;

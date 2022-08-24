@@ -3,7 +3,8 @@
 @use 'sprite/mo_icons';
 @use 'breakpoints';
 
-// member 
+// member
+
 .member {
 	border: 0 !important;
 	input[type=text], input[type=password] {
@@ -58,7 +59,7 @@
 	.member__container {
 		max-width: calc(1360px + 3.37vw);
 		margin: 0 auto;
-		padding: 0 1.67vw;
+		padding: 200px 1.67vw 168px;
 	}
 	.member__container--join {
 		max-width: calc(910px + 3.37vw);
@@ -284,6 +285,7 @@
 	}
 
 	.login {
+		margin-top: -60px;
 		.login__container {
 			display: flex;
 			.login__left,
@@ -294,18 +296,21 @@
 				flex-basis: 670px;
 			}
 			.login__right {
+				flex: 1;
 				display: flex;
 				flex-direction: column;
-				justify-content: center;
+				// justify-content: center;
 				position: relative;
 				margin-left: 7.03vw;
+				padding-top: 194px;
 				flex-basis: 554px;
 			}
 		}
 		.login__visual {
 			position: relative;
-			height: 44.06vw;
-			max-height: 846px;
+			// height: 44.06vw;
+			// max-height: 846px;
+			height: 846px;
 			border-radius: 30px;
 			background: url('/assets/images/bg_login_visual.png') no-repeat 50% 50%;
 			.login__text {
@@ -313,7 +318,7 @@
 			}
 		}
 		.login__normal {
-			margin: auto 0 30px;
+			// margin: auto 0 30px;
 			.login__title {
 				margin-bottom: 27px;
 				font-weight: 500;
@@ -393,7 +398,7 @@
 			}
 		}
 		.login__sns {
-			// margin-top: auto;
+			margin-top: auto;
 			.login__title {
 				font-size: 12px;
 				letter-spacing: -0.025em;
@@ -528,7 +533,8 @@
 
 	@include breakpoints.mobile() {
 		.member__container {
-			padding: 28.5px 4vw 0;
+			// padding: 28.5px 4vw 0;
+			padding: 100px 4vw 124px;
 		}
 		.member__container--join-result {
 			.member__header {
@@ -678,15 +684,24 @@
 
 		.login {
 			padding-top: 60px;
+			margin-top: 0;
+			margin-bottom: -124px;
 			.login__container {
 				flex-direction: column-reverse;
+				position: relative;
+				padding-bottom: 65px;
 				.login__left {
+					position: absolute;
+					left: -4vw;
+					right: -4vw;
+					bottom: 0;
 					flex-basis: initial;
-					margin: 15px -4vw 0;
+					// margin: 15px -4vw 0;
 				}
 				.login__right {
 					flex-basis: initial;
 					margin-left: 0;
+					padding-top: 0;
 				}
 			}
 			.login__visual {
@@ -750,7 +765,8 @@
 					}
 				}
 				.login__util {
-					display: block;
+					// display: block;
+					flex-wrap: wrap;
 					gap: 10px;
 					margin-top: 11.5px;
 					text-align: center;
@@ -936,4 +952,9 @@
 			}
 		}
 	}
+}
+
+.container {
+	padding: 0;
+	transform: none;
 }
