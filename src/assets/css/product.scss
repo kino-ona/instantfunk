@@ -508,12 +508,12 @@
   @include breakpoints.mobile() {
     height: 36px;
     justify-content: center;
-    margin-right: -56px;
+    // margin-right: -56px;
     > p {
       display: flex;
-      width: 80px;
+      // width: 80px;
       height: 100%;
-      border: 1px solid #000000;
+      // border: 1px solid #000000;
       border-radius: 25px;
       justify-content: center;
     }
@@ -1865,9 +1865,12 @@
     & + .product-list__option {
       display: flex;
     }
+    .product-list__text {
+      color: #5EECFA;
+    }
     .product-list__ico {
       border-top: 0;
-      border-bottom: 10px solid #000;
+      border-bottom: 10px solid #5EECFA;
     }
   }
   .product-list__option {
