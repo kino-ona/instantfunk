@@ -2101,7 +2101,9 @@
         right: 30px;
         top: 35px;
         display: block;
-        @include icons.retina-sprite(icons.$ico-close-group);
+        // @include icons.retina-sprite(icons.$ico-close-group);
+        width: 18px;
+        height: 18px;
         cursor: pointer;
       }
       legend {

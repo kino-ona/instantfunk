@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ico_login_naver</title>
+    <g id="ico_login_naver" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-5" transform="translate(1.000000, 1.000000)">
+            <path d="M20,40 L20,40 C9,40 0,31 0,20 L0,20 C0,9 9,0 20,0 L20,0 C31,0 40,9 40,20 L40,20 C40,31 31,40 20,40" id="Fill-1" fill="#03C75A"></path>
+            <polygon id="Fill-3" fill="#FFFFFF" points="22.7294 20.5352 17.0464 12.4002 12.3354 12.4002 12.3354 27.6002 17.2704 27.6002 17.2704 19.4652 22.9534 27.6002 27.6644 27.6002 27.6644 12.4002 22.7294 12.4002"></polygon>
+        </g>
+    </g>
+</svg>

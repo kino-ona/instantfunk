@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="24px" viewBox="0 0 26 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ico_reviewcnt</title>
+    <g id="ico_reviewcnt" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2" transform="translate(1.000000, 1.000000)" fill="#000000">
+            <rect id="Rectangle" x="0" y="0" width="24" height="17" rx="8.5"></rect>
+            <path d="M12.3577709,16.7155418 L14.7105573,21.4211146 C14.809353,21.618706 14.7292632,21.8589752 14.5316718,21.9577709 C14.4761297,21.985542 14.4148844,22 14.3527864,22 L9.64721361,22 C9.4262997,22 9.2472136,21.8209139 9.2472136,21.6 C9.2472136,21.537902 9.26167164,21.4766567 9.28944272,21.4211146 L11.6422291,16.7155418 C11.7410248,16.5179504 11.981294,16.4378606 12.1788854,16.5366563 C12.2562964,16.5753618 12.3190654,16.6381308 12.3577709,16.7155418 Z" id="Triangle" transform="translate(12.000000, 19.000000) rotate(-180.000000) translate(-12.000000, -19.000000) "></path>
+        </g>
+    </g>
+</svg>

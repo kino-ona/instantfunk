@@ -53,22 +53,35 @@
 		letter-spacing: -0.05em;
 		i {
 			display: block;
+			width: 22px;
+			height: 22px;
 			margin-right: 7px;
+			background-repeat: no-repeat;
+			background-position: 0 0;
 		}
 	}
 	.menu__tag--celeb {
 		i {
-			@include icons.retina-sprite(icons.$ico-menu-tag-celeb-group);
+			// @include icons.retina-sprite(icons.$ico-menu-tag-celeb-group);
+			background-image: url('../images/ico_menu_tag_celeb.svg');
 		}
 	}
 	.menu__tag--picks {
 		i {
-			@include icons.retina-sprite(icons.$ico-menu-tag-picks-group);
+			// @include icons.retina-sprite(icons.$ico-menu-tag-picks-group);
+			background-image: url('../images/ico_menu_tag_picks.svg');
 		}
 	}
 	.menu__tag--funkplay {
 		i {
-			@include icons.retina-sprite(icons.$ico-menu-tag-funkplay-group);
+			// @include icons.retina-sprite(icons.$ico-menu-tag-funkplay-group);
+			background-image: url('../images/ico_menu_tag_funkplay.svg');
+		}
+	}
+	.menu__tag--mdpick {
+		i {
+			// @include icons.retina-sprite(icons.$ico-menu-tag-mdpick-group);
+			background-image: url('../images/ico_menu_tag_mdpick.svg');
 		}
 	}
 	.menu__colors {
@@ -380,24 +393,32 @@
 			font-size: 11px;
 			letter-spacing: -0.025em;
 			i {
+				width: 11px;
+				height: 11px;
 				margin-right: 4.5px;
+				background-size: 100% 100%;
 			}
 		}
-		.menu__tag--celeb {
-			i {
-				@include mixins.sprite(mo_icons.$ico-menu-tag-celeb);
-			}
-		}
-		.menu__tag--picks {
-			i {
-				@include mixins.sprite(mo_icons.$ico-menu-tag-picks);
-			}
-		}
-		.menu__tag--funkplay {
-			i {
-				@include mixins.sprite(mo_icons.$ico-menu-tag-funkplay);
-			}
-		}
+		// .menu__tag--celeb {
+		// 	i {
+		// 		@include mixins.sprite(mo_icons.$ico-menu-tag-celeb);
+		// 	}
+		// }
+		// .menu__tag--picks {
+		// 	i {
+		// 		@include mixins.sprite(mo_icons.$ico-menu-tag-picks);
+		// 	}
+		// }
+		// .menu__tag--funkplay {
+		// 	i {
+		// 		@include mixins.sprite(mo_icons.$ico-menu-tag-funkplay);
+		// 	}
+		// }
+		// .menu__tag--mdpick {
+		// 	i {
+		// 		@include mixins.sprite(mo_icons.$ico-menu-tag-mdpick);
+		// 	}
+		// }
 		.menu__colors {
 			right: 15px;
 			top: 15px;

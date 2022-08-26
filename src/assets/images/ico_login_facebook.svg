@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ico_login_facebook</title>
+    <g id="ico_login_facebook" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-3" transform="translate(1.000000, 1.000000)">
+            <circle id="Oval" fill="#1877F2" cx="20" cy="20" r="20"></circle>
+            <g id="5296500_fb_social-media_facebook_facebook-logo_social-network_icon" transform="translate(14.000000, 9.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                <path d="M11.213701,12.8397949 L11.8355796,8.70873438 L7.9451785,8.70873438 L7.9451785,6.02793164 C7.9451785,4.89774219 8.48861682,3.79612305 10.2311468,3.79612305 L12,3.79612305 L12,0.279144531 C12,0.279144531 10.3946854,0 8.86000676,0 C5.65581505,0 3.56164847,1.97844922 3.56164847,5.56020508 L3.56164847,8.70873438 L0,8.70873438 L0,12.8397949 L3.56164847,12.8397949 L3.56164847,22.826377 C4.2758124,22.9405684 5.00778965,23 5.75343553,23 C6.49908141,23 7.23105866,22.9405684 7.9451785,22.826377 L7.9451785,12.8397949 L11.213701,12.8397949 Z" id="Path"></path>
+            </g>
+        </g>
+    </g>
+</svg>

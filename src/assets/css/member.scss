@@ -118,7 +118,9 @@
 		.member__logo {
 			display: flex;
 			i {
-				@include icons.retina-sprite(icons.$logo-group);
+				// @include icons.retina-sprite(icons.$logo-group);
+				width: 161px;
+				height: 14px;
 			}
 		}
 		.member__info {
@@ -230,8 +232,10 @@
 				@include mixins.PtdRegular();
 			}
 			.member__ico {
+				width: 16px;
+				height: 16px;
 				margin-right: 5px;
-				@include icons.retina-sprite(icons.$ico-info-group);
+				// @include icons.retina-sprite(icons.$ico-info-group);
 			}
 		}
 		.member__noti--center {
@@ -331,14 +335,20 @@
 				text-align: right;
 				.login__text {
 					display: inline-flex;
-					gap: 8px;
+					// gap: 8px;
+					gap: 3px;
 					align-items: center;
 					font-weight: 500;
 					font-size: 12px;
 					letter-spacing: -0.025em;
 				}
 				.login__ico {
-					@include icons.retina-sprite(icons.$ico-login-security-group);
+					// @include icons.retina-sprite(icons.$ico-login-security-group);
+					background-image: url('../images/ico_login_security.svg');
+					background-repeat: no-repeat;
+					background-position: 0 0;
+					width: 18px;
+					height: 18px;
 				}
 			}
 			.login__form {
@@ -412,15 +422,22 @@
 				margin-top: 20px;
 				.login__link {
 					display: block;
+					width: 42px;
+					height: 42px;
+					background-repeat: no-repeat;
+					background-position: 0 0;
 				}
 				.login__link--naver {
-					@include icons.retina-sprite(icons.$ico-login-naver-group);
+					// @include icons.retina-sprite(icons.$ico-login-naver-group);
+					background-image: url('../images/ico_login_naver.svg');
 				}
 				.login__link--facebook {
-					@include icons.retina-sprite(icons.$ico-login-facebook-group);
+					// @include icons.retina-sprite(icons.$ico-login-facebook-group);
+					background-image: url('../images/ico_login_facebook.svg');
 				}
 				.login__link--kakao {
-					@include icons.retina-sprite(icons.$ico-login-kakao-group);
+					// @include icons.retina-sprite(icons.$ico-login-kakao-group);
+					background-image: url('../images/ico_login_kakao.svg');
 				}
 			}
 		}
@@ -562,7 +579,9 @@
 			}
 			.member__logo {
 				i {
-					@include mixins.sprite(mo_icons.$logo);
+					// @include mixins.sprite(mo_icons.$logo);
+					width: 117px;
+    			height: 10px;
 				}
 			}
 			.member__info {
@@ -632,8 +651,10 @@
 					letter-spacing: -0.012em;
 				}
 				.member__ico {
+					width: 12px;
+					height: 12px;
 					margin-right: 4px;
-					@include mixins.sprite(mo_icons.$ico-info);
+					// @include mixins.sprite(mo_icons.$ico-info);
 				}
 			}
 			.member__id {
@@ -739,12 +760,16 @@
 				.login__security {
 					margin-bottom: 9px;
 					.login__text {
-						gap: 6.5px;
+						// gap: 6.5px;
+						gap: 1.5px;
 						font-weight: 400;
 						letter-spacing: -0.012em;
 					}
 					.login__ico {
-						@include mixins.sprite(mo_icons.$ico-login-security);
+						// @include mixins.sprite(mo_icons.$ico-login-security);
+						width: 16px;
+						height: 17px;
+						background-size: 100% 100%;
 					}
 				}
 				.login__form {
@@ -798,15 +823,20 @@
 				.login__list {
 					gap: 25.5px;
 					margin-top: 14px;
-					.login__link--naver {
-						@include mixins.sprite(mo_icons.$ico-login-naver);
+					.login__link {
+						width: 36px;
+						height: 36px;
+						background-size: 100% 100%;
 					}
-					.login__link--facebook {
-						@include mixins.sprite(mo_icons.$ico-login-facebook);
-					}
-					.login__link--kakao {
-						@include mixins.sprite(mo_icons.$ico-login-kakao);
-					}
+					// .login__link--naver {
+					// 	@include mixins.sprite(mo_icons.$ico-login-naver);
+					// }
+					// .login__link--facebook {
+					// 	@include mixins.sprite(mo_icons.$ico-login-facebook);
+					// }
+					// .login__link--kakao {
+					// 	@include mixins.sprite(mo_icons.$ico-login-kakao);
+					// }
 				}
 			}
 		}

@@ -137,7 +137,12 @@ table {
     i {
       display: inline-block;
       margin-right: 7px;
-      @include mixins.sprite(mo_icons.$ico_scroller);
+      // @include mixins.sprite(mo_icons.$ico_scroller);
+      width: 18px;
+      height: 22px;
+      background-image: url('../images/ico_scroller.svg');
+      background-repeat: no-repeat;
+      background-position: 0 0;
     }
     @include breakpoints.mobile() {
       display: block;

@@ -292,7 +292,14 @@
 <!-- 반품주소 팝업 -->
 <div id="footerMap" class="layer__body footer_map">
 	<div class="layer__wrap">
-		<div class="layer__close"><a href="javascript:;" data-layer="footerMap" class="btn__close modal__hide"><span class="a11y">닫기</span></a></div>
+		<div class="layer__close">
+			<a href="javascript:;" data-layer="footerMap" class="btn__close modal__hide">
+				<svg class="svg-ico">
+					<use xlink:href="@@webrootassets/images/ico.svg#ico_close"></use>
+				</svg>
+				<span class="a11y">닫기</span>
+			</a>
+		</div>
 		<div class="layer__content">
 			<dl class="return__addr">
 				<dt>반품주소</dt>

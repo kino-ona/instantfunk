@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="24px" viewBox="0 0 34 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ico_shipp</title>
+    <g id="ico_shipp" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-3" transform="translate(1.000000, 1.000000)">
+            <path d="M18,2.5 C18.4142136,2.5 18.7892136,2.66789322 19.0606602,2.93933983 C19.3321068,3.21078644 19.5,3.58578644 19.5,4 L19.5,18.5 L4,18.5 C3.58578644,18.5 3.21078644,18.3321068 2.93933983,18.0606602 C2.66789322,17.7892136 2.5,17.4142136 2.5,17 L2.5,4 C2.5,3.58578644 2.66789322,3.21078644 2.93933983,2.93933983 C3.21078644,2.66789322 3.58578644,2.5 4,2.5 Z" id="Rectangle" stroke="#000000"></path>
+            <path d="M25.9620657,6.5 C26.6473437,6.5 27.3025795,6.78130021 27.7745643,7.27812635 L30.8124986,10.4759519 C31.2538913,10.9405758 31.5,11.5569644 31.5,12.1978255 L31.5,17 C31.5,17.4142136 31.3321068,17.7892136 31.0606602,18.0606602 C30.7892136,18.3321068 30.4142136,18.5 30,18.5 L19.5,18.5 L19.5,6.5 Z" id="Polygon" stroke="#000000"></path>
+            <circle id="Oval" stroke="#000000" fill="#FFFFFF" cx="9" cy="19" r="2.5"></circle>
+            <circle id="Oval-Copy" stroke="#000000" fill="#FFFFFF" cx="25" cy="19" r="2.5"></circle>
+            <g id="Group-2">
+                <circle id="Oval" fill="#000000" cx="6" cy="6" r="6"></circle>
+                <polyline id="Path-3" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" points="3 5.75 5 8.25 9 4"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

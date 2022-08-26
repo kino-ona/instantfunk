@@ -98,7 +98,12 @@
       }
       .ico__shipp {
         display: inline-block;
-        @include icons.retina-sprite(icons.$ico-shipp-group);
+        // @include icons.retina-sprite(icons.$ico-shipp-group);
+        width: 34px;
+        height: 24px;
+        background-image: url('../images/ico_shipp.svg');
+        background-repeat: no-repeat;
+        background-position: 0 0;
         vertical-align: middle;
       }
       
@@ -625,12 +630,18 @@ div.ec-base-help.ec-base-help_new {
     }
 		.menu__tag--celeb {
 			i {
-				@include mixins.sprite(mo_icons.$ico-menu-tag-celeb10);
+				// @include mixins.sprite(mo_icons.$ico-menu-tag-celeb10);
+        width: 10px;
+        height: 10px;
+        background-size: 100% 100%;
 			}
 		}
 		.menu__tag--picks {
 			i {
-				@include mixins.sprite(mo_icons.$ico-menu-tag-picks13);
+				// @include mixins.sprite(mo_icons.$ico-menu-tag-picks13);
+        width: 13px;
+        height: 13px;
+        background-size: 100% 100%;
 			}
 		}
     .menu__colors {

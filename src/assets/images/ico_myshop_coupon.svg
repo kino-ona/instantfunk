@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ico_myshop_coupon</title>
+    <g id="ico_myshop_coupon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-4" transform="translate(5.000000, 1.000000)" fill="#000000">
+            <polygon id="Fill-1" points="0 22 22 22 22 20 0 20"></polygon>
+            <path d="M22.0278,0 L15.7778,0 C15.7778,2.915 13.6508,5.278 11.0278,5.278 C8.4048,5.278 6.2778,2.915 6.2778,0 L0.0278,0 L0.0278,30 L22.0278,30 L22.0278,0 Z M20.0278,2 L20.0278,28 L2.0278,28 L2.0278,2 L4.5368,2 C5.3448,5.044 7.9488,7.278 11.0278,7.278 C14.1068,7.278 16.7108,5.044 17.5188,2 L20.0278,2 Z" id="Fill-2"></path>
+        </g>
+    </g>
+</svg>

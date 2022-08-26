@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="22px" viewBox="0 0 18 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ico_scroller</title>
+    <g id="ico_scroller" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-3" transform="translate(1.000000, 1.000000)" stroke="#000000" stroke-width="0.4">
+            <line x1="0.169491525" y1="2" x2="15.6694915" y2="2" id="Path-3" stroke-linecap="round"></line>
+            <polyline id="Path" stroke-linecap="round" stroke-linejoin="round" transform="translate(15.000000, 2.000000) rotate(90.000000) translate(-15.000000, -2.000000) " points="13 3 15 1 17 3"></polyline>
+            <polyline id="Path-Copy" stroke-linecap="round" stroke-linejoin="round" transform="translate(1.000000, 2.000000) scale(-1, 1) rotate(90.000000) translate(-1.000000, -2.000000) " points="-1 3 1 1 3 3"></polyline>
+            <path d="M7.91949153,0.75 C8.75282486,0.75 9.16949153,1.33333333 9.16949153,2.5 L9.16949153,7.25 C10.1694915,7.08333333 10.7528249,7.25 10.9194915,7.75 C11.1694915,7.5 12.1694915,7.25 12.6694915,8 C13.1694915,7.75 14.1694915,8 14.4194915,8.5 C14.9194915,8.25 15.6694915,8.75 15.6694915,9.5 L15.6694915,14.25 C15.6694915,15.0741857 15.5031367,15.7736053 15.1704271,16.3482589 L15.1694915,19 C15.1694915,19.5522847 14.7217763,20 14.1694915,20 L8.16949153,20 C7.61720678,20 7.16949153,19.5522847 7.16949153,19 L7.16904708,16.382 L3.16949153,10.5 C2.50282486,9.66666667 2.58615819,8.91666667 3.41949153,8.25 C3.91949153,8 4.41949153,8 4.91949153,8.5 C5.25282486,8.83333333 5.83615819,9.5 6.66949153,10.5 L6.66949153,2.25 C6.66949153,1.25 7.08615819,0.75 7.91949153,0.75 Z" id="Combined-Shape" fill="#FFFFFF" stroke-linejoin="round"></path>
+        </g>
+    </g>
+</svg>

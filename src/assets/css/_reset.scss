@@ -301,8 +301,8 @@ select{
 	border-radius: 100vw;
 	background: {
 		color: #f4f4f7;
-		image: url('/assets/images/bg_select@2x.png');
-		size: 11px;
+		image: url('../images/bg_select.svg');
+		// size: 11px;
 		repeat: no-repeat;
 		position: right 20px center;
 	}

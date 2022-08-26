@@ -24,10 +24,15 @@
 		content: '';
 		display: block;
 		position: absolute;
-		right: 19px;
+		right: 18px;
 		top: 50%;
-		margin-top: -3px;
-		@include icons.retina-sprite(icons.$bg-select-group);
+		margin-top: -3.5px;
+		// @include icons.retina-sprite(icons.$bg-select-group);
+		width: 12px;
+		height: 7px;
+		background-image: url('../images/bg_select.svg');
+		background-repeat: no-repeat;
+		background-position: 0 0;
 	}
 	select {
 		background-image: none;
@@ -659,7 +664,9 @@
 		z-index: 1;
 		.btn__close {
 			display: block;
-			@include icons.retina-sprite(icons.$ico-close-group);
+			// @include icons.retina-sprite(icons.$ico-close-group);
+			width: 22px;
+			height: 22px;
 			cursor: pointer;
 		}
 	}

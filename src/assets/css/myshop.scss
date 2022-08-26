@@ -106,45 +106,59 @@
 					.myshop__ico {
 						display: flex;
 						margin-bottom: auto;
+						i {
+							width: 32px;
+							height: 32px;
+							background-repeat: no-repeat;
+							background-position: 0 0;
+						}
 					}
 					.myshop__ico--order {
 						i {
-							@include icons.retina-sprite(icons.$ico-myshop-order-group);
+							// @include icons.retina-sprite(icons.$ico-myshop-order-group);
+							background-image: url('../images/ico_myshop_order.svg');
 						}
 					}
 					.myshop__ico--profile {
 						i {
-							@include icons.retina-sprite(icons.$ico-myshop-profile-group);
+							// @include icons.retina-sprite(icons.$ico-myshop-profile-group);
+							background-image: url('../images/ico_myshop_profile.svg');
 						}
 					}
 					.myshop__ico--cart {
 						i {
-							@include icons.retina-sprite(icons.$ico-myshop-cart-group);
+							// @include icons.retina-sprite(icons.$ico-myshop-cart-group);
+							background-image: url('../images/icon_myshop_cart.svg');
 						}
 					}
 					.myshop__ico--mileage {
 						i {
-							@include icons.retina-sprite(icons.$ico-myshop-mileage-group);
+							// @include icons.retina-sprite(icons.$ico-myshop-mileage-group);
+							background-image: url('../images/icon_myshop_mileage.svg');
 						}
 					}
 					.myshop__ico--coupon {
 						i {
-							@include icons.retina-sprite(icons.$ico-myshop-coupon-group);
+							// @include icons.retina-sprite(icons.$ico-myshop-coupon-group);
+							background-image: url('../images/ico_myshop_coupon.svg');
 						}
 					}
 					.myshop__ico--board {
 						i {
-							@include icons.retina-sprite(icons.$ico-myshop-board-group);
+							// @include icons.retina-sprite(icons.$ico-myshop-board-group);
+							background-image: url('../images/ico_myshop_board.svg');
 						}
 					}
 					.myshop__ico--address {
 						i {
-							@include icons.retina-sprite(icons.$ico-myshop-address-group);
+							// @include icons.retina-sprite(icons.$ico-myshop-address-group);
+							background-image: url('../images/ico_myshop_address.svg');
 						}
 					}
 					.myshop__ico--review {
 						i {
-							@include icons.retina-sprite(icons.$ico-myshop-review-group);
+							// @include icons.retina-sprite(icons.$ico-myshop-review-group);
+							background-image: url('../images/ico_myshop_review.svg');
 						}
 					}
 				}
@@ -307,46 +321,53 @@
 						.myshop__desc {
 							font-size: 9px;
 						}
-						.myshop__ico--order {
+						.myshop__ico {
 							i {
-								@include mixins.sprite(mo_icons.$ico-myshop-order);
+								width: 22px;
+								height: 22px;
+								background-size: 100% 100%;
 							}
 						}
-						.myshop__ico--profile {
-							i {
-								@include mixins.sprite(mo_icons.$ico-myshop-profile);
-							}
-						}
-						.myshop__ico--cart {
-							i {
-								@include mixins.sprite(mo_icons.$ico-myshop-cart);
-							}
-						}
-						.myshop__ico--mileage {
-							i {
-								@include mixins.sprite(mo_icons.$ico-myshop-mileage);
-							}
-						}
-						.myshop__ico--coupon {
-							i {
-								@include mixins.sprite(mo_icons.$ico-myshop-coupon);
-							}
-						}
-						.myshop__ico--board {
-							i {
-								@include mixins.sprite(mo_icons.$ico-myshop-board);
-							}
-						}
-						.myshop__ico--address {
-							i {
-								@include mixins.sprite(mo_icons.$ico-myshop-address);
-							}
-						}
-						.myshop__ico--review {
-							i {
-								@include mixins.sprite(mo_icons.$ico-myshop-review);
-							}
-						}
+						// .myshop__ico--order {
+						// 	i {
+						// 		@include mixins.sprite(mo_icons.$ico-myshop-order);
+						// 	}
+						// }
+						// .myshop__ico--profile {
+						// 	i {
+						// 		@include mixins.sprite(mo_icons.$ico-myshop-profile);
+						// 	}
+						// }
+						// .myshop__ico--cart {
+						// 	i {
+						// 		@include mixins.sprite(mo_icons.$ico-myshop-cart);
+						// 	}
+						// }
+						// .myshop__ico--mileage {
+						// 	i {
+						// 		@include mixins.sprite(mo_icons.$ico-myshop-mileage);
+						// 	}
+						// }
+						// .myshop__ico--coupon {
+						// 	i {
+						// 		@include mixins.sprite(mo_icons.$ico-myshop-coupon);
+						// 	}
+						// }
+						// .myshop__ico--board {
+						// 	i {
+						// 		@include mixins.sprite(mo_icons.$ico-myshop-board);
+						// 	}
+						// }
+						// .myshop__ico--address {
+						// 	i {
+						// 		@include mixins.sprite(mo_icons.$ico-myshop-address);
+						// 	}
+						// }
+						// .myshop__ico--review {
+						// 	i {
+						// 		@include mixins.sprite(mo_icons.$ico-myshop-review);
+						// 	}
+						// }
 					}
 				}
 			}
@@ -623,7 +644,13 @@
 			margin-bottom: 60px;
 			.myshop__ico {
 				margin-left: 8px;
-				@include icons.retina-sprite(icons.$ico-myshop-mileage-group);
+				// @include icons.retina-sprite(icons.$ico-myshop-mileage-group);
+				width: 32px;
+				height: 32px;
+				background-image: url('../images/icon_myshop_mileage.svg');
+				background-repeat: no-repeat;
+				background-position: 0 0;
+
 			}
 		}
 
@@ -826,7 +853,8 @@
 				position: absolute;
 				right: 16px;
 				top: 50%;
-				margin-top: -10px;
+				// margin-top: -12px;
+				margin-top: -11px;
 			}
 		}
 		.hasDatepicker {
@@ -845,10 +873,20 @@
 		// 	font-size: 17px;
 		// }
 		.calendar__ico {
-			@include icons.retina-sprite(icons.$ico-calendar-group);
+			// @include icons.retina-sprite(icons.$ico-calendar-group);
+			width: 22px;
+			height: 22px;
+			background-image: url('../images/ico_calendar.svg');
+			background-repeat: no-repeat;
+			background-position: 0 0;
 		}
 		.ui-datepicker-trigger {
-			@include icons.retina-sprite(icons.$ico-calendar-group);
+			// @include icons.retina-sprite(icons.$ico-calendar-group);
+			width: 22px;
+			height: 22px;
+			background-image: url('../images/ico_calendar.svg');
+			background-repeat: no-repeat;
+			background-position: 0 0;
 			img {
 				visibility: hidden;
 			}
@@ -1335,7 +1373,12 @@
 				align-items: center;
 				gap: 4px;
 				.notice__ico {
-					@include icons.retina-sprite(icons.$ico-login-security-group);
+					// @include icons.retina-sprite(icons.$ico-login-security-group);
+					background-image: url('../images/ico_login_security.svg');
+					background-repeat: no-repeat;
+					background-position: 0 0;
+					width: 18px;
+					height: 18px;
 				}
 			}
 			.notice__notice {
@@ -1845,7 +1888,10 @@
 				margin-bottom: 33px;
 				.myshop__ico {
 					margin-left: 6px;
-					@include mixins.sprite(mo_icons.$ico-myshop-mileage);
+					// @include mixins.sprite(mo_icons.$ico-myshop-mileage);
+					width: 22px;
+					height: 22px;
+					background-size: 100% 100%;
 				}
 			}
 
@@ -1975,12 +2021,15 @@
 				.calendar__ico {
 					right: 12.5px;
 					top: 50%;
-					margin-top: -8px;
+					margin-top: -9px;
 				}
 			}
 			.calendar__ico,
 			.ui-datepicker-trigger {
-				@include mixins.sprite(mo_icons.$ico-calendar);
+				// @include mixins.sprite(mo_icons.$ico-calendar);
+				width: 18px;
+				height: 18px;
+				background-size: 100% 100%;
 				margin-left: 6px;
 			}
 		}
@@ -2262,7 +2311,10 @@
 						font-size: 12px;
 					}
 					.notice__ico {
-						@include mixins.sprite(mo_icons.$ico-login-security);
+						// @include mixins.sprite(mo_icons.$ico-login-security);
+						width: 16px;
+						height: 17px;
+						background-size: 100% 100%;
 					}
 				}
 				.notice__notice {
@@ -2766,14 +2818,28 @@
 		}
 	}
 	.ico_boardset {
-		@include icons.retina-sprite(icons.$ico_boardset-group);
+		// @include icons.retina-sprite(icons.$ico_boardset-group);
+		width: 21px;
+		height: 21px;
+		background-image: url('../images/ico_boardset.svg');
+		background-repeat: no-repeat;
+		background-position: 0 0;
 	}
 	.ico_likecnt {
-		@include icons.retina-sprite(icons.$ico_like_on-group);
-
+		// @include icons.retina-sprite(icons.$ico_like_on-group);
+		width: 22px;
+		height: 19px;
+		background-image: url('../images/ico_like_on.svg');
+		background-repeat: no-repeat;
+		background-position: 0 0;
 	}
 	.ico_reviewcnt {
-		@include icons.retina-sprite(icons.$ico_reviewcnt-group);
+		// @include icons.retina-sprite(icons.$ico_reviewcnt-group);
+		width: 26px;
+		height: 24px;
+		background-image: url('../images/ico_reviewcnt.svg');
+		background-repeat: no-repeat;
+		background-position: 0 0;
 	}
   .btn__sopen {
     display: inline-block;
@@ -3087,13 +3153,22 @@
 			}
 		}
 		.ico_boardset {
-      @include mixins.sprite(mo_icons.$ico_boardset);
+      // @include mixins.sprite(mo_icons.$ico_boardset);
+			width: 19px;
+			height: 19px;
+			background-size: 100% 100%;
 		}
 		.ico_likecnt {
-      @include mixins.sprite(mo_icons.$ico_like_on);
+      // @include mixins.sprite(mo_icons.$ico_like_on);
+			width: 17px;
+			height: 15px;
+			background-size: 100% 100%;
 		}
 		.ico_reviewcnt {
-      @include mixins.sprite(mo_icons.$ico_reviewcnt);
+      // @include mixins.sprite(mo_icons.$ico_reviewcnt);
+			width: 22px;
+			height: 20px;
+			background-size: 100% 100%;
 		}
     .review__list--cont {
       .review__list--item {
@@ -3224,9 +3299,15 @@
 		}
 		.btn__rvlike {
 			display: inline-block;
-			@include icons.retina-sprite(icons.$ico-like-group);
+			// @include icons.retina-sprite(icons.$ico-like-group);
+			width: 22px;
+			height: 19px;
+			background-image: url('../images/ico_like.svg');
+			background-repeat: no-repeat;
+			background-position: 0 0;
 			&.seleted {
-				@include icons.retina-sprite(icons.$ico-like-on-group);
+				// @include icons.retina-sprite(icons.$ico-like-on-group);
+				background-image: url('../images/ico_like_on.svg');
 			}
 		}
 		.morecnt_section {
@@ -3320,11 +3401,14 @@
 				}
 			}
 			.btn__rvlike {
-				width: 16px;
-				@include mixins.sprite(mo_icons.$ico-like);
-				&.seleted {
-					@include mixins.sprite(mo_icons.$ico-like-on);
-				}
+				// width: 16px;
+				// @include mixins.sprite(mo_icons.$ico-like);
+				width: 17px;
+				height: 15px;
+				background-size: 100% 100%;
+				// &.seleted {
+				// 	// @include mixins.sprite(mo_icons.$ico-like-on);
+				// }
 			}
 			.review__list--line {display: none;}
 		}
@@ -3343,7 +3427,12 @@
 	i {
 		display: inline-block;
 		margin-right: 7px;
-		@include mixins.sprite(mo_icons.$ico_scroller);
+		// @include mixins.sprite(mo_icons.$ico_scroller);
+		width: 18px;
+		height: 22px;
+		background-image: url('../images/ico_scroller.svg');
+		background-repeat: no-repeat;
+		background-position: 0 0;
 	}
 } 
 .membership_row {
