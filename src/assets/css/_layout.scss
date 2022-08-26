@@ -41,7 +41,9 @@
 		display: block;
 		position: relative;
 		z-index: 5;
-		@include icons.retina-sprite(icons.$ico-header-search-group);
+		// @include icons.retina-sprite(icons.$ico-header-search-group);
+		width: 17px;
+		height: 17px;
 	}
 	.header__funkplay {
 		display: block;
@@ -404,7 +406,9 @@
 			position: absolute;
 			right: 64.5px;
 			top: 22px;
-			@include mixins.sprite(mo_icons.$ico-header-search);
+			// @include mixins.sprite(mo_icons.$ico-header-search);
+			width: 14px;
+			height: 14px;
 		}
 		.header__search--hide {
 			display: none;

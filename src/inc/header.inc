@@ -3,7 +3,7 @@
 				<h1 class="logo">
 					<a href="#" class="logo__link">
 						<svg class="svg-ico">
-							<use xlink:href="@@webrootassets/images/sprite/ico.svg#logo"></use>
+							<use xlink:href="@@webrootassets/images/ico.svg#logo"></use>
 						</svg>
 						<span class="a11y">INSTANTPUNK</span>
 					</a>
@@ -127,6 +127,9 @@
 				</div>
 				<div class="header__right">
 					<button type="button" class="header__search">
+						<svg class="svg-ico">
+							<use xlink:href="@@webrootassets/images/ico.svg#ico_header_search"></use>
+						</svg>
 						<span class="a11y">검색</span>
 					</button>
 					<div class="search">
