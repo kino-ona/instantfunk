@@ -60,7 +60,9 @@
 		z-index: 1;
 		.logo__link {
 			display: block;
-			@include icons.retina-sprite(icons.$logo-group);
+			// @include icons.retina-sprite(icons.$logo-group);
+			// width: 161px;
+			// height: 14px;
 		}
 	}
 
@@ -420,7 +422,9 @@
 
 		.logo {
 			.logo__link {
-				@include mixins.sprite(mo_icons.$logo);
+				// @include mixins.sprite(mo_icons.$logo);
+				width: 117px;
+    		height: 10px;
 			}
 		}
 		

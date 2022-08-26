@@ -1,7 +1,12 @@
 <header class="header">
 			<div class="header__container">
 				<h1 class="logo">
-					<a href="#" class="logo__link"><span class="a11y">INSTANTPUNK</span></a>
+					<a href="#" class="logo__link">
+						<svg class="svg-ico">
+							<use xlink:href="@@webrootassets/images/sprite/ico.svg#logo"></use>
+						</svg>
+						<span class="a11y">INSTANTPUNK</span>
+					</a>
 				</h1>
 				<a class="header__cart">CART <span>(3)</span></a>
 				<button class="header__mobile">MENU</button>
