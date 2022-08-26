@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="72px" height="42px" viewBox="0 0 72 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>bg_header_funkplay_on</title>
+    <g id="bg_header_funkplay_on" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(1.000000, 1.000000)" stroke="#000000">
+            <rect id="Rectangle-Copy" stroke-width="0.5" fill="#F4FF00" x="0.25" y="0.25" width="69.5" height="39.5" rx="19.75"></rect>
+            <circle id="Oval-Copy" stroke-width="0.5" fill="#00EFFC" fill-rule="nonzero" cx="50" cy="20" r="19.75"></circle>
+            <g id="Group-3" transform="translate(40.000000, 11.800000)" fill-rule="nonzero" stroke-width="0.4">
+                <path d="M8.04524887,10.3582181 L8.04524887,17.2 L4.04524887,17.2 L4.04524887,10.3582181 L8.04524887,10.3582181 Z" id="Path" fill="#B3AEFF"></path>
+                <path d="M19,6.67619048 L19,10.3582181 L15,10.3582181 L15,6.67619048 L19,6.67619048 Z" id="Path" fill="#FFC224"></path>
+                <path d="M8.04524887,3.85591398 L8.04524887,6.67619048 L4.04524887,6.67619048 L4.04524887,3.85591398 L8.04524887,3.85591398 Z" id="Path" fill="#B3AEFF"></path>
+                <path d="M15,0.2 L19,0.2 L19,3.85591398 L15,3.85591398 L15,0.2 Z" id="Path" fill="#56FF00"></path>
+                <polygon id="Path-Copy-2" fill="#F4FF00" points="0 17.2 0 0.2 15 0.2 15 3.85591398 4.04524887 3.85591398 4.04524887 6.67619048 15 6.67619048 15 10.3582181 4.04524887 10.3582181 4.04524887 17.2"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

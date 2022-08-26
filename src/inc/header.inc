@@ -141,7 +141,12 @@
 										<div class="search__row">
 											<div class="search__field">
 												<label for="searchText" class="a11y">검색어</label>
-												<input type="text" id="searchText" class="search__input" placeholder="SEARCH EVERYTHING"><button type="button" class="search__button"><span class="a11y">검색 버튼</span></button>
+												<input type="text" id="searchText" class="search__input" placeholder="SEARCH EVERYTHING"><button type="button" class="search__button">
+													<svg class="svg-ico">
+														<use xlink:href="@@webrootassets/images/ico.svg#btn_header_search"></use>
+													</svg>
+													<span class="a11y">검색 버튼</span>
+												</button>
 											</div>
 										</div>
 										<!-- 인기검색어 -->

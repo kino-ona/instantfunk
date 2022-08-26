@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="49px" height="34px" viewBox="0 0 49 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>bg_header_funplay_off</title>
+    <g id="bg_header_funplay_off" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="FUNKPLAY_OUTSIDE_01_DEFAULT" transform="translate(1.000000, 1.000000)" fill-rule="nonzero">
+            <path d="M31,1 C39.27,1 46,7.73 46,16 C46,24.27 39.27,31 31,31 L16,31 C7.73,31 1,24.27 1,16 C1,7.73 7.73,1 16,1 L31,1 M31,0 L16,0 C7.16,0 0,7.16 0,16 C0,24.84 7.16,32 16,32 L31,32 C39.84,32 47,24.84 47,16 C47,7.16 39.84,0 31,0 L31,0 Z" id="Shape" fill="#000000"></path>
+            <circle id="Oval" fill="#000000" cx="16" cy="16" r="16"></circle>
+            <g id="Group" transform="translate(9.590000, 9.690000)">
+                <g transform="translate(2.920000, 2.630000)">
+                    <rect id="Rectangle" fill="#00A5A0" x="0.1" y="0.1" width="3.04" height="2.8"></rect>
+                    <path d="M3.04,0.2 L3.04,2.8 L0.2,2.8 L0.2,0.2 L3.04,0.2 M3.24,0 L1.77635684e-15,0 L1.77635684e-15,3 L3.24,3 L3.24,0 L3.24,0 Z" id="Shape" fill="#000000"></path>
+                </g>
+                <g transform="translate(2.920000, 7.120000)">
+                    <rect id="Rectangle" fill="#00A5A0" x="0.1" y="0.1" width="3.04" height="5.9"></rect>
+                    <path d="M3.04,0.2 L3.04,5.9 L0.2,5.9 L0.2,0.2 L3.04,0.2 M3.24,0 L1.77635684e-15,0 L1.77635684e-15,6.1 L3.24,6.1 L3.24,0 L3.24,0 Z" id="Shape" fill="#000000"></path>
+                </g>
+                <g transform="translate(10.470000, -0.000000)">
+                    <rect id="Rectangle" fill="#00A5A0" x="0.11" y="0.1" width="3.55" height="2.8"></rect>
+                    <path d="M3.55,0.2 L3.55,2.8 L0.2,2.8 L0.2,0.2 L3.55,0.2 M3.75,0 L0,0 L0,3 L3.75,3 L3.75,0 L3.75,0 Z" id="Shape" fill="#000000"></path>
+                </g>
+                <g transform="translate(10.470000, 4.960000)">
+                    <rect id="Rectangle" fill="#00A5A0" x="0.11" y="0.1" width="3.55" height="2.82"></rect>
+                    <path d="M3.55,0.2 L3.55,2.82 L0.2,2.82 L0.2,0.2 L3.55,0.2 M3.75,0 L0,0 L0,3.02 L3.75,3.02 L3.75,0 L3.75,0 Z" id="Shape" fill="#000000"></path>
+                </g>
+                <g transform="translate(0.000000, 0.000000)">
+                    <polygon id="Path" fill="#00EFFC" points="0.1 13.12 0.1 0.1 11.15 0.1 11.15 2.9 3.08 2.9 3.08 5.06 11.15 5.06 11.15 7.88 3.08 7.88 3.08 13.12"></polygon>
+                    <path d="M11.05,0.2 L11.05,2.8 L2.98,2.8 L2.98,5.16 L11.05,5.16 L11.05,7.78 L2.98,7.78 L2.98,13.02 L0.2,13.02 L0.2,0.2 L11.06,0.2 M11.26,-3.55271368e-15 L0,-3.55271368e-15 L0,13.22 L3.18,13.22 L3.18,7.98 L11.25,7.98 L11.25,4.96 L3.18,4.96 L3.18,3 L11.25,3 L11.25,-3.55271368e-15 L11.25,-3.55271368e-15 L11.26,-3.55271368e-15 Z" id="Shape" fill="#000000"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
