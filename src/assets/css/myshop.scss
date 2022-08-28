@@ -3332,7 +3332,12 @@
 			right: 0;
 			bottom: 10px;
 			display: inline-block;
-			@include icons.retina-sprite(icons.$ico-share-group);
+			// @include icons.retina-sprite(icons.$ico-share-group);
+			width: 23px;
+			height: 22px;
+			background-image: url('../images/ico_share.svg');
+			background-repeat: no-repeat;
+			background-position: 0 0;
 			&.seleted {
 			}
 		}

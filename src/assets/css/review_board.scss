@@ -168,13 +168,28 @@
 		}
 	}
 	.ico_boardset {
-		@include icons.retina-sprite(icons.$ico_boardset-group);
+		// @include icons.retina-sprite(icons.$ico_boardset-group);
+    width: 21px;
+		height: 21px;
+		background-image: url('../images/ico_boardset.svg');
+		background-repeat: no-repeat;
+		background-position: 0 0;
 	}
 	.ico_likecnt {
-		@include icons.retina-sprite(icons.$ico_like_on-group);
+		// @include icons.retina-sprite(icons.$ico_like_on-group);
+    width: 22px;
+		height: 19px;
+		background-image: url('../images/ico_like_on.svg');
+		background-repeat: no-repeat;
+		background-position: 0 0;
 	}
 	.ico_reviewcnt {
-		@include icons.retina-sprite(icons.$ico_reviewcnt-group);
+		// @include icons.retina-sprite(icons.$ico_reviewcnt-group);
+    width: 26px;
+		height: 24px;
+		background-image: url('../images/ico_reviewcnt.svg');
+		background-repeat: no-repeat;
+		background-position: 0 0;
 	}
   .shareLayer {
     z-index: 3;
@@ -311,27 +326,65 @@
     }
     .review__list--cont {
       .btn__rvshare {
-        @include mixins.sprite(mo_icons.$ico_share);
+        // @include mixins.sprite(mo_icons.$ico_share);
+        width: 18px;
+        height: 17px;
+        background-image: url('../images/ico_share.svg');
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: 100%;
       }
       .btn__rvlike {
-        @include mixins.sprite(mo_icons.$ico_like);
+        // @include mixins.sprite(mo_icons.$ico_like);
+        width: 17px;
+        height: 15px;
+        background-image: url('../images/ico_like.svg');
+        background-repeat: no-repeat;
+			  background-position: 0 0;
+        background-size: 100% 100%;
+
         &.selected {
-          @include mixins.sprite(mo_icons.$ico_like_on);
+          // @include mixins.sprite(mo_icons.$ico_like_on);
+          background-image: url('../images/ico_like_on.svg');
         }
       }
       .rv__count .ic_star {
-        @include mixins.sprite(mo_icons.$ico_star);
+        // @include mixins.sprite(mo_icons.$ico_star);
+        width: 20px;
+        height: 19px;
+        background-image: url('../images/ico_star.svg');
+        background-repeat: no-repeat;
+			  background-position: 0 0;
+        background-size: 100% 100%;
       }
     }
 
     .ico_boardset {
-      @include mixins.sprite(mo_icons.$ico_boardset);
+      // @include mixins.sprite(mo_icons.$ico_boardset);
+      width: 19px;
+			height: 19px;
+      background-image: url('../images/ico_boardset.svg');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+			background-size: 100% 100%;
     }
     .ico_likecnt {
-      @include mixins.sprite(mo_icons.$ico_like_on);
+      // @include mixins.sprite(mo_icons.$ico_like_on);
+      width: 17px;
+      height: 15px;
+      background-image: url('../images/ico_like_on.svg');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+			background-size: 100% 100%;
     }
     .ico_reviewcnt {
-      @include mixins.sprite(mo_icons.$ico_reviewcnt);
+      // @include mixins.sprite(mo_icons.$ico_reviewcnt);
+      width: 22px;
+			height: 20px;
+      background-image: url('../images/ico_reviewcnt.svg');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+			background-size: 100% 100%;
     }
 
     &.myshop__container {

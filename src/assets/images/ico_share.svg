@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="22px" viewBox="0 0 23 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ico_share</title>
+    <g id="ico_share" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2" transform="translate(1.000000, 1.000000)" stroke="#000000">
+            <rect id="Rectangle" fill="#D8D8D8" x="10.5" y="0.5" width="1" height="13"></rect>
+            <path d="M21,10 L21,10 L21,17 C21,18.6568542 19.6568542,20 18,20 L3,20 C1.34314575,20 0,18.6568542 0,17 L0,10 L0,10" id="Path"></path>
+            <polyline id="Path" stroke-linecap="round" stroke-linejoin="round" points="5 6 10.5 0 16 6"></polyline>
+        </g>
+    </g>
+</svg>
