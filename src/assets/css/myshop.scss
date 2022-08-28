@@ -3578,16 +3578,36 @@
 	display: flex;
 	gap: 10px;
 	position: relative;
+	max-width: 1280px;
+	margin: 0 auto;
+	// padding: 0 3.37vw;
+	.myshop__container {
+		padding: 0;
+		max-width: 100%;
+	}
 	.myshop_coupon-aside {
 		// position: absolute;
 		width: 360px;
+		margin-top: 61px;
 	}
 	@include breakpoints.mobile() {
 		flex-direction: column-reverse;
 		box-sizing: content-box;
+		
+		.myshop__container {
+			padding: 0 3.37vw;
+		}
 		.myshop_coupon-aside{
 			width: 100%;
 			padding: 0 4vw;
+			margin-top: 35px;
+		}
+		.myshop__container--wide {
+			.myshop__header.mobile_header {
+				position: absolute;
+				top: 0;
+				// width: 100%;
+			}
 		}
 	}
 }
