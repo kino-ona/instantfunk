@@ -121,7 +121,13 @@ width: 100%;
       font-weight: 500;
     }
     .ico__shipp {
-      @include icons.retina-sprite(icons.$ico-shipp-group);
+      // @include icons.retina-sprite(icons.$ico-shipp-group);
+      display: block;
+      width: 34px;
+      height: 24px;
+      background-image: url('../images/ico_shipp.svg');
+      background-repeat: no-repeat;
+      background-position: 0 0;
     }
     @include breakpoints.mobile() {
       width: 100%;
@@ -130,9 +136,9 @@ width: 100%;
       > h2 {
         font-size: 24px;
       }
-      .ico__shipp {
-        @include mixins.sprite(mo_icons.$ico-shipp);
-      }
+      // .ico__shipp {
+      //   @include mixins.sprite(mo_icons.$ico-shipp);
+      // }
     }
   }
 
@@ -1366,7 +1372,13 @@ width: 100%;
       font-weight: 500;
     }
     .ico__shipp {
-      @include icons.retina-sprite(icons.$ico-shipp-group);
+      // @include icons.retina-sprite(icons.$ico-shipp-group);
+      display: block;
+      width: 34px;
+      height: 24px;
+      background-image: url('../images/ico_shipp.svg');
+      background-repeat: no-repeat;
+      background-position: 0 0;
     }
     @include breakpoints.mobile() {
       width: 100%;
@@ -1375,9 +1387,9 @@ width: 100%;
       > h2 {
         font-size: 24px;
       }
-      .ico__shipp {
-        @include mixins.sprite(mo_icons.$ico-shipp);
-      }
+      // .ico__shipp {
+      //   @include mixins.sprite(mo_icons.$ico-shipp);
+      // }
     }
   }
   .xans-order-result {

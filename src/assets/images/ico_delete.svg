@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ico_delete</title>
+    <g id="ico_delete" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval" fill="#000000" cx="9" cy="9" r="8"></circle>
+        <g id="Icon_ClosePop-Copy" transform="translate(6.000000, 6.000000)" stroke="#FFFFFF">
+            <line x1="0" y1="6" x2="6" y2="0" id="Path-2"></line>
+            <line x1="0" y1="6" x2="6" y2="0" id="Path-2" transform="translate(3.000000, 3.000000) scale(-1, 1) translate(-3.000000, -3.000000) "></line>
+        </g>
+    </g>
+</svg>

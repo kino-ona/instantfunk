@@ -17,18 +17,36 @@
 
 .ic_star {
   display: inline-block;
-  @include icons.retina-sprite(icons.$ico-star-group);
+  // @include icons.retina-sprite(icons.$ico-star-group);
   vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  background-image: url('../images/ico_star.svg');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100% 100%;
 }
 .ic_star_blank {
   display: inline-block;
   // @include icons.retina-sprite(icons.$ico-star-blank-group);
   vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  background-image: url('../images/ico_star_blank.svg');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100% 100%;
 }
 .ic_star_half {
   display: inline-block;
-  @include icons.retina-sprite(icons.$ico-start-half-group);
+  // @include icons.retina-sprite(icons.$ico-start-half-group);
   vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  background-image: url('../images/ico_start_half.svg');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100% 100%;
 }
 
 .review__sort {
@@ -275,9 +293,16 @@
   }
   .btn__rvlike {
     display: inline-block;
-    @include icons.retina-sprite(icons.$ico-like-group);
+    // @include icons.retina-sprite(icons.$ico-like-group);
+    width: 22px;
+    height: 19px;
+    background-image: url('../images/ico_like.svg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100% 100%;
     &.selected {
-      @include icons.retina-sprite(icons.$ico-like-on-group);
+      // @include icons.retina-sprite(icons.$ico-like-on-group);
+      background-image: url('../images/ico_like_on.svg');
     }
   }
   .morecnt_section {
@@ -301,7 +326,13 @@
     right: 0;
     bottom: 10px;
     display: inline-block;
-    @include icons.retina-sprite(icons.$ico-share-group);
+    // @include icons.retina-sprite(icons.$ico-share-group);
+    width: 23px;
+    height: 22px;
+    background-image: url('../images/ico_share.svg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
     &.selected {
     }
   }
@@ -337,9 +368,9 @@
       font-size: 16px;
       align-items: inherit;
       justify-content: flex-end;
-      .ic_star {
-        margin-right: 5px;
-      }
+      // .ic_star {
+      //   margin-right: 5px;
+      // }
     }
     .rv__thumnb {
       width: 110px;
@@ -372,10 +403,17 @@
       }
     }
     .btn__rvlike {
-      width: 16px;
-      @include mixins.sprite(mo_icons.$ico-like);
+      // width: 16px;
+      // @include mixins.sprite(mo_icons.$ico-like);
+      width: 17px;
+      height: 15px;
+      background-image: url('../images/ico_like.svg');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: 100% 100%;
       &.selected {
-        @include mixins.sprite(mo_icons.$ico-like-on);
+        // @include mixins.sprite(mo_icons.$ico-like-on);
+        background-image: url('../images/ico_like_on.svg');
       }
     }
     .review__list--line {display: none;}
@@ -1105,7 +1143,13 @@
   }
   .btn__delete {
     display: inline-block;
-    @include icons.retina-sprite(icons.$ico-close-10-group);
+    // @include icons.retina-sprite(icons.$ico-close-10-group);
+    width: 12px;
+    height: 12px;
+    background-image: url('../images/ico_close_10.svg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100% 100%;
   }
   .product__totalprice {
     display: flex;
@@ -1354,8 +1398,14 @@
   }
   .ico_basket {
     display: block;
-    @include icons.retina-sprite(icons.$ico-basket-group);
+    // @include icons.retina-sprite(icons.$ico-basket-group);
     margin: 0 auto 30px;
+    width: 112px;
+    height: 90px;
+    background-image: url('../images/ico_basket.svg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100% 100%;
   }
   p {
     font-size: 18px;
@@ -1386,7 +1436,10 @@
       padding-top: 45px;
     }
     .ico_basket {
-      @include mixins.sprite(mo_icons.$ico-basket-mo);
+      // @include mixins.sprite(mo_icons.$ico-basket-mo);
+      width: 66px;
+      height: 54px;
+      background-size: 100% 100%;
     }
     p {
       font-size: 12px;
@@ -1474,15 +1527,33 @@
     }
     .ic_star {
       margin-right: 5px;
-      @include icons.retina-sprite(icons.$ico-star-group);
+      // @include icons.retina-sprite(icons.$ico-star-group);
+      width: 24px;
+      height: 24px;
+      background-image: url('../images/ico_star.svg');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: 100% 100%;
     }
     .ic_star_half {
       margin-right: 5px;
-      @include icons.retina-sprite(icons.$ico-star-half-group);
+      // @include icons.retina-sprite(icons.$ico-star-half-group);
+      width: 24px;
+      height: 24px;
+      background-image: url('../images/ico_star_half.svg');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: 100% 100%;
     }
     .ic_star_blank {
       margin-right: 5px;
-      @include icons.retina-sprite(icons.$ico-star-blank-group);
+      // @include icons.retina-sprite(icons.$ico-star-blank-group);
+      width: 24px;
+      height: 24px;
+      background-image: url('../images/ico_star_blank.svg');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: 100% 100%;
     }
   }
   .rv__photo {
@@ -1515,7 +1586,13 @@
       font-size: 14px;
       border-radius: 24px;
       i {
-        @include icons.retina-sprite(icons.$ico-camera-small-group);
+        // @include icons.retina-sprite(icons.$ico-camera-small-group);
+        width: 51px;
+        height: 37px;
+        background-image: url('../images/ico_camera.svg');
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: 100% 100%;
       }
       span {
         margin-left: 0;
@@ -1526,7 +1603,13 @@
     position: absolute;
     top: 8px;
     right: 8px;
-    @include icons.retina-sprite(icons.$ico-delete-group);
+    // @include icons.retina-sprite(icons.$ico-delete-group);
+    width: 18px;
+    height: 18px;
+    background-image: url('../images/ico_delete.svg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100% 100%;
   }  
 
   .btn__addphoto {
@@ -1538,8 +1621,14 @@
     text-align: center;
     i {
       display: block;
-      @include icons.retina-sprite(icons.$ico-camera-group);
+      // @include icons.retina-sprite(icons.$ico-camera-group);
       margin: 0 auto;
+      width: 67px;
+      height: 48px;
+      background-image: url('../images/ico_camera.svg');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: 100% 100%;
     }
     span {
       display: block;
@@ -1638,15 +1727,33 @@
   }
   .ic_star {
     margin-right: 5px;
-    @include icons.retina-sprite(icons.$ico-star-group);
+    // @include icons.retina-sprite(icons.$ico-star-group);
+    width: 24px;
+    height: 24px;
+    background-image: url('../images/ico_star.svg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100% 100%;
   }
   .ic_star_blank {
     margin-right: 5px;
-    @include icons.retina-sprite(icons.$ico-star-blank-group);
+    // @include icons.retina-sprite(icons.$ico-star-blank-group);
+    width: 24px;
+    height: 24px;
+    background-image: url('../images/ico_star_blank.svg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100% 100%;
   }
   .ic_star_half {
     margin-right: 5px;
-    @include icons.retina-sprite(icons.$ico-star-half-group);
+    // @include icons.retina-sprite(icons.$ico-star-half-group);
+    width: 24px;
+    height: 24px;
+    background-image: url('../images/ico_star_half.svg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100% 100%;
   }
   .rv__product {
     display: flex;
@@ -1707,14 +1814,28 @@
   }
   .btn__rvlike {
     display: inline-block;
-    @include icons.retina-sprite(icons.$ico-like-group);
+    // @include icons.retina-sprite(icons.$ico-like-group);
+    width: 22px;
+    height: 19px;
+    background-image: url('../images/ico_like.svg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100% 100%;
+
     &.selected {
-      @include icons.retina-sprite(icons.$ico-like-on-group);
+      // @include icons.retina-sprite(icons.$ico-like-on-group);
+      background-image: url('../images/ico_like_on.svg');
     }
   }
   .btn__rvshare {
     display: inline-block;
-    @include icons.retina-sprite(icons.$ico-share-group);
+    // @include icons.retina-sprite(icons.$ico-share-group);
+    width: 23px;
+    height: 22px;
+    background-image: url('../images/ico_share.svg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100% 100%;
     &.selected {
     }
   }
@@ -2134,7 +2255,13 @@
           right: 15px;
           top: 50%;
           margin-top: -7.5px;
-          @include icons.retina-sprite(icons.$ico-header-search-group);
+          // @include icons.retina-sprite(icons.$ico-header-search-group);
+          width: 17px;
+          height: 17px;
+          background-image: url('../images/ico_header_search.svg');
+          background-repeat: no-repeat;
+          background-position: 0 0;
+          background-size: 100% 100%;
         }
         ::-webkit-input-placeholder {
           font-size: 16px;
@@ -2564,7 +2691,13 @@
       .delete {
         width: 10px;
         height: 10px;
-        @include icons.retina-sprite(icons.$ico-close-10-group);
+        // @include icons.retina-sprite(icons.$ico-close-10-group);
+        width: 12px;
+        height: 12px;
+        background-image: url('../images/ico_close_10.svg');
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: 100% 100%;
         img {
           visibility: hidden;
         }
@@ -2766,9 +2899,16 @@
 		}
 		.btn__rvlike {
 			display: inline-block;
-			@include icons.retina-sprite(icons.$ico-like-group);
+			// @include icons.retina-sprite(icons.$ico-like-group);
+      width: 22px;
+      height: 19px;
+      background-image: url('../images/ico_like.svg');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: 100% 100%;
 			&.seleted {
-				@include icons.retina-sprite(icons.$ico-like-on-group);
+				// @include icons.retina-sprite(icons.$ico-like-on-group);
+        background-image: url('../images/ico_like_on.svg');
 			}
 		}
 		.morecnt_section {
@@ -2792,7 +2932,13 @@
 			right: 0;
 			bottom: 10px;
 			display: inline-block;
-			@include icons.retina-sprite(icons.$ico-share-group);
+			// @include icons.retina-sprite(icons.$ico-share-group);
+      width: 23px;
+      height: 22px;
+      background-image: url('../images/ico_share.svg');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: 100% 100%;
 			&.selected {
 			}
 		}
