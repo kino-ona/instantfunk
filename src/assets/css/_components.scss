@@ -668,6 +668,12 @@
 			width: 22px;
 			height: 22px;
 			cursor: pointer;
+			background: {
+				image: url('../images/ico_close_10.svg');
+				size: 22px;
+				repeat: no-repeat;
+				position: 0 0;
+			}
 		}
 	}
 	.layer__header {
