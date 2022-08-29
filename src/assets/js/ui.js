@@ -204,51 +204,49 @@ jQuery.noConflict();
 	
 
 	$(function() {
-		if ($('[data-footer=true]').length) {
-			const $w = $(window);
-			let timeout = null;
+		// if ($('[data-footer=true]').length) {
+		// 	const $w = $(window);
+		// 	let timeout = null;
 	
-			$w.on('scroll', function() {
-				const sT = window.pageYOffset + window.innerHeight
-				const val = window.pageYOffset + document.querySelector('.footer_copyright').getBoundingClientRect().top
+		// 	$w.on('scroll', function() {
+		// 		const sT = window.pageYOffset + window.innerHeight
+		// 		const val = window.pageYOffset + document.querySelector('.footer_copyright').getBoundingClientRect().top
 	
-				if (sT > val) {
-					clearTimeout(timeout);
-					timeout = setTimeout(function() {
-						$('.footer .btn__funkplay').addClass('__active');
-					}, 200);
-				} else {
-					$('.footer .btn__funkplay').removeClass('__active');
-				}
-			});
+		// 		if (sT > val) {
+		// 			clearTimeout(timeout);
+		// 			timeout = setTimeout(function() {
+		// 				$('.footer .btn__funkplay').addClass('__active');
+		// 			}, 200);
+		// 		} else {
+		// 			$('.footer .btn__funkplay').removeClass('__active');
+		// 		}
+		// 	});
 
-			/*
-			* Footer Scroll Event
-			**/
-			const setLogoAnimation = () => {
-				const $footer = document.querySelector('.footer')
-				const fLogoHeight = $footer.querySelector('.footer__funkplay').getBoundingClientRect().height
-				const fCsHeight = $footer.querySelector('.footer__cs').getBoundingClientRect().height
-				const startPosition = window.pageYOffset + $footer.querySelector('.footer__funkplay').getBoundingClientRect().top + fLogoHeight / 2
-				const scrollRange = fCsHeight + fLogoHeight / 2
+		// 	/*
+		// 	* Footer Scroll Event
+		// 	**/
+		// 	const setLogoAnimation = () => {
+		// 		const $footer = document.querySelector('.footer')
+		// 		const fLogoHeight = $footer.querySelector('.footer__funkplay').getBoundingClientRect().height
+		// 		const fCsHeight = $footer.querySelector('.footer__cs').getBoundingClientRect().height
+		// 		const startPosition = window.pageYOffset + $footer.querySelector('.footer__funkplay').getBoundingClientRect().top + fLogoHeight / 2
+		// 		const scrollRange = fCsHeight + fLogoHeight / 2
 				
-				let distance = window.matchMedia('only screen and (max-width: 1024px)').matches ? fLogoHeight / 9 : fLogoHeight / 5
-				let scrollProgress = ((window.pageYOffset + window.innerHeight - startPosition) / scrollRange).toFixed(5)
+		// 		let distance = window.matchMedia('only screen and (max-width: 1024px)').matches ? fLogoHeight / 9 : fLogoHeight / 5
+		// 		let scrollProgress = ((window.pageYOffset + window.innerHeight - startPosition) / scrollRange).toFixed(5)
 	
-				if (scrollProgress >= 1) {
-					window.removeEventListener('scroll', setLogoAnimation)
-					window.removeEventListener('resize', setLogoAnimation)
-				}
+		// 		if (scrollProgress >= 1) {
+		// 			window.removeEventListener('scroll', setLogoAnimation)
+		// 			window.removeEventListener('resize', setLogoAnimation)
+		// 		}
 				
-				scrollProgress = scrollProgress < 0 ? 0 : scrollProgress > 1 ? 1 : scrollProgress
-				$footer.style.setProperty('--distance', `${distance}px`)
-				$footer.style.setProperty('--progress', `${scrollProgress}`)
-			}
+		// 		scrollProgress = scrollProgress < 0 ? 0 : scrollProgress > 1 ? 1 : scrollProgress
+		// 		$footer.style.setProperty('--distance', `${distance}px`)
+		// 		$footer.style.setProperty('--progress', `${scrollProgress}`)
+		// 	}
 	
-			window.addEventListener('scroll', setLogoAnimation)
-			window.addEventListener('resize', setLogoAnimation)
-	
-			/* //220823 DFY 작업 END */
-		}
+		// 	window.addEventListener('scroll', setLogoAnimation)
+		// 	window.addEventListener('resize', setLogoAnimation)
+		// }
 	});
 })(jQuery);
