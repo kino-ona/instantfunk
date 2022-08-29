@@ -66,6 +66,93 @@ table {
 	}
 }
 
+input[type='checkbox'],
+input[type='radio'] {
+	appearance: none;
+	border: 1px solid #000;
+	border-radius: 50%;
+	cursor: pointer;
+	&:checked {
+		background-color: #000;
+	}
+}
+input[type='checkbox'] {
+	width: 14px;
+	height: 14px;
+}
+input[type='radio'] {
+	position: relative;
+	width: 24px;
+	height: 24px;
+	@include mixins.rotate(45);
+	&:checked {
+		&:before,
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			background-color: #fff;
+		}
+		&:before {
+			left: 11px;
+			top: 4px;
+			width: 2px;
+			height: 12px;
+		}
+		&:after {
+			left: 6px;
+			top: 14px;
+			width: 5px;
+			height: 2px;
+		}
+	}
+	& + label {
+		font-size: 16px;
+		@include mixins.PtdMedium();
+    & + input[type='radio'] {
+      margin-left: 10px;
+    }
+	}
+}
+input[type='checkbox'],
+input[type='radio'] {
+	& + label {
+		letter-spacing: -0.025em;
+		vertical-align: middle;
+	}
+}
+
+@include breakpoints.mobile() {
+	input[type='checkbox'] {
+		& + label {
+			font-size: 12px;
+			letter-spacing: -0.012em;
+		}
+	}
+	input[type='radio'] {
+		width: 22px;
+		height: 22px;
+		&:checked {
+			&:before {
+				top: 4px;
+				width: 1px;
+				height: 10px;
+			}
+			&:after {
+				left: 7px;
+				top: 14px;
+				width: 5px;
+				height: 1px;
+			}
+		}
+		& + label {
+			font-size: 14px;
+			letter-spacing: 0;
+			@include mixins.PtdMedium();
+		}
+	}
+}
+
 #popup {
   select{
     appearance: none;
