@@ -2,9 +2,6 @@
 			<div class="header__container">
 				<h1 class="logo">
 					<a href="#" class="logo__link">
-						<svg class="svg-ico">
-							<use xlink:href="@@webrootassets/images/ico.svg#logo"></use>
-						</svg>
 						<span class="a11y">INSTANTPUNK</span>
 					</a>
 				</h1>
@@ -127,9 +124,6 @@
 				</div>
 				<div class="header__right">
 					<button type="button" class="header__search">
-						<svg class="svg-ico">
-							<use xlink:href="@@webrootassets/images/ico.svg#ico_header_search"></use>
-						</svg>
 						<span class="a11y">검색</span>
 					</button>
 					<div class="search">
@@ -142,9 +136,6 @@
 											<div class="search__field">
 												<label for="searchText" class="a11y">검색어</label>
 												<input type="text" id="searchText" class="search__input" placeholder="SEARCH EVERYTHING"><button type="button" class="search__button">
-													<svg class="svg-ico">
-														<use xlink:href="@@webrootassets/images/ico.svg#btn_header_search"></use>
-													</svg>
 													<span class="a11y">검색 버튼</span>
 												</button>
 											</div>

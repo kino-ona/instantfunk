@@ -44,6 +44,10 @@
 		// @include icons.retina-sprite(icons.$ico-header-search-group);
 		width: 17px;
 		height: 17px;
+		background-image: url('../images/ico_header_search.svg');
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		background-size: 100% 100%;
 	}
 	.header__funkplay {
 		display: block;
@@ -71,6 +75,10 @@
 			// @include icons.retina-sprite(icons.$logo-group);
 			width: 162px;
 			height: 14px;
+			background-image: url('../images/logo.svg');
+			background-repeat: no-repeat;
+			background-position: 0 0;
+			background-size: 100% 100%;
 		}
 	}
 
@@ -353,6 +361,10 @@
 					width: 32px;
 					height: 19px;
 					margin-top: -9.5px;
+					background-image: url('../images/btn_header_search.svg');
+					background-repeat: no-repeat;
+					background-position: 0 0;
+					background-size: 100% 100%;
 				}
 			}
 			.search__recommend {
@@ -1012,5 +1024,13 @@
 		100% {
 			@include mixins.translate(-100vw, 0);
 		}
+	}
+}
+
+#ch-plugin .etHUMM {
+	
+	@include breakpoints.mobile() {
+		right: 10px !important;
+		bottom: 10px !important;
 	}
 }
