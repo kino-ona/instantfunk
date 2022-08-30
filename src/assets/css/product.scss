@@ -520,6 +520,7 @@
   flex: 1;
   height: 43px;
   align-items: center;
+  justify-content: center;
   .btn__prev, .btn__next {
     display: inline-block;
     width: 43px;
@@ -527,15 +528,18 @@
     vertical-align: middle;
   }
   .paging_number {
-    width:70px;
+    // width:70px;
     height: 100%;
     margin: 0 6px;
+    padding: 0 10px;
     border: 1px solid #000000;
     border-radius: 14px;
     align-items: center;
     vertical-align: middle;
     text-align: center;
     p {
+      padding-left: 10px;
+      padding-right: 10px;
       line-height: 40px;
     }
     p, span {
@@ -3015,6 +3019,40 @@
   }
 }
 
-.reviewArea .reviewLayer .contentWrite {
-  border-radius: 0;
+.reviewArea {
+  .reviewLayer {
+    .contentWrite {
+      border-radius: 0;
+    }
+		@include breakpoints.mobile() {
+      width: calc(100% - 30px);
+      top: 10% !important;
+      left: 0;
+      margin: 0 15px;
+      .content {
+        padding: 0 20px;
+      }
+      .contentWarp {
+        margin: 15px 0;
+      }
+      .attachList {
+        .btnAddEmpty {
+          background-position: center center;
+        }
+        .btnAdd {
+          background-position: center center;
+          background-size: cover;
+        }
+        li {
+          width: 60px;
+          height: 60px;
+          margin-bottom: 5px;
+          &:nth-child(3n+1) {
+            clear: left;
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
 }
