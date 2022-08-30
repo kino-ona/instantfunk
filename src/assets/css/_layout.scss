@@ -628,7 +628,7 @@
 // container
 .container {
 	padding: 160px 0 180px;
-	transform: translateY(calc(min(var(--progress), 0.5) * 2 * var(--distance) * -9 + (max(var(--progress), 0.5) - 0.5) * 2 * var(--distance) * 9 ));
+	// transform: translateY(calc(min(var(--progress), 0.5) * 2 * var(--distance) * -9 + (max(var(--progress), 0.5) - 0.5) * 2 * var(--distance) * 9 ));
 
 	@include breakpoints.mobile() {
 		padding: 72px 0 85px;
@@ -642,7 +642,7 @@
 	}
 }
 .sub__container {
-	transform: translateY(calc(min(var(--progress), 0.5) * 2 * var(--distance) * -9 + (max(var(--progress), 0.5) - 0.5) * 2 * var(--distance) * 9 ));
+	// transform: translateY(calc(min(var(--progress), 0.5) * 2 * var(--distance) * -9 + (max(var(--progress), 0.5) - 0.5) * 2 * var(--distance) * 9 ));
 }
 
 // footer
