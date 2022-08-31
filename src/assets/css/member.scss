@@ -308,6 +308,9 @@
 				margin-left: 7.03vw;
 				padding-top: 194px;
 				flex-basis: 554px;
+				padding-right: 20px;
+				height: calc(100vh - 170px);
+				overflow-y: auto;
 			}
 		}
 		.login__visual {
@@ -315,6 +318,7 @@
 			// height: 44.06vw;
 			// max-height: 846px;
 			height: 846px;
+			height: calc(100vh - 170px);
 			border-radius: 30px;
 			background: url('/assets/images/bg_login_visual.png') no-repeat 50% 50%;
 			.login__text {
@@ -384,6 +388,7 @@
 				justify-content: center;
 				gap: 16px;
 				margin-top: 25px;
+				margin-bottom: 25px;
 				.login__menu {
 					letter-spacing: -0.025em;
 					&:not(:first-child) {
@@ -547,7 +552,9 @@
 			}
 		}
 	}
-
+	.member__container--login {
+		padding-bottom: 0;
+	}
 	@include breakpoints.mobile() {
 		.member__container {
 			// padding: 28.5px 4vw 0;
@@ -952,7 +959,7 @@
 	}
 
 	.xans-myshop-orderhistorynologin {
-		padding-top: 30px;
+		padding-top: 20px;
 		padding-bottom: 40px;
 		border-top: 1px solid #000000;
 
