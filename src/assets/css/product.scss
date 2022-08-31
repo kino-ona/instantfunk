@@ -518,7 +518,7 @@
 .review_paging {
   display: flex;
   flex: 1;
-  height: 43px;
+  // height: 43px;
   align-items: center;
   justify-content: center;
   .btn__prev, .btn__next {
@@ -526,6 +526,11 @@
     width: 43px;
     height: 43px;
     vertical-align: middle;
+  }
+  .btnMore {
+    padding: 15px 20px;
+    border-radius: 28px;
+    border: 1px solid #000000;
   }
   .paging_number {
     // width:70px;
@@ -551,6 +556,10 @@
     height: 36px;
     justify-content: center;
     // margin-right: -56px;
+    .btnMore {
+      margin-right: -40px;
+      padding: 0 15px;
+    }
     > p {
       display: flex;
       // width: 80px;
