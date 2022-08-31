@@ -805,7 +805,8 @@
 					// display: block;
 					flex-wrap: wrap;
 					gap: 10px;
-					margin-top: 11.5px;
+					width: 80%;
+					margin: 11.5px auto;
 					text-align: center;
 					.login__menu {
 						letter-spacing: -0.012em;
@@ -814,6 +815,27 @@
 							&:before {
 								height: 11px;
 								margin-top: -5.5px;
+							}
+						}
+						&:nth-child(4),
+						&:nth-child(5) {
+							padding-left: 0;
+							&:before {
+								display: none;
+							}
+						}
+						&:nth-child(4) {
+							padding-right: 10.5px;
+							&:after {
+								content: '';
+								display: block;
+								position: absolute;
+								left: 0;
+								top: 50%;
+								width: 1px;
+								height: 14px;
+								margin-top: -7px;
+								background-color: #dfdfdf;
 							}
 						}
 					}
