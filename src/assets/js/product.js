@@ -40,7 +40,7 @@ jQuery.noConflict();
     });
   
     var productListSwiper = new Swiper('.product-list .menu .menu__item:not(.menu__item--soldout) .menu__swiper', {
-      speed: 300,
+      speed: 500,
 			effect: 'creative',
 			creativeEffect: {
 				next: {
@@ -56,7 +56,7 @@ jQuery.noConflict();
       },
 			autoplay: {
 				enabled: false,
-				delay: 500
+				delay: 800
 			},
 			breakpoints: {
 				1024: {
