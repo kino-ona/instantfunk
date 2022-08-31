@@ -477,6 +477,8 @@
 				margin-top: 5px;
 				font-size: 12px;
 				@include mixins.PtdRegular();
+				width: auto !important;
+				margin-left: auto !important;
 			}
 		}
 		.table__row--separate {
