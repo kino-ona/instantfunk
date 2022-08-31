@@ -553,6 +553,9 @@
 			// padding: 28.5px 4vw 0;
 			padding: 100px 4vw 124px;
 		}
+		.member__container--login {
+			padding-top: 80px;
+		}
 		.member__container--join-result {
 			.member__header {
 				margin-bottom: 70px;
@@ -704,10 +707,11 @@
 		}
 
 		.login {
-			padding-top: 50px;
+			// padding-top: 50px;
 			margin-top: 0;
-			margin-bottom: -124px;
-			height: calc(var(--vh, 1vh) * 100 - 100px);
+			// margin-bottom: -124px;
+			margin-bottom: 0;
+			height: calc(var(--vh, 1vh) * 100 - 80px);
 			.login__container {
 				flex-direction: column-reverse;
 				position: relative;
