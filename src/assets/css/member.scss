@@ -811,9 +811,10 @@
 				.login__util {
 					// display: block;
 					flex-wrap: wrap;
-					gap: 10px;
+					column-gap: 10px;
+					row-gap: 16.5px;
 					width: 80%;
-					margin: 11.5px auto;
+					margin: 20px auto 0;
 					text-align: center;
 					.login__menu {
 						letter-spacing: -0.012em;
