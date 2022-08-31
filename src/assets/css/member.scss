@@ -554,7 +554,7 @@
 			padding: 100px 4vw 124px;
 		}
 		.member__container--login {
-			padding-top: 80px;
+			padding-top: 0;
 			padding-bottom: 0;
 		}
 		.member__container--join-result {
@@ -712,17 +712,19 @@
 			margin-top: 0;
 			// margin-bottom: -124px;
 			margin-bottom: 0;
-			height: calc(var(--vh, 1vh) * 100 - 80px);
+			// height: calc(var(--vh, 1vh) * 100 - 80px);
+			height: calc(var(--vh, 1vh) * 100);
 			.login__container {
 				flex-direction: column-reverse;
 				position: relative;
-				padding-bottom: 65px;
+				// padding-bottom: 65px;
 				height: 100%;
 				.login__left {
 					position: absolute;
 					left: -4vw;
 					right: -4vw;
 					bottom: 0;
+					z-index: 5;
 					flex-basis: initial;
 					// margin: 15px -4vw 0;
 				}
@@ -730,7 +732,9 @@
 					overflow-y: auto;
 					flex-basis: initial;
 					margin-left: 0;
-					padding-top: 0;
+					// padding-top: 0;
+					padding-top: 80px;
+					padding-bottom: 65px;
 				}
 			}
 			.login__visual {
