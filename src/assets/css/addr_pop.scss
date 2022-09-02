@@ -278,9 +278,9 @@ input[type='radio'] {
       font-size: 14px;
       border: 1px solid #000000;
       border-radius: 25px;
-      &.btn_zipcode {
-        width: 55px;
-      }
+      // &.btn_zipcode {
+      //   width: 55px;
+      // }
     }
     div.ec-base-help {
       border: 0;
@@ -301,6 +301,7 @@ input[type='radio'] {
           padding-left: 0;
           color: #000000;
           font-size: 14px;
+          @include mixins.PtdRegular();
         }
       }
     }
@@ -403,7 +404,7 @@ input[type='radio'] {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        width: 130px;
+        min-width: 130px;
         height: 40px;
         border-color: #000000;
         border-radius: 25px;
@@ -474,7 +475,11 @@ input[type='radio'] {
         }
       }
 
-      &.xans-myshop-addrlist {
+      &.xans-myshop-addrlist,
+      &.xans-myshop-addrmodify {
+        .header {
+          position: relative;
+        }
         .ec-base-table.typeList {
           width: 100%;
           overflow-x: scroll;
@@ -488,8 +493,12 @@ input[type='radio'] {
           table {
             width: 760px;
           }
-
         }
+        // div.ec-base-help {
+        //   ul {
+        //     margin-top: 40px;
+        //   }
+        // }
       }
     }
   }

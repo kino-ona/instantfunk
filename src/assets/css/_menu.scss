@@ -365,8 +365,12 @@
 	}
 	
 	@include breakpoints.mobile() {
+		.menu__container {
+			height: 240px;
+		}
 		.menu__list {
 			margin-left: -2px;
+			padding-bottom: 20px;
 		}
 		.menu__item {
 			width: calc(50% - 2px);

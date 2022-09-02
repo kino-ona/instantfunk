@@ -228,6 +228,7 @@
 
   .list__bottom {
     margin-top: 60px;
+    margin-bottom: 60px;
   }
 
   @include breakpoints.mobile() {
@@ -620,5 +621,12 @@
         }
       }
     }
+  }
+}
+
+.reviewArea .reviewSearch .ctrl .btnSearch {
+  top: 8px;
+  &:after {
+    top: 5px;
   }
 }

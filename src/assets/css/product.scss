@@ -56,6 +56,12 @@
     .review_sort--head {
       border-bottom-right-radius: 0;
       border-bottom-left-radius: 0;
+      .arrow {
+        &::after {
+          margin-top: 5px;
+          transform: rotate(-45deg);
+        }
+      }
     }
     .review__sorting {
       display: block;
@@ -695,6 +701,11 @@
   border-radius: 40px;
   overflow-y: auto;
   z-index: 10;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
   &.on {
     position: absolute;
     bottom: 0;

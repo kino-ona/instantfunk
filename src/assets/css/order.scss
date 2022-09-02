@@ -1086,13 +1086,21 @@ width: 100%;
       padding: 30px;
       margin-bottom: 10px;
       .check {
-        display: flex;
+        position: relative;
+        display: block;
         align-items: center;
         background: transparent;
         border: 0;
         margin: 0;
         padding: 0;
         font-size: 24px;
+        padding-left: 21px;
+        line-height:1;
+        input[type=checkbox] {
+          position: absolute;
+          left:0;
+          top: 6px;
+        }
       }
       .box {
         h4 {
@@ -1560,11 +1568,6 @@ width: 100%;
       table {
         table-layout: initial;
       }
-      .ec-base-layer {
-        .header {
-          display: none;
-        }
-      }
       .title {
         font-size: 18px !important;
       }
@@ -1585,6 +1588,14 @@ width: 100%;
         min-height: auto;
         margin-left: 0;
         padding: 20px 20px 5px;
+        .ec-base-table tbody td,
+        .ec-base-table tbody th {
+          display: block;
+          font-size: 15px;
+          .small_button {
+            margin-right: 0;
+          }
+        }
       }
       .totalArea {
         float: none;
@@ -1644,8 +1655,13 @@ width: 100%;
               //   text-align: left;
               // }
               &.left {
+                a {
+                  display: block;
+                  text-align: left;
+                }
                 strong {
                   font-size: 16px;
+                  color:#000000;
                 }
               }
               &:last-of-type {
@@ -1783,6 +1799,7 @@ width: 100%;
       }
       @include breakpoints.mobile() {
         width: calc(100% - 100px);
+        .header {display: none;}
         .content {
           > p {
             font-size: 18px;
@@ -1801,5 +1818,16 @@ width: 100%;
     iframe {
       height: 100vh !important;
     }
+  }
+  #order_layer_detail {
+    left: 15px !important;
+    .header {display: none;}
+  }
+  .order_wrap .xans-order-form .totalArea .ec-base-table.total .btn_total-detail {margin-left: 0;}
+}
+
+.ec-base-layer {
+  .header {
+    display: none !important;
   }
 }
