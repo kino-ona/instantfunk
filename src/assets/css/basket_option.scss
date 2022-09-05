@@ -34,6 +34,7 @@
 .button__container {
     display: flex;
     justify-content: center;
+    padding: 5px 6px;
 }
 .button__item {
     flex: 1;
@@ -73,7 +74,7 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 22.5%;
+    bottom: 24%;
     width: 40px;
     height: 40px;
     border: 1px solid #000;
@@ -152,6 +153,8 @@
 }
 .totalProducts table {
     width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
     color:#ffffff;
 }
 .totalProducts tbody td {

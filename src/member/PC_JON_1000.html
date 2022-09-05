@@ -166,7 +166,7 @@
 																		</div>
 																	</div>
 																	<div class="form__col">
-																		<input type="text">
+																		<input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
 																	</div>
 																	<div class="form__col">
 																		<input type="text">

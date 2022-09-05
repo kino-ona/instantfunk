@@ -3077,3 +3077,65 @@
     }
   }
 }
+
+// qna 
+.product__additional {
+  .qna_cont {
+    position: relative;
+    margin-top: 150px;
+    .qna_head {
+      position: relative;
+      margin-bottom: 20px;
+      text-align: left;
+      > h3 {
+        font-size: 40px;
+      }
+      .btn__write {
+        position: absolute;
+        right:0;
+        top: -5px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 25px;
+        border: 1px solid #000000;
+        border-radius: 25px;
+        font-size: 18px;
+      }
+    }
+    .qna_table {
+      thead {
+        border-bottom: 1px solid #000000;
+        th {
+          padding: 22px 0;
+          font-size: 18px;
+          @include mixins.PtdRegular();
+          &:nth-child(2) {
+            text-align: left;
+          }
+        }
+      }
+      tbody {
+        td {
+          padding: 20px 0;
+          font-size: 18px;
+          border-bottom: 1px solid #dfdfdf;
+          @include mixins.PtdRegular();
+          &:nth-child(2) {
+            text-align: left;
+          }
+        }
+      }
+    }
+    .qna__btn {
+      position: absolute;
+      right: 0;
+      margin-top: -55px;
+      a {
+        font-size: 18px;
+        text-decoration: underline;
+      }
+    }
+  }
+}
