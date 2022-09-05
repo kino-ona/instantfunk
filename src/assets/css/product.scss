@@ -3127,6 +3127,34 @@
           }
         }
       }
+      #product-qna-read {
+        td {
+          padding: 0;
+          margin: 0;
+        }
+        .view {
+          padding: 25px;
+          text-align: left;
+        }
+      }
+    }
+    .memoCont {
+      background-color: #ffffff;
+      border: 0;
+      .user {
+        input {
+          height: 55px;
+          border: 0;
+          padding-left: 15px;
+          padding-right: 15px;
+          background-color: #f4f4f7;
+        }
+        textarea {
+          padding: 15px;
+          border: 0;
+          background-color: #f4f4f7;
+        }
+      }
     }
     .qna__btn {
       position: absolute;
@@ -3135,6 +3163,21 @@
       a {
         font-size: 18px;
         text-decoration: underline;
+      }
+    }
+    .ec-base-paginate.typeSub {
+      img {
+        width:44px;
+        height: 44px;
+      }
+      ol {
+        display: inline-flex;
+        min-width: 80px;
+        height: 44px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #000000;
+        border-radius: 15px;
       }
     }
   }

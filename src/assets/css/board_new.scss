@@ -1,0 +1,227 @@
+@use 'mixins';
+@use 'breakpoints';
+
+.xans-board {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  .xans-board-title {
+    padding-top: 172px;
+    .title {
+      h2 {
+        font-size: 32px;
+        @include mixins.PtdMedium();
+        text-align: left;
+      }
+    }
+  }
+}
+.xans-board-writepackage {
+  .ec-base-table.typeWrite {
+    padding: 15px 30px 25px;
+    border: 1px solid #000000;
+    border-radius: 42px;
+    table {
+      border: 0;
+      margin: 0;
+      &::before {
+        display: none;
+      }
+      label {
+        margin-left: 7px;
+        margin-right: 15px;
+      }
+    }
+    tbody {
+      th, td {
+        background-color: #ffffff;
+        border: 0;
+        color:#000000;
+      }
+    }
+    .fr-box.fr-basic {
+      border-radius: 42px;
+      border:1px solid #31cdd6;
+      overflow: hidden;
+      .fr-wrapper {
+        border: 0 !important;
+      }
+    }
+    .fr-toolbar {
+      border: 0 !important;
+    }
+    .second-toolbar {
+      border: 0 !important;
+      .fr-counter {
+        padding-right: 20px;
+        padding-bottom: 20px;
+      }
+    }
+  }
+  .ec-base-button {
+    padding: 0;
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 55px;
+      padding-left: 30px;
+      padding-right: 30px;
+      border:1px solid #000000;
+      border-radius: 30px;
+      font-size: 18px;
+    }
+    .btn__sumit {
+      background-color: #000000;
+      color:#ffffff;
+    }
+  }
+
+  .ec-base-box.typeProduct {
+    margin: 0 0 20px;
+    padding: 25px 0;
+    border: 1px solid #000000;
+    border-radius: 42px;
+    .thumbnail {
+      width: 130px;
+      img {
+        border: 0;
+      }
+    }
+    .information {
+      h3 {
+        margin-bottom: 7px;
+        @include mixins.PtdMedium();
+      }
+      .button {
+        display: none;
+      }
+    }
+  }
+}
+// .xans-board-writepackage
+
+.xans-board-listpackage {
+  .xans-board-title {
+    .title {
+      position: relative;
+    }
+    .ec-base-button {
+      position: absolute;
+      right: 0;
+      top: 0;
+      max-width: initial;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .ec-base-table.typeList {
+    padding: 25px 15px 25px;
+    border: 1px solid #000000;
+    border-radius: 42px;
+    table {
+      border: 0;
+      margin: 0;
+      &::before {
+        display: none;
+      }
+    }
+    thead th {
+      border: 0;
+      color:#000000;
+    }
+    tbody {
+      th, td {
+        background-color: #ffffff;
+        border: 0;
+        font-size: 18px;
+        color:#000000;
+        @include mixins.PtdMedium();
+      }
+    }
+    .thumb {
+      a {
+        display: block;
+        width:100%;
+        height: 100%;
+      }
+      img {
+        width: 80px;
+      }
+    }
+  }
+  .ec-base-button {
+    .btn__write {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 55px;
+      padding-left: 30px;
+      padding-right: 30px;
+      border:1px solid #000000;
+      border-radius: 30px;
+      background-color: #000000;
+      color:#ffffff;
+      font-size: 18px;
+    }
+  }
+}
+// .xans-board-listpackage
+
+.xans-board-paging.ec-base-paginate {
+  margin-top: 20px;
+  img {
+    width: 44px;
+    height: 44px;
+  }
+  ol {
+    display: inline-flex;
+    min-width: 80px;
+    height: 44px;
+    margin-left: 5px;
+    margin-right: 5px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000000;
+    border-radius: 15px;
+  }
+  li {
+    border: 0;
+    a.this {
+      border:0;
+      color:#59e8ee;
+    }
+  }
+}
+// .xans-board-paging
+
+.xans-board-search {
+  padding-bottom: 100px;
+  legend {display: none;}
+  select {
+    width: 125px;
+    height: 45px;
+    border: 1px solid #000000;
+    background-color: #ffffff;
+  }
+  input {
+    height: 45px;
+    border: 1px solid #000000;
+    background-color: #ffffff;
+  }
+  .btn__search {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border:1px solid #000000;
+    border-radius: 30px;
+    background-color: #000000;
+    color:#ffffff;
+    font-size: 16px;
+  }
+}
+// .xans-board-search

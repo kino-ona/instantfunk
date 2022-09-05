@@ -366,7 +366,7 @@
 	
 	@include breakpoints.mobile() {
 		.menu__container {
-			height: 240px;
+			min-height: 240px;
 		}
 		.menu__list {
 			margin-left: -2px;
