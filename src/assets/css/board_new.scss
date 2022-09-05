@@ -17,6 +17,51 @@
     }
   }
 }
+
+.ec-base-button {
+  padding: 0;
+  a, input[type=submit] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 55px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border:1px solid #000000;
+    border-radius: 30px;
+    font-size: 18px;
+    &:hover {
+      background-color: #000000;
+      color:#ffffff;
+    }
+  }
+  .btn__sumit, .btn__blank {
+    background-color: #000000;
+    color:#ffffff;
+  }
+}
+.ec-base-box.typeProduct {
+  margin: 0 0 20px;
+  padding: 25px 0;
+  border: 1px solid #000000;
+  border-radius: 42px;
+  .thumbnail {
+    width: 130px;
+    img {
+      border: 0;
+    }
+  }
+  .information {
+    text-align: left;
+    h3 {
+      margin-bottom: 7px;
+      @include mixins.PtdMedium();
+    }
+    .button {
+      display: none;
+    }
+  }
+}
 .xans-board-writepackage {
   .ec-base-table.typeWrite {
     padding: 15px 30px 25px;
@@ -56,46 +101,6 @@
       .fr-counter {
         padding-right: 20px;
         padding-bottom: 20px;
-      }
-    }
-  }
-  .ec-base-button {
-    padding: 0;
-    a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      height: 55px;
-      padding-left: 30px;
-      padding-right: 30px;
-      border:1px solid #000000;
-      border-radius: 30px;
-      font-size: 18px;
-    }
-    .btn__sumit {
-      background-color: #000000;
-      color:#ffffff;
-    }
-  }
-
-  .ec-base-box.typeProduct {
-    margin: 0 0 20px;
-    padding: 25px 0;
-    border: 1px solid #000000;
-    border-radius: 42px;
-    .thumbnail {
-      width: 130px;
-      img {
-        border: 0;
-      }
-    }
-    .information {
-      h3 {
-        margin-bottom: 7px;
-        @include mixins.PtdMedium();
-      }
-      .button {
-        display: none;
       }
     }
   }
@@ -225,3 +230,218 @@
   }
 }
 // .xans-board-search
+
+.xans-board-readpackage {
+  .xans-board-read {
+    padding-left: 0;
+    padding-right: 0;
+    .ec-base-table {
+      .detailArea {
+        border: 0;
+        margin: 0;
+        color:#000000;
+        text-align: left;
+        span.title {
+          font-size: 32px;
+        }
+        span {
+          @include mixins.PtdMedium();
+        }
+      }
+    }
+  }
+  .ec-base-table.typeWrite {
+    padding: 25px 30px 25px;
+    border: 1px solid #000000;
+    border-radius: 42px;
+    table {
+      border: 0;
+      margin: 0;
+      &::before {
+        display: none;
+      }
+    }
+  }
+  .ec-base-table table {
+    border: 0;
+  }
+  .ec-base-button {
+    padding: 0;
+  }
+}
+// .xans-board-read
+
+.xans-board-commentwrite {
+  margin-bottom: 100px;
+  padding-left: 0;
+  padding-right: 0;
+  .write_form {
+    padding: 25px 30px 25px;
+    border: 1px solid #000000;
+    border-radius: 42px;
+    background-color: #ffffff;
+    textarea {
+      width: calc(100% - 60px);
+      padding: 20px;
+    }
+    .btn__sumit {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 55px;
+      padding-left: 30px;
+      padding-right: 30px;
+      border:1px solid #000000;
+      border-radius: 30px;
+      background-color: #000000;
+      color:#ffffff;
+      font-size: 18px;
+    }
+  }
+}
+.xans-board-commentlist {
+  padding: 25px 30px 25px;
+  border: 1px solid #000000;
+  border-radius: 42px;
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  .boardComment {
+    li {
+      border: 0;
+      color:#000000;
+      div.commentTop {
+        padding: 0 0 10px 0;
+        border: 0;
+        @include mixins.PtdMedium();
+      }
+      .comment {
+        padding: 10px 0 20px 0;
+      }
+    }
+  }
+  .button {
+    right: 0;
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 30px;
+      padding-left: 10px;
+      padding-right: 10px;
+      border:1px solid #000000;
+      background-color: #ffffff;
+      color:#000000;
+      border-radius: 30px;
+      font-size: 13px;
+    }
+  }
+}
+.xans-board-commentform {
+  padding: 25px 15px 25px;
+  border: 1px solid #000000;
+  border-radius: 42px;
+  background-color: #ffffff;
+  p {
+    margin: 0;
+  }
+  textarea {
+    width: calc(100% - 120px);
+    padding: 20px;
+  }
+  .submit {
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 55px;
+      padding-left: 30px;
+      padding-right: 30px;
+      border:1px solid #000000;
+      background-color: #ffffff;
+      color:#000000;
+      border-radius: 30px;
+      font-size: 18px;
+      &.btn__blank {
+        background-color: #000000;
+        color:#ffffff;
+      }
+    }
+  }
+}
+
+.xans-board-commentdel {
+  padding: 25px 30px 25px;
+  border: 1px solid #000000;
+  border-radius: 42px;
+  background-color: #ffffff;
+  margin-bottom: 100px;
+  .commentDel {
+    width: 100%;
+    text-align: center;
+    legend {display: none;}
+    fieldset {
+      padding: 90px 0;
+    }
+    h3 {
+      font-size: 24px;
+      text-align: left;
+    }
+    p {
+      max-width: 370px;
+      margin: 0 auto !important;
+    }
+    .info {
+      padding-bottom: 20px;
+      font-size: 24px;
+      line-height: 120%;
+    }
+    .password {
+      label {display: none;}
+      input {
+        width: 100%;
+      }
+    }
+    .ec-base-button {
+      margin-top: 35px;
+    }
+  }
+}
+// xans-board-commentdel
+
+.xans-board-secure {
+  padding: 25px 30px 25px;
+  border: 1px solid #000000;
+  border-radius: 42px;
+  background-color: #ffffff;
+  margin-bottom: 100px;
+  .secret {
+    width: 100%;
+    text-align: center;
+    legend {display: none;}
+    fieldset {
+      padding: 90px 0;
+    }
+    h3 {
+      font-size: 24px;
+      text-align: left;
+    }
+    p {
+      max-width: 370px;
+      margin: 0 auto !important;
+    }
+    .info {
+      padding-bottom: 20px;
+      font-size: 24px;
+      line-height: 120%;
+    }
+    .password {
+      label {display: none;}
+      input {
+        width: 100%;
+      }
+    }
+    .ec-base-button {
+      margin-top: 35px;
+    }
+  }
+}
