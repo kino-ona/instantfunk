@@ -30,6 +30,7 @@
     border:1px solid #000000;
     border-radius: 30px;
     font-size: 18px;
+    vertical-align: top;
     &:hover {
       background-color: #000000;
       color:#ffffff;
@@ -62,7 +63,9 @@
     }
   }
 }
-.xans-board-writepackage {
+.xans-board-writepackage,
+.xans-board-modifypackage {
+  margin-bottom: 100px;
   .ec-base-table.typeWrite {
     padding: 15px 30px 25px;
     border: 1px solid #000000;
@@ -300,7 +303,7 @@
   }
 }
 .xans-board-commentlist {
-  padding: 25px 30px 25px;
+  padding: 25px 30px 15px;
   border: 1px solid #000000;
   border-radius: 42px;
   background-color: #ffffff;
@@ -317,22 +320,23 @@
       .comment {
         padding: 10px 0 20px 0;
       }
-    }
-  }
-  .button {
-    right: 0;
-    a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      height: 30px;
-      padding-left: 10px;
-      padding-right: 10px;
-      border:1px solid #000000;
-      background-color: #ffffff;
-      color:#000000;
-      border-radius: 30px;
-      font-size: 13px;
+      .button {
+        top: 0;
+        right: 0;
+        a {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          height: 30px;
+          padding-left: 10px;
+          padding-right: 10px;
+          border:1px solid #000000;
+          background-color: #ffffff;
+          color:#000000;
+          border-radius: 30px;
+          font-size: 13px;
+        }
+      }
     }
   }
 }
@@ -442,6 +446,259 @@
     }
     .ec-base-button {
       margin-top: 35px;
+    }
+  }
+}
+// .xans-board-secure
+
+.ec-base-table .xans-board-empty.message {
+  border: 0;
+  padding: 150px 0;
+  font-size: 18px;
+  @include breakpoints.mobile() {
+    padding: 80px 0;
+    font-size: 14px;
+  }
+}
+
+@include breakpoints.mobile() {
+  .ec-base-table {
+    border-radius: 21px !important;
+    table {
+      table-layout: initial;
+      thead, colgroup {
+        display: none;
+      }
+      tr {
+        position: relative;
+        display: block;
+        margin-top: 20px;
+        &:first-of-type {
+          margin-top: 0;
+        }
+        &:after {
+          content: '';
+          display: block;
+          clear: both;
+        }
+      }
+    }
+  }
+  
+  .ec-base-button {
+    a, input[type=submit] {
+      padding-left: 10px;
+      padding-right: 10px;
+      height: 35px;
+      font-size: 13px;
+    }
+  }
+  .xans-board {
+    padding-left: 10px;
+    padding-right: 10px;
+    .xans-board {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .xans-board-title {
+      padding-top: 80px;
+      .title {
+        margin-bottom:0;
+        h2 {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .xans-board-paging.ec-base-paginate {
+    ol {
+      height: 35px;
+    }
+    img {
+      width: 35px;
+      height: 35px;
+    }
+  }
+
+  .xans-board-listpackage {
+    .ec-base-button {
+      .btn__write {
+        height: 25px;
+        padding-left: 5px;
+        padding-right: 5px;
+        font-size: 11px;
+      }
+    }
+    .boardSort {margin: 0;float: none;}
+    .ec-base-table.typeList {
+      tbody {
+        td {
+          float: left;
+          width: 50%;
+          display: block;
+          padding-left: 0 !important;
+          padding-bottom: 0;
+          font-size: 13px;
+          text-align: right;
+          &:first-child {display: none;}
+          &:nth-child(7) {
+            &:before {
+              content: '조회수';
+              display: inline-block;
+              margin-right: 10px;
+            }
+          }
+          &.subject {
+            padding-top: 20px;
+          }
+          &.thumb {
+            padding-top: 20px;
+            span {
+              position: absolute;
+              left:0;
+              top: -5px;
+              float: none;
+              width: 100%;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .xans-board-search {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: left;
+    select {
+      width: 49%;
+      margin: 0 0 5px !important;
+    }
+    input {
+      width: 99%;
+    }
+    .btn__search {
+      display: flex;
+      width: 100px;
+      margin: 10px auto;
+      font-size: 12px;
+    }
+  }
+  .xans-board-write,
+  .xans-board-modify {
+    .ec-base-table {
+      #subject {
+        width: 100%;
+      }
+    }
+  }
+  .xans-board-writepackage, 
+  .xans-board-modifypackage {
+    .ec-base-table.typeWrite {
+      padding: 15px 15px;
+      tbody {
+        th {
+          width: 50px;
+          padding-left: 0;
+        }
+      }
+    }
+  }
+  .ec-base-box.typeProduct {
+    padding: 10px 0;
+    border-radius: 21px;
+    .thumbnail {
+      width: 90px;
+      img {
+        max-width: 60px;
+      }
+    }
+  }
+
+  .xans-board-readpackage {
+    .ec-base-table.typeWrite {
+      padding: 15px 15px;
+    }
+  }
+
+  .xans-board-writepackage .ec-base-table.typeWrite .fr-box.fr-basic, 
+  .xans-board-modifypackage .ec-base-table.typeWrite .fr-box.fr-basic {
+    border-radius: 21px;
+  }
+
+  .xans-board-commentwrite {
+    input[type=text],
+    input[type=password] {
+      width: 80px;
+    }
+    .write_form {
+      padding: 15px 15px;
+      textarea {
+        width: 100%;
+      }
+      .btn__sumit {
+        display: flex;
+        position: relative;
+        width: 80px;
+        margin: 5px auto 0;
+        padding-left: 10px;
+        padding-right: 10px;
+        height: 35px;
+        font-size: 13px;
+      }
+    }
+    .view {
+      padding: 0;
+    }
+  }
+
+  .xans-board-commentlist {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    .boardComment {
+      li {
+        .button {
+          top: -5px;
+          a {
+            padding-left: 5px;
+            padding-right: 5px;
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .xans-board-commentdel {
+    .commentDel {
+      h3 {
+        padding-left: 25px;
+        font-size: 18px;
+      }
+      .info {
+        font-size: 14px;
+      }
+      .password input {
+        width: 80%;
+        margin-right: 0;
+      }
+    }
+  }
+
+  .xans-board-secure {
+    .secret {
+      h3 {
+        padding-left: 25px;
+        font-size: 18px;
+      }
+      .info {
+        font-size: 14px;
+      }
+      .password input {
+        width: 80%;
+        margin-right: 0;
+      }
     }
   }
 }

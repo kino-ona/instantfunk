@@ -3083,6 +3083,13 @@
   .qna_cont {
     position: relative;
     margin-top: 150px;
+    .nodata {
+      display: flex;
+      min-height: 200px;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
     .qna_head {
       position: relative;
       margin-bottom: 20px;
@@ -3131,6 +3138,7 @@
         td {
           padding: 0;
           margin: 0;
+          border: 0;
         }
         .view {
           padding: 25px;
@@ -3174,10 +3182,142 @@
         display: inline-flex;
         min-width: 80px;
         height: 44px;
+        margin: 0 5px;
         align-items: center;
         justify-content: center;
         border: 1px solid #000000;
         border-radius: 15px;
+      }
+      li {
+        a.this {
+          color:#59e8ee;
+        }
+      }
+    }
+  }
+}
+.xans-product-additional {
+  .boardComment {
+    padding: 25px 30px 25px;
+    border: 1px solid #000000;
+    border-radius: 42px;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    li {
+      border: 0;
+      font-size: 14px;
+      text-align: left;
+      .comment {
+        border: 0;
+        padding-left: 0;
+        padding-top: 10px;
+        margin: 0;
+      }
+    }
+  }
+}
+@include breakpoints.mobile() {
+  .product__additional {
+    .qna_cont {
+      margin: 80px 10px;
+      .qna_head {
+        > h3 {
+          font-size: 20px;
+        }
+        .btn__write {
+          height: 35px;
+          padding: 0 13px;
+          background-color: #000000;
+          color:#ffffff;
+          font-size: 11px;
+        }
+      }
+      .qna_table {
+        border: 1px solid #000000;
+        border-radius: 42px;
+        overflow: hidden;
+        colgroup, thead {
+          display: none;
+        }
+        tbody {
+          td {
+            padding-left: 5px;
+            padding-right: 5px;
+            border: 0;
+            font-size: 13px;
+            &:first-child {display: none;}
+            &:nth-child(2) {
+              width: 32%;
+              padding-right: 0;
+              padding-left: 15px;
+            }
+            &:nth-child(4),
+            &:nth-child(5) {
+              font-size:12px;
+            }
+            &:nth-child(5) {
+              width: 50px;
+            }
+          }
+          #product-qna-read {
+            td {
+              display: inherit;
+            }
+            .view {
+              padding: 25px 0;
+              text-align: left;
+              width: calc(100vw - 41px);
+              margin-left: 10px;
+            }
+            .boardComment {
+              padding: 15px 20px 15px;
+              margin-left:10px;
+            }
+          }
+        }
+      }
+      .qna__btn {
+        position: relative;
+        margin-top: 0;
+        a {
+          font-size: 10px;
+        }
+      }
+      .ec-base-paginate.typeSub {
+        ol {
+          height: 35px;
+        }
+        img {
+          width: 35px;
+          height: 35px;
+        }
+      }
+    }
+    .memoCont {
+      padding: 10px 0 15px 0;
+      margin-left: 10px;
+      margin-top: 10px;
+      text-align: center;
+      .user {
+        padding: 0;
+        input {
+          width: 100px;
+          background-color: #f4f4f7 !important;
+          &:focus {
+            background-color: #f4f4f7;
+          }
+        }
+        textarea {
+          float: none;
+        }
+        a {
+          float: none;
+          margin: 0 0 0;
+          img {
+            margin-top: 10px;
+            border-radius: 25px;
+          }
+        }
       }
     }
   }
