@@ -8,6 +8,18 @@
 	})
 	<script src="./assets/js/main.js"></script>
 	<link rel="stylesheet" href="./assets/css/main.css">
+	<style>
+		iframe {
+   width: 100vw;
+   height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+   min-height: 100vh;
+   min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+	</style>
 </head>
 
 <body>
@@ -25,7 +37,8 @@
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
 									<div class="visual__video">
-										<video muted="muted" onloadedmetadata="this.muted = true" poster="./assets/images/dummy.png" playsinline><source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4" autostart="false"></video>
+										<iframe src="https://player.vimeo.com/video/76979871?background=1&autoplay=1&loop=1&byline=0&title=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+										<!-- <video muted="muted" onloadedmetadata="this.muted = true" poster="./assets/images/dummy.png" playsinline><source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4" autostart="false"></video> -->
 									</div>
 									<div class="visual__contents">
 										<dov class="visual__inner">
