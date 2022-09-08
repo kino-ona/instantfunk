@@ -738,10 +738,19 @@
 		.celeb-curation__cut {
 			position: absolute;
 			left: 50%;
+			top: 50%;
 			width: 100%;
-			@include mixins.translate(-50%, 0);
+			height: 100%;
+			@include mixins.translate(-50%, -50%);
 			img {
 				width: 100%;
+				height: 100%;
+				// position: absolute;
+				// left: 50%;
+				// top: 50%;
+				// // width: 100%;
+				// // height: 100%;
+				// @include mixins.translate(-50%, -50%);
 			}
 			&:not(:first-child) {
 				opacity: 0;
@@ -810,6 +819,13 @@
 			.celeb-curation__cut {
 				height: 100%;
 				img {
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					@include mixins.translate(-50%, -50%);
+					// height: auto;
+					width: auto;
+					max-width: inherit;
 					height: 100%;
 				}
 			}
