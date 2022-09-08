@@ -51,6 +51,7 @@
 		background-color: #fff;
 		font-size: 30px;
 		letter-spacing: -0.05em;
+		text-transform: uppercase;
 		i {
 			display: block;
 			width: 22px;
@@ -121,15 +122,17 @@
 	.menu__info {
 		display: flex;
 		flex-wrap: wrap;
-		align-items: center;
+		// align-items: center;
 		padding: 10px 20px 55px;
 		.menu__right {
 			flex: 1;
 			display: flex;
-			align-items: center;
+			// align-items: center;
 		}
 	}
 	.menu__name {
+		// display: flex;
+		max-width: 70%;
 		margin-right: 8px;
 		font-size: 14px;
 		line-height: 18px;
@@ -138,6 +141,10 @@
 			font-size: inherit !important;
 			line-height: inherit !important;
 			color: #000 !important;
+		}
+		img {
+			margin-left: 4px;
+			vertical-align: middle;
 		}
 	}
 	.menu__event {
@@ -458,8 +465,16 @@
 			}
 		}
 		.menu__name {
+			max-width: 100%;
+			margin-bottom: 10px;
 			font-size: 11px;
 			line-height: 13px;
+			img {
+				margin-top: 4px;
+				&:first-of-type {
+					margin-left: 0;
+				}
+			}
 		}
 		.menu__event {
 			align-items: flex-start;

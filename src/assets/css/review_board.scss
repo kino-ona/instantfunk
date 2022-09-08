@@ -77,7 +77,7 @@
       border-radius: 21px;
     }
     .rv__morecnt {
-      margin-top: 5px;
+      margin-top: 10px;
       align-items: center;
       justify-content: space-between;
       & + .rv__morecnt { 
@@ -628,5 +628,13 @@
   top: 8px;
   &:after {
     top: 5px;
+  }
+}
+
+.myshop__container {
+  .review__list--cont {
+    .rv__count {
+      margin-right: 0;
+    }
   }
 }
