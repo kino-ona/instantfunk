@@ -42,10 +42,12 @@
 		z-index: 5;
 	}
 	.menu__tag {
-		display: flex;
+		display: inline-flex;
+		width: auto;
 		align-items: center;
 		height: 40px;
 		padding: 0 12px;
+		margin-bottom: 2px;
 		border: 1px solid #000;
 		border-radius: 100vw;
 		background-color: #fff;
@@ -74,6 +76,12 @@
 		}
 	}
 	.menu__tag--funkplay {
+		i {
+			// @include icons.retina-sprite(icons.$ico-menu-tag-funkplay-group);
+			background-image: url('../images/ico_menu_tag_funkplay.svg');
+		}
+	}
+	.menu__tag--funky {
 		i {
 			// @include icons.retina-sprite(icons.$ico-menu-tag-funkplay-group);
 			background-image: url('../images/ico_menu_tag_funkplay.svg');
