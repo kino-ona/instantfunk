@@ -558,6 +558,33 @@ input[type='radio'] {
       border-top: 1px solid #000000 !important;
     }
   }
+}
 
-  
+.xans-myshop-couponproductpackage {
+  select {
+    margin-bottom: 5px;
+  }
+  legend {
+    font-size: 16px;
+    font-weight: 500;
+    padding-bottom: 15px;
+  }
+  .ec-base-table table {
+    margin-top: 0;
+  }
+  .ec-base-box.typeThinBg {
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    border-radius: 36px;
+  }
+
+  .xans-myshop-couponproductlist {
+    .title {
+      .result {
+        padding-bottom: 10px;
+        background: none;
+        @include mixins.PtdMedium();
+      }
+    }
+  }
 }
