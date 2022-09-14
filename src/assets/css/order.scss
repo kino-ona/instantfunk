@@ -725,9 +725,9 @@ width: 100%;
             th {
               width: 120px;
             }
-            td {
-              width: calc(100% - 120px);
-            }
+            // td {
+            //   width: calc(100% - 120px);
+            // }
             th, td {
               padding-left: 0;
               border: 0;
@@ -1838,12 +1838,12 @@ width: 100%;
     }
   }
   #order_layer_detail {
+    left: 13% !important;
     .header {display: none;}
   }
   .xans-order-form {
     #order_layer_detail {
       top: 47.5% !important;
-      left: 13% !important;
     }
   }
   .order_wrap .xans-order-form .totalArea .ec-base-table.total .btn_total-detail {margin-left: 0;}

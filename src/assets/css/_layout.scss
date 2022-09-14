@@ -1039,8 +1039,11 @@
 	}
 }
 
-#ch-plugin .etHUMM {
-	
+
+#ch-plugin .etHUMM,
+#ch-plugin .kUICpr {
+	right: 20px !important;
+	bottom: 40px !important;
 	@include breakpoints.mobile() {
 		right: 10px !important;
 		bottom: 10px !important;
