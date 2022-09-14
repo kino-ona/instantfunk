@@ -1373,7 +1373,7 @@
 	.table-detail--mileage {
 		.table-detail__tbody {
 			position: relative;
-			min-height: 100px;
+			min-height: 50px;
 
 			@include breakpoints.mobile() {
 				min-height: auto;
@@ -1743,7 +1743,7 @@
 			}
 			.button__item.small_button {
 				width: 100px;
-				margin: 0 auto 5px;
+				margin: 5px auto 0;
 			}
 		}
 
