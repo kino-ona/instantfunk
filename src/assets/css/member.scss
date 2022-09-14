@@ -652,6 +652,18 @@
 					font-size: 18px;
 					letter-spacing: -0.012em;
 				}
+				.check__inner {
+					.ec-base-chk {
+						padding-right: 8px;
+						input {
+							width: 22px;
+							height: 22px;
+						}
+						.checkbox {
+							width: 22px;
+						}
+					}
+				}
 			}
 		}
 		.member__card--result {

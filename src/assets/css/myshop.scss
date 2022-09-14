@@ -1334,6 +1334,12 @@
 				font-size: 14px;
 			}
 		}
+		.table-detail_nodata {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+      @include mixins.translate(-50%, -50%);
+		}
 
 		input[type='checkbox'] {
 			position: relative;
@@ -1361,6 +1367,16 @@
 					width: 5px;
 					height: 2px;
 				}
+			}
+		}
+	}
+	.table-detail--mileage {
+		.table-detail__tbody {
+			position: relative;
+			min-height: 100px;
+
+			@include breakpoints.mobile() {
+				min-height: auto;
 			}
 		}
 	}
@@ -2397,19 +2413,19 @@
 					&:nth-child(9) {
 						text-align: left;
 					}
-					&:nth-child(2),
-					&:nth-child(3),
-					&:nth-child(4),
-					&:nth-child(5),
-					&:nth-child(6),
-					&:nth-child(7),
-					&:nth-child(8) {
-						display: none;
-					}
+					// &:nth-child(2),
+					// &:nth-child(3),
+					// &:nth-child(4),
+					// &:nth-child(5),
+					// &:nth-child(6),
+					// &:nth-child(7),
+					// &:nth-child(8) {
+					// 	display: none;
+					// }
 				}
-				.table-detail__td--mobile {
-					display: block;
-				}
+				// .table-detail__td--mobile {
+				// 	display: block;
+				// }
 			}
 
 			.address {
@@ -3515,9 +3531,12 @@
 			&:first-child {
 				width: 25%;
 			}
-			&:last-child {
-				text-align: right;
-			}
+			// &:last-child {
+			// 	text-align: right;
+			// }
+		}
+		th {
+			text-align: left;
 		}
 
 		tr:last-child {
@@ -3656,3 +3675,42 @@
 		}
 	}
 }
+
+
+@include breakpoints.mobile() {
+	.xans-myshop-addrlist {
+		.myshop__article {
+			.myshop__roundbox {
+				padding-top: 0;
+				overflow-x: scroll;
+				-webkit-overflow-scrolling: touch;
+				.table-detail--address {
+					white-space: nowrap;
+				}
+			}
+		}
+		// .table-detail {
+		// 	.table-detail__thead {
+		// 		display: block;
+		// 	}
+		// }
+		.table-detail--address {
+			.table-detail__tbody {
+				.table-detail__tr {
+					display: flex;
+					align-items: baseline;
+					grid-template-columns:none;
+				}
+			}
+
+			.table-detail__td {
+				width: auto;
+				padding-right: 15px !important;
+			}
+			.button .button__container .button__item:not(:first-child) {
+				margin-left: 0;
+			}
+		}
+	}
+}
+

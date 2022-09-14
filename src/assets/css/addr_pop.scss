@@ -557,6 +557,12 @@ input[type='radio'] {
     .ec-base-button {
       border-top: 1px solid #000000 !important;
     }
+    .xans-coupon-aprd {
+      border-bottom: 1px solid #000000;
+      &:last-of-type {
+        border-bottom: 0;
+      }
+    }
   }
 }
 
@@ -577,7 +583,6 @@ input[type='radio'] {
     background-color: #ffffff;
     border-radius: 36px;
   }
-
   .xans-myshop-couponproductlist {
     .title {
       .result {

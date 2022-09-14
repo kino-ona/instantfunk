@@ -1820,6 +1820,9 @@ width: 100%;
   }
 }
 
+#order_layer_detail {
+  left: 39% !important;
+}
 @include breakpoints.mobile() {
   #couponLayer {
     iframe {
@@ -1827,6 +1830,7 @@ width: 100%;
     }
   }
   #order_layer_detail {
+    top: 47.5% !important;
     left: 15px !important;
     .header {display: none;}
   }
