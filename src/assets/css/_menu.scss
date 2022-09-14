@@ -111,6 +111,7 @@
 	}
 	.menu__swiper {
 		height: 100%;
+		clip-path: inset(1px round 72px);
 
 		.swiper-wrapper {
 			transition-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
@@ -450,6 +451,7 @@
 			}
 		}
 		.menu__swiper {
+			clip-path: inset(1px round 26px);
 			.swiper-pagination {
 				display: block;
 				left: 50%;
