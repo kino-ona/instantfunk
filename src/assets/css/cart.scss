@@ -720,3 +720,15 @@ div.ec-base-help.ec-base-help_new {
   }
 }
 
+.xans-order-basketpackage {
+  .npay_type_C_1_1, .npay_type_C_2_1 {
+    width: 100% !important;
+  }
+  .npay_btn_list {
+     tbody {
+      .npay_btn_item {
+        width: 45% !important;
+      }
+    }
+  }
+}
