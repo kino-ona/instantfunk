@@ -320,7 +320,7 @@
 			height: 846px;
 			height: calc(100vh - 170px);
 			border-radius: 30px;
-			background: url('/assets/images/bg_login_visual.png') no-repeat 50% 50%;
+			background: url('/assets/images/bg_login_visual.jpg') no-repeat 50% 50%;
 			.login__text {
 				display: none;
 			}
@@ -764,8 +764,8 @@
 				height: 50px;
 				border-top: 1px solid #000;
 				border-radius: 0;
-				background: url('/assets/images/m_bg_login_visual.png') no-repeat 0 -36.13vw;
-				background-size: 101.6vw auto;
+				background: url('/assets/images/m_bg_login_visual.jpg') no-repeat center center;
+				background-size: cover;
 				.login__text {
 					display: block;
 					color: #74fbd3;
