@@ -704,10 +704,13 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			top: auto;
+			// top: auto;
+			top: 50%;
 			bottom: 32px;
-			width: 162px;
-			height: 60px;
+			// width: 162px;
+			// height: 60px;
+			width: 70px;
+			height: 70px;
 			margin-top: 0;
 			border: 1px solid #000;
 			border-radius: 100vw;
@@ -715,15 +718,36 @@
 			font-size: 32px;
 			text-transform: uppercase;
 			&:hover {
-				background-color: #5eecfa;
+				// background-color: #5eecfa;
+				background-color: #ffffff;
+			}
+			&:after {
+				content: ' ';
 			}
 		}
 		.swiper-button-prev {
-			left: auto;
-			right: 202px;
+			// left: auto;
+			// right: 202px;
+			left: 32px;
+			&:after {
+				margin-left: 5px;
+				width: 15px;
+				height: 15px;
+				border-top: 2px solid #000;
+				border-right: 2px solid #000;
+				transform: rotate(225deg);
+			}
 		}
 		.swiper-button-next {
 			right: 32px;
+			&:after {
+				margin-right: 5px;
+				width: 15px;
+				height: 15px;
+				border-top: 2px solid #000;
+				border-right: 2px solid #000;
+				transform: rotate(45deg);
+			}
 		}
 	}
 	.celeb-curation__celeb {
@@ -799,17 +823,28 @@
 			}
 			.swiper-button-prev,
 			.swiper-button-next {
-				bottom: 45px;
-				width: 63.5px;
-				height: 27px;
+				// bottom: 45px;
+				// width: 63.5px;
+				// height: 27px;
+				width: 40px;
+				height: 40px;
 				font-size: 12px;
+				bottom: inherit;
+				&:after {
+					width: 10px;
+					height: 10px;
+				}
 			}
 			.swiper-button-prev {
-				left: auto;
-				right: 83.5px;
+				// left: auto;
+				// right: 83.5px;
+				left: 16px;
+				top: 22%;
 			}
 			.swiper-button-next {
 				right: 16px;
+				top: inherit;
+				bottom: 22%;
 			}
 		}
 		.celeb-curation__celeb {
