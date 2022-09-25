@@ -593,3 +593,21 @@ input[type='radio'] {
     }
   }
 }
+
+.xans-myshop-addrregister {
+  &.address_layer-write {
+    @include breakpoints.mobile() {
+      .ec-base-table.typeWrite {
+        tr {
+          th, td {
+            display: block;
+          }
+        }
+        input[type=text] {
+          min-width: 25%;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

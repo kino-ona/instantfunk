@@ -2541,7 +2541,12 @@
     }
     .menu__round {
       padding-top: 122.883%;
-      clip-path: inset(0 round 2.71vw);
+      // clip-path: inset(0 round 2.71vw);
+      clip-path: none;
+      border: 1px solid #000000;
+      border-left: 0;
+      border-radius: 52px;
+      overflow: hidden;
     }
     .marquee {
       height: 66px;
@@ -2576,14 +2581,15 @@
         flex: none;
         float: left;
         width: calc((100%/2.5) - 2px);
-        margin-right: 2px;
-        border-radius: 15px;
+        // margin-right: 2px;
+        border-radius: 0;
         &:last-child {
           margin-right: 0;
         }
       }
       .menu__round {
-        clip-path: inset(0 round 15px);
+        // clip-path: inset(0 round 15px);
+        border-radius: 15px;
       }
       .marquee {
         height: 28.5px;
@@ -2810,7 +2816,7 @@
         padding-bottom: 0 !important;
         &.right {
           float: none;
-          // width: 100%;
+          width: 90%;
           justify-content: flex-end;
           padding: 0 !important;
           margin-top: -20px;
