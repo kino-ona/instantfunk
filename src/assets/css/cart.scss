@@ -630,6 +630,12 @@ div.ec-base-help.ec-base-help_new {
     .menu__round {
       padding-top: 122.883%;
       clip-path: inset(0 round 25px);
+      border: 1px solid #000000;
+      border-left: 0;
+      border-radius: 30px;
+      &:first-of-type {
+        border-left: 1px solid #000000;
+      }
     }
     .marquee {
       height: 66px;
