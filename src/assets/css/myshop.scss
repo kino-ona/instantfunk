@@ -2144,9 +2144,9 @@
 				}
 
 				.button {
-					&:not(:first-child) {
-						display: none;
-					}
+					// &:not(:first-child) {
+					// 	display: none;
+					// }
 					.button__container {
 						justify-content: flex-start;
 					}
