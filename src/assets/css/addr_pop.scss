@@ -606,12 +606,18 @@ input[type='radio'] {
         }
         input[type=text] {
           min-width: 30% !important;
-          width: 100% !important;
         }
         select {
           width: 30% !important;
         }
       }
     }
+  }
+}
+
+@include breakpoints.mobile() {
+  .xans-myshop-addrregister #address_addr1, 
+  .xans-myshop-addrregister #address_addr2 {
+    width: auto;
   }
 }

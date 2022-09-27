@@ -1085,8 +1085,28 @@
     &:nth-child(4n + 1) {
       clear: left;
     }
+    &[title*='품절'] {
+      color: #cccccc;
+      a, button {
+        background-color: transparent !important;
+        border-color: #cccccc;
+        pointer-events: none;
+      }
+      .opt__selected {
+        background-color: transparent !important;
+        border-color: #cccccc;
+        color: #cccccc;
+        pointer-events: none;
+      }
+    }
+    &.ec-product-selected {
+      a {
+        background-color: #000000;
+        color: #ffffff;
+      }
+    }
   }
-  .opt__button, li>a {
+  .opt__button,li>a {
     position: absolute;
     left: 0;
     top: 0;
@@ -1099,11 +1119,13 @@
     overflow: hidden;
     text-align: center;
     &.opt__selected, &:hover, &:active {
-      background-color: #5eecfa;
+      background-color: #000000;
+      color: #ffffff;
     }
     @include breakpoints.mobile() {
       &.opt__selected, &:hover, &:active {
         background-color: #ffffff;
+        color:#000000;
       }
     }
     &:disabled {
