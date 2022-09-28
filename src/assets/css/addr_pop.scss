@@ -595,7 +595,8 @@ input[type='radio'] {
   }
 }
 
-.xans-myshop-addrregister {
+.xans-myshop-addrregister,
+.xans-myshop-addrmodify {
   &.address_layer-write {
     @include breakpoints.mobile() {
       .ec-base-table.typeWrite {
@@ -606,6 +607,7 @@ input[type='radio'] {
         }
         input[type=text] {
           min-width: 30% !important;
+          padding: 0 20px 0 15px;
         }
         select {
           width: 30% !important;
@@ -616,8 +618,11 @@ input[type='radio'] {
 }
 
 @include breakpoints.mobile() {
+  .pc_only {display: none;}
   .xans-myshop-addrregister #address_addr1, 
-  .xans-myshop-addrregister #address_addr2 {
-    width: auto;
+  .xans-myshop-addrregister #address_addr2,
+  .xans-myshop-addrmodify #address_addr1, 
+  .xans-myshop-addrmodify #address_addr2 {
+    width: 95%;
   }
 }
