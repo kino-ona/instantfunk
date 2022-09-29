@@ -1092,7 +1092,7 @@
         border-color: #cccccc;
         pointer-events: none;
       }
-      .opt__selected {
+      &.opt__selected {
         background-color: transparent !important;
         border-color: #cccccc;
         color: #cccccc;
@@ -1101,11 +1101,17 @@
           color: #cccccc;
         }
       }
+      
     }
     &.ec-product-selected {
       a {
         background-color: #000000;
         color: #ffffff;
+      }
+    }
+    &.ec-product-soldout {
+      a {
+        color: #cccccc !important;
       }
     }
   }
