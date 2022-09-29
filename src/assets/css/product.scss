@@ -1097,6 +1097,9 @@
         border-color: #cccccc;
         color: #cccccc;
         pointer-events: none;
+        a {
+          color: #cccccc;
+        }
       }
     }
     &.ec-product-selected {
