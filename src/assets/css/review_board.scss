@@ -490,6 +490,17 @@
       }
     }
   }
+  .reviewLayer {
+    .content {
+      max-height: 740px;
+      overflow-y: auto;
+    }
+    .addItem {
+      th {
+        border:0;
+      }
+    }
+  }
   .fixedBar {
     float: none;
     width: 280px;
@@ -552,6 +563,13 @@
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
       overflow-y: auto;
+    }
+    .reviewLayer {
+      .prdInfo {
+        .heading {
+          text-align: left;
+        }
+      }
     }
     .reviewLayer.typeRead {
       position: absolute;

@@ -3109,6 +3109,8 @@
       margin: 0 15px;
       .content {
         padding: 0 20px;
+        max-height:80vh;
+        overflow-y: auto;
       }
       .contentWarp {
         margin: 15px 0;
