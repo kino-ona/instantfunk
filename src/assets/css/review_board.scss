@@ -494,11 +494,13 @@
     .content {
       max-height: 740px;
       overflow-y: auto;
+
+      @include breakpoints.mobile() {
+        max-height: 80vh;
+      }
     }
     .addItem {
-      th {
-        border:0;
-      }
+      th { border:0; }
     }
   }
   .fixedBar {

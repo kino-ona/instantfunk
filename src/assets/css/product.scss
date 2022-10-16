@@ -701,7 +701,7 @@
       }
     }
   }
-}
+} 
 .detail_info {
   position: fixed;
   top: 165px;
@@ -737,9 +737,17 @@
     word-break: keep-all;
   }
   .product__price {
+    display: flex;
     margin-bottom: 16px;
     font-size: 18px;
     @include mixins.PtdMedium();
+    .price_sale_output {
+      margin-left: 5px;
+    }
+    .product_sale_line {
+      text-decoration: line-through;
+      color:#999999;
+    }
   }
 
   .product__tag {
